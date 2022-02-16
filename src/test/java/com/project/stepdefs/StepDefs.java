@@ -51,6 +51,11 @@ public class StepDefs extends MyTestNGBaseClass {
         commonLib.startTest(scenario.getName());
     }
 
+    @And("I have to refresh the page")
+    public void refreshPage() {
+        oDriver.navigate().refresh();
+    }
+
     @Given("^Open the (.*) URL$")
     public void openUrl(String URL) {
         CommonLib.navigateToURL(oDriver, URL);
@@ -1202,7 +1207,6 @@ public class StepDefs extends MyTestNGBaseClass {
             Thread.sleep(5000);
             System.out.println("aa.txt is uploaded.");
         }
-
 
     }
 
