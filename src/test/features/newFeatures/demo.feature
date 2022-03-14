@@ -7,7 +7,7 @@ Feature: Demo
     Then I enter "1" text to password text area at index 1
     And I have to refresh the page
     And I have to getText from below element. Above element: username text area at index 1
-
+    And I have to refresh the page
 
 
   @Finco
