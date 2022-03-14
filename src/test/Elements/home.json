@@ -10,6 +10,7 @@
         {
           "workflow management button": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[1]/a"
         },
+
         {
           "application management button": "//ul[(@class='nav')]/descendant::li[@class=\"has-sub\"][2]"
         },

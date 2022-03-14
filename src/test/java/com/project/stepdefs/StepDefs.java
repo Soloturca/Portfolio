@@ -17,6 +17,9 @@ import org.openqa.selenium.support.ui.Select;
 import org.sikuli.script.FindFailed;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
+
+import static org.openqa.selenium.support.locators.RelativeLocator.with;
+
 import utils.excelutils.ExcelUtils;
 
 
@@ -49,6 +52,22 @@ public class StepDefs extends MyTestNGBaseClass {
     @Before
     public void setReportName(Scenario scenario) {
         commonLib.startTest(scenario.getName());
+    }
+
+    @And("I have to refresh the page")
+    public void refreshPage() {
+        oDriver.navigate().refresh();
+    }
+
+    @And("^I have to getText from below element. Above element: (\\w+(?: \\w+)*) at index (\\d+)")
+    public void getTextFromBelowElement(String element, int index) {
+        WebElement object = commonLib.findElement(element, index);
+        WebElement element2 = oDriver.findElement(with(By.tagName("input")).below(object));
+        System.out.println(element2.getText());
+        element2.sendKeys("ABC");
+        System.out.println(element2.getText());
+
+
     }
 
     @Given("^Open the (.*) URL$")
@@ -1203,7 +1222,6 @@ public class StepDefs extends MyTestNGBaseClass {
             System.out.println("aa.txt is uploaded.");
         }
 
-
     }
 
 
@@ -1250,14 +1268,14 @@ public class StepDefs extends MyTestNGBaseClass {
         waitElement("row button", timeout, 27);
         clickElement("row button", 27);
         clickElement("add side customer button", 1);
-       // waitElement("row button", timeout, 1);
+        // waitElement("row button", timeout, 1);
         //clickElement("row button", 1);
 //checkbox tik'lendiğinde kefil seçilmiş oluyor, tekrar run ettiğimizde seçili olursa doğru ilerlemeyecektir.
         //waitElement("checkbox", timeout, 1);
         //clickElement("checkbox", 1);
-       // waitElement("update the guarantor button", timeout, 1);
-     //  clickElement("update the guarantor button", 1);
-      justWait();
+        // waitElement("update the guarantor button", timeout, 1);
+        //  clickElement("update the guarantor button", 1);
+        justWait();
         clickElement("continue to Reference Information button", 1);
         waitElement("close button for financial info", timeout, 1);
         clickElement("close button for financial info", 1);
