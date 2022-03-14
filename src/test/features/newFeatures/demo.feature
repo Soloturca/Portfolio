@@ -6,31 +6,9 @@ Feature: Demo
     Then I enter "3003" text to username text area at index 1
     Then I enter "1" text to password text area at index 1
     And I have to refresh the page
-    And I wait login button element 30 seconds at index 1
-    When I click element: login button at index 1
-    Then I see home page
+    And I have to getText from below element. Above element: username text area at index 1
 
-    And I wait customer transactions button element 30 seconds at index 1
-    When I click element: customer transactions button at index 1
-    Then I see customerTransactions page
-    And I wait customer group management button element 30 seconds at index 1
-    When I click element: customer group management button at index 1
-    And I wait add new main group button element 30 seconds at index 1
-    When I click element: add new main group button at index 1
-    Then I enter unique text to main group name text area at index 1
 
-    And I wait save button element 30 seconds at index 1
-    When I click element: save button at index 1
-    And I wait warning popup element 30 seconds at index 1
-    Then I clear text to warning popup text area at index 1
-    Then I enter "AUTOMATION" text to warning popup text area at index 1
-    And I wait yes button element 30 seconds at index 1
-    When I click element: yes button at index 1
-    And I wait reference number text area element 30 seconds at index 1
-    Then I get the information: reference number text area at index 1
-    And I wait close button element 30 seconds at index 1
-    When I click element: close button at index 1
-    Then I see home page
 
   @Finco
   Scenario: Is Akis: TC001 - User Resumes Work that Started - Unit Officer
