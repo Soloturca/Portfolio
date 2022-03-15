@@ -18,7 +18,7 @@ import org.sikuli.script.FindFailed;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 
-import static org.openqa.selenium.support.locators.RelativeLocator.with;
+//import static org.openqa.selenium.support.locators.RelativeLocator.with;
 
 import utils.excelutils.ExcelUtils;
 
@@ -62,10 +62,10 @@ public class StepDefs extends MyTestNGBaseClass {
     @And("^I have to getText from below element. Above element: (\\w+(?: \\w+)*) at index (\\d+)")
     public void getTextFromBelowElement(String element, int index) {
         WebElement object = commonLib.findElement(element, index);
-        WebElement element2 = oDriver.findElement(with(By.tagName("input")).below(object));
-        System.out.println(element2.getText());
-        element2.sendKeys("ABC");
-        System.out.println(element2.getText());
+      //  WebElement element2 = oDriver.findElement(with(By.tagName("input")).below(object));
+       // System.out.println(element2.getText());
+        //element2.sendKeys("ABC");
+        //System.out.println(element2.getText());
 
 
     }
