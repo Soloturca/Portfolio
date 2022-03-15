@@ -12,7 +12,7 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-        <selenium.version>4.0.0</selenium.version>
+        <selenium.version>3.141.59</selenium.version>
         <cucumber.version>4.8.1</cucumber.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <failsafe.version>3.0.0-M4</failsafe.version>
