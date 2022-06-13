@@ -80,7 +80,7 @@ Feature: Orion Finance Finco Test Scenarios / Client Creation - MUSTERI YONETIMI
     And I wait save button for test data input element 30 seconds at index 1
     When I click element: save button for test data input at index 1
 
-#Burada top page yapmamız lazım yoksa test patlıyor.
+    #Burada top page yapmamız lazım yoksa test patlıyor.
     Then I go to top of the site
     And I wait save data button element 30 seconds at index 1
     When I click element: save data button at index 1
