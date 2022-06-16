@@ -1,7 +1,11 @@
-Feature: Support
+Feature: Orion Finance Finco Test Scenarios / Customer Create - MUSTERI YONETIMI
+#  This feature includes these steps:
+#1.) Müşteri Yönetimi -  Yeni GERÇEK KİŞİ TACİR müşteri oluşturma
+#2.) Müşteri Yönetimi -  Yeni KURUMSAL müşteri oluşturma
+#3.) Müşteri Yönetimi -  Yeni BİREYSEL müşteri oluşturma
 
-  @Test
-  Scenario Outline: Scenario: Outline Testing
+  @Finco
+  Scenario Outline: Müsteri Yonetimi: Yeni - GERÇEK KİŞİ TACİR müşteri oluşturma
 
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
     Then I see login page
@@ -154,6 +158,7 @@ Feature: Support
     Examples:
       | TCKN        |     VKN     |
       | 84448334514 | 7490171712  |
+      | 84448334514 | 9250303573  |
 
   #@Test
   Scenario: Fake SMTP Server Testing
@@ -163,8 +168,8 @@ Feature: Support
     And I need to just wait
     Then I click element: sms log card at index 1
     And I get SMS code from the item value: sms content
-    
-    
+
+
   #@Test
   Scenario: Tab Switch Testing
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
