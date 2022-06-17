@@ -41,6 +41,9 @@
           "next button": "//button[@orionid='btnNextStep_1']"
         },
         {
+          "next button for contacts": "//span[text()='Devam Et']/ancestor::button"
+        },
+        {
           "contact information section area": "//a[@href='#step3']"
         },
         {
@@ -104,6 +107,9 @@
           "priority telephone checkbox": "//input[@class='htCheckboxRendererInput']"
         },
         {
+          "otp telephone checkbox": "//input[@type='checkbox' and @id='swcVerify']"
+        },
+        {
           "telephone verify area": "//*[contains(text(),'+90')]"
         },
         {
@@ -134,6 +140,15 @@
           "permission marketing area": "//*[@id=\"step4\"]/div/div/div[2]/div/div/div[4]/h5"
         },
         {
+          "permission channel for call center": "//label[text()='Call Center']"
+        },
+        {
+          "permission channel for email": "//label[text()='E-mail']"
+        },
+        {
+          "permission channel for sms": "//label[text()='SMS']"
+        },
+        {
           "detail information area": "//*[@id=\"step4\"]/div/div/div[2]/div/div/div[1]/h5"
         },
         {
@@ -144,6 +159,9 @@
         },
         {
           "permission marketing yes permission button": "//label[@for='orion-id-131']"
+        },
+        {
+          "yes permission button": "//label[contains(text(),'Evet')]"
         },
         {
           "permission marketing button": "//input[@name='permissionMarketing']"
@@ -270,6 +288,21 @@
         },
         {
           "unconfirmation reason code": "//select[@orionid='unConfirmationReasonCode']"
+        },
+        {
+          "sms code tag": "//p[contains(text(),'SMS')]"
+        },
+        {
+          "OTP text area": "//input[@orionid='edVerifyCode']"
+        },
+        {
+          "KVKK information area": "//h5[contains(text(),'KVKK')]"
+        },
+        {
+          "upload document button": "//tbody/tr/td[3]/i[1]"
+        },
+        {
+          "remove document button": "//tbody/tr/td[3]/i[2]"
         }
       ]
     }
