@@ -1,11 +1,7 @@
-Feature: Orion Finance Finco Test Scenarios / Customer Create - MUSTERI YONETIMI
-#  This feature includes these steps:
-#1.) Müşteri Yönetimi -  Yeni GERÇEK KİŞİ TACİR müşteri oluşturma
-#2.) Müşteri Yönetimi -  Yeni KURUMSAL müşteri oluşturma
-#3.) Müşteri Yönetimi -  Yeni BİREYSEL müşteri oluşturma
+Feature: Testing
 
-  @Finco
-  Scenario Outline: Müsteri Yonetimi: Yeni - GERÇEK KİŞİ TACİR müşteri oluşturma
+  #@Test
+  Scenario Outline: Testing for Customer Creation
 
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
     Then I see login page
@@ -45,13 +41,6 @@ Feature: Orion Finance Finco Test Scenarios / Customer Create - MUSTERI YONETIMI
     When I click element: telephone add button at index 1
     Then I need to just wait
     And I wait telephone warning close button element 30 seconds at index 1
-
-    #Kontrol eklenmesi gereken nokta
-    #When I click element: telephone warning close button at index 1
-    #When I select element: "MÜŞTERİNİN CEP TELEFONU YANINDA VEYA AÇIK DEĞİL" under reason for not verification selection at index 1
-    #And I wait reason add button element 30 seconds at index 1
-    #When I click element: reason add button at index 1
-    #Then I need to checkbox verify for priority telephone checkbox at index 5
 
     Then I wait sms code tag element 5 seconds at index 1
     And I get SMS Code Tag from the item value: sms code tag
@@ -94,54 +83,15 @@ Feature: Orion Finance Finco Test Scenarios / Customer Create - MUSTERI YONETIMI
 
     # Uploading
     Then I wait upload document button element 5 seconds at index 1
+    Then I click remove button if document name area exists at index 1
     And I upload the pdf file using the: upload document button at index 1
+    Then I click remove button if document name area exists at index 2
     And I upload the pdf file using the: upload document button at index 2
+    Then I click remove button if document name area exists at index 3
     And I upload the pdf file using the: upload document button at index 3
+    Then I click remove button if document name area exists at index 4
     And I upload the pdf file using the: upload document button at index 4
-    And I upload the pdf file using the: upload document button at index 5
-
-    # Remove
-    Then I wait remove document button element 5 seconds at index 1
-    And I click element: remove document button at index 1
-    Then I wait warning yes button element 5 seconds at index 1
-    And I click element: warning yes button at index 1
-    Then I wait close button element 5 seconds at index 1
-    And I click element: close button at index 1
-
-    Then I wait remove document button element 5 seconds at index 2
-    And I click element: remove document button at index 2
-    Then I wait warning yes button element 5 seconds at index 1
-    And I click element: warning yes button at index 1
-    Then I wait close button element 5 seconds at index 1
-    And I click element: close button at index 1
-
-    Then I wait remove document button element 5 seconds at index 3
-    And I click element: remove document button at index 3
-    Then I wait warning yes button element 5 seconds at index 1
-    And I click element: warning yes button at index 1
-    Then I wait close button element 5 seconds at index 1
-    And I click element: close button at index 1
-
-    Then I wait remove document button element 5 seconds at index 4
-    And I click element: remove document button at index 4
-    Then I wait warning yes button element 5 seconds at index 1
-    And I click element: warning yes button at index 1
-    Then I wait close button element 5 seconds at index 1
-    And I click element: close button at index 1
-
-    Then I wait remove document button element 5 seconds at index 5
-    And I click element: remove document button at index 5
-    Then I wait warning yes button element 5 seconds at index 1
-    And I click element: warning yes button at index 1
-    Then I wait close button element 5 seconds at index 1
-    And I click element: close button at index 1
-
-    # Uploading
-    Then I wait upload document button element 5 seconds at index 1
-    And I upload the pdf file using the: upload document button at index 1
-    And I upload the pdf file using the: upload document button at index 2
-    And I upload the pdf file using the: upload document button at index 3
-    And I upload the pdf file using the: upload document button at index 4
+    Then I click remove button if document name area exists at index 5
     And I upload the pdf file using the: upload document button at index 5
 
     Then I click element: next button for contacts at index 3
@@ -158,10 +108,8 @@ Feature: Orion Finance Finco Test Scenarios / Customer Create - MUSTERI YONETIMI
     Examples:
       | TCKN        |     VKN     |
       | 84448334514 | 7490171712  |
-      | 84448334514 | 9250303573  |
-
   #@Test
-  Scenario: Fake SMTP Server Testing
+  Scenario: Testing for Fake SMTP Server
     Given Open the https://fake-smtp-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
     When I see fakeSmtpServer page
     Then I wait title element 10 seconds at index 1
@@ -171,7 +119,7 @@ Feature: Orion Finance Finco Test Scenarios / Customer Create - MUSTERI YONETIMI
 
 
   #@Test
-  Scenario: Tab Switch Testing
+  Scenario: Testing for Tab Switch
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
     When I see login page
     And I need to just wait
@@ -182,3 +130,9 @@ Feature: Orion Finance Finco Test Scenarios / Customer Create - MUSTERI YONETIMI
     Then I switch to main window
     And I see login page
     And I need to just wait
+
+  #@Test
+  Scenario: Testing for get VKN from excel file
+    Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
+    When I see login page
+    Then I need to get test data from Excel

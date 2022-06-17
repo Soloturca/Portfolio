@@ -1,6 +1,5 @@
 package com.project.stepdefs;
 
-import com.gargoylesoftware.htmlunit.ElementNotFoundException;
 import com.saf.framework.CommonLib;
 import com.saf.framework.TestUtils;
 import com.saf.framework.MyTestNGBaseClass;
@@ -17,9 +16,6 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 import org.sikuli.script.FindFailed;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
-
-//import static org.openqa.selenium.support.locators.RelativeLocator.with;
 
 import utils.excelutils.ExcelUtils;
 
@@ -41,6 +37,7 @@ public class StepDefs extends MyTestNGBaseClass {
     public String randomEmployees;
     public String randomCiroString;
     public String mytckn;
+    public String vkn;
     public String object;
     public String tax;
     public String realCustomerTax;
@@ -1390,6 +1387,51 @@ public class StepDefs extends MyTestNGBaseClass {
         System.out.println("2017.pdf is uploaded.");
         Thread.sleep(5000);
 
+    }
+
+    @Then("^I click remove button if (.*) exists at index (\\d+)$")
+    public boolean clickIfExistsDocument(String element, int index) throws InterruptedException {
+
+        boolean flag = false;
+        WebElement elementToSee = commonLib.findElement(element, index);
+
+        if ( elementToSee != null && !elementToSee.getText().trim().isEmpty() ) {
+
+            // Remove document
+            commonLib.waitElement("remove document button", 5, index);
+            commonLib.findElement("remove document button", index).click();
+            commonLib.waitElement("warning yes button", 5, 1);
+            commonLib.findElement("warning yes button", 1).click();
+            commonLib.waitElement("close button", 5, 1);
+            commonLib.findElement("close button", 1).click();
+
+            System.out.println("Removed document on object-->" + element);
+            Allure.addAttachment("Element is clicked.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("PASS", "I clicked the element: " + element, true);
+            return true;
+        }
+        else {
+            System.out.println("No more document left-->" + element);
+            reportResult("PASS", "Element does not exist: " + element, true);
+            return true;
+        }
+    }
+
+    @Then("^(?:I )?need to get VKN from Excel file$")
+    public void getVknFromExcel() {
+        vkn = excelUtils.getVKNFromExcelFile("FincoTestData.xlsx");
+        System.out.println("Available VKN : " + vkn);
+    }
+
+    @Then("^(?:I )?need to set VKN as used into Excel$")
+    public void setVknAsUsed() {
+        excelUtils.setVKNValueIntoExcelFile(vkn, "FincoTestData.xlsx");
+        System.out.println("VKN is changed as used in the excel file. -> VKN : " + vkn);
+    }
+
+    @Then("^(?:I )?enter the VKN to (.*) at index (\\d+)$")
+    public void enterVknToElement(String element, int index) throws InterruptedException {
+        enterText(vkn, element, index);
     }
 
     @Then("^I need to store the information for real customer vkn")
