@@ -9,8 +9,8 @@ Feature: Orion Finance Finco Test Scenarios / Customer Create - MUSTERI YONETIMI
 
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
     Then I see login page
-    Then I enter "4000" text to username text area at index 1
-    Then I enter "1" text to password text area at index 1
+    Then I enter "<username>" text to username text area at index 1
+    Then I enter "<password>" text to password text area at index 1
     And I wait login button element 30 seconds at index 1
     When I click element: login button at index 1
     Then I see home page
@@ -20,7 +20,8 @@ Feature: Orion Finance Finco Test Scenarios / Customer Create - MUSTERI YONETIMI
 
     #Müşteri yönetimi
     #Giriş
-    And I enter "<VKN>" text to VKN text area at index 1
+    And I need to get VKN from Excel file
+    And I enter the VKN to VKN text area at index 1
     Then I wait search button element 5 seconds at index 1
     And I click element: search button at index 1
     # Yeni bir müşterimi olduğu kontrol edilecek
@@ -87,54 +88,15 @@ Feature: Orion Finance Finco Test Scenarios / Customer Create - MUSTERI YONETIMI
 
     # Uploading
     Then I wait upload document button element 5 seconds at index 1
+    Then I click remove button if document name area exists at index 1
     And I upload the pdf file using the: upload document button at index 1
+    Then I click remove button if document name area exists at index 2
     And I upload the pdf file using the: upload document button at index 2
+    Then I click remove button if document name area exists at index 3
     And I upload the pdf file using the: upload document button at index 3
+    Then I click remove button if document name area exists at index 4
     And I upload the pdf file using the: upload document button at index 4
-    And I upload the pdf file using the: upload document button at index 5
-
-    # Remove
-    Then I wait remove document button element 5 seconds at index 1
-    And I click element: remove document button at index 1
-    Then I wait warning yes button element 5 seconds at index 1
-    And I click element: warning yes button at index 1
-    Then I wait close button element 5 seconds at index 1
-    And I click element: close button at index 1
-
-    Then I wait remove document button element 5 seconds at index 2
-    And I click element: remove document button at index 2
-    Then I wait warning yes button element 5 seconds at index 1
-    And I click element: warning yes button at index 1
-    Then I wait close button element 5 seconds at index 1
-    And I click element: close button at index 1
-
-    Then I wait remove document button element 5 seconds at index 3
-    And I click element: remove document button at index 3
-    Then I wait warning yes button element 5 seconds at index 1
-    And I click element: warning yes button at index 1
-    Then I wait close button element 5 seconds at index 1
-    And I click element: close button at index 1
-
-    Then I wait remove document button element 5 seconds at index 4
-    And I click element: remove document button at index 4
-    Then I wait warning yes button element 5 seconds at index 1
-    And I click element: warning yes button at index 1
-    Then I wait close button element 5 seconds at index 1
-    And I click element: close button at index 1
-
-    Then I wait remove document button element 5 seconds at index 5
-    And I click element: remove document button at index 5
-    Then I wait warning yes button element 5 seconds at index 1
-    And I click element: warning yes button at index 1
-    Then I wait close button element 5 seconds at index 1
-    And I click element: close button at index 1
-
-    # Uploading
-    Then I wait upload document button element 5 seconds at index 1
-    And I upload the pdf file using the: upload document button at index 1
-    And I upload the pdf file using the: upload document button at index 2
-    And I upload the pdf file using the: upload document button at index 3
-    And I upload the pdf file using the: upload document button at index 4
+    Then I click remove button if document name area exists at index 5
     And I upload the pdf file using the: upload document button at index 5
 
     Then I click element: next button for contacts at index 3
@@ -146,9 +108,15 @@ Feature: Orion Finance Finco Test Scenarios / Customer Create - MUSTERI YONETIMI
     #Then I wait close button element 5 seconds at index 1
     #And I click element: close button at index 1
 
+    Then I need to set VKN as used into Excel
     And I need to just wait
 
     Examples:
-      | TCKN        |     VKN     |
-      | 84448334514 | 7490171712  |
-      | 84448334514 | 9250303573  |
+      | username    | password     |
+      | 4000        | 1            |
+
+  #@Test
+  Scenario: Testing for get VKN from excel file
+    When I need to get VKN from Excel file
+    Then I need to set VKN as used into Excel
+    And I need to just wait

@@ -299,6 +299,9 @@
           "KVKK information area": "//h5[contains(text(),'KVKK')]"
         },
         {
+          "document name area": "//tbody/tr/td[3]/i[1]/ancestor::td"
+        },
+        {
           "upload document button": "//tbody/tr/td[3]/i[1]"
         },
         {
