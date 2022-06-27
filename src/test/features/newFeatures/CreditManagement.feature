@@ -16,6 +16,9 @@ Feature: Orion Finance Finco Test Scenarios / Credit Management - YONETSEL
     Then I see home page
     soner
     soner
+    fevzi
+    özge
+
 
   @Finco
   Scenario: Yonetsel: TC001 - Financial Item Identification Screen - Save Button Control
