@@ -19,6 +19,7 @@ Feature: Orion Finance Finco Test Scenarios / Credit Management - YONETSEL
     fevzi
     özge
 
+
   @Finco
   Scenario: Yonetsel: TC001 - Financial Item Identification Screen - Save Button Control
     And I wait loan button for 3005 element 30 seconds at index 1
