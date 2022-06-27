@@ -68,7 +68,7 @@ public class MyTestNGBaseClass {
 		}
 		else{
 			throw new Exception("Unknown driver name = " + sDriverName +
-					"Valid names are: ie,firefox,chrome,htmlunit");
+					"Valid names are: ie, firefox, chrome, htmlunit");
 		}
 
 		oDriver = CommonLib.getDriver(sDriverName);

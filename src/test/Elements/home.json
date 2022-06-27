@@ -120,6 +120,12 @@
           "customer transactions for 30060": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[3]/a"
         },
         {
+          "customer transactions": "//span[contains(text(),'Müşteri İşlemleri')]/ancestor::a"
+        },
+        {
+          "customer management": "//a[contains(text(),'Müşteri Yönetimi')]"
+        },
+        {
           "gateway button": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[8]/a"
         }
       ]

@@ -253,6 +253,8 @@ Feature: Orion Finance Finco Test Scenarios / Credit Usage - KULLANDIRIM
     When I click element: customer information tab continue button at index 1
     Then I wait external agency inquiry tab area element 30 seconds at index 1
     When I click element: external agency inquiry tab continue button at index 1
+
+
   @Finco
   Scenario: TC0010 - TÜZEL MÜŞTERİ -DİJİTAL EVRAK ONAY
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL

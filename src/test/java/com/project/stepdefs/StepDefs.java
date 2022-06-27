@@ -16,7 +16,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 import org.sikuli.script.FindFailed;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
+
 import utils.excelutils.ExcelUtils;
 
 
@@ -24,9 +24,7 @@ import java.awt.*;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.HashMap;
-import java.util.Random;
-import java.util.UUID;
+import java.util.*;
 
 public class StepDefs extends MyTestNGBaseClass {
     ExcelUtils excelUtils = new ExcelUtils();
@@ -39,6 +37,7 @@ public class StepDefs extends MyTestNGBaseClass {
     public String randomEmployees;
     public String randomCiroString;
     public String mytckn;
+    public String vkn;
     public String object;
     public String tax;
     public String realCustomerTax;
@@ -46,9 +45,27 @@ public class StepDefs extends MyTestNGBaseClass {
     InputStream stringsis;
     TestUtils utils;
 
+    public String SmsCode, SmsCodeTag;
+
     @Before
     public void setReportName(Scenario scenario) {
         commonLib.startTest(scenario.getName());
+    }
+
+    @And("I have to refresh the page")
+    public void refreshPage() {
+        oDriver.navigate().refresh();
+    }
+
+    @And("^I have to getText from below element. Above element: (\\w+(?: \\w+)*) at index (\\d+)")
+    public void getTextFromBelowElement(String element, int index) {
+        WebElement object = commonLib.findElement(element, index);
+      //  WebElement element2 = oDriver.findElement(with(By.tagName("input")).below(object));
+       // System.out.println(element2.getText());
+        //element2.sendKeys("ABC");
+        //System.out.println(element2.getText());
+
+
     }
 
     @Given("^Open the (.*) URL$")
@@ -162,7 +179,7 @@ public class StepDefs extends MyTestNGBaseClass {
         object = commonLib.waitElement(element, timeout, index);
         boolean flag = false;
         String randomNumbers = RandomStringUtils.randomNumeric(7);
-        phNo = 111 + randomNumbers;
+        phNo = 542 + randomNumbers;
 
 
         try {
@@ -177,6 +194,56 @@ public class StepDefs extends MyTestNGBaseClass {
             Allure.addAttachment("The telephone number has not been entered.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
             reportResult("FAIL", "I cannot entered the element: " + phNo, true);
             Assert.fail("Could not entered the telephone number:" + phNo);
+            flag = false;
+        }
+        return flag;
+    }
+
+    @Then("^I enter Sms Code to (.*) at index (\\d+)")
+    public boolean enterSmsCode(String element, int index) throws InterruptedException {
+        WebElement object;
+        object = commonLib.waitElement(element, timeout, index);
+        boolean flag = false;
+        try {
+            if (object != null) {
+                object.sendKeys(SmsCode);
+                System.out.println("The Sms Code has been entered:" + SmsCode);
+                Allure.addAttachment("The text has been entered.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "I entered the Sms Code: " + SmsCode, true);
+
+                return true;
+            }
+        } catch (Exception e) {
+            Allure.addAttachment("The Sms Code has not been entered.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "I cannot entered the element: " + SmsCode, true);
+            Assert.fail("Could not entered the text:" + SmsCode);
+            flag = false;
+        }
+        return flag;
+    }
+
+    @Then("^I press key \"([^\"]*)\" to (.*) at index (\\d+)")
+    public boolean pressKeyOnElement(String key, String element, int index) throws InterruptedException {
+        WebElement object;
+        object = commonLib.waitElement(element, timeout, index);
+        boolean flag = false;
+        try {
+            if (object != null) {
+                switch (key){
+                    case "ENTER": object.sendKeys(Keys.ENTER);
+                    case "TAB": object.sendKeys(Keys.TAB);
+                    default: break;
+                }
+                System.out.println("The Key has been pressed:" + key);
+                Allure.addAttachment("The Key has been pressed.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "I pressed the key: " + key, true);
+
+                return true;
+            }
+        } catch (Exception e) {
+            Allure.addAttachment("The Key could not press on element.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "The Key could not press on element.: " + key, true);
+            Assert.fail("Could not press the text:" + key);
             flag = false;
         }
         return flag;
@@ -888,6 +955,108 @@ public class StepDefs extends MyTestNGBaseClass {
         String object = commonLib.getTheItemValue(element, index);
     }
 
+    @Then("^(?:I )?get SMS Code Tag from the item value: (\\w+(?: \\w+)*)")
+    public void getSmsCodeTagFromTheItemValue(String element) {
+        int index = 1;
+        String object = commonLib.getTheItemValue(element, index);
+
+        try {
+            System.out.println(object.substring(40, 45));
+            SmsCodeTag = object;
+
+            if (!SmsCodeTag.isEmpty()) {
+                Allure.addAttachment("SMS code found.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "SMS code found.", true);
+            }
+            else {
+                Allure.addAttachment("SMS code NOT found.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("FAIL", "SMS code NOT found ", true);
+                throw new ElementNotSelectableException("SMS code NOT found.");
+            }
+
+        } catch (Exception e){
+            Allure.addAttachment("SMS code NOT found.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            Assert.fail("SMS code NOT found!");
+            reportResult("FAIL", "SMS code NOT found.", true);
+            throw new ElementNotSelectableException("SMS code NOT found.");
+        }
+    }
+
+    @Then("^(?:I )?get SMS code from the item value: (\\w+(?: \\w+)*)")
+    public void getSmsCodeFromTheItemValue(String element) {
+        int index = 1;
+        String object = commonLib.getTheItemValue(element, index);
+
+        try {
+            System.out.println(object.substring(102));
+            SmsCode = object.substring(102);
+
+            if (!SmsCode.isEmpty()) {
+                Allure.addAttachment("SMS code found.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "SMS code found.", true);
+            }
+            else {
+                Allure.addAttachment("SMS code NOT found.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("FAIL", "SMS code NOT found ", true);
+                throw new NotFoundException("SMS code NOT found.");
+            }
+
+        } catch (Exception e){
+            Allure.addAttachment("SMS code NOT found.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            Assert.fail("SMS code NOT found!");
+            reportResult("FAIL", "SMS code NOT found.", true);
+        }
+    }
+
+    @When("^(?:I )?switch to child window")
+    public void switchToChildWindow() throws InterruptedException {
+        String MainWindow=oDriver.getWindowHandle();
+        int timeCount = 1;
+        do
+        {
+            oDriver.getWindowHandles();
+            Thread.sleep(200);
+            timeCount++;
+            if ( timeCount > 50 )
+            {
+                break;
+            }
+        }
+        while ( oDriver.getWindowHandles().size() == 1 );
+        Set<String> s1 = oDriver.getWindowHandles();
+        Iterator<String> i1=s1.iterator();
+
+        while(i1.hasNext()) {
+            String ChildWindow=i1.next();
+            //System.out.println(ChildWindow + "******" + driver.getTitle());
+            if(!MainWindow.equalsIgnoreCase(ChildWindow))
+            {
+                // Switching to Child window
+                oDriver.switchTo().window(ChildWindow);
+                Thread.sleep(3000);
+                System.out.println("Switched to child window ID : " + ChildWindow);
+                break;
+            }
+        }
+    }
+
+    @When("^Open (.*) URL in a new tab$")
+    public void openUrlInNewTab(String URL) throws InterruptedException {
+        ((JavascriptExecutor) oDriver).executeScript("window.open('" + URL + "','_blank');");
+        ArrayList<String> availableWindows = new ArrayList<String>(oDriver.getWindowHandles());
+        oDriver.switchTo().window(availableWindows.get(1));
+        System.out.println(URL + " is opened in a new tab.");
+    }
+
+    @When("^(?:I )?switch to main window")
+    public void switchToMainWindow() throws InterruptedException {
+        ArrayList<String> availableWindows = new ArrayList<String>(oDriver.getWindowHandles());
+        if (!availableWindows.isEmpty()) {
+            oDriver.switchTo().window(availableWindows.get(0));
+            System.out.println(availableWindows.get(0) + "is active.");
+        }
+    }
+
     @Then("^The item value is changed to \"([^\"]*)\" under (.*)$")
     public boolean oppositeOption(String text, String element) throws InterruptedException {
 
@@ -1152,7 +1321,7 @@ public class StepDefs extends MyTestNGBaseClass {
     }
 
     @Then("^(?:I )?upload the file \"([^\"]*)\" using the: (\\w+(?: \\w+)*) at index (\\d+)")
-    public void uploadFile(String text, String element, int index) throws IOException, InterruptedException, FindFailed, AWTException, IOException {
+    public void uploadFile(String text, String element, int index) throws InterruptedException, IOException {
 
         WebElement object;
         object = commonLib.findElement(element, index);
@@ -1204,9 +1373,67 @@ public class StepDefs extends MyTestNGBaseClass {
             System.out.println("aa.txt is uploaded.");
         }
 
+    }
+
+    @Then("^(?:I )?upload the pdf file using the: (\\w+(?: \\w+)*) at index (\\d+)")
+    public void uploadPdfFile(String element, int index) throws InterruptedException, IOException {
+
+        WebElement object;
+        object = commonLib.findElement(element, index);
+        object.click();
+        Thread.sleep(5000);
+
+        System.out.println("2017.pdf is uploading.");
+        Runtime.getRuntime().exec(System.getProperty("user.dir") + "/Library/pdfFileUploader.exe");
+        System.out.println("2017.pdf is uploaded.");
+        Thread.sleep(5000);
 
     }
 
+    @Then("^I click remove button if (.*) exists at index (\\d+)$")
+    public boolean clickIfExistsDocument(String element, int index) throws InterruptedException {
+
+        boolean flag = false;
+        WebElement elementToSee = commonLib.findElement(element, index);
+
+        if ( elementToSee != null && !elementToSee.getText().trim().isEmpty() ) {
+
+            // Remove document
+            commonLib.waitElement("remove document button", 5, index);
+            commonLib.findElement("remove document button", index).click();
+            commonLib.waitElement("warning yes button", 5, 1);
+            commonLib.findElement("warning yes button", 1).click();
+            commonLib.waitElement("close button", 5, 1);
+            commonLib.findElement("close button", 1).click();
+
+            System.out.println("Removed document on object-->" + element);
+            Allure.addAttachment("Element is clicked.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("PASS", "I clicked the element: " + element, true);
+            return true;
+        }
+        else {
+            System.out.println("No more document left-->" + element);
+            reportResult("PASS", "Element does not exist: " + element, true);
+            return true;
+        }
+    }
+
+    @Then("^(?:I )?need to get VKN from Excel file$")
+    public void getVknFromExcel() {
+        vkn = excelUtils.getVKNFromExcelFile("FincoTestData.xlsx");
+        System.out.println("Available VKN : " + vkn);
+    }
+
+    @Then("^(?:I )?need to set VKN as used into Excel$")
+    public void setVknAsUsed() {
+        excelUtils.setVKNValueIntoExcelFile(vkn, "FincoTestData.xlsx");
+        System.out.println("VKN is changed as used in the excel file. -> VKN : " + vkn);
+    }
+
+    @Then("^(?:I )?enter the VKN to (.*) at index (\\d+)$")
+    public void enterVknToElement(String element, int index) throws InterruptedException {
+        enterText(vkn, element, index);
+    }
 
     @Then("^I need to store the information for real customer vkn")
     public String storeInformationVKN() {
@@ -1251,14 +1478,14 @@ public class StepDefs extends MyTestNGBaseClass {
         waitElement("row button", timeout, 27);
         clickElement("row button", 27);
         clickElement("add side customer button", 1);
-       // waitElement("row button", timeout, 1);
+        // waitElement("row button", timeout, 1);
         //clickElement("row button", 1);
 //checkbox tik'lendiğinde kefil seçilmiş oluyor, tekrar run ettiğimizde seçili olursa doğru ilerlemeyecektir.
         //waitElement("checkbox", timeout, 1);
         //clickElement("checkbox", 1);
-       // waitElement("update the guarantor button", timeout, 1);
-     //  clickElement("update the guarantor button", 1);
-      justWait();
+        // waitElement("update the guarantor button", timeout, 1);
+        //  clickElement("update the guarantor button", 1);
+        justWait();
         clickElement("continue to Reference Information button", 1);
         waitElement("close button for financial info", timeout, 1);
         clickElement("close button for financial info", 1);
