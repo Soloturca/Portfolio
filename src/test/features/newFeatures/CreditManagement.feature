@@ -14,6 +14,8 @@ Feature: Orion Finance Finco Test Scenarios / Credit Management - YONETSEL
     And I wait login button element 30 seconds at index 1
     When I click element: login button at index 1
     Then I see home page
+    soner
+    soner
     fevzi
     özge
 
