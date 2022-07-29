@@ -203,3 +203,24 @@ Feature: Orion Finance Finco Test Scenarios / Credit Financing - FIYATLANDIRMA
     And I wait search and list pricings button element 30 seconds at index 1
     When I click element: search and list pricings button at index 1
     When I click element: row button at index 1
+
+  @Finco
+  Scenario: Fiyatlandirma: TC004 - E2E Credit Pricing - Fiyatlama Tanimlama Mevcut Fiyatlandirma
+
+    And I wait loan button element 30 seconds at index 1
+    When I click element: loan button at index 1
+    Then I see loan page
+    And I wait pricing button element 30 seconds at index 1
+    When I click element: pricing button at index 1
+    And I wait financial identification button element 30 seconds at index 1
+    When I click element: financial identification button at index 1
+    When I click element: existing button at index 1
+    Then I enter "345" text to mevcuttan getir code area at index 1
+    When I click element: magnifying glass button at index 1
+    Then I select element: "Pasif" under state button at index 2
+    When I click element: magnifying glass v2 button at index 1
+    When I click element: first row button at index 1
+
+
+
+
