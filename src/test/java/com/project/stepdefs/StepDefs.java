@@ -11,6 +11,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.qameta.allure.Allure;
+import oracle.net.aso.e;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
@@ -24,9 +25,9 @@ import java.awt.*;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.HashMap;
-import java.util.Random;
-import java.util.UUID;
+import java.text.Format;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class StepDefs extends MyTestNGBaseClass {
     ExcelUtils excelUtils = new ExcelUtils();
@@ -61,7 +62,38 @@ public class StepDefs extends MyTestNGBaseClass {
         commonLib.seePage(page);
     }
 
-    @When("^(?:I )?click element: (\\w+(?: \\w+)*) at index (\\d+)")
+    @When("^(?:I )?have to incleaseyear: (\\w+(?: \\w+)*) at index (\\d+)")
+    public boolean incleaseyear(String element, int index) throws Exception {
+        WebElement object = commonLib.findElement(element, index);
+        boolean flag = false;
+        try {
+            if (object != null) {
+
+                object.click();
+                Calendar date = Calendar.getInstance();
+                date.setTime(new Date());
+                Format f = new SimpleDateFormat("dd/MM/yyyy");
+                date.add(Calendar.YEAR, 1);
+                System.out.println(f.format(date.getTime()));
+                object.sendKeys(f.format(date.getTime()));
+                Thread.sleep(1000);
+            }
+        }  catch (Exception e) {
+
+                Allure.addAttachment("Verification does not completed.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("FAIL", "An error during assertion. " + element, true);
+                Assert.fail("Could not clicked the element:" + element);
+                flag = false;
+        }
+         finally {
+                if (stringsis != null) {
+                    stringsis.close();
+                }
+            }
+            return flag;
+        }
+
+        @When("^(?:I )?click element: (\\w+(?: \\w+)*) at index (\\d+)")
     public boolean clickElement(String element, int index) {
         WebElement object = commonLib.findElement(element, index);
         boolean flag = false;
@@ -81,7 +113,6 @@ public class StepDefs extends MyTestNGBaseClass {
         }
         return flag;
     }
-
 
     @When("^(?:I )?have to verify the text for: (\\w+(?: \\w+)*) at index (\\d+)")
     public boolean verifyText(String element, int index) throws Exception {
@@ -563,6 +594,27 @@ public class StepDefs extends MyTestNGBaseClass {
             flag = false;
         }
         return flag;
+    }
+
+    @Then("^(?:I )?upload the file for customer \"([^\"]*)\" using the: (\\w+(?: \\w+)*) at index (\\d+)")
+    public void uploadFile2(String text, String element, int index) throws IOException, InterruptedException, FindFailed, AWTException, IOException {
+
+        WebElement object;
+        object = commonLib.findElement(element, index);
+        object.click();
+        Thread.sleep(5000);
+
+        if (text.contains("evrak.jpg")) {
+
+            System.out.println("Document is uploading for evrak.");
+            String fileName = System.getProperty("user.dir") + "\\Library\\evrak.jpg";
+            Runtime.getRuntime().exec(System.getProperty("user.dir") + "\\Exes\\seleniumFolderUpload.exe " + fileName);
+            Thread.sleep(5000);
+
+            System.out.println("evrak.jpg is uploaded.");
+
+        }
+
     }
 
 
@@ -1116,6 +1168,319 @@ public class StepDefs extends MyTestNGBaseClass {
                 System.out.println("Matched .The client is created new!");
                 Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("PASS", "Matched. The client is created new!", true);
+            }
+            return true;
+        } catch (Exception e) {
+            System.out.println("Not matched. An error during the update.");
+            Allure.addAttachment("Not matched. An error during the update.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "Not matched! " + phNo, true);
+            Assert.fail("Not matched. An error during the update!" + phNo);
+            flag = false;
+        }
+        return flag;
+    }
+
+    @Then("I need to individual client verify by (\\w+(?: \\w+)*) at index (\\d+)")
+    public boolean verifyIndividualClient(String element, int index) {
+        String title = commonLib.getTheElementInformation(element, index);
+        System.out.println("Title: " + " " + title);
+        boolean flag = false;
+
+        try {
+            if (title.contains("Bireysel müşteriler için başvuru oluşturulamaz.")) {
+                System.out.println("Matched .The client is created new!");
+                Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "Matched. The client is created new!", true);
+            }
+            else
+            {
+                System.out.println("Not matched.");
+                Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("FAIL", "Not matched! " + phNo, true);
+                Assert.fail("Not matched." + phNo);
+                flag = false;
+             }
+            return true;
+        } catch (Exception e) {
+            System.out.println("Not matched. An error during the update.");
+            Allure.addAttachment("Not matched. An error during the update.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "Not matched! " + phNo, true);
+            Assert.fail("Not matched. An error during the update!" + phNo);
+            flag = false;
+        }
+        return flag;
+    }
+
+    @Then("I need to application login verify by (\\w+(?: \\w+)*) at index (\\d+)")
+    public boolean verifyApplicationLogin(String element, int index) {
+        String title = commonLib.getTheElementInformation(element, index);
+        System.out.println("Title: " + " " + title);
+        boolean flag = false;
+
+        try {
+            if (title.contains("Müşterinin B13001 - VODAFONE NET A.Ş. satış kanalında, BAŞVURU GİRİŞ aşamasında başvurusu mevcuttur. Devam edemezsiniz!")) {
+                System.out.println("Matched .The client is created new!");
+                Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "Matched. The client is created new!", true);
+            }
+            else
+            {
+                System.out.println("Not matched.");
+                Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("FAIL", "Not matched! " + phNo, true);
+                Assert.fail("Not matched." + phNo);
+                flag = false;
+            }
+            return true;
+        } catch (Exception e) {
+            System.out.println("Not matched. An error during the update.");
+            Allure.addAttachment("Not matched. An error during the update.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "Not matched! " + phNo, true);
+            Assert.fail("Not matched. An error during the update!" + phNo);
+            flag = false;
+        }
+        return flag;
+    }
+
+    @Then("I need to preliminary assessment verify by (\\w+(?: \\w+)*) at index (\\d+)")
+    public boolean verifyPreliminaryAssessment(String element, int index) {
+        String title = commonLib.getTheElementInformation(element, index);
+        System.out.println("Title: " + " " + title);
+        boolean flag = false;
+
+        try {
+            if (title.contains("Ön değerlendirme sonucu olumludur.")) {
+                System.out.println("Matched .The client is created new!");
+                Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "Matched. The client is created new!", true);
+            }
+            else
+            {
+                System.out.println("Not matched.");
+                Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("FAIL", "Not matched! " + phNo, true);
+                Assert.fail("Not matched." + phNo);
+                flag = false;
+            }
+            return true;
+        } catch (Exception e) {
+            System.out.println("Not matched. An error during the update.");
+            Allure.addAttachment("Not matched. An error during the update.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "Not matched! " + phNo, true);
+            Assert.fail("Not matched. An error during the update!" + phNo);
+            flag = false;
+        }
+        return flag;
+    }
+
+    @Then("I need to right scroll verify by (\\w+(?: \\w+)*) at index (\\d+)")
+    public boolean rightScroll(String element, int index) {
+        WebElement object = commonLib.findElement(element,index);
+        System.out.println("Scroll start" );
+        boolean flag = false;
+
+        try {
+            if (object != null) {
+
+            ((JavascriptExecutor) oDriver).executeScript("arguments[0].scrollLeft = arguments[0].offsetWidth",object);
+
+            System.out.println("Scroll!");
+            Allure.addAttachment("Scroll.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("PASS", "Scroll!", true);
+
+             }
+            else{
+                System.out.println("Not scroll. Error.");
+                Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("FAIL", "Not matched! " + phNo, true);
+                Assert.fail("Not matched." + phNo);
+                flag = false;
+            }
+            return true;
+        } catch (Exception e) {
+            System.out.println("Object null, not scroll. Error.");
+            Allure.addAttachment("Object null, not scroll. Error.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "Object null, not scroll. Error." + phNo, true);
+            Assert.fail("Object null, not scroll. Error." + phNo);
+            flag = false;
+        }
+        return flag;
+    }
+
+    @Then("I need to financial observation verify by (\\w+(?: \\w+)*) at index (\\d+)")
+    public boolean verifyFinancialObservation(String element, int index) {
+        String title = commonLib.getTheElementInformation(element, index);
+        System.out.println("Title: " + " " + title);
+        boolean flag = false;
+
+        try {
+            if (title.contains("Fiyatlama Gözlem")) {
+                System.out.println("Matched .The client is created new!");
+                Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "Matched. The client is created new!", true);
+            }
+            else
+            {
+                System.out.println("Not matched.");
+                Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("FAIL", "Not matched! " + phNo, true);
+                Assert.fail("Not matched." + phNo);
+                flag = false;
+            }
+            return true;
+        } catch (Exception e) {
+            System.out.println("Not matched. An error during the update.");
+            Allure.addAttachment("Not matched. An error during the update.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "Not matched! " + phNo, true);
+            Assert.fail("Not matched. An error during the update!" + phNo);
+            flag = false;
+        }
+        return flag;
+    }
+
+    @Then("I need to observation and report verify by (\\w+(?: \\w+)*) at index (\\d+)")
+    public boolean verifyObservationAndReport(String element, int index) {
+        String title = commonLib.getTheElementInformation(element, index);
+        System.out.println("Title: " + " " + title);
+        boolean flag = false;
+
+        try {
+            if (title.contains("Başvuru Gözlem ve Rapor")) {
+                System.out.println("Matched .The client is created new!");
+                Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "Matched. The client is created new!", true);
+            }
+            else
+            {
+                System.out.println("Not matched.");
+                Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("FAIL", "Not matched! " + phNo, true);
+                Assert.fail("Not matched." + phNo);
+                flag = false;
+            }
+            return true;
+        } catch (Exception e) {
+            System.out.println("Not matched. An error during the update.");
+            Allure.addAttachment("Not matched. An error during the update.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "Not matched! " + phNo, true);
+            Assert.fail("Not matched. An error during the update!" + phNo);
+            flag = false;
+        }
+        return flag;
+    }
+
+    @Then("I need to credit application approval verify by (\\w+(?: \\w+)*) at index (\\d+)")
+    public boolean verifyCreditApplicationApproval(String element, int index) {
+        String title = commonLib.getTheElementInformation(element, index);
+        System.out.println("Title: " + " " + title);
+        boolean flag = false;
+
+        try {
+            if (title.contains("Kredi Başvuru Onay")) {
+                System.out.println("Matched .The client is created new!");
+                Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "Matched. The client is created new!", true);
+            }
+            else
+            {
+                System.out.println("Not matched.");
+                Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("FAIL", "Not matched! " + phNo, true);
+                Assert.fail("Not matched." + phNo);
+                flag = false;
+            }
+            return true;
+        } catch (Exception e) {
+            System.out.println("Not matched. An error during the update.");
+            Allure.addAttachment("Not matched. An error during the update.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "Not matched! " + phNo, true);
+            Assert.fail("Not matched. An error during the update!" + phNo);
+            flag = false;
+        }
+        return flag;
+    }
+
+    @Then("I need to application cancel verify by (\\w+(?: \\w+)*) at index (\\d+)")
+    public boolean verifyApplicationCancel(String element, int index) {
+        String title = commonLib.getTheElementInformation(element, index);
+        System.out.println("Title: " + " " + title);
+        boolean flag = false;
+
+        try {
+            if (title.contains("Başvuru İptal")) {
+                System.out.println("Matched .The client is created new!");
+                Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "Matched. The client is created new!", true);
+            }
+            else
+            {
+                System.out.println("Not matched.");
+                Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("FAIL", "Not matched! " + phNo, true);
+                Assert.fail("Not matched." + phNo);
+                flag = false;
+            }
+            return true;
+        } catch (Exception e) {
+            System.out.println("Not matched. An error during the update.");
+            Allure.addAttachment("Not matched. An error during the update.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "Not matched! " + phNo, true);
+            Assert.fail("Not matched. An error during the update!" + phNo);
+            flag = false;
+        }
+        return flag;
+    }
+
+    @Then("I need to application cancellation has been approved verify by (\\w+(?: \\w+)*) at index (\\d+)")
+    public boolean verifyApplicationCancellationHasBeenApproved(String element, int index) {
+        String title = commonLib.getTheElementInformation(element, index);
+        System.out.println("Title: " + " " + title);
+        boolean flag = false;
+
+        try {
+            if (title.contains("Başvuru iptal işlemi onaylandı.")) {
+                System.out.println("Matched .The client is created new!");
+                Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "Matched. The client is created new!", true);
+            }
+            else
+            {
+                System.out.println("Not matched.");
+                Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("FAIL", "Not matched! " + phNo, true);
+                Assert.fail("Not matched." + phNo);
+                flag = false;
+            }
+            return true;
+        } catch (Exception e) {
+            System.out.println("Not matched. An error during the update.");
+            Allure.addAttachment("Not matched. An error during the update.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "Not matched! " + phNo, true);
+            Assert.fail("Not matched. An error during the update!" + phNo);
+            flag = false;
+        }
+        return flag;
+    }
+
+    @Then("I need to general definitions verify by (\\w+(?: \\w+)*) at index (\\d+)")
+    public boolean verifyGeneralDefinitions(String element, int index) {
+        String title = commonLib.getTheElementInformation(element, index);
+        System.out.println("Title: " + " " + title);
+        boolean flag = false;
+
+        try {
+            if (title.contains("Genel Tanımlar")) {
+                System.out.println("Matched .The client is created new!");
+                Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "Matched. The client is created new!", true);
+            }
+            else
+            {
+                System.out.println("Not matched.");
+                Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("FAIL", "Not matched! " + phNo, true);
+                Assert.fail("Not matched." + phNo);
+                flag = false;
             }
             return true;
         } catch (Exception e) {
@@ -2229,6 +2594,8 @@ public class StepDefs extends MyTestNGBaseClass {
 
 
     }
+
+
 }
 
 

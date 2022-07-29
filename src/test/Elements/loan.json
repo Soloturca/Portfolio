@@ -17,6 +17,9 @@
           "pricing button": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[5]/ul/li[4]/a"
         },
         {
+          "page header": "//*[@id=\"content\"]/div/h1"
+      },
+        {
           "financial observation button": "//a[contains(@data-href,'/finance/pricing/js/pricingObservation.js')]"
         },
         {
@@ -86,6 +89,12 @@
           "n period no payment selection": "//select[@orionid='nonPaidMaturityPeriodType']"
         },
         {
+          "file charge": "//input[@orionid='fileExpense']"
+        },
+        {
+          "file charge type": "//select[@orionid='fileExpenseType']"
+        },
+        {
           "file charge area": "//input[@orionid='allocationValidityDay']"
         },
         {
@@ -119,10 +128,31 @@
           "maturity range second area": "//input[@orionid='maxMaturity']"
         },
         {
-          "approved amount text area": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[9]"
+          "maturity range second area": "//input[@orionid='maxMaturity']"
+        },
+        {
+          "invoice amount": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[26]"
+        },
+        {
+          "rscroll": "//html/body/div[1]/div[4]/div/div[2]/div/div[2]/div/div[1]/div/div[7]/div/div/div[2]/div/div/div/div/div[1]/div"
+        },
+        {
+          "approved amount text area": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[26]"
+        },
+        {
+          "confirmed amount text area": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[36]"
+        },
+        {
+          "maturity area": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[25]"
+        },
+        {
+          "approved due date": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[35]"
         },
         {
           "approved maturity text area": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[6]"
+        },
+        {
+          "amount range first area": "//input[@orionid='minAmount']"
         },
         {
           "amount range first area": "//input[@orionid='minAmount']"
@@ -140,6 +170,21 @@
           "click somewhere area": "//legend[@orionid='orion-id-022']"
         },
         {
+          "repeat button": "//span[@class='glyphicon glyphicon-repeat']"
+        },
+        {
+          "search button": "//span[@class='glyphicon glyphicon-search']"
+        },
+        {
+          "yes button": "//i[@class='fa fa-check']"
+        },
+        {
+          "comment reason button": "//select[@orionid='commentReason']"
+        },
+        {
+          "note": "//*[@id=\"modal-body-notetext\"]"
+        },
+        {
           "existing pricing button": "//a[@value='existing']"
         },
         {
@@ -152,13 +197,19 @@
           "pricing number area": "//*[@id=\"modal-body-text\"]/b"
         },
         {
-          "inquire button": "//button[@orionid='orion-id-076']"
+          "inquire button": "//button[@orionid='orion-id-228']"
         },
         {
-          "inquire button for financial observation": "//button[@orionid='orion-id-057']"
+          "inquire button for financial observation": "//button[@orionid='orion-id-058']"
         },
         {
           "inquire button for account information": "//button[@orionid='orion-id-037']"
+        },
+        {
+          "complete the transaction": "//span[@class='glyphicon glyphicon-ok']"
+        },
+        {
+          "application cancellation message": "//p[@id='modal-body-text']"
         },
         {
           "update button": "//button[@orionid='btnSaveAsPricing']"
@@ -168,6 +219,15 @@
         },
         {
           "pricing details accordion area": "//h5[@class='orionrpm-accordion-title open']"
+        },
+        {
+          "pricing details": "//h5[@class='orionrpm-accordion-title']"
+        },
+        {
+          "general definitions": "//legend[@orionid='orion-id-023']"
+        },
+        {
+          "transaction result": "//p[@id='modal-body-text']"
         },
         {
           "pricing inquiry frame": "/html/body/div[2]/div/div/div[2]"
@@ -234,6 +294,9 @@
         },
         {
           "current application": "//*[@class='btn btn-info orion-toggle-button-last']"
+        },
+        {
+          "current pricing": "//*[@class='btn btn-info orion-toggle-button-last']"
         },
         {
           "customer no-new application text area": "//input[@orionid='customerCode']"
@@ -404,7 +467,10 @@
           "credit application observation and report search and list button": "//button[@orionid='searchAndListApplications']"
         },
         {
-          "credit application observation and report transaction reference number text area": "//*/div[1]/div/div/div/table/tbody/tr[2]/td[8]"
+          "credit application observation and report transaction reference number text area": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[1]"
+        },
+        {
+          "applications": "//html/body/div[1]/div[4]/div/div/div/div[2]/div/div[1]/div[2]/div[2]/div/div/div/div/div[1]/div/div/div/table/tbody/tr[1]/th"
         },
         {
           "sender bank button": "//input[@orionid='senderBankCode']"
@@ -434,9 +500,6 @@
           "approved due date text area": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[7]"
         },
         {
-          "approved amount text area": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[8]"
-        },
-        {
           "create payment plan button": "//button[@orionid='btnCreatePaymentPlan']"
         },
         {
@@ -456,6 +519,9 @@
         },
         {
           "send approve button": "//button[@orionid='btnSendApprove']"
+        },
+        {
+          "add product button": "//span[@class='glyphicon glyphicon-plus']"
         },
         {
           "transaction description text area": "//textarea[@orionid='commentDetail']"
@@ -614,6 +680,12 @@
           "inquire button": "//button[@orionid='orion-id-076']"
         },
         {
+          "inquire button one": "/html/body/div[2]/div/div/div[2]/div/div/div[1]/div/div/div[3]/div[2]/button/span[2]"
+        },
+        {
+          "inquire button two": "//html/body/div[3]/div/div/div[5]/div[1]/div/div/div[3]/div/div[2]/button/span[2]"
+        },
+        {
           "inquire button for financial observation": "//button[@orionid='orion-id-057']"
         },
         {
@@ -627,6 +699,18 @@
         },
         {
           "pricing inquiry frame": "/html/body/div[2]/div/div/div[2]"
+        },
+        {
+          "choose pricing": "//html/body/div[2]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
+        },
+        {
+          "choose credit": "//html/body/div[3]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
+        },
+        {
+          "choose customer": "//html/body/div[3]/div/div/div[5]/div[2]/div/div/div[1]/div/div/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
+        },
+        {
+          "situation": "//select[@orionid='state']"
         },
         {
           "financial item identification button": "//a[contains(@data-href,'/finance/creditapplication/js/financialAccountManagement.js')]"
@@ -680,6 +764,9 @@
           "application button": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[3]/ul/li[1]/a/span"
         },
         {
+          "warning message": "//p[@id='modal-body-text']"
+        },
+        {
           "credit application introduction button": "//a[contains(@data-href,'/finance/creditapplication/js/creditApplication.js')]"
         },
         {
@@ -725,13 +812,22 @@
           "go on button": "//button[@orionid='btnInterestCalculateNextStep']"
         },
         {
+          "goOn button": "//button[@orionid='btnContinue']"
+        },
+        {
           "update product button": "//button[@orionid='btnAddProductItem']"
         },
         {
           "row pick input": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[1]/input"
         },
         {
+          "select button": "//input[@class='htCheckboxRendererInput']"
+        },
+        {
           "payment month selection": "//select[@orionid='drdPaymentDayOfWeek']"
+        },
+        {
+          "payment year selection": "//select[@orionid='drdPaymentMonthOfYear']"
         },
         {
           "pop up save button": "//button[@orionid='popupSaveBtn']"
@@ -749,7 +845,16 @@
           "guarantor selection": "//select[@orionid='guarantor']"
         },
         {
-          "continue to Finco Observation button": "//button[@orionid='btnSaveColletral']"
+          "pricing observation": "//h1[@class='page-header']"
+        },
+        {
+          "application observation and report": "//h1[@class='page-header']"
+        },
+        {
+          "credit application approval": "//h1[@class='page-header']"
+        },
+        {
+          "continue to Finco Observation button": "//button[@orionid='btnSaveCollateral']"
         },
         {
           "continue to Financial Information button": "//button[@orionid='btnFincoObservationContinue']"
@@ -842,7 +947,19 @@
           "customer no-new application text area": "//input[@orionid='customerCode']"
         },
         {
+          "add a guarantor customer": "//input[@orionid='edCustomerCode']"
+        },
+        {
+          "choose a side": "//html/body/div[1]/div[4]/div/div[2]/div/div[2]/div/div/div/div[1]/div/div[1]/div[4]/div[5]/div/div/div/div[7]/div[1]/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
+        },
+        {
+          "delete guarantor": "//button[@orionid='btnSideDeleteGuarantor']"
+        },
+        {
           "closeview": "//i[@class='fa fa-search fa-fw']"
+        },
+        {
+          "close button": "//i[@class='fa fa-share']"
         },
         {
           "continue to Reference Information button": "//button[@orionid='btnContinue']"

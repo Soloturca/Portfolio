@@ -23,6 +23,9 @@
           "loan button": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[5]/a"
         },
         {
+          "loan button credit": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[3]/a"
+        },
+        {
           "loan button for 3003": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[3]/ul/li[6]/a"
         },
         {
