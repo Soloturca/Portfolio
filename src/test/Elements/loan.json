@@ -912,6 +912,21 @@
         },
         {
           "exception management button": "//a[contains(@data-href,'/finance/creditapplication/js/exceptionDefinition.js')]"
+        },
+        {
+          "existing button": "//a[@value=\"existing\"]"
+        },
+        {
+          "mevcuttan getir code area": "//input[@orionid=\"code\"]"
+        },
+        {
+          "state button": "//select[@orionid='state']"
+        },
+        {
+          "magnifying glass v2 button": "//span[contains(@class,'btntext') and text()='Sorgula']"
+        },
+        {
+          "first row button": "//html/body/div[2]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
         }
       ]
     }
