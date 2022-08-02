@@ -3,7 +3,7 @@ Feature: Orion Finance Finco Test Scenarios - GKTİ BAŞVURU KONTROLÜ
 
 
   Background: System Login & Creating Job for unique reference number
-    Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
+    Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URLGKTİBaşvuru.feature
     Then I see login page
     Then I enter "40000" text to username text area at index 1
     Then I enter "1" text to password text area at index 1
