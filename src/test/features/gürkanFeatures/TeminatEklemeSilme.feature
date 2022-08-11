@@ -63,6 +63,7 @@ Feature: Orion Finance Finco Test Scenarios - TEMİNAT MEKTUBU EKLEME SİLME KON
     Then I click element: create payment plan button at index 1
     And I click element: go on button at index 1
     And I select element: "MART" under payment year selection at index 1
+    And I wait create payment plan button element 30 seconds at index 2
     Then I click element: create payment plan button at index 2
     And I wait pop up save button element 30 seconds at index 1
     Then I click element: pop up save button at index 1
