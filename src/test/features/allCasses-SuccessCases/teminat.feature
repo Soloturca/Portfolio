@@ -1,4 +1,11 @@
 Feature: Orion Finance Finco Test Scenarios - Teminat
+  #  This feature includes these steps:
+#1.) Teminat Oluşturma: TC001
+#2.) Var olan teminatın güncellenmesi: TC002
+#3.) Teminatın pasife alınması: TC003
+#4.) Var olan teminatın gözlemlenmesi: TC004
+#5.) Var olan teminatın bir krediye bağlanması: TC005
+#6.) Var olan kredinin teminatının çözülmesi: TC006
 
 
 
@@ -60,7 +67,7 @@ Feature: Orion Finance Finco Test Scenarios - Teminat
     And I click element: approve button at index 1
     And I click element: yes button at index 1
 
-  @teminad
+  @teminat
   Scenario: Var olan teminatın güncellenmesi: TC002 -
     Then I see assurance page
     And I wait assurance transaction button element 30 seconds at index 1
@@ -102,7 +109,7 @@ Feature: Orion Finance Finco Test Scenarios - Teminat
     And I click element: approve button at index 1
     And I click element: yes button at index 1
 
-  @teminay
+  @teminat
   Scenario: Teminatın pasife alınması: TC003 -
     Then I see assurance page
     And I wait assurance transaction button element 30 seconds at index 1
@@ -140,7 +147,7 @@ Feature: Orion Finance Finco Test Scenarios - Teminat
     And I click element: yes button at index 1
 
 
-  @teminaf
+  @teminat
   Scenario: Var olan teminatın gözlemlenmesi: TC004 -
     Then I see assurance page
     And I wait assurance transaction button element 30 seconds at index 1
@@ -153,7 +160,7 @@ Feature: Orion Finance Finco Test Scenarios - Teminat
     And I click element: assurance search button at index 1
     Then I click element: assurance monitoring assurance select row at index 1
 
-  @teminap
+  @teminat
   Scenario: Var olan teminatın bir krediye bağlanması: TC005 -
     Then I see assurance page
     And I wait assurance transaction button element 30 seconds at index 1
@@ -170,6 +177,50 @@ Feature: Orion Finance Finco Test Scenarios - Teminat
     When I click element: credit select row at index 1
     And I click element: assurance select check box at index 1
     Then I click element: bind collateral button at index 1
+    And I click element: bind collateral save button at index 1
+    And I click element: yes button at index 1
+    And I wait reference number text area element 30 seconds at index 1
+    Then I get the information: reference number text area at index 1
+    And Open https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL in a new tab
+    Then I see login page
+    Then I enter "19006" text to username text area at index 1
+    Then I enter "1" text to password text area at index 1
+    And I wait login button element 30 seconds at index 1
+    When I click element: login button at index 1
+    Then I see home page
+    And I click element: workflow management button at index 1
+    Then I see workflowManagement page
+    Then I click element: jobs pending on my list button at index 1
+    And I wait reference number area element 30 seconds at index 1
+    Then I enter my reference: "reference number" text to reference number area at index 1
+    And I wait inquire button element 30 seconds at index 1
+    And I click element: inquire button at index 1
+    Then I click element: work select row at index 1
+    Then I click element: yes button at index 1
+    And I click element: approve button at index 1
+    And I click element: yes button at index 1
+
+  @teminal
+  Scenario: Var olan kredinin teminatının çözülmesi: TC006 -
+    Then I see assurance page
+    And I wait assurance transaction button element 30 seconds at index 1
+    When I click element: assurance transaction button at index 1
+    And I wait assurance and credit relationship management element 30 seconds at index 1
+    When I click element: assurance and credit relationship management at index 1
+    Then I enter "2022081200002" text to credit no text area at index 1
+    Then I click element: assurance monitoring customer search button at index 1
+    When I select element: "AKTİF" under disbursement status at index 1
+    And I click element: credit date area at index 1
+    And I clear text to credit date area at index 1
+    Then I enter "12082022" text to credit date area at index 1
+    And I click element: credit query button at index 1
+    When I click element: credit select row at index 1
+    And I click element: choose collateral letter at index 1
+    And I click element: choose binded collateral at index 1
+    And I click element: transfer amount text area at index 1
+    Then I clear text to transfer amount text area at index 1
+    Then I enter "100" text to transfer amount text area at index 1
+    Then I click element: release collateral button at index 1
     And I click element: bind collateral save button at index 1
     And I click element: yes button at index 1
     And I wait reference number text area element 30 seconds at index 1
