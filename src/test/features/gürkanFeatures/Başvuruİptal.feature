@@ -1,6 +1,7 @@
 Feature: Orion Finance Finco Test Scenarios - BAŞVURU İPTAL KONTROLÜ
 
-
+  #1.)Başvuru İlerletme
+  #2.)Başvuru İptal
 
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
@@ -13,6 +14,26 @@ Feature: Orion Finance Finco Test Scenarios - BAŞVURU İPTAL KONTROLÜ
 
   @Başvuruİptal
   Scenario: Başvuru İptal: TC001 -
+
+    #Başvuru İlerletme - 1Scenario:
+    And I wait loan button credit element 30 seconds at index 1
+    When I click element: loan button credit at index 1
+    Then I see loan page
+    And I wait application button element 30 seconds at index 1
+    When I click element: application button at index 1
+    And I wait credit application introduction button element 30 seconds at index 1
+    When I click element: credit application introduction button at index 1
+    Then I enter "11876" text to customer no-new application text area at index 1
+    And I wait magnifying glass button element 30 seconds at index 1
+    Then I click element: magnifying glass button at index 1
+    Then I need to just wait
+    Then I click element: choose customer at index 1
+    And I wait trade registration no text area element 30 seconds at index 1
+    Then I enter "7611" text to trade registration no text area at index 1
+    And I wait goOn button element 30 seconds at index 1
+    Then I click element: goOn button at index 1
+
+    #Başvuru İptal - 2Scenario:
     And I wait loan button credit element 30 seconds at index 1
     When I click element: loan button credit at index 1
     Then I see loan page
