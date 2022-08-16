@@ -13,7 +13,7 @@ Feature: Orion Finance Finco Test Scenarios - BAŞVURU İPTAL KONTROLÜ
     Then I see home page
 
   @Başvuruİptal
-  Scenario: Başvuru İptal: TC001 -
+  Scenario: Başvuru İptal:
 
     #Başvuru İlerletme - 1Scenario:
     And I wait loan button credit element 30 seconds at index 1
@@ -32,13 +32,15 @@ Feature: Orion Finance Finco Test Scenarios - BAŞVURU İPTAL KONTROLÜ
     Then I enter "7611" text to trade registration no text area at index 1
     And I wait goOn button element 30 seconds at index 1
     Then I click element: goOn button at index 1
+    Then I click element: close button at index 1
 
-    #Başvuru İptal - 2Scenario:
-    And I wait loan button credit element 30 seconds at index 1
-    When I click element: loan button credit at index 1
-    Then I see loan page
-    And I wait application button element 30 seconds at index 1
-    When I click element: application button at index 1
+        #Başvuru İptal - 2Scenario:
+    #Then I see home page
+    #And I wait loan button credit element 30 seconds at index 1
+    #When I click element: loan button credit at index 1
+    #Then I see loan page
+    #And I wait application button element 30 seconds at index 1
+    #When I click element: application button at index 1
     And I wait application cancel button element 30 seconds at index 1
     When I click element: application cancel button at index 1
     And I wait pricing observation element 30 seconds at index 1

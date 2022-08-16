@@ -15,7 +15,7 @@ Feature: Orion Finance Finco Test Scenarios - GKTİ BAŞVURU
     Then I see home page
 
   @GKTİBaşvuru
-  Scenario: GKTİ Başvuru: TC001 -
+  Scenario: GKTİ Başvuru:
 
     #Fiyatlama Güncelleme - 1Scenario:
     And I wait loan button element 30 seconds at index 1

@@ -842,6 +842,15 @@
           "add collateral button": "//button[@orionid='btnAddCollateralItem']"
         },
         {
+          "success button": "//button[@class='btn btn-sm btn-success']"
+        },
+        {
+          "letter of guarantee selection": "//html/body/div[1]/div[4]/div/div[2]/div/div[2]/div/div/div/div[3]/div/div[1]/div[2]/div[8]/div/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
+        },
+        {
+          "deletion of letter of guarantee": "//button[@orionid='deleteButton']"
+        },
+        {
           "guarantor selection": "//select[@orionid='guarantor']"
         },
         {
