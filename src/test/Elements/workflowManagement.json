@@ -30,6 +30,24 @@
         },
         {
           "continue button": "//button[@orionid='btnContinue']"
+        },
+        {
+          "inquire button": "//button[@orionid='orion-id-008']"
+        },
+        {
+          "work select row": "//html/body/div/div[4]/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div/div[3]/div/div/div/table/tbody/tr[1]"
+        },
+        {
+          "approve button": "//button[@owf_type='approve']"
+        },
+        {
+          "yes button": "//i[@class='fa fa-check']"
+        },
+        {
+          "reference number text area": "//html/body/div[1]/div[7]/div/div/div[1]/div/h4/b"
+        },
+        {
+          "reference number area": "//input[@orionid='referans_no']"
         }
       ]
     }
