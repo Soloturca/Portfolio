@@ -1,0 +1,6 @@
+ControlFocus("Aç", "", "Edit1")
+Sleep(1000)
+ControlSetText("Aç", "", "Edit1", @ScriptDir & "\2017.pdf")
+Sleep(1000)
+ControlClick("Aç", "", "Button1")
+Sleep(1000)

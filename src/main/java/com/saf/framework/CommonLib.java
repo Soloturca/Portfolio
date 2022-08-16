@@ -10,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
+
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -119,6 +120,79 @@ public class CommonLib extends MyTestNGBaseClass {
         }
     }
 
+    public List<WebElement> findElements(String elem) {
+        List<WebElement> object = null;
+        String element = parser.getElement(page, elem);
+
+        try {
+            if (element != null) {
+                if (element.startsWith("//") || element.startsWith("(//")) {
+                    object = (List<WebElement>) oDriver.findElements(By.xpath(element));
+
+                    System.out.println("Elements found : " + elem);
+                } else if (element.startsWith("#") || element.startsWith(".")) {
+                    object = (List<WebElement>) oDriver.findElements(By.cssSelector(element));
+                    System.out.println("Elements found : " + elem);
+                } else {
+                    object = (List<WebElement>) oDriver.findElements(By.id(element));
+                    System.out.println("Elements found : " + elem);
+                }
+            } else if (element == null) {
+                object = (List<WebElement>) oDriver.findElements(By.xpath("//*[text()='" + elem + "'or contains(text(),'" + elem + "')]"));
+            }
+
+            if (object == null) {
+                System.out.println("Elements not found: " + elem);
+                Assert.fail("Elements not found : " + elem);
+            }
+            return object;
+        } catch (Exception e) {
+            System.out.println("Elements not found: " + elem);
+            Allure.addAttachment("There are no such elements.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "There are no such elements. " + elem, true);
+            Assert.fail("Elements not found : " + elem);
+
+            return null;
+
+        }
+    }
+
+    public WebElement checkElement(String elem, int index) {
+        WebElement object = null;
+        String element = parser.getElement(page, elem);
+
+        try {
+            if (element != null) {
+                if (element.startsWith("//") || element.startsWith("(//")) {
+                    object = oDriver.findElements(By.xpath(element)).get(index - 1);
+
+                    System.out.println("Element found : " + elem);
+                } else if (element.startsWith("#") || element.startsWith(".")) {
+                    object = oDriver.findElements(By.cssSelector(element)).get(index - 1);
+                    System.out.println("Element found : " + elem);
+                } else {
+                    object = oDriver.findElements(By.id(element)).get(index - 1);
+                    System.out.println("Element found : " + elem);
+                }
+            } else if (element == null) {
+                object = oDriver.findElement(By.xpath("//*[text()='" + elem + "'or contains(text(),'" + elem + "')]"));
+            }
+
+            if (object == null) {
+                System.out.println("Element not found: " + elem);
+                Assert.fail("Element not found : " + elem);
+            }
+            return object;
+        } catch (Exception e) {
+            System.out.println("Element not found: " + elem);
+            Allure.addAttachment("There is no such element.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "There is no such element. " + elem, true);
+            Assert.fail("Element not found : " + elem);
+
+            return null;
+
+        }
+    }
 
     public String getTheItemValueFromAttribute(String elem, int index) {
         String elementText = (findElement(elem, index).getAttribute("value"));

@@ -17,16 +17,14 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 import org.sikuli.script.FindFailed;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 import utils.excelutils.ExcelUtils;
-
-
 import java.awt.*;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.text.Format;
 import java.text.SimpleDateFormat;
+import java.util.*;
 import java.util.*;
 
 public class StepDefs extends MyTestNGBaseClass {
@@ -40,6 +38,7 @@ public class StepDefs extends MyTestNGBaseClass {
     public String randomEmployees;
     public String randomCiroString;
     public String mytckn;
+    public String vkn;
     public String object;
     public String tax;
     public String realCustomerTax;
@@ -47,9 +46,27 @@ public class StepDefs extends MyTestNGBaseClass {
     InputStream stringsis;
     TestUtils utils;
 
+    public String SmsCode, SmsCodeTag;
+
     @Before
     public void setReportName(Scenario scenario) {
         commonLib.startTest(scenario.getName());
+    }
+
+    @And("I have to refresh the page")
+    public void refreshPage() {
+        oDriver.navigate().refresh();
+    }
+
+    @And("^I have to getText from below element. Above element: (\\w+(?: \\w+)*) at index (\\d+)")
+    public void getTextFromBelowElement(String element, int index) {
+        WebElement object = commonLib.findElement(element, index);
+      //  WebElement element2 = oDriver.findElement(with(By.tagName("input")).below(object));
+       // System.out.println(element2.getText());
+        //element2.sendKeys("ABC");
+        //System.out.println(element2.getText());
+
+
     }
 
     @Given("^Open the (.*) URL$")

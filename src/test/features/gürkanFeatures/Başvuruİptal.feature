@@ -12,6 +12,7 @@ Feature: Orion Finance Finco Test Scenarios - BAŞVURU İPTAL KONTROLÜ
     When I click element: login button at index 1
     Then I see home page
 
+
   @Başvuruİptal
   Scenario: Başvuru İptal:
 
