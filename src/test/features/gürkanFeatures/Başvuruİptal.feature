@@ -2,6 +2,7 @@ Feature: Orion Finance Finco Test Scenarios - BAŞVURU İPTAL KONTROLÜ
 
   #1.)Başvuru İlerletme
   #2.)Başvuru İptal
+  #3.)Başvuru İptal Onayı
 
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
@@ -17,6 +18,7 @@ Feature: Orion Finance Finco Test Scenarios - BAŞVURU İPTAL KONTROLÜ
   Scenario: Başvuru İptal:
 
     #Başvuru İlerletme - 1Scenario:
+
     And I wait loan button credit element 30 seconds at index 1
     When I click element: loan button credit at index 1
     Then I see loan page
@@ -36,6 +38,7 @@ Feature: Orion Finance Finco Test Scenarios - BAŞVURU İPTAL KONTROLÜ
     Then I click element: close button at index 1
 
         #Başvuru İptal - 2Scenario:
+
     #Then I see home page
     #And I wait loan button credit element 30 seconds at index 1
     #When I click element: loan button credit at index 1
@@ -64,6 +67,8 @@ Feature: Orion Finance Finco Test Scenarios - BAŞVURU İPTAL KONTROLÜ
     When I click element: close system button at index 1
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
     Then I see login page
+
+    #Başvuru İptal Onayı - 3Scenario:
 
     Then I enter "30030" text to username text area at index 1
     Then I enter "1" text to password text area at index 1

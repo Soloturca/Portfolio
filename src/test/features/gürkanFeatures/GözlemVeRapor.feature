@@ -1,6 +1,6 @@
 Feature: Orion Finance Finco Test Scenarios - GÖZLEM VE RAPOR KONTROLÜ
 
-
+  #1.)Gözlem ve Rapor Ekranı
 
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
@@ -12,7 +12,10 @@ Feature: Orion Finance Finco Test Scenarios - GÖZLEM VE RAPOR KONTROLÜ
     Then I see home page
 
   @GözlemVeRapor
-  Scenario: GÖZLEM VE RAPOR: TC001 -
+  Scenario: GÖZLEM VE RAPOR:
+
+    #Gözlem ve Rapor Ekranı - 1Scenario:
+
     And I wait loan button credit element 30 seconds at index 1
     When I click element: loan button credit at index 1
     Then I see loan page

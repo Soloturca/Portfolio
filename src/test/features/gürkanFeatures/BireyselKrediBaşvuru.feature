@@ -12,7 +12,8 @@ Feature: Orion Finance Finco Test Scenarios - BİREYSEL MÜŞTERİ KREDİ BAŞVU
     Then I see home page
 
   @BireyselKrediBasvuru
-  Scenario: Kredi Başvuru:
+
+  Scenario: Bireysel Kredi Başvuru:
 
     #Bireysel Müşteri Kredi Başvuru - 1Scenario:
 

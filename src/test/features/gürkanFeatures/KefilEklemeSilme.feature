@@ -1,6 +1,6 @@
 Feature: Orion Finance Finco Test Scenarios - KEFİL EKLEME VE SİLME KONTROLÜ
 
-
+  #1.)Kefil Ekleme ve Silme
 
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URLGKTİBaşvuru.feature
@@ -12,7 +12,10 @@ Feature: Orion Finance Finco Test Scenarios - KEFİL EKLEME VE SİLME KONTROLÜ
     Then I see home page
 
   @KefilEklemeSilme
-  Scenario: GKTİ Başvuru: TC001 -
+  Scenario: KEFİL EKLEME VE SİLME:
+
+    #Kefil Ekleme ve Silme - 1Scenario:
+
     And I wait loan button credit element 30 seconds at index 1
     When I click element: loan button credit at index 1
     Then I see loan page
@@ -43,9 +46,3 @@ Feature: Orion Finance Finco Test Scenarios - KEFİL EKLEME VE SİLME KONTROLÜ
     Then I click element: delete guarantor at index 1
     And I wait yes button element 30 seconds at index 1
     Then I click element: yes button at index 1
-    And I wait goOn button element 30 seconds at index 1
-    Then I click element: goOn button at index 1
-
-    When I need to just wait
-    Then I need to preliminary assessment verify by transaction result at index 1
-    Then I click element: close button at index 1
