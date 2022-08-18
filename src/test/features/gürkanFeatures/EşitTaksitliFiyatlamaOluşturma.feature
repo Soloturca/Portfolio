@@ -1,5 +1,7 @@
 Feature: Orion Finance Finco Test Scenarios - EŞİT TAKSİTLİ FİYATLAMA OLUŞTURMA
 
+  #1.)Eşit Taksitli Ödemeli Fiyatlama Oluşturma
+  #2.)Fiyatlama Onayı
 
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
@@ -11,7 +13,10 @@ Feature: Orion Finance Finco Test Scenarios - EŞİT TAKSİTLİ FİYATLAMA OLUŞ
     Then I see home page
 
   @FiyatlamaEşit
-  Scenario: FİYATLAMA LOGİN: TC001 -
+  Scenario: FİYATLAMA EŞİT LOGİN:
+
+    #Eşit Taksitli Ödemeli Fiyatlama Oluşturma - 1Scenario:
+
     And I wait loan button element 30 seconds at index 1
     When I click element: loan button at index 1
     Then I see loan page
@@ -67,6 +72,8 @@ Feature: Orion Finance Finco Test Scenarios - EŞİT TAKSİTLİ FİYATLAMA OLUŞ
     When I click element: close button at index 1
     Then I see home page
 
+    #Fiyatlama Onayı - 2Scenario:
+
     And I wait close system button element 30 seconds at index 1
     When I click element: close system button at index 1
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
@@ -100,5 +107,3 @@ Feature: Orion Finance Finco Test Scenarios - EŞİT TAKSİTLİ FİYATLAMA OLUŞ
     Then I get pricing information of: pricing no area at index 1
     And I wait close button element 30 seconds at index 1
     When I click element: close button at index 1
-
-

@@ -1,6 +1,9 @@
-Feature: Orion Finance Finco Test Scenarios - Tahsisden İade Başvuru ve İptali
+Feature: Orion Finance Finco Test Scenarios - Tahsis Değerlendirme Aşamasından İade Başvuru ve İptali
 
-
+  #1.)Başvuru Oluşturma
+  #2.)Tahsisten Kredi İadesi
+  #3.)Kredi İptali
+  #4.)Kredi İptal Onayı
 
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
@@ -12,7 +15,10 @@ Feature: Orion Finance Finco Test Scenarios - Tahsisden İade Başvuru ve İptal
     Then I see home page
 
   @TahsisdenİadeBaşvuruVeİptal
-  Scenario: GKTİ Başvuru: TC001 -
+  Scenario: TAHSİS DEĞERLENDİRME AŞAMASINDAN KREDİ İADESİ VE İPTALİ:
+
+    #Başvuru Oluşturma - 1Scenario:
+
     And I wait loan button credit element 30 seconds at index 1
     When I click element: loan button credit at index 1
     Then I see loan page
@@ -94,6 +100,8 @@ Feature: Orion Finance Finco Test Scenarios - Tahsisden İade Başvuru ve İptal
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
     Then I see login page
 
+    #Tahsisten Kredi İadesi - 2Scenario:
+
     Then I enter "30030" text to username text area at index 1
     Then I enter "1" text to password text area at index 1
     And I wait login button element 30 seconds at index 1
@@ -136,6 +144,8 @@ Feature: Orion Finance Finco Test Scenarios - Tahsisden İade Başvuru ve İptal
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
     Then I see login page
 
+    #Kredi İptali - 3Scenario:
+
     Then I enter "40000" text to username text area at index 1
     Then I enter "1" text to password text area at index 1
     And I wait login button element 30 seconds at index 1
@@ -169,6 +179,8 @@ Feature: Orion Finance Finco Test Scenarios - Tahsisden İade Başvuru ve İptal
     When I click element: close system button at index 1
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
     Then I see login page
+
+    #Kredi İptal Onayı - 4Scenario:
 
     Then I enter "30030" text to username text area at index 1
     Then I enter "1" text to password text area at index 1
@@ -233,4 +245,3 @@ Feature: Orion Finance Finco Test Scenarios - Tahsisden İade Başvuru ve İptal
 
     When I need to just wait
     Then I need to application cancellation has been approved verify by application cancellation message at index 1
-

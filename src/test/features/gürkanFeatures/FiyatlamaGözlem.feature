@@ -1,6 +1,6 @@
 Feature: Orion Finance Finco Test Scenarios - FİYATLAMA GÖZLEM EKRANI KONTROLÜ
 
-
+   #1.)Fiyatlama Gözlem Ekranı
 
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
@@ -12,7 +12,10 @@ Feature: Orion Finance Finco Test Scenarios - FİYATLAMA GÖZLEM EKRANI KONTROL�
     Then I see home page
 
   @FiyatlamaGözlem
-  Scenario: FİYATLAMA GÖZLEM: TC001 -
+  Scenario: FİYATLAMA GÖZLEM:
+
+    #Fiyatlama Gözlem Ekranı
+
     And I wait loan button element 30 seconds at index 1
     When I click element: loan button at index 1
     Then I see loan page

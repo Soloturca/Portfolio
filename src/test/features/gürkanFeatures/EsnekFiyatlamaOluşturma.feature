@@ -13,7 +13,7 @@ Feature: Orion Finance Finco Test Scenarios - ESNEK FİYATLAMA OLUŞTURMA
     Then I see home page
 
   @FiyatlamaEsnek
-  Scenario: FİYATLAMA LOGİN:
+  Scenario: FİYATLAMA ESNEK LOGİN:
 
     #Esnek Ödemeli Fiyatlama Oluşturma - 1Scenario:
 
