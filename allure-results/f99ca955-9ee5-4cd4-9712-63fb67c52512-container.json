@@ -1,1 +1,0 @@
-{"uuid":"f99ca955-9ee5-4cd4-9712-63fb67c52512","name":"Scenario: SH QUERIES FOR CCS USAGE TESTS","children":["ab655995-27d0-4418-89be-eeffac8c49d6"],"befores":[{"name":"CcsUsage.setReportName()","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1654783736624,"stop":1654783737164}],"afters":[],"start":1654783736621,"stop":1654783822328}
