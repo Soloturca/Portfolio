@@ -1,0 +1,1 @@
+{"uuid":"393f21be-a781-4a31-873d-39c56cc10087","name":"Scenario: GKTİ Başvuru:","children":["5550b876-1059-4680-ad61-4e89288ad9df"],"befores":[{"name":"StepDefs.setReportName(Scenario)","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1661933994272,"stop":1661933994379}],"afters":[],"start":1661933994265,"stop":1661934230215}
