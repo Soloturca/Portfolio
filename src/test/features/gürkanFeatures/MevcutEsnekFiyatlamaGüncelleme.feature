@@ -37,8 +37,7 @@ Feature: Orion Finance Finco Test Scenarios - MEVCUT ESNEK FİYATLAMA GÜNCELLEM
     Then I need to just wait
     Then I click element: choose pricing at index 1
     And I wait start date area element 30 seconds at index 1
-    Then I get the information by copying the value from: start date area at index 1
-    Then I copy the information by copying the value to: end date area at index 1
+    Then I copy the information by copying the system time to: end date area at index 1
 
     When I click element: update button at index 1
     And I wait warning popup element 30 seconds at index 1

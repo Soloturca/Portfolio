@@ -17,6 +17,7 @@ Feature: Orion Finance Finco Test Scenarios - ESNEK FİYATLAMA OLUŞTURMA
 
     #Esnek Ödemeli Fiyatlama Oluşturma - 1Scenario:
 
+
     And I wait loan button element 30 seconds at index 1
     When I click element: loan button at index 1
     Then I see loan page
@@ -27,8 +28,7 @@ Feature: Orion Finance Finco Test Scenarios - ESNEK FİYATLAMA OLUŞTURMA
     And I wait page header element 30 seconds at index 1
 
     When I enter "Grkn Fiyatlama" text to pricing name area at index 1
-    Then I get the information by copying the value from: start date area at index 1
-    Then I copy the information by copying the value to: end date area at index 1
+    Then I copy the information by copying the system time to: end date area at index 1
 
     When I select element: "ESNEK ÖDEME" under payment type selection at index 1
     When I select element: "YILDA" under period type selection at index 1

@@ -27,8 +27,7 @@ Feature: Orion Finance Finco Test Scenarios - EŞİT TAKSİTLİ FİYATLAMA OLUŞ
     And I wait page header element 30 seconds at index 1
 
     When I enter "Grkn Fiyatlama" text to pricing name area at index 1
-    Then I get the information by copying the value from: start date area at index 1
-    Then I copy the information by copying the value to: end date area at index 1
+    Then I copy the information by copying the system time to: end date area at index 1
 
     When I select element: "EŞİT TAKSİTLİ ÖDEME" under payment type selection at index 1
     When I select element: "YILDA" under period type selection at index 1

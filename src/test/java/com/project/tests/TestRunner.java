@@ -29,11 +29,12 @@ import java.io.IOException;
 
 
 @CucumberOptions(
-        features = "src/test/features/gürkanFeatures/",
-        //tags = "@Test",
-        tags = "@GKTİBaşvuru",
+        features = "src/test/features/gürkanFeatures",
+        //tags = "@FiyatlamaEsnek",
+        tags = {"@BireyselKrediBaşvuru, @EsnekFiyatlamaOluşturma, @EşitTaksitliFiyatlamaOluşturma, @FiyatlamaGözlem, @GözlemVeRapor, @KefilEklemeSilme, @MevcutEsnekFiyatlamaGüncelleme, @MevcutEşitFiyatlamaGüncelleme, @TahsisdenİadeBaşvuruVeİptali, @TeminatEklemeSilme"},
         plugin = {"pretty", "io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm"},
         glue = {"com.project.stepdefs"})
+
 
 public class TestRunner extends MyTestNGBaseClass {
     private io.cucumber.testng.TestNGCucumberRunner testNGCucumberRunner;
