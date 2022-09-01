@@ -17,6 +17,7 @@ Feature: Orion Finance Finco Test Scenarios - ESNEK FİYATLAMA OLUŞTURMA
 
     #Esnek Ödemeli Fiyatlama Oluşturma - 1Scenario:
 
+
     And I wait loan button element 30 seconds at index 1
     When I click element: loan button at index 1
     Then I see loan page
