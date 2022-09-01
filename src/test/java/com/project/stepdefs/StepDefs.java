@@ -795,7 +795,6 @@ public class StepDefs extends MyTestNGBaseClass {
         datse = f.format(date.getTime());
 
 
-
         boolean flag = false;
         try {
             if (object != null) {
