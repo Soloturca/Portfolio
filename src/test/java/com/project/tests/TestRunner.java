@@ -30,7 +30,7 @@ import java.io.IOException;
 
 @CucumberOptions(
         features = "src/test/features/gürkanFeatures",
-        //tags = "@Test",
+        //tags = "@FiyatlamaEsnek",
         tags = {"@BireyselKrediBaşvuru, @EsnekFiyatlamaOluşturma, @EşitTaksitliFiyatlamaOluşturma, @FiyatlamaGözlem, @GözlemVeRapor, @KefilEklemeSilme, @MevcutEsnekFiyatlamaGüncelleme, @MevcutEşitFiyatlamaGüncelleme, @TahsisdenİadeBaşvuruVeİptali, @TeminatEklemeSilme"},
         plugin = {"pretty", "io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm"},
         glue = {"com.project.stepdefs"})

@@ -14,7 +14,7 @@ Feature: Orion Finance Finco Test Scenarios - BAŞVURU İPTAL KONTROLÜ
     Then I see home page
 
 
-  @Başvuruİptal
+  @Başvuruİptal1
   Scenario: Başvuru İptal:
 
     #Başvuru İlerletme - 1Scenario:
@@ -133,14 +133,4 @@ Feature: Orion Finance Finco Test Scenarios - BAŞVURU İPTAL KONTROLÜ
 
     When I need to just wait
     Then I need to application cancellation has been approved verify by application cancellation message at index 1
-
-
-
-
-
-
-
-
-
-
 
