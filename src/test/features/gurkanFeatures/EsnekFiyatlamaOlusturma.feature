@@ -1,7 +1,7 @@
 Feature: Orion Finance Finco Test Scenarios - ESNEK FİYATLAMA OLUŞTURMA
 
-  #1.)Esnek Ödemeli Fiyatlama Oluşturma
-  #2.)Fiyatlama Onayı
+  #1.)Esnek Ödemeli Fiyatlama Oluşturma: TC001
+  #2.)Fiyatlama Onayı: TC002
 
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
@@ -13,7 +13,7 @@ Feature: Orion Finance Finco Test Scenarios - ESNEK FİYATLAMA OLUŞTURMA
     Then I see home page
 
   @FiyatlamaEsnek
-  Scenario: FİYATLAMA ESNEK LOGİN:
+  Scenario: Esnek Ödemeli Fiyatlama Oluşturma: TC001
 
     #Esnek Ödemeli Fiyatlama Oluşturma - 1Scenario:
 
@@ -71,6 +71,9 @@ Feature: Orion Finance Finco Test Scenarios - ESNEK FİYATLAMA OLUŞTURMA
     And I wait close button element 30 seconds at index 1
     When I click element: close button at index 1
     Then I see home page
+
+  @FiyatlamaEsnek
+  Scenario: Fiyatlama Onayı: TC002
 
     #Fiyatlama Onayı - 2Scenario:
 

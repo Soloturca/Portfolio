@@ -1,6 +1,6 @@
 Feature: Orion Finance Finco Test Scenarios - GÖZLEM VE RAPOR KONTROLÜ
 
-  #1.)Gözlem ve Rapor Ekranı
+  #1.)Gözlem ve Rapor Ekranı: TC001
 
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
@@ -11,8 +11,8 @@ Feature: Orion Finance Finco Test Scenarios - GÖZLEM VE RAPOR KONTROLÜ
     When I click element: login button at index 1
     Then I see home page
 
-  @GözlemVeRapor
-  Scenario: GÖZLEM VE RAPOR:
+  @GozlemVeRapor
+  Scenario: GÖZLEM VE RAPOR: TC001
 
     #Gözlem ve Rapor Ekranı - 1Scenario:
 

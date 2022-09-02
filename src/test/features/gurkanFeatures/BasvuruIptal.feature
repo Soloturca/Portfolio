@@ -1,8 +1,8 @@
 Feature: Orion Finance Finco Test Scenarios - BAŞVURU İPTAL KONTROLÜ
 
-  #1.)Başvuru İlerletme
-  #2.)Başvuru İptal
-  #3.)Başvuru İptal Onayı
+  #1.)Başvuru İlerletme: TC001
+  #2.)Başvuru İptal: TC002
+  #3.)Başvuru İptal Onayı: TC003
 
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
@@ -14,8 +14,8 @@ Feature: Orion Finance Finco Test Scenarios - BAŞVURU İPTAL KONTROLÜ
     Then I see home page
 
 
-  @Başvuruİptal1
-  Scenario: Başvuru İptal:
+  @BasvuruIptal
+  Scenario: Başvuru İlerletme: TC001
 
     #Başvuru İlerletme - 1Scenario:
 
@@ -36,6 +36,9 @@ Feature: Orion Finance Finco Test Scenarios - BAŞVURU İPTAL KONTROLÜ
     And I wait goOn button element 30 seconds at index 1
     Then I click element: goOn button at index 1
     Then I click element: close button at index 1
+
+  @BasvuruIptal
+  Scenario: Başvuru İptal: TC002
 
         #Başvuru İptal - 2Scenario:
 
@@ -67,6 +70,9 @@ Feature: Orion Finance Finco Test Scenarios - BAŞVURU İPTAL KONTROLÜ
     When I click element: close system button at index 1
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
     Then I see login page
+
+  @BasvuruIptal
+  Scenario: Başvuru İptal Onayı: TC003
 
     #Başvuru İptal Onayı - 3Scenario:
 

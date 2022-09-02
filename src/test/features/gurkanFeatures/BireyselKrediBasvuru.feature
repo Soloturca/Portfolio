@@ -1,6 +1,6 @@
 Feature: Orion Finance Finco Test Scenarios - BİREYSEL MÜŞTERİ KREDİ BAŞVURU OLUŞTURAMAMA
 
-  #1.)Bireysel Müşterinin Kredi Başvuru Oluşturamaması
+  #1.)Bireysel Müşterinin Kredi Başvuru Oluşturamaması: TC001
 
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
@@ -13,7 +13,7 @@ Feature: Orion Finance Finco Test Scenarios - BİREYSEL MÜŞTERİ KREDİ BAŞVU
 
   @BireyselKrediBasvuru
 
-  Scenario: Bireysel Kredi Başvuru:
+  Scenario: Bireysel Kredi Başvuru: TC001
 
     #Bireysel Müşteri Kredi Başvuru - 1Scenario:
 
