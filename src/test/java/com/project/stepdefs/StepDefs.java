@@ -777,7 +777,6 @@ public class StepDefs extends MyTestNGBaseClass {
         return flag;
     }
 
-
     @Then("^(?:I )?copy the information by copying the system time to: (\\w+(?: \\w+)*) at index (\\d+)")
     public boolean pase(String element, int index) throws InterruptedException {
 
@@ -792,8 +791,7 @@ public class StepDefs extends MyTestNGBaseClass {
         date.add(Calendar.YEAR, 1);
         System.out.println(f.format(date.getTime()));
         datse = f.format(date.getTime());
-
-
+        
         boolean flag = false;
         try {
             if (object != null) {

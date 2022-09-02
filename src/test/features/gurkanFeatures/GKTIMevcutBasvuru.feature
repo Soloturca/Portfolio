@@ -1,8 +1,9 @@
 Feature: Orion Finance Finco Test Scenarios - GKTİ MEVCUT BAŞVURU KONTROLÜ
 
-  #1.)GKTİ Müşteri Yeni Başvuru Giriş
-  #2.)GKTİ Müşteri Mevcut Başvuru Giriş
-  #3.)Başvuru İptal
+  #1.)GKTİ Müşteri Yeni Başvuru Giriş: TC001
+  #2.)GKTİ Müşteri Mevcut Başvuru Giriş: TC002
+  #3.)Başvuru İptal: TC003
+  #4.)Başvuru İptal Onay akışı: TC004
 
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
@@ -13,8 +14,8 @@ Feature: Orion Finance Finco Test Scenarios - GKTİ MEVCUT BAŞVURU KONTROLÜ
     When I click element: login button at index 1
     Then I see home page
 
-  @GKTİMevcutBaşvuru
-  Scenario: GKTİ MEVCUT BAŞVURU:
+  @GKTIMevcutBasvuru
+  Scenario: GKTİ Müşteri Yeni Başvuru Giriş: TC001
 
     #GKTİ Müşteri Yeni Başvuru Giriş - 1Scenario:
 
@@ -38,6 +39,9 @@ Feature: Orion Finance Finco Test Scenarios - GKTİ MEVCUT BAŞVURU KONTROLÜ
     Then I need to preliminary assessment verify by transaction result at index 1
     Then I click element: close button at index 1
     Then I see home page
+
+  @GKTIMevcutBasvuru
+  Scenario: GKTİ Müşteri Mevcut Başvuru Giriş: TC002
 
     #GKTİ Müşteri Mevcut Başvuru Giriş - 2Scenario:
 
@@ -71,7 +75,10 @@ Feature: Orion Finance Finco Test Scenarios - GKTİ MEVCUT BAŞVURU KONTROLÜ
     Then I need to preliminary assessment verify by transaction result at index 1
     Then I click element: close button at index 1
 
-    #Başvuru İptal
+  @GKTIMevcutBasvuru
+  Scenario: Başvuru İptal: TC003
+
+    #Başvuru İptal - 3Scenario:
 
     And I wait application cancel button element 30 seconds at index 1
     When I click element: application cancel button at index 1
@@ -90,6 +97,11 @@ Feature: Orion Finance Finco Test Scenarios - GKTİ MEVCUT BAŞVURU KONTROLÜ
     And I wait close button element 30 seconds at index 1
     When I click element: close button at index 1
     Then I see home page
+
+  @GKTIMevcutBasvuru
+  Scenario: Başvuru İptal Onay akışı: TC004
+
+    #Başvuru İptal Onay akışı - 4Scenario:
 
     And I wait close system button element 30 seconds at index 1
     When I click element: close system button at index 1

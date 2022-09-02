@@ -1,6 +1,6 @@
 Feature: Orion Finance Finco Test Scenarios - KEFİL EKLEME VE SİLME KONTROLÜ
 
-  #1.)Kefil Ekleme ve Silme
+  #1.)Kefil Ekleme ve Silme: TC001
 
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URLGKTİBaşvuru.feature
@@ -12,7 +12,7 @@ Feature: Orion Finance Finco Test Scenarios - KEFİL EKLEME VE SİLME KONTROLÜ
     Then I see home page
 
   @KefilEklemeSilme
-  Scenario: KEFİL EKLEME VE SİLME:
+  Scenario: KEFİL EKLEME VE SİLME: TC001
 
     #Kefil Ekleme ve Silme - 1Scenario:
 

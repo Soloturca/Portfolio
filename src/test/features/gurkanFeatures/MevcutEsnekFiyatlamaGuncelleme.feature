@@ -1,7 +1,7 @@
-Feature: Orion Finance Finco Test Scenarios - MEVCUT EŞİT FİYATLAMA GÜNCELLEME
+Feature: Orion Finance Finco Test Scenarios - MEVCUT ESNEK FİYATLAMA GÜNCELLEME
 
-  #1.)Mevcut Eşit Taksitli Fiyatlama Güncelleme
-  #2.)Fiyatlama Onayı
+    #1.)Mevcut Esnek Ödemeli Fiyatlama Güncelleme: TC001
+    #2.)Fiyatlama Onayı: TC002
 
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
@@ -12,10 +12,10 @@ Feature: Orion Finance Finco Test Scenarios - MEVCUT EŞİT FİYATLAMA GÜNCELLE
     When I click element: login button at index 1
     Then I see home page
 
-  @MevcutEsitFiyatlama
-  Scenario: MEVCUT EŞİT TAKSİTLİ FİYATLAMA:
+  @MevcutEsnekFiyatlama
+  Scenario: Mevcut Esnek Ödemeli Fiyatlama Güncelleme : TC001
 
-    #Mevcut Eşit Taksitli Fiyatlama Güncelleme - 1Scenario:
+    #Mevcut Esnek Ödemeli Fiyatlama Güncelleme - 1Scenario:
 
     And I wait loan button element 30 seconds at index 1
     When I click element: loan button at index 1
@@ -31,12 +31,13 @@ Feature: Orion Finance Finco Test Scenarios - MEVCUT EŞİT FİYATLAMA GÜNCELLE
     Then I click element: magnifying glass button at index 1
     Then I wait pricing code area element 30 seconds at index 2
 
-    When I enter "347" text to pricing code area at index 2
+    When I enter "345" text to pricing code area at index 2
     And I select element: "Pasif" under situation at index 2
     Then I click element: inquire button for financial observation at index 1
     Then I need to just wait
     Then I click element: choose pricing at index 1
     And I wait start date area element 30 seconds at index 1
+    Then I clear text to end date area at index 1
     Then I copy the information by copying the system time to: end date area at index 1
 
     When I click element: update button at index 1
@@ -49,6 +50,9 @@ Feature: Orion Finance Finco Test Scenarios - MEVCUT EŞİT FİYATLAMA GÜNCELLE
     And I wait close button element 30 seconds at index 1
     When I click element: close button at index 1
     Then I see home page
+
+  @MevcutEsnekFiyatlama
+  Scenario: Fiyatlama Onayı : TC002
 
     #Fiyatlama Onayı - 2Scenario:
 

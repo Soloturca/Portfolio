@@ -1,7 +1,7 @@
-Feature: Orion Finance Finco Test Scenarios - MEVCUT ESNEK FİYATLAMA GÜNCELLEME
+Feature: Orion Finance Finco Test Scenarios - EŞİT TAKSİTLİ FİYATLAMA OLUŞTURMA
 
-    #1.)Mevcut Esnek Ödemeli Fiyatlama Güncelleme
-    #2.)Fiyatlama Onayı
+  #1.)Eşit Taksitli Ödemeli Fiyatlama Oluşturma: TC001
+  #2.)Fiyatlama Onayı: TC002
 
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
@@ -12,10 +12,10 @@ Feature: Orion Finance Finco Test Scenarios - MEVCUT ESNEK FİYATLAMA GÜNCELLEM
     When I click element: login button at index 1
     Then I see home page
 
-  @MevcutEsnekFiyatlama
-  Scenario: MEVCUT ESNEK ÖDEMELİ FİYATLAMA LOGİN:
+  @FiyatlamaEsit
+  Scenario: FİYATLAMA EŞİT LOGİN: TC001
 
-    #Mevcut Esnek Ödemeli Fiyatlama Güncelleme - 1Scenario:
+    #Eşit Taksitli Ödemeli Fiyatlama Oluşturma - 1Scenario:
 
     And I wait loan button element 30 seconds at index 1
     When I click element: loan button at index 1
@@ -26,20 +26,41 @@ Feature: Orion Finance Finco Test Scenarios - MEVCUT ESNEK FİYATLAMA GÜNCELLEM
     When I click element: financial identification button at index 1
     And I wait page header element 30 seconds at index 1
 
-    When I click element: current pricing at index 1
-    And I wait magnifying glass button element 30 seconds at index 1
-    Then I click element: magnifying glass button at index 1
-    Then I wait pricing code area element 30 seconds at index 2
-
-    When I enter "345" text to pricing code area at index 2
-    And I select element: "Pasif" under situation at index 2
-    Then I click element: inquire button for financial observation at index 1
-    Then I need to just wait
-    Then I click element: choose pricing at index 1
-    And I wait start date area element 30 seconds at index 1
+    When I enter "Grkn Fiyatlama" text to pricing name area at index 1
     Then I copy the information by copying the system time to: end date area at index 1
 
-    When I click element: update button at index 1
+    When I select element: "EŞİT TAKSİTLİ ÖDEME" under payment type selection at index 1
+    When I select element: "YILDA" under period type selection at index 1
+    Then I enter "50" text to file charge at index 1
+    And I select element: "ORAN" under file charge type at index 1
+    And I enter "Otomasyon Testi Esit Taksitli Odemeli Fiyatlama" text to explanation area at index 1
+
+    When I select element: "VODAFONE NET SUNU TİPLERİ" under product main group selection at index 1
+    When I click element: product area at index 1
+    And I wait select all button element 30 seconds at index 1
+    And I click element: select all button at index 1
+    When I click element: sales channel area at index 1
+    And I wait select all button element 30 seconds at index 1
+    When I click element: select all button at index 1
+    When I click element: customer type area at index 1
+    And I wait select all button element 30 seconds at index 1
+    When I click element: select all button at index 1
+    When I click element: application type area at index 1
+    And I wait select all button element 30 seconds at index 1
+    When I click element: select all button at index 1
+    When I click element: kkdf exemption area at index 1
+    And I wait select all button element 30 seconds at index 1
+    When I click element: select all button at index 1
+
+    Then I enter "1" text to maturity range first area at index 1
+    Then I enter "50" text to maturity range second area at index 1
+    Then I enter "1" text to amount range first area at index 1
+    Then I enter "1000000" text to amount range second area at index 1
+    Then I enter "20" text to contract margin area at index 1
+    And I wait add price terms button element 30 seconds at index 1
+    When I click element: add price terms button at index 1
+
+    When I click element: pricing save button at index 1
     And I wait warning popup element 30 seconds at index 1
     And I click element: note at index 1
     Then I enter "Fiyatlama Onayi Ltf." text to note at index 1
@@ -49,6 +70,9 @@ Feature: Orion Finance Finco Test Scenarios - MEVCUT ESNEK FİYATLAMA GÜNCELLEM
     And I wait close button element 30 seconds at index 1
     When I click element: close button at index 1
     Then I see home page
+
+  @FiyatlamaEsit
+  Scenario: Fiyatlama Onayı: TC002
 
     #Fiyatlama Onayı - 2Scenario:
 
