@@ -3,7 +3,7 @@ Feature: Orion Finance Finco Test Scenarios - KEFİL EKLEME VE SİLME KONTROLÜ
   #1.)Kefil Ekleme ve Silme: TC001
 
   Background: System Login & Creating Job for unique reference number
-    Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URLGKTİBaşvuru.feature
+    Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
     Then I see login page
     Then I enter "40000" text to username text area at index 1
     Then I enter "1" text to password text area at index 1
