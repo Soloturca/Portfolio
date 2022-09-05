@@ -30,7 +30,7 @@ import java.io.IOException;
 
 @CucumberOptions(
         features = "src/test/features",
-        //tags = "@MevcutEsitFiyatlama",
+        //tags = "@BasvuruIptal",
         tags = {"@BireyselKrediBasvuru, @teminat, @BasvuruIptal, @FiyatlamaEsit, @FiyatlamaEsnek, @FiyatlamaGozlem, @GKTIMevcutBasvuru, @GozlemVeRapor, @KefilEklemeSilme, @MevcutEsitFiyatlama, @MevcutEsnekFiyatlama"},
         plugin = {"pretty", "io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm"},
         glue = {"com.project.stepdefs"})

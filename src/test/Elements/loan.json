@@ -779,6 +779,9 @@
           "trade registration no text area": "//input[@orionid='tradeRegistrationNo']"
         },
         {
+          "trade registration no individual text area": "//input[@orionid='tradeRegistrationNoIndividual']"
+        },
+        {
           "parties row": "//*[@class='orionrpm-accordion-title']"
         },
         {
