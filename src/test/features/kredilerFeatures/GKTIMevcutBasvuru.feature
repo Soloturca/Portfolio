@@ -31,7 +31,7 @@ Feature: Orion Finance Finco Test Scenarios - GKTİ MEVCUT BAŞVURU KONTROLÜ
     Then I click element: magnifying glass button at index 1
     Then I need to just wait
     Then I click element: choose customer at index 1
-    And I wait trade registration no text area element 30 seconds at index 1
+    And I wait trade registration no individual text area element 30 seconds at index 1
     Then I enter "1" text to trade registration no individual text area at index 1
     Then I click element: goOn button at index 1
 
