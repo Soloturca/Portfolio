@@ -6,6 +6,7 @@ Feature: Orion Finance Finco Test Scenarios / Test Cases for Treasury
   @Kur
   Scenario: TCMB kurlarının sisteme alınması
    #TCMB Kur/Parite Getir
+
     Given I go to "https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/" with this username: "30060" and this password:"1"
     Then I see treasury page
     And I wait treasury menu for 30060 element 3 seconds at index 1
