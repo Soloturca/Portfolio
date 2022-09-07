@@ -18,7 +18,6 @@ Feature: Orion Finance Finco Test Scenarios - Bankalar ve banka şubeleri
     Then I see home page
     
 
-
   @bank
   Scenario: Banka Subesi Olusturma: TC001 -
     Then I see banks page
