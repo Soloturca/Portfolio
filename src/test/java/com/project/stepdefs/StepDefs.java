@@ -751,6 +751,43 @@ public class StepDefs extends MyTestNGBaseClass {
         String object = commonLib.getTheElementInformationForPricing(element, index);
     }
 
+    @Then("^(?:I )?copy the information by copying the delivery date to: (\\w+(?: \\w+)*) at index (\\d+)")
+    public boolean pase(String element, int index) throws InterruptedException {
+
+        WebElement object;
+        object = commonLib.waitElement(element, timeout, index);
+
+        String datse;
+
+        Calendar date = Calendar.getInstance();
+        date.setTime(new Date());
+        Format f = new SimpleDateFormat("dd/MM/yyyy");
+        date.add(Calendar.YEAR, 1);
+        System.out.println(f.format(date.getTime()));
+        datse = f.format(date.getTime());
+
+        boolean flag = false;
+        try {
+            if (object != null) {
+                Thread.sleep(2000);
+                object.sendKeys(datse);
+
+                System.out.println("The text has been pasted.");
+                Allure.addAttachment("The text has been pasted.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "The text has been pasted.", true);
+                return true;
+            }
+        } catch (Exception e) {
+            System.out.println("The paste action cannot be done.");
+            Allure.addAttachment("The paste action cannot be done.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "The paste action cannot be done.", true);
+            Assert.fail("The paste action cannot be done!");
+            flag = false;
+
+        }
+        return flag;
+    }
+
     @Then("^(?:I )?get the information by copying the value from: (\\w+(?: \\w+)*) at index (\\d+)")
     public boolean copyElement(String element, int index) throws InterruptedException {
         WebElement object;
@@ -948,6 +985,27 @@ public class StepDefs extends MyTestNGBaseClass {
 
         }
         return flag;
+    }
+
+    @Then("^(?:I )?upload the file for payment \"([^\"]*)\" using the: (\\w+(?: \\w+)*) at index (\\d+)")
+    public void uploadFile3(String text, String element, int index) throws IOException, InterruptedException, FindFailed, AWTException, IOException {
+
+        WebElement object;
+        object = commonLib.findElement(element, index);
+        object.click();
+        Thread.sleep(5000);
+
+        if (text.contains("testtd.docx")) {
+
+            System.out.println("Document is uploading for testtd.");
+            String fileName = System.getProperty("user.dir") + "\\Library\\testtd.docx";
+            Runtime.getRuntime().exec(System.getProperty("user.dir") + "\\Exes\\seleniumFolderUpload.exe " + fileName);
+            Thread.sleep(5000);
+
+            System.out.println("testtd.docx is uploaded.");
+
+        }
+
     }
 
     @Then("^(?:I )?get the item value: (\\w+(?: \\w+)*)")
@@ -2611,8 +2669,4 @@ public class StepDefs extends MyTestNGBaseClass {
 
 
     }
-
-
 }
-
-
