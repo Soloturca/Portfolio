@@ -140,13 +140,13 @@
           "approved amount text area": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[26]"
         },
         {
-          "confirmed amount text area": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[36]"
+          "confirmed amount text area": "//td[@class='htRight']"
         },
         {
           "maturity area": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[25]"
         },
         {
-          "approved due date": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[35]"
+          "approved due date": "//td[@class='htRight']"
         },
         {
           "approved maturity text area": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[6]"
@@ -777,6 +777,9 @@
         },
         {
           "trade registration no text area": "//input[@orionid='tradeRegistrationNo']"
+        },
+        {
+          "trade registration no individual text area": "//input[@orionid='tradeRegistrationNoIndividual']"
         },
         {
           "parties row": "//*[@class='orionrpm-accordion-title']"

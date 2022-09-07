@@ -74,7 +74,7 @@
           "yes button": "//i[@class='fa fa-check']"
         },
         {
-          "assurance select button": "//html/body/div[1]/div[4]/div/div[5]/div/div[2]/div/div[1]/div/div[1]/div/div/div[5]/div/div[2]/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
+          "assurance select button": "//html/body/div[1]/div[4]/div/div[5]/div/div[2]/div/div[1]/div/div[1]/div/div/div[5]/div/div[2]/div/div/div[3]/div/div/div/table/tbody/tr[2]/th"
         },
         {
           "assurance amount tab": "//*[@id=\"content\"]/div/div[5]/div/div[2]/div/div[1]/ol/li[3]"

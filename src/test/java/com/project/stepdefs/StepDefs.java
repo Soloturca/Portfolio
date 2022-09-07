@@ -15,7 +15,6 @@ import oracle.net.aso.e;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
-import org.sikuli.script.FindFailed;
 import org.testng.Assert;
 import utils.excelutils.ExcelUtils;
 import java.awt.*;
@@ -383,7 +382,7 @@ public class StepDefs extends MyTestNGBaseClass {
     }
 
     @Then("^I have to check is there any document is uploaded on the (.*) at index (\\d+) for address")
-    public boolean checkUploadFile(String element, int index) throws InterruptedException, AWTException, FindFailed, IOException {
+    public boolean checkUploadFile(String element, int index) throws InterruptedException, AWTException, IOException {
         WebElement object;
         object = commonLib.waitElement(element, timeout, index);
         boolean flag = false;
@@ -434,7 +433,7 @@ public class StepDefs extends MyTestNGBaseClass {
     }
 
     @Then("^I have to check is there any document is uploaded on the (.*) at index (\\d+) for telephone")
-    public boolean checkUploadFileForTelephone(String element, int index) throws InterruptedException, AWTException, FindFailed, IOException {
+    public boolean checkUploadFileForTelephone(String element, int index) throws InterruptedException, AWTException, IOException {
         WebElement object;
         object = commonLib.waitElement(element, timeout, index);
         boolean flag = false;
@@ -614,7 +613,7 @@ public class StepDefs extends MyTestNGBaseClass {
     }
 
     @Then("^(?:I )?upload the file for customer \"([^\"]*)\" using the: (\\w+(?: \\w+)*) at index (\\d+)")
-    public void uploadFile2(String text, String element, int index) throws IOException, InterruptedException, FindFailed, AWTException, IOException {
+    public void uploadFile2(String text, String element, int index) throws IOException, InterruptedException, AWTException, IOException {
 
         WebElement object;
         object = commonLib.findElement(element, index);
@@ -815,6 +814,42 @@ public class StepDefs extends MyTestNGBaseClass {
         return flag;
     }
 
+    @Then("^(?:I )?copy the information by copying the system time to: (\\w+(?: \\w+)*) at index (\\d+)")
+    public boolean pase(String element, int index) throws InterruptedException {
+
+         WebElement object;
+        object = commonLib.waitElement(element, timeout, index);
+
+          String datse;
+
+        Calendar date = Calendar.getInstance();
+        date.setTime(new Date());
+        Format f = new SimpleDateFormat("dd/MM/yyyy");
+        date.add(Calendar.YEAR, 1);
+        System.out.println(f.format(date.getTime()));
+        datse = f.format(date.getTime());
+        
+        boolean flag = false;
+        try {
+            if (object != null) {
+                Thread.sleep(2000);
+                object.sendKeys(datse);
+
+                System.out.println("The text has been pasted.");
+                Allure.addAttachment("The text has been pasted.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "The text has been pasted.", true);
+                return true;
+            }
+        } catch (Exception e) {
+            System.out.println("The paste action cannot be done.");
+            Allure.addAttachment("The paste action cannot be done.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "The paste action cannot be done.", true);
+            Assert.fail("The paste action cannot be done!");
+            flag = false;
+
+        }
+        return flag;
+    }
 
     @Then("^(?:I )?copy the information by copying the value to: (\\w+(?: \\w+)*) at index (\\d+)")
     public boolean pasteElement(String element, int index) throws InterruptedException {
@@ -1591,7 +1626,7 @@ public class StepDefs extends MyTestNGBaseClass {
     }
 
     @Then("^(?:I )?upload the file \"([^\"]*)\" using the: (\\w+(?: \\w+)*) at index (\\d+)")
-    public void uploadFile(String text, String element, int index) throws IOException, InterruptedException, FindFailed, AWTException, IOException {
+    public void uploadFile(String text, String element, int index) throws IOException, InterruptedException, AWTException, IOException {
 
         WebElement object;
         object = commonLib.findElement(element, index);
@@ -1664,7 +1699,7 @@ public class StepDefs extends MyTestNGBaseClass {
     //43. Kredi Kullandırım - TC001
 
     @Then("I have to create a credit by credit amount:\"([^\"]*)\" for customer:\"([^\"]*)\"")
-    public void createCredit(String amount, String customerNo) throws InterruptedException, AWTException, FindFailed, IOException {
+    public void createCredit(String amount, String customerNo) throws InterruptedException, AWTException, IOException {
         waitElement("loan button for 4000", timeout, 1);
         clickElement("loan button for 4000", 1);
         seePage("loan");
