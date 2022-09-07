@@ -1,0 +1,217 @@
+{
+  "pages": [
+    {
+      "pageInfo": {
+        "pageName": "treasury",
+        "parent": "home",
+        "waitelement": ""
+      },
+
+      "elements": [
+        {
+          "treasury menu for 30060": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[6]"
+        },
+        {
+          "administrative menu for 30060": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[6]/ul/li[1]"
+        },
+        {
+          "tcmb rates menu for 30060": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[6]/ul/li[1]/ul/li[1]"
+        },
+        {
+          "tcmb get rates button": "//*[@id=\"step1\"]/div/div/div/div[4]/button"
+        },
+        {
+          "tcmb query tab": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div/div/div/ol/li[2]"
+        },
+        {
+          "tcmb query button": "//button[@orionid='orion-id-005']"
+        },
+        {
+          "tcmb date area": "//*[@id=\"step2\"]/div/div[1]/div[1]/div[4]/input"
+        },
+        {
+          "powered currency menu": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[6]/ul/li[1]/ul/li[2]"
+        },
+        {
+          "first currency": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[2]/div[2]/div[1]/div[4]/select"
+        },
+        {
+          "first currency option": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[2]/div[2]/div[1]/div[4]/select/option[16]"
+        },
+        {
+          "second currency": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[2]/div[2]/div[2]/div[4]/select"
+        },
+        {
+          "second currency option": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[2]/div[2]/div[2]/div[4]/select/option[7]"
+        },
+        {
+          "powered currency": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[2]/div[2]/div[3]/div[4]/select"
+        },
+        {
+          "powered currency option": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[2]/div[2]/div[3]/div[4]/select/option[16]"
+        },
+        {
+          "powered currency save button": "//button[@orionid='btnSave']"
+        },
+        {
+          "first currency current": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[2]/div[2]/div[1]/div[4]/select/option[16]"
+        },
+        {
+          "first currency option current": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[2]/div[2]/div[1]/div[4]/select/option[16]"
+        },
+        {
+          "second currency current": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[2]/div[2]/div[2]/div[4]/select"
+        },
+        {
+          "second currency option current": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[2]/div[2]/div[2]/div[4]/select/option[7]"
+        },
+        {
+          "powered currency current": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[2]/div[2]/div[3]/div[4]/select"
+        },
+        {
+          "powered currency option current": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[2]/div[2]/div[3]/div[4]/select/option[16]"
+        },
+        {
+          "powered currency current tab": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[1]/ul/li[2]/a"
+        },
+        {
+          "powered currency query button": "//button[@orionid='btnQuery']"
+        },
+        {
+          "treasury cost rate menu for 30060": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[6]/ul/li[1]/ul/li[3]"
+        },
+        {
+          "currency code": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div/div[2]/div[2]/div[1]/div[4]/select"
+        },
+        {
+          "currency code option": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div/div[2]/div[2]/div[1]/div[4]/select/option[13]"
+        },
+        {
+          "start day": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div/div[2]/div[2]/div[2]/div[4]/input"
+        },
+        {
+          "second day count": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div/div[2]/div[2]/div[2]/div[6]/input"
+        },
+        {
+          "start amount": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div/div[2]/div[2]/div[3]/div[4]/input"
+        },
+        {
+          "second amount": "//input[@orionid='endAmount']"
+        },
+        {
+          "interest rate": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div/div[2]/div[2]/div[4]/div[4]/input"
+        },
+        {
+          "save button": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div/div[2]/div[3]/div[3]/button"
+        },
+        {
+          "ok button": "//*[@id=\"modal-footer-area\"]/button[1]"
+        },
+        {
+          "treasury cost rate current tab": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div/div[1]/ul/li[2]"
+        },
+        {
+          "treasury cost rate date area": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div/div[2]/div[2]/div[5]/div[4]/input"
+        },
+        {
+          "treasury cost rate query button": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div/div[2]/div[3]/div[1]/div[2]/button"
+        },
+        {
+          "treasury cost rate table line": "//*[@id=\"ht_8fb5cf5d3e992f9c\"]/div[3]/div/div/div/table/tbody/tr[1]"
+        },
+        {
+          "treasury cost rate delete button": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div/div[2]/div[5]/div[4]/button"
+        },
+        {
+          "group currency rate menu": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[6]/ul/li[1]/ul/li[4]"
+        },
+        {
+          "group currency process date": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[2]/div[1]/div/div[1]/div[4]/input"
+        },
+        {
+          "group currency code": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[2]/div[1]/div/div[2]/div[4]/select"
+        },
+        {
+          "group currency code option": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[2]/div[1]/div/div[2]/div[4]/select/option[7]"
+        },
+        {
+          "group currency buying rate": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[2]/div[1]/div/div[3]/div[4]/input"
+        },
+        {
+          "group currency selling rate": "//input[@orionid='currencySellingRate']"
+        },
+        {
+          "group currency save button": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[2]/div[2]/div/div[2]/button"
+        },
+        {
+          "group currency current tab": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[1]/div/div[1]/ul/li[2]/a"
+        },
+        {
+          "group currency query button": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[2]/div[2]/div/div[4]/button"
+        },
+        {
+          "treasury parameter menu": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[6]/ul/li[1]/ul/li[5]"
+        },
+        {
+          "treasury parameter date area": "//*[@id=\"content\"]/div/div/div/div[2]/div/div[1]/div[2]/div[1]/div[4]/input"
+        },
+        {
+          "treasury parameter name area": "//*[@id=\"content\"]/div/div/div/div[2]/div/div[1]/div[2]/div[2]/div[4]/select"
+        },
+        {
+          "treasury parameter name area option": "//*[@id=\"content\"]/div/div/div/div[2]/div/div[1]/div[2]/div[2]/div[4]/select/option[7]"
+        },
+        {
+          "treasury parameter value area": "//input[@orionid='value']"
+        },
+        {
+          "treasury parameter save button": "//*[@id=\"content\"]/div/div/div/div[2]/div/div[1]/div[3]/div/div[2]/button"
+        },
+        {
+          "treasury parameter current tab": "//*[@id=\"content\"]/div/div/div/div[2]/div/div[1]/div[1]/div[1]/ul/li[2]"
+        },
+        {
+          "treasury parameter query button": "//*[@id=\"content\"]/div/div/div/div[2]/div/div[1]/div[3]/div/div[4]/button"
+        },
+        {
+          "Account management menu": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[6]/ul/li[2]"
+        },
+        {
+          "Account transaction menu": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[6]/ul/li[2]/ul/li[1]"
+        },
+        {
+          "Account transfer menu": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[6]/ul/li[2]/ul/li[2]"
+        },
+        {
+          "Free transfer menu": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[6]/ul/li[2]/ul/li[3]"
+        },
+        {
+          "treasury transactions date area first": "//*[@id=\"content\"]/div/div/div/div[2]/div/div[3]/div/div/div[10]/div[4]/div/input[1]"
+        },
+        {
+          "treasury transactions date area second": "//*[@id=\"content\"]/div/div/div/div[2]/div/div[3]/div/div/div[10]/div[4]/div/input[2]"
+        },
+        {
+          "treasury transactions search button": "//*[@id=\"content\"]/div/div/div/div[2]/div/div[4]/div/div/div[4]/button"
+        },
+        {
+          "Account transfer sending bank": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[4]/div[1]/div[2]/div[4]/div"
+        },
+        {
+          "Account transfer receiving bank": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[4]/div[2]/div[2]/div[4]/div"
+        },
+        {
+          "Account transfer sending bank pop-up option": "//*[@id=\"ht_9cd24a12cb12a039\"]/div[3]/div/div/div/table/tbody/tr[1]"
+        },
+        {
+          "Account transfer receiving bank pop-up search button": "/html/body/div[3]/div/div/div[3]/div/div[4]/button"
+        },
+        {
+          "Account transfer receiving bank pop-up option": "//*[@id=\"ht_87ec68ce45e5a157\"]/div[3]/div/div/div/table/tbody/tr[3]"
+        }
+      ]
+    }
+  ]
+}
+
+
