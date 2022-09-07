@@ -1,4 +1,4 @@
-Feature: Orion Finance Finco Test Scenarios - ESNEK FİYATLAMA OLUŞTURMA
+Feature: Orion Finance Finco Test Scenarios - 3.ESNEK FİYATLAMA OLUŞTURMA
 
   #1.)Esnek Ödemeli Fiyatlama Oluşturma: TC001
   #2.)Fiyatlama Onayı: TC002

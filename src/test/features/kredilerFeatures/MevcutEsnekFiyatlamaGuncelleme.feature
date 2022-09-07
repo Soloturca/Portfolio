@@ -1,4 +1,4 @@
-Feature: Orion Finance Finco Test Scenarios - MEVCUT ESNEK FİYATLAMA GÜNCELLEME
+Feature: Orion Finance Finco Test Scenarios - 5.MEVCUT ESNEK FİYATLAMA GÜNCELLEME
 
     #1.)Mevcut Esnek Ödemeli Fiyatlama Güncelleme: TC001
     #2.)Fiyatlama Onayı: TC002
