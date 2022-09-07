@@ -1,4 +1,4 @@
-Feature: Orion Finance Finco Test Scenarios - KEFİL EKLEME VE SİLME KONTROLÜ
+Feature: Orion Finance Finco Test Scenarios - 8.KEFİL EKLEME VE SİLME KONTROLÜ
 
   #1.)Kefil Ekleme ve Silme: TC001
 

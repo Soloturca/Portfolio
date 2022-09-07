@@ -1,4 +1,4 @@
-Feature: Orion Finance Finco Test Scenarios - GKTİ MEVCUT BAŞVURU KONTROLÜ
+Feature: Orion Finance Finco Test Scenarios - 10.GKTİ MEVCUT BAŞVURU KONTROLÜ
 
   #1.)GKTİ Müşteri Yeni Başvuru Giriş: TC001
   #2.)GKTİ Müşteri Mevcut Başvuru Giriş: TC002
