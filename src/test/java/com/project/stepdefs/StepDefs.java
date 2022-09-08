@@ -752,7 +752,7 @@ public class StepDefs extends MyTestNGBaseClass {
     }
 
     @Then("^(?:I )?copy the information by copying the delivery date to: (\\w+(?: \\w+)*) at index (\\d+)")
-    public boolean pase(String element, int index) throws InterruptedException {
+    public boolean pase1(String element, int index) throws InterruptedException {
 
         WebElement object;
         object = commonLib.waitElement(element, timeout, index);
