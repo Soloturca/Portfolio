@@ -15,6 +15,7 @@ import oracle.net.aso.e;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
+import org.sikuli.script.FindFailed;
 import org.testng.Assert;
 import utils.excelutils.ExcelUtils;
 import java.awt.*;
@@ -815,7 +816,7 @@ public class StepDefs extends MyTestNGBaseClass {
     }
 
     @Then("^(?:I )?copy the information by copying the system time to: (\\w+(?: \\w+)*) at index (\\d+)")
-    public boolean Pase(String element, int index) throws InterruptedException {
+    public boolean pase(String element, int index) throws InterruptedException {
 
          WebElement object;
         object = commonLib.waitElement(element, timeout, index);
@@ -1023,7 +1024,7 @@ public class StepDefs extends MyTestNGBaseClass {
     }
 
     @Then("^(?:I )?upload the file for payment \"([^\"]*)\" using the: (\\w+(?: \\w+)*) at index (\\d+)")
-    public void uploadFile3(String text, String element, int index) throws IOException, InterruptedException, AWTException, IOException {
+    public void uploadFile3(String text, String element, int index) throws IOException, InterruptedException, FindFailed, AWTException, IOException {
 
         WebElement object;
         object = commonLib.findElement(element, index);
