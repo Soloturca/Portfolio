@@ -815,7 +815,7 @@ public class StepDefs extends MyTestNGBaseClass {
     }
 
     @Then("^(?:I )?copy the information by copying the system time to: (\\w+(?: \\w+)*) at index (\\d+)")
-    public boolean pase(String element, int index) throws InterruptedException {
+    public boolean Pase(String element, int index) throws InterruptedException {
 
          WebElement object;
         object = commonLib.waitElement(element, timeout, index);
@@ -1023,7 +1023,7 @@ public class StepDefs extends MyTestNGBaseClass {
     }
 
     @Then("^(?:I )?upload the file for payment \"([^\"]*)\" using the: (\\w+(?: \\w+)*) at index (\\d+)")
-    public void uploadFile3(String text, String element, int index) throws IOException, InterruptedException, FindFailed, AWTException, IOException {
+    public void uploadFile3(String text, String element, int index) throws IOException, InterruptedException, AWTException, IOException {
 
         WebElement object;
         object = commonLib.findElement(element, index);
