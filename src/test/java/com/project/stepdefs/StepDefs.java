@@ -15,7 +15,6 @@ import oracle.net.aso.e;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
-import org.sikuli.script.FindFailed;
 import org.testng.Assert;
 import utils.excelutils.ExcelUtils;
 import java.awt.*;
@@ -829,7 +828,7 @@ public class StepDefs extends MyTestNGBaseClass {
         date.add(Calendar.YEAR, 1);
         System.out.println(f.format(date.getTime()));
         datse = f.format(date.getTime());
-        
+
         boolean flag = false;
         try {
             if (object != null) {
@@ -1024,7 +1023,7 @@ public class StepDefs extends MyTestNGBaseClass {
     }
 
     @Then("^(?:I )?upload the file for payment \"([^\"]*)\" using the: (\\w+(?: \\w+)*) at index (\\d+)")
-    public void uploadFile3(String text, String element, int index) throws IOException, InterruptedException, FindFailed, AWTException, IOException {
+    public void uploadFile3(String text, String element, int index) throws IOException, InterruptedException, AWTException, IOException {
 
         WebElement object;
         object = commonLib.findElement(element, index);
@@ -1678,7 +1677,6 @@ public class StepDefs extends MyTestNGBaseClass {
             Thread.sleep(5000);
             System.out.println("aa.txt is uploaded.");
         }
-
 
     }
 
