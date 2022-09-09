@@ -51,7 +51,7 @@ Feature: Orion Finance Finco Test Scenarios - Teminat
     And I click element: save button at index 1
     Then I enter "automation teminat test" text to note area at index 1
     And I click element: yes button at index 1
-    And Open https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL in a new tab
+    And Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
     Then I see login page
     Then I enter "19006" text to username text area at index 1
     Then I enter "1" text to password text area at index 1
@@ -127,7 +127,7 @@ Feature: Orion Finance Finco Test Scenarios - Teminat
     And I click element: yes button at index 1
     And I wait reference number text area element 30 seconds at index 1
     Then I get the information: reference number text area at index 1
-    And Open https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL in a new tab
+    And Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
     Then I see login page
     Then I enter "19006" text to username text area at index 1
     Then I enter "1" text to password text area at index 1

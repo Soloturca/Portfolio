@@ -1,4 +1,4 @@
-Feature: Orion Finance Finco Test Scenarios - EŞİT TAKSİTLİ FİYATLAMA OLUŞTURMA
+Feature: Orion Finance Finco Test Scenarios - 2.EŞİT TAKSİTLİ FİYATLAMA OLUŞTURMA
 
   #1.)Eşit Taksitli Ödemeli Fiyatlama Oluşturma: TC001
   #2.)Fiyatlama Onayı: TC002

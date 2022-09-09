@@ -1,0 +1,43 @@
+{
+  "pages": [
+    {
+      "pageInfo": {
+        "pageName": "customer",
+        "parent": "home",
+        "waitelement": ""
+      },
+      "elements": [
+        {
+          "customer transaction": "//html/body/div/div[2]/div/div[1]/ul[2]/ul/li[2]"
+        },
+        {
+          "customer management button": "//a[contains(@data-href,'/finance/customer/js/customerManagementPage.js')]"
+        },
+        {
+          "tc no Area": "//input[@orionid='tcNo']"
+        },
+        {
+          "customer search button": "//button[@orionid='btnSearchStep1']"
+        },
+        {
+          "continue button": "//button[@orionid='btnNextStep_1']"
+        },
+        {
+          "general information continue button": "//button[@orionid='btnNextStep_3']"
+        },
+        {
+          "new number button": "//button[@orionid='new']"
+        },
+        {
+          "phone number area": "//input[@orionid='phoneNumberTR']"
+        },
+        {
+          "priority number switch button": "//input[@orionid='phoneNumberTR']"
+        }
+      ]
+    }
+  ]
+}
+
+
+

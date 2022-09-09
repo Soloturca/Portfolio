@@ -1,0 +1,58 @@
+{
+  "pages": [
+    {
+      "pageInfo": {
+        "pageName": "banks",
+        "parent": "home",
+        "waitelement": ""
+      },
+      "elements": [
+        {
+          "package management": "//html/body/div/div[2]/div/div[1]/ul[2]/ul/li[5]"
+        },
+        {
+          "bank branch management": "//a[contains(@data-href,'/finance/utility/js/defineBranchPage.js')]"
+        },
+        {
+          "bank name area for bank branch": "//select[@orionid='filter']"
+        },
+        {
+          "branch name area": "//input[@orionid='value']"
+        },
+        {
+          "branch code area": "//input[@orionid='key']"
+        },
+        {
+          "save button for create new branch": "//button[@orionid='btnSave']"
+        },
+        {
+          "approve note area": "//textarea[@id='modal-body-notetext']"
+        },
+        {
+          "yes button": "//i[@class='fa fa-check']"
+        },
+        {
+          "reference number text area": "//html/body/div[1]/div[7]/div/div/div[1]/div/h4/b"
+        },
+        {
+          "existing button": "//a[@value='existing']"
+        },
+        {
+          "query button": "//button[@orionid='btnQuery']"
+        },
+        {
+          "bank branch select": "//html/body/div/div[4]/div/div[2]/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
+        },
+        {
+          "save button for update": "//button[@orionid='btnUpdate']"
+        },
+        {
+          "branch delete button": "//button[@orionid='btnDelete']"
+        }
+      ]
+    }
+  ]
+}
+
+
+
