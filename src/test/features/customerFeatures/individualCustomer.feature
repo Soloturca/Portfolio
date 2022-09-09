@@ -20,7 +20,7 @@ Feature: Orion Finance Finco Test Scenarios - Teminat
     
 
 
-  @teminat
+  @xxxxx
   Scenario: Bireysel Müşteri Oluşturma: TC001 -
     Then I see customer page
     And I wait customer transaction element 30 seconds at index 1
