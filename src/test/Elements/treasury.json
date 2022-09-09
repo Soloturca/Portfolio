@@ -6,7 +6,6 @@
         "parent": "home",
         "waitelement": ""
       },
-
       "elements": [
         {
           "treasury menu for 30060": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[6]"
