@@ -1,4 +1,4 @@
-Feature: Orion Finance Finco Test Scenarios - 4.MEVCUT EŞİT FİYATLAMA GÜNCELLEME
+Feature: Orion Finance Finco Test Scenarios - 004.MEVCUT EŞİT FİYATLAMA GÜNCELLEME
 
   #1.)Mevcut Eşit Taksitli Fiyatlama Güncelleme: TC001
   #2.)Fiyatlama Onayı: TC002
