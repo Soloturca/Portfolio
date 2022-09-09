@@ -29,8 +29,8 @@ import java.io.IOException;
 
 
 @CucumberOptions(
-        //features = "src/test/features",
-        features = "src/test/features/kredilerFeatures",
+        features = "src/test/features",
+        //features = "src/test/features/kredilerFeatures",
         //tags = {"@GKTIBaşvuru, @GKTIBaşvuruDeğerlendirme, @450.000TLAltiTutarliKredi"},
         tags = {"@BireyselKrediBasvuru, @teminat, @TahsisdenIadeBasvuruVeIptal, @TeminatEklemeSilme, @BasvuruIptal, @FiyatlamaEsit, @FiyatlamaEsnek, @FiyatlamaGozlem, @GKTIMevcutBasvuru, @GozlemVeRapor, @KefilEklemeSilme, @MevcutEsitFiyatlama, @MevcutEsnekFiyatlama, @bank, @treasury, @KomisyonOdeme, @GiderOdeme, @SatınAlmaTalep"},
         plugin = {"pretty", "io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm"},
