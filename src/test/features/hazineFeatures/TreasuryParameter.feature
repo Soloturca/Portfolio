@@ -12,7 +12,7 @@ Feature: Orion Finance Finco Test Scenarios / Test Cases for Treasury
   #This feature includes these steps:
   #1.) Parametre Tanımlama Yeni Sekmesi
 
-  @TreasuryParameter
+  @Treasury
   Scenario: Add Treasury Parameter
 
    #Yeni Parametre Tanımlama

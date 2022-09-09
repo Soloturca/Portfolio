@@ -3,7 +3,7 @@ Feature: Orion Finance Finco Test Scenarios / Test Cases for Treasury
   #This feature includes these steps:
   #1.) Hazine Maliyet oranı tanımlama
 
-  @TreasuryRate
+  @Treasury
   Scenario: Add Treasury Rate
    #Hazine Maliyet Oranı Yeni Sekmesi
     Given I go to "https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/" with this username: "30060" and this password:"1"

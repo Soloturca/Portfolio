@@ -3,7 +3,7 @@ Feature: Orion Finance Finco Test Scenarios / Test Cases for Treasury
   #This feature includes these steps:
   #1.) TCMB kurları getir.
 
-  @Kur
+  @Treasury
   Scenario: TCMB kurlarının sisteme alınması
    #TCMB Kur/Parite Getir
 

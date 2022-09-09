@@ -3,7 +3,7 @@ Feature: Orion Finance Finco Test Scenarios / Test Cases for Treasury
   #This feature includes these steps:
   #1.) Grup Kuru Mevcut sekmesi
 
-  @GroupCurrencyCurrent
+  @Treasury
   Scenario: Query Group Currency Rate
    #Grup Kuru Sorgulama
     Given I go to "https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/" with this username: "30060" and this password:"1"
