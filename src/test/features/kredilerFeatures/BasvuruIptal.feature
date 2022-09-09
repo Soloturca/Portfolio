@@ -1,4 +1,4 @@
-Feature: Orion Finance Finco Test Scenarios - 9.BAŞVURU İPTAL KONTROLÜ
+Feature: Orion Finance Finco Test Scenarios - 012.BAŞVURU İPTAL KONTROLÜ
 
   #1.)Başvuru İlerletme: TC001
   #2.)Başvuru İptal: TC002

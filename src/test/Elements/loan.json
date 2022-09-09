@@ -143,6 +143,9 @@
           "confirmed amount text area": "//td[@class='htRight']"
         },
         {
+          "current highlight": "//td[@class='htRight current highlight']"
+        },
+        {
           "maturity area": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[25]"
         },
         {
