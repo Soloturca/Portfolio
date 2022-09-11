@@ -1,4 +1,4 @@
-Feature: Orion Finance Finco Test Scenarios - 6.FİYATLAMA GÖZLEM EKRANI KONTROLÜ
+Feature: Orion Finance Finco Test Scenarios - 006.FİYATLAMA GÖZLEM EKRANI KONTROLÜ
 
    #1.)Fiyatlama Gözlem Ekranı: TC001
 
