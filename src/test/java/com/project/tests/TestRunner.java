@@ -32,7 +32,7 @@ import java.io.IOException;
         features = "src/test/features",
         //features = "src/test/features/kredilerFeatures",
         //tags = {"@GKTIBaşvuru, @GKTIBaşvuruDeğerlendirme, @450.000TLAltiTutarliKredi"},
-        tags = {"@BireyselKrediBasvuru, @teminat, @BasvuruIptal, @FiyatlamaEsit, @FiyatlamaEsnek, @FiyatlamaGozlem, @GKTIMevcutBasvuru, @GozlemVeRapor, @KefilEklemeSilme, @MevcutEsitFiyatlama, @MevcutEsnekFiyatlama, @bank, @treasury, @KomisyonOdeme, @GiderOdeme, @SatınAlmaTalep"},
+        tags = {"@BireyselKrediBasvuru, @teminat, @BasvuruIptal, @FiyatlamaEsit, @FiyatlamaEsnek, @FiyatlamaGozlem, @GKTIMevcutBasvuru, @GozlemVeRapor, @KefilEklemeSilme, @MevcutEsitFiyatlama, @MevcutEsnekFiyatlama, @bank, @treasury, @KomisyonOdeme, @GiderOdeme"},
         plugin = {"pretty", "io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm"},
         glue = {"com.project.stepdefs"})
 
