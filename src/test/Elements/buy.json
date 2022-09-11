@@ -111,7 +111,7 @@
         {"vat amount" : "//*/div[1]/div/div/div/table/tbody/tr[1]/td[4]"
 
         },
-        {"continue to documents" : "//*/div/div[2]/div/div[2]/div/div[6]/div[6]/div[2]/div[1]/legend"
+        {"continue to documents" : ".orion-grid:nth-of-type(7) .orion-frame"
 
         },
         {"upload to word button" : "//i[@class='fa fa-upload htOrionIcon pull-right']"
@@ -138,7 +138,7 @@
         {"payment type search" : "//div[@class='orion-widget-container orion-button-container orion-inline']"
 
         },
-        {"choose second line" : "//*/div[3]/div/div/div/table/tbody/tr[2]/th"
+        {"choose second line" : "//*/div[3]/div/div/div/table/tbody/tr[1]/th"
 
         },
         {"process date area" : "//input[@orionid='processDate']"
