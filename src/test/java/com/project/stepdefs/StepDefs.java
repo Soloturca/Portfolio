@@ -11,6 +11,7 @@ import io.qameta.allure.Allure;
 import oracle.net.aso.e;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import utils.excelutils.ExcelUtils;
@@ -428,6 +429,7 @@ public class StepDefs extends MyTestNGBaseClass {
     public void topOfWebsite() {
         ((JavascriptExecutor) oDriver).executeScript("window.scrollTo(document.body.scrollHeight, 0)");
     }
+
 
     @Then("^I have to check is there any document is uploaded on the (.*) at index (\\d+) for telephone")
     public boolean checkUploadFileForTelephone(String element, int index) throws InterruptedException, AWTException, IOException {
@@ -1024,7 +1026,9 @@ public class StepDefs extends MyTestNGBaseClass {
 
         WebElement object;
         object = commonLib.findElement(element, index);
-        object.click();
+        Thread.sleep(1000);
+        //object.click();
+        ((JavascriptExecutor)oDriver).executeScript("arguments[0].click();",object);
         Thread.sleep(5000);
 
         if (text.contains("testtd.docx")) {
