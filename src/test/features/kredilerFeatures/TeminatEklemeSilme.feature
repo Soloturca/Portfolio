@@ -101,6 +101,11 @@ Feature: Orion Finance Finco Test Scenarios - 009.TEMİNAT MEKTUBU EKLEME VE Sİ
 
     #Kredi İptali - 3Scenario:
 
+    And I wait loan button credit element 30 seconds at index 1
+    When I click element: loan button credit at index 1
+    Then I see loan page
+    And I wait application button element 30 seconds at index 1
+    When I click element: application button at index 1
     And I wait application cancel button element 30 seconds at index 1
     When I click element: application cancel button at index 1
     And I wait pricing observation element 30 seconds at index 1
@@ -119,15 +124,15 @@ Feature: Orion Finance Finco Test Scenarios - 009.TEMİNAT MEKTUBU EKLEME VE Sİ
     When I click element: close button at index 1
     Then I see home page
 
-    And I wait close system button element 30 seconds at index 1
-    When I click element: close system button at index 1
-    Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
-    Then I see login page
-
   @TeminatEklemeSilme
   Scenario: Kredi İptal Onayı: TC004
 
     #Kredi İptal Onayı - 4Scenario:
+
+    And I wait close system button element 30 seconds at index 1
+    When I click element: close system button at index 1
+    Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
+    Then I see login page
 
     Then I enter "30030" text to username text area at index 1
     Then I enter "1" text to password text area at index 1

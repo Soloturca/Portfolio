@@ -93,17 +93,15 @@ Feature: Orion Finance Finco Test Scenarios - 011.Tahsis Değerlendirme Aşamas�
     When I click element: close button at index 1
     Then I see home page
 
-    And I wait close system button element 30 seconds at index 1
-    When I click element: close system button at index 1
-
-
-    Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
-    Then I see login page
-
   @TahsisdenIadeBasvuruVeIptal
   Scenario: Tahsisten Kredi İadesi: TC002
 
     #Tahsisten Kredi İadesi - 2Scenario:
+
+    And I wait close system button element 30 seconds at index 1
+    When I click element: close system button at index 1
+    Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
+    Then I see login page
 
     Then I enter "30030" text to username text area at index 1
     Then I enter "1" text to password text area at index 1
@@ -142,15 +140,15 @@ Feature: Orion Finance Finco Test Scenarios - 011.Tahsis Değerlendirme Aşamas�
     When I click element: close button at index 1
     Then I see home page
 
-    And I wait close system button element 30 seconds at index 1
-    When I click element: close system button at index 1
-    Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
-    Then I see login page
-
   @TahsisdenIadeBasvuruVeIptal
   Scenario: Kredi İptali: TC003
 
     #Kredi İptali - 3Scenario:
+
+    And I wait close system button element 30 seconds at index 1
+    When I click element: close system button at index 1
+    Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
+    Then I see login page
 
     Then I enter "40000" text to username text area at index 1
     Then I enter "1" text to password text area at index 1
@@ -181,15 +179,15 @@ Feature: Orion Finance Finco Test Scenarios - 011.Tahsis Değerlendirme Aşamas�
     When I click element: close button at index 1
     Then I see home page
 
-    And I wait close system button element 30 seconds at index 1
-    When I click element: close system button at index 1
-    Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
-    Then I see login page
-
   @TahsisdenIadeBasvuruVeIptal
   Scenario: Kredi İptal Onayı: TC004
 
     #Kredi İptal Onayı - 4Scenario:
+
+    And I wait close system button element 30 seconds at index 1
+    When I click element: close system button at index 1
+    Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
+    Then I see login page
 
     Then I enter "30030" text to username text area at index 1
     Then I enter "1" text to password text area at index 1
