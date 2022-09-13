@@ -101,8 +101,8 @@ Feature: Orion Finance Finco Test Scenarios - 003.ESNEK FİYATLAMA OLUŞTURMA
     And I wait warning popup element 30 seconds at index 1
     When I click element: yes button at index 1
 
-    And I wait approve button element 30 seconds at index 1
-    When I click element: approve button at index 1
+    And I wait cancel button element 30 seconds at index 1
+    When I click element: cancel button at index 1
     And I wait warning popup element 30 seconds at index 1
     And I wait yes button element 30 seconds at index 1
     When I click element: yes button at index 1
