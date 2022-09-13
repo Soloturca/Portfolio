@@ -31,8 +31,8 @@ import java.io.IOException;
 @CucumberOptions(
         features = "src/test/features",
         //features = "src/test/features/kredilerFeatures",
-        //tags = {"@TahsisdenIadeBasvuruVeIptal"},
-        tags = {"@BireyselKrediBasvuru, @teminat, @BasvuruIptal, @FiyatlamaEsit, @FiyatlamaEsnek, @FiyatlamaGozlem, @GKTIMevcutBasvuru, @GozlemVeRapor, @KefilEklemeSilme, @MevcutEsitFiyatlama, @MevcutEsnekFiyatlama, @bank, @treasury, @KomisyonOdeme"},
+        //tags = {"@TeminatEklemeSilme"},
+        tags = {"@BireyselKrediBasvuru, @teminat, @TeminatEklemeSilme, @TahsisdenIadeBasvuruVeIptal, @BasvuruIptal, @FiyatlamaEsit, @FiyatlamaEsnek, @FiyatlamaGozlem, @GKTIMevcutBasvuru, @GozlemVeRapor, @KefilEklemeSilme, @MevcutEsitFiyatlama, @MevcutEsnekFiyatlama, @bank, @Treasury, @KomisyonOdeme"},
         plugin = {"pretty", "io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm"},
         glue = {"com.project.stepdefs"})
 

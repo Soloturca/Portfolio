@@ -986,7 +986,7 @@
           "closeview for side customer": "//*[@id=\"step1\"]/div/div[1]/div[4]/div[5]/div/div/div/div[1]/div[1]/div[4]/div/i"
         },
         {
-          "close button": "//i[@class='fa fa-share']"
+          "close button": "//*[contains(text(),'Kapat')]"
         },
         {
           "continue to Reference Information button": "//button[@orionid='btnContinue']"
