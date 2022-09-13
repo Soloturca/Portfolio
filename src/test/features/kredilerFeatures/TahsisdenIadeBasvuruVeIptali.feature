@@ -47,7 +47,9 @@ Feature: Orion Finance Finco Test Scenarios - 011.Tahsis Değerlendirme Aşamas�
     Then I enter "1" text to invoice amount/product quantity piece text area at index 1
     Then I enter "1000" text to credit amount text area at index 1
     Then I click element: add product button at index 3
+    And I wait close button element 30 seconds at index 1
     Then I click element: close button at index 1
+    And I wait select button element 30 seconds at index 1
     And I click element: select button at index 1
     Then I click element: create payment plan button at index 1
     And I click element: go on button at index 1
