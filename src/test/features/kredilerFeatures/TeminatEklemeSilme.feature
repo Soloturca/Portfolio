@@ -13,7 +13,7 @@ Feature: Orion Finance Finco Test Scenarios - 009.TEMİNAT MEKTUBU EKLEME VE Sİ
     When I click element: login button at index 1
     Then I see home page
 
-  @TeminatEklemeSilme
+  @TeminatEklemeveSilme
   Scenario: Başvuru Oluşturma ve Teminat Ekleme Silme: TC001
 
     #Başvuru Oluşturma ve Teminat Ekleme Silme - 1Scenario:
@@ -75,7 +75,7 @@ Feature: Orion Finance Finco Test Scenarios - 009.TEMİNAT MEKTUBU EKLEME VE Sİ
     And I wait continue to Finco Observation button element 30 seconds at index 1
     Then I click element: continue to Finco Observation button at index 1
 
-  @TeminatEklemeSilme
+  @TeminatEklemeveSilme
   Scenario: Kredi İptali: TC002
 
     #Kredi İptali - 2Scenario:
@@ -103,7 +103,7 @@ Feature: Orion Finance Finco Test Scenarios - 009.TEMİNAT MEKTUBU EKLEME VE Sİ
     When I click element: close button at index 1
     Then I see home page
 
-  @TeminatEklemeSilme
+  @TeminatEklemeveSilme
   Scenario: Kredi İptal Onayı: TC003
 
     #Kredi İptal Onayı - 3Scenario:
