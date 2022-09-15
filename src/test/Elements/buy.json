@@ -90,11 +90,11 @@
         {"free space" : "//*/div/div[2]/div/div[2]/div/div[6]/div[6]/div[1]/div[1]/legend"
 
         },
-        {"piece" : "//*/div[1]/div/div/div/table/tbody/tr[1]/td[5]"
-
+        {
+          "piece" : "//*/div[1]/div/div/div/table/tbody/tr[1]/td[5]"
         },
-        {"piece area" : "//*/div[7]/textarea"
-
+        {
+          "piece area" : "//*/div[7]/textarea"
         },
         {"price excluding vat" :  "//*/div[1]/div/div/div/table/tbody/tr[1]/td[6]"
 
@@ -117,8 +117,14 @@
         {"upload to word button" : "//i[@class='fa fa-upload htOrionIcon pull-right']"
 
         },
-        {"save button" : "//button[@orionid='btnSave']"
-
+        {
+          "rscroll": "//html/body/div[1]/div[4]/div/div[2]/div/div[2]/div/div[6]/div[6]/div[2]/div[2]/div/div/div/div[1]/div"
+        },
+        {
+          "upload to word button two" : "//html/body/div[1]/div[4]/div/div[2]/div/div[2]/div/div[6]/div[6]/div[2]/div[2]/div/div/div/div[1]/div/div/div/table/tbody/tr[2]/td[3]/i[1]"
+        },
+        {
+          "save button" : "//button[@orionid='btnSave']"
         },
         {"yes button" : "//button[@type='button']"
 
@@ -197,6 +203,81 @@
         },
         {
           "consignment note no area" : "//input[@orionid='consignmentNoteNo']"
+        },
+        {
+          "expense identification" : "//a[@data-href='/finance/purchasingandexpense/js/expenseDefinitionPage.js']"
+        },
+        {
+          "expense new button" : "//a[@value='create']"
+        },
+        {
+          "type of expense" : "//div[@class='orion-widget-container orion-inline']"
+        },
+        {
+          "type of expense area" : "//select[@orionid='expenseType']"
+        },
+        {
+          "expense subtype" : "//div[@class='orion-widget-container orion-inline']"
+        },
+        {
+          "expense subtype area" : "//select[@orionid='expenseSubtype']"
+        },
+        {
+          "search customer no" : "(//I[@type='search'])[2]"
+        },
+        {
+          "customer no area" : "//input[@orionid='customerCode' and @type='text']"
+        },
+        {
+          "customer no search button" : "//span[@class='glyphicon glyphicon-search']"
+        },
+        {
+          "currency code" : "//select[@orionid='currencyCode']"
+        },
+        {
+          "description area" : "//textarea[@orionid='description']"
+        },
+        {
+          "bill number" : "//html/body/div[1]/div[4]/div/div[2]/div/div[2]/div/div[2]/div[6]/div[2]/div/div/div/div/div[1]/div/div/div/table/tbody/tr[1]/td[3]"
+        },
+        {
+          "bill number area" : "//html/body/div[1]/div[4]/div/div[2]/div/div[2]/div/div[2]/div[6]/div[2]/div/div/div/div/div[5]/textarea"
+        },
+        {
+          "detail expense table" : "//legend[@orionid='detailExpensesLegend']"
+        },
+        {
+          "invoice date" : "//*/div[1]/div/div/div/table/tbody/tr[1]/td[4]/div"
+        },
+        {
+          "day1" : "//button[@class='pika-button pika-day']"
+        },
+        {
+          "estimated completion date" : "//*/div[1]/div/div/div/table/tbody/tr[1]/td[5]/div"
+        },
+        {
+          "day2" : "//button[@class='pika-button pika-day']"
+        },
+        {
+          "special communication tax" : "//*/div[1]/div/div/div/table/tbody/tr[1]/td[6]"
+        },
+        {
+          "special communication tax area" : "//*/div[7]/textarea"
+        },
+        {
+          "excludes vat" : "//*/div[1]/div/div/div/table/tbody/tr[1]/td[8]"
+        },
+        {
+          "excludes vat area" : "//textarea[@class='handsontableInput htRight htRight htRight htRight']"
+        },
+        {
+          "vat rate" : "//*/div/div/div/table/tbody/tr[1]/td[9]/div"
+        },
+        {
+          "vat rate select" : "//select[@class='htSelectEditor']"
+        },
+        {
+
         }
       ]
     }

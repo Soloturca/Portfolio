@@ -128,6 +128,25 @@ public class StepDefs extends MyTestNGBaseClass {
         return flag;
     }
 
+    private boolean clickElementWithScript(String element, int index) {
+        WebElement object = commonLib.findElement(element, index);
+        boolean flag = false;
+        try {
+            if (object != null) {
+                ((JavascriptExecutor)oDriver).executeScript("arguments[0].click();",object);
+                Allure.addAttachment("Element is clicked.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "I clicked the element: " + element, true);
+                return true;
+            }
+        } catch (Exception e) {
+            reportResult("FAIL", "I cannot clicked the element: " + element, true);
+            Allure.addAttachment("Element is not clicked.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            Assert.fail("Could not clicked the element:" + element);
+            flag = false;
+        }
+        return flag;
+    }
+
     @When("^(?:I )?have to verify the text for: (\\w+(?: \\w+)*) at index (\\d+)")
     public boolean verifyText(String element, int index) throws Exception {
         WebElement object = commonLib.findElement(element, index);
@@ -430,6 +449,10 @@ public class StepDefs extends MyTestNGBaseClass {
         ((JavascriptExecutor) oDriver).executeScript("window.scrollTo(document.body.scrollHeight, 0)");
     }
 
+    @Then("I go to end of the site")
+    public void endOfWebsite() {
+        ((JavascriptExecutor) oDriver).executeScript("window.scrollTo(document.body.scrollLow, 0)");
+    }
 
     @Then("^I have to check is there any document is uploaded on the (.*) at index (\\d+) for telephone")
     public boolean checkUploadFileForTelephone(String element, int index) throws InterruptedException, AWTException, IOException {
@@ -786,6 +809,43 @@ public class StepDefs extends MyTestNGBaseClass {
         return flag;
     }
 
+    @Then("^(?:I )?print the date from one year ago: (\\w+(?: \\w+)*) at index (\\d+)")
+    public boolean pase2(String element, int index) throws InterruptedException {
+
+        WebElement object;
+        object = commonLib.waitElement(element, timeout, index);
+
+        String datse;
+
+        Calendar date = Calendar.getInstance();
+        date.setTime(new Date());
+        Format f = new SimpleDateFormat("dd/MM/yyyy");
+        date.add(Calendar.YEAR, -1);
+        System.out.println(f.format(date.getTime()));
+        datse = f.format(date.getTime());
+
+        boolean flag = false;
+        try {
+            if (object != null) {
+                Thread.sleep(2000);
+                object.sendKeys(datse);
+
+                System.out.println("The text has been pasted.");
+                Allure.addAttachment("The text has been pasted.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "The text has been pasted.", true);
+                return true;
+            }
+        } catch (Exception e) {
+            System.out.println("The paste action cannot be done.");
+            Allure.addAttachment("The paste action cannot be done.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "The paste action cannot be done.", true);
+            Assert.fail("The paste action cannot be done!");
+            flag = false;
+
+        }
+        return flag;
+    }
+
     @Then("^(?:I )?get the information by copying the value from: (\\w+(?: \\w+)*) at index (\\d+)")
     public boolean copyElement(String element, int index) throws InterruptedException {
         WebElement object;
@@ -1024,12 +1084,8 @@ public class StepDefs extends MyTestNGBaseClass {
     @Then("^(?:I )?upload the file for payment \"([^\"]*)\" using the: (\\w+(?: \\w+)*) at index (\\d+)")
     public void uploadFile3(String text, String element, int index) throws IOException, InterruptedException, AWTException, IOException {
 
-        WebElement object;
-        object = commonLib.findElement(element, index);
-        Thread.sleep(1000);
-        //object.click();
-        ((JavascriptExecutor)oDriver).executeScript("arguments[0].click();",object);
-        Thread.sleep(5000);
+        waitElement(element,30,index);
+        clickElement(element, index);
 
         if (text.contains("testtd.docx")) {
 
