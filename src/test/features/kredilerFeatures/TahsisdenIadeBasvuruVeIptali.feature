@@ -37,8 +37,9 @@ Feature: Orion Finance Finco Test Scenarios - 011.Tahsis Değerlendirme Aşamas�
 
     When I need to just wait
     Then I need to preliminary assessment verify by transaction result at index 1
+    And I wait close button element 30 seconds at index 1
     Then I click element: close button at index 1
-    And I wait product name selection element 30 seconds at index 1
+    And I wait product name selection element 55 seconds at index 1
     And I select element: "MANAGED SERVİCES - YILLIK" under product name selection at index 1
     Then I enter "347" text to pricing selection at index 1
     Then I click element: application calender button at index 1
