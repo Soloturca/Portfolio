@@ -35,6 +35,7 @@ Feature: Orion Finance Finco Test Scenarios - 012.BAŞVURU İPTAL KONTROLÜ
     Then I enter "1" text to trade registration no individual text area at index 1
     And I wait goOn button element 30 seconds at index 1
     Then I click element: goOn button at index 1
+    And I wait close button element 30 seconds at index 1
     Then I click element: close button at index 1
 
   @BasvuruIptal
