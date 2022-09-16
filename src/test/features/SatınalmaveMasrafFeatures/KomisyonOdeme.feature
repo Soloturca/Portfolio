@@ -6,7 +6,8 @@ Feature: Orion Finance Finco Test Scenarios - KOMİSYON ÖDEME TALEP
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
     Then I see login page
-    Then I enter "19007" text to username text area at index 1
+    And I wait username text area element 30 seconds at index 1
+    When I enter "19007" text to username text area at index 1
     Then I enter "1" text to password text area at index 1
     And I wait login button element 30 seconds at index 1
     When I click element: login button at index 1
@@ -36,8 +37,11 @@ Feature: Orion Finance Finco Test Scenarios - KOMİSYON ÖDEME TALEP
     Then I copy the information by copying the value to: value date area at index 1
     And I wait description area element 30 seconds at index 1
     When I enter "test" text to description area at index 1
-    And I wait page header element 30 seconds at index 1
+    And I click element: end page at index 1
+    And I need to right scroll verify by rscroll2 at index 1
+    And I wait upload to word button element 30 seconds at index 1
     And I upload the file for payment "testtd.docx" using the: upload to word button at index 1
+    And I wait page header element 30 seconds at index 1
     When I click element: save button second at index 1
     And I wait note text element 30 seconds at index 1
     When I click element: note text at index 1
