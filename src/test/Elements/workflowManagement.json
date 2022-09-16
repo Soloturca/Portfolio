@@ -48,6 +48,24 @@
         },
         {
           "reference number area": "//input[@orionid='referans_no']"
+        },
+        {
+          "cancel button": "//button[@owf_type='reject']"
+        },
+        {
+          "back to pool button": "//button[@owf_type='back_to_pool']"
+        },
+        {
+          "modify button": "//button[@owf_type='modify']"
+        },
+        {
+          "close button": "//i[@class='fa fa-share']"
+        },
+        {
+          "update button": "//button[@orionid='btnUpdate']"
+        },
+        {
+          "inquire button for pending jobs": "//button[@orionid='orion-id-009']"
         }
       ]
     }
