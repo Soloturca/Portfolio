@@ -1,4 +1,4 @@
-Feature: Orion Finance Finco Test Scenarios - EŞİT TAKSİTLİ FİYATLAMA OLUŞTURMA
+Feature: Orion Finance Finco Test Scenarios - 002.EŞİT TAKSİTLİ FİYATLAMA OLUŞTURMA
 
   #1.)Eşit Taksitli Ödemeli Fiyatlama Oluşturma: TC001
   #2.)Fiyatlama Onayı: TC002
@@ -100,12 +100,14 @@ Feature: Orion Finance Finco Test Scenarios - EŞİT TAKSİTLİ FİYATLAMA OLUŞ
     And I wait warning popup element 30 seconds at index 1
     When I click element: yes button at index 1
 
-    And I wait approve button element 30 seconds at index 1
-    When I click element: approve button at index 1
+    #And I wait approve button element 30 seconds at index 1
+    #When I click element: approve button at index 1
+    And I wait cancel button element 30 seconds at index 1
+    When I click element: cancel button at index 1
     And I wait warning popup element 30 seconds at index 1
     And I wait yes button element 30 seconds at index 1
     When I click element: yes button at index 1
-    And I wait pricing no area element 30 seconds at index 1
-    Then I get pricing information of: pricing no area at index 1
+    #And I wait pricing no area element 30 seconds at index 1
+    #Then I get pricing information of: pricing no area at index 1
     And I wait close button element 30 seconds at index 1
     When I click element: close button at index 1

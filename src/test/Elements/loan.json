@@ -143,6 +143,9 @@
           "confirmed amount text area": "//td[@class='htRight']"
         },
         {
+          "current highlight": "//td[@class='htRight current highlight']"
+        },
+        {
           "maturity area": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[25]"
         },
         {
@@ -983,7 +986,7 @@
           "closeview for side customer": "//*[@id=\"step1\"]/div/div[1]/div[4]/div[5]/div/div/div/div[1]/div[1]/div[4]/div/i"
         },
         {
-          "close button": "//i[@class='fa fa-share']"
+          "close button": "//*[contains(text(),'Kapat')]"
         },
         {
           "continue to Reference Information button": "//button[@orionid='btnContinue']"

@@ -1,4 +1,4 @@
-Feature: Orion Finance Finco Test Scenarios - GÖZLEM VE RAPOR KONTROLÜ
+Feature: Orion Finance Finco Test Scenarios - 007.GÖZLEM VE RAPOR KONTROLÜ
 
   #1.)Gözlem ve Rapor Ekranı: TC001
 

@@ -1,4 +1,4 @@
-Feature: Orion Finance Finco Test Scenarios - BİREYSEL MÜŞTERİ KREDİ BAŞVURU OLUŞTURAMAMA
+Feature: Orion Finance Finco Test Scenarios - 001.BİREYSEL MÜŞTERİ KREDİ BAŞVURU OLUŞTURAMAMA
 
   #1.)Bireysel Müşterinin Kredi Başvuru Oluşturamaması: TC001
 

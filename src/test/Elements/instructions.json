@@ -1,0 +1,124 @@
+{
+  "pages": [
+    {
+      "pageInfo": {
+        "pageName": "instructions",
+        "parent": "login",
+        "waitelement": ""
+      },
+      "elements": [
+        {
+          "loan button": "(//li[@class='has-sub'])[4]"
+        },
+        {
+          "loan disbursement" : "(//li[@class='has-sub'])[5]"
+        },
+        {
+          "loan disbursement monitoring" : "(//a[contains(text(),'Kredi Kullandırım Gözlem')])[1]"
+        },
+        {
+          "loan disbursement date" : "(//input[@type='text'])[3]"
+        },
+        {
+          "loan disbursement status" : "(//div[@class='orion-widget-container orion-inline orion-col-c8'])[6]"
+        },
+        {
+          "loan disbursement status area" : "(//select[@orionid='state'])[1]"
+        },
+        {
+          "search button" : "//button[@orionid='btnSearch']"
+        },
+        {
+          "end page" : "//*/div/div[2]/div/div[2]/div/div[2]/div/div[2]/div[2]/div[2]"
+        },
+        {
+          "first row button": "//*/div[3]/div/div/div/table/tbody/tr[2]/th"
+        },
+        {
+          "credit detail button" : "//button[@orionid='btnShowCreditDisbursement']"
+        },
+        {
+          "credit no" : "(//div[@class='orion-widget-container orion-inline orion-col-c8'])[9]"
+        },
+        {
+          "credit no are" : "//small[@id='edPopupCreditNo-helper']"
+        },
+        {
+          "close button" : "//button[@orionid='orion-id-080']"
+        },
+        {
+          "collection" : ".expand .has-sub:nth-of-type(4) > a:nth-of-type(1)"
+        },
+        {
+          "instruction operations" : "(//li[@class='has-sub'])[7]"
+        },
+        {
+          "giving instructions" : "(//a[contains(text(),'Talimat İşlemleri')])[1]"
+        },
+        {
+          "giving instructions page" : "//a[normalize-space()='Talimat Verme']"
+        },
+        {
+          "credit no area" : "//input[@orionid='creditCode']"
+        },
+        {
+          "bank name button" : "(//select[@orionid='bankCode'])[1]"
+        },
+        {
+          "bank name test" : "//*/div/div/div[2]/div[2]/div[4]/select/option[7]"
+        },
+        {
+          "bank name" : "//*/select/option[12]"
+        },
+        {
+          "save button" : "//button[@orionid='btnGiveOrder']"
+        },
+        {
+          "yes button" : "//button[@type='button' and @class='btn btn-sm btn-warning']"
+        },
+        {
+          "success close button" : "//button[@type='button' and @class='btn btn-sm btn-success']"
+        },
+        {
+          "page hader" : "//h1[contains(text(),'Talimat İşlemleri')]"
+        },
+        {
+          "cancel the instruction" : "(//a[@class='hidden-phone'])[2]"
+        },
+        {
+          "cancel credit no search" : "(//i[@type='search'])[2]"
+        },
+        {
+          "cancel credit area" : "(//input[@orionid='creditNo'])[1]"
+        },
+        {
+          "start date" : "(//input[@type='text'])[13]"
+        },
+        {
+          "finish date" : "(//input[@type='text'])[14]"
+        },
+        {
+          "cancel credit no search button" : "//button[@orionid='btnSearch']"
+        },
+        {
+          "cancel credit no first row" : "(//span[contains(text(),'1')])[35]"
+        },
+        {
+          "cancel the instruction save button" : "//button[@orionid='btnCancelOrder']"
+        },
+        {
+          "cancel the instruction yes button" : "(//button[normalize-space()='Evet'])[1]"
+        },
+        {
+          "cancel the instruction close button" : "(//button[@class='btn btn-sm btn-success'])[1]"
+        },
+        {
+          "system close" : "//li[@id='logout_button']"
+        }
+      ]
+    }
+  ]
+}
+
+
+

@@ -50,6 +50,21 @@
           "reference number area": "//input[@orionid='referans_no']"
         },
         {
+          "reference number limit text area" : "//*[@id=\"modal-title-text\"]/b"
+
+        },
+        {
+          "received in full area" : "//select[@orionid='missingDelivery']"
+
+        },
+        {
+          "received in full" : "//div[@class='orion-widget-container orion-inline']"
+
+        },
+        {
+          "page" : "//*[@id=\"content\"]/div/h1"
+        },
+        {
           "cancel button": "//button[@owf_type='reject']"
         },
         {
