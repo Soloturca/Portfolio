@@ -143,13 +143,16 @@
           "confirmed amount text area": "//td[@class='htRight']"
         },
         {
-          "current highlight": "//td[@class='htRight current highlight']"
+          "current highlight": "//textarea[@class='handsontableInput htRight']"
         },
         {
           "maturity area": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[25]"
         },
         {
           "approved due date": "//td[@class='htRight']"
+        },
+        {
+          "financing items": "//*[contains(text(),'Finansman Kalemleri')]"
         },
         {
           "approved maturity text area": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[6]"
