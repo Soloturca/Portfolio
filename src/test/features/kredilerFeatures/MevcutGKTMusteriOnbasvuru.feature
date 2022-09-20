@@ -36,8 +36,7 @@ Feature: Orion Finance Finco Test Scenarios - Mevcut GKT ön başvuru
     And I need to just wait
 
     And I wait transaction result element 30 seconds at index 1
-    When I need to see if the result of the transaction is positive by transaction result at index 1
-    Then I click element: close button at index 1
+    When I click element: close button at index 1
     And I wait continue button element 30 seconds at index 1
     And I click element: continue button at index 1
     And I wait add document element 30 seconds at index 1
@@ -54,6 +53,7 @@ Feature: Orion Finance Finco Test Scenarios - Mevcut GKT ön başvuru
     When I click element: continue button two at index 1
     Then I click element: close system at index 1
     And I click element: yes button at index 1
+    And I wait login username element 30 seconds at index 1
 
 
 

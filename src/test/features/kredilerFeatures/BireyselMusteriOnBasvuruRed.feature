@@ -1,7 +1,6 @@
-Feature: Orion Finance Finco Test Scenarios - Mevcut Kurumsal ön başvuru
+Feature: Orion Finance Finco Test Scenarios - Bireysel müşteri ön başvuru red
 
-  #1.)Mevcut kurumsal müşteri ön başvuru
-  #2.)ön başvuru alındı yazısı gorulur
+  #1.)Bireysel müşteri ön başvuru red
 
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
@@ -13,10 +12,11 @@ Feature: Orion Finance Finco Test Scenarios - Mevcut Kurumsal ön başvuru
     When I click element: login button at index 1
     Then I see loanapplication page
 
-  @MevcutKurumsalonbasvuru
-  Scenario: MEVCUT KURUMSAL ON BASVURU:
+  @BireysekMusteriOnBasvuruRed
+  Scenario: BIREYSEL MUSTERI ON BASVURU RED:
 
-    #on basvuru - 1Scenario:
+    #on basvuru red - 1Scenario:
+
     And I wait loan button element 30 seconds at index 1
     When I click element: loan button at index 1
     And I wait loan application element 30 seconds at index 1
@@ -30,28 +30,13 @@ Feature: Orion Finance Finco Test Scenarios - Mevcut Kurumsal ön başvuru
     When I click element: application information at index 1
     And I wait tax no element 30 seconds at index 1
     When I click element: tax no at index 1
-    And I enter "4301970204" text to tax no area at index 1
+    And I enter "1649952269" text to tax no area at index 1
     And I click element: partner search button at index 1
     And I need to just wait
 
-    And I wait transaction result element 30 seconds at index 1
-    When I click element: close button at index 1
-    And I wait continue button element 30 seconds at index 1
-    And I click element: continue button at index 1
-    And I wait add document element 30 seconds at index 1
-    And I need to just wait
-    When I upload the file for customer "evrak.jpg" using the: add document at index 1
-    Then I wait add document element 30 seconds at index 2
-    And I upload the file for customer "evrak.jpg" using the: add document at index 2
-    And I wait preliminary assessment element 30 seconds at index 1
-    When I click element: preliminary assessment at index 1
-    And I need to just wait
-    And I need to see if the preliminary evaluation result is positive by information at index 1
-    And I click element: close button at index 1
-    And I wait continue button two element 30 seconds at index 1
-    When I click element: continue button two at index 1
-    And I wait close system element 30 seconds at index 1
-    And I click element: close system at index 1
+    And I wait error text element 30 seconds at index 1
+    When I click element: error close button at index 1
+    Then I click element: close system at index 1
     And I click element: yes button at index 1
     And I wait login username element 30 seconds at index 1
 
