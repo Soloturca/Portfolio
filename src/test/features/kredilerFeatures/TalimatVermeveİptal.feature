@@ -1,4 +1,4 @@
-Feature: Orion Finance Finco Test Scenarios
+Feature: Orion Finance Finco Test Scenarios - Talimat verme ve iptal
 
   #1.)Talimat verme
   #2.)Talimat iptal
@@ -23,8 +23,10 @@ Feature: Orion Finance Finco Test Scenarios
     When I click element: loan button at index 1
     And I wait instruction operations element 30 seconds at index 1
     When I click element: instruction operations at index 1
-    Then I click element: giving instructions at index 1
-    And I click element: giving instructions page at index 1
+    And I wait giving instructions element 30 seconds at index 1
+    When I click element: giving instructions at index 1
+    And I need to just wait
+    Then I click element: giving instructions page at index 1
     And I wait credit no area element 30 seconds at index 1
     When I click element: credit no area at index 1
     And I enter "2021091700003" text to credit no area at index 1

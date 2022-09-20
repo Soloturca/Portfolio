@@ -1659,6 +1659,130 @@ public class StepDefs extends MyTestNGBaseClass {
         }
         return flag;
     }
+    @Then("I need to see if the result of the transaction is positive by (\\w+(?: \\w+)*) at index (\\d+)")
+    public boolean resultpositive(String element, int index) {
+        String title = commonLib.getTheElementInformation(element, index);
+        System.out.println("Title: " + " " + title);
+        boolean flag = false;
+
+        try {
+            if (title.contains("Mersis'ten ortak sorgulama işlemi tamamlandı.")) {
+                System.out.println("Matched .The client is created new!");
+                Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "Matched. The client is created new!", true);
+            }
+            else
+            {
+                System.out.println("Not matched.");
+                Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("FAIL", "Not matched! " + phNo, true);
+                Assert.fail("Not matched." + phNo);
+                flag = false;
+            }
+            return true;
+        } catch (Exception e) {
+            System.out.println("Not matched. An error during the update.");
+            Allure.addAttachment("Not matched. An error during the update.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "Not matched! " + phNo, true);
+            Assert.fail("Not matched. An error during the update!" + phNo);
+            flag = false;
+        }
+        return flag;
+    }
+
+    @Then("I need to see if the preliminary evaluation result is positive by (\\w+(?: \\w+)*) at index (\\d+)")
+    public boolean evaluationpositive(String element, int index) {
+        String title = commonLib.getTheElementInformation(element, index);
+        System.out.println("Title: " + " " + title);
+        boolean flag = false;
+
+        try {
+            if (title.contains("Ön değerlendirme sonucu olumludur.")) {
+                System.out.println("Matched .The client is created new!");
+                Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "Matched. The client is created new!", true);
+            }
+            else
+            {
+                System.out.println("Not matched.");
+                Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("FAIL", "Not matched! " + phNo, true);
+                Assert.fail("Not matched." + phNo);
+                flag = false;
+            }
+            return true;
+        } catch (Exception e) {
+            System.out.println("Not matched. An error during the update.");
+            Allure.addAttachment("Not matched. An error during the update.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "Not matched! " + phNo, true);
+            Assert.fail("Not matched. An error during the update!" + phNo);
+            flag = false;
+        }
+        return flag;
+    }
+
+    @Then("I need to see the payment plan screen pop up by (\\w+(?: \\w+)*) at index (\\d+)")
+    public boolean paymentplanscreen(String element, int index) {
+        String title = commonLib.getTheElementInformation(element, index);
+        System.out.println("Title: " + " " + title);
+        boolean flag = false;
+
+        try {
+            if (title.contains("Ödeme Planı Simülasyonu")) {
+                System.out.println("Matched .The client is created new!");
+                Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "Matched. The client is created new!", true);
+            }
+            else
+            {
+                System.out.println("Not matched.");
+                Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("FAIL", "Not matched! " + phNo, true);
+                Assert.fail("Not matched." + phNo);
+                flag = false;
+            }
+            return true;
+        } catch (Exception e) {
+            System.out.println("Not matched. An error during the update.");
+            Allure.addAttachment("Not matched. An error during the update.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "Not matched! " + phNo, true);
+            Assert.fail("Not matched. An error during the update!" + phNo);
+            flag = false;
+        }
+        return flag;
+    }
+
+
+    @Then("I need to validate the pre-application screen by (\\w+(?: \\w+)*) at index (\\d+)")
+    public boolean preapplicationscreen(String element, int index) {
+        String title = commonLib.getTheElementInformation(element, index);
+        System.out.println("Title: " + " " + title);
+        boolean flag = false;
+
+        try {
+            if (title.contains("Ön Başvuru")) {
+                System.out.println("Matched .The client is created new!");
+                Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "Matched. The client is created new!", true);
+            }
+            else
+            {
+                System.out.println("Not matched.");
+                Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("FAIL", "Not matched! " + phNo, true);
+                Assert.fail("Not matched." + phNo);
+                flag = false;
+            }
+            return true;
+        } catch (Exception e) {
+            System.out.println("Not matched. An error during the update.");
+            Allure.addAttachment("Not matched. An error during the update.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "Not matched! " + phNo, true);
+            Assert.fail("Not matched. An error during the update!" + phNo);
+            flag = false;
+        }
+        return flag;
+    }
 
     @Then("^(?:I )?I need to checkbox verify for (\\w+(?: \\w+)*) at index (\\d+)")
     public boolean verifyCheckbox(String element, int index) {
