@@ -32,7 +32,7 @@
           "partner search button" : "(//button[@orionid='btnQueryPartners'])[1]"
         },
         {
-          "transaction result" : "//div[@id='modal-background']"
+          "transaction result" : "//div[@class='modal in']//p[@id='modal-body-text']"
         },
         {
           "close button" : "(//button[@class='btn btn-sm btn-success'])[1]"
@@ -63,6 +63,15 @@
         },
         {
           "yes button": "//button[normalize-space()='Evet']"
+        },
+        {
+          "error close button" : "//button[@class='btn btn-sm btn-danger']"
+        },
+        {
+          "error text" : "//div[@class='modal in']//p[@id='modal-body-text']"
+        },
+        {
+          "login username" : "(//input[@id='username'])[1]"
         }
       ]
     }
