@@ -25,8 +25,7 @@ Feature: Orion Finance Finco Test Scenarios - Talimat verme ve iptal
     When I click element: instruction operations at index 1
     And I wait giving instructions element 30 seconds at index 1
     When I click element: giving instructions at index 1
-    And I need to just wait
-    Then I click element: giving instructions page at index 1
+    And I wait giving instructions page element 30 seconds at index 1
     And I wait credit no area element 30 seconds at index 1
     When I click element: credit no area at index 1
     And I enter "2021091700003" text to credit no area at index 1
@@ -57,6 +56,8 @@ Feature: Orion Finance Finco Test Scenarios - Talimat verme ve iptal
     And I click element: cancel the instruction close button at index 1
     And I need to just wait
     Then I click element: system close at index 1
+    And I click element: yes button at index 1
+    And I wait login user element 30 seconds at index 1
 
 
 

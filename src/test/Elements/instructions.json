@@ -53,10 +53,10 @@
           "instruction operations" : "(//li[@class='has-sub'])[7]"
         },
         {
-          "giving instructions" : "(//a[contains(text(),'Talimat İşlemleri')])[1]"
+          "giving instructions" : "//a[@data-href='/finance/customerexternalinquiry/js/orderOperations.js']"
         },
         {
-          "giving instructions page" : "//a[normalize-space()='Talimat Verme']"
+          "giving instructions page" : "//div[@class='orion orion-page orion-context']"
         },
         {
           "credit no area" : "//input[@orionid='creditCode']"
@@ -101,7 +101,7 @@
           "cancel credit no search button" : "//button[@orionid='btnSearch']"
         },
         {
-          "cancel credit no first row" : "(//span[contains(text(),'1')])[35]"
+          "cancel credit no first row" : "//html/body/div[2]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
         },
         {
           "cancel the instruction save button" : "//button[@orionid='btnCancelOrder']"
@@ -114,7 +114,13 @@
         },
         {
           "system close" : "//li[@id='logout_button']"
-        }
+        },
+        {
+          "yes button" : "//button[normalize-space()='Evet']"
+        },
+        {
+          "login user" : "//input[@id='username']"
+         }
       ]
     }
   ]

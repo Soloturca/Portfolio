@@ -47,10 +47,10 @@
           "add document" : "//i[@class='fa fa-upload htOrionIcon pull-right']"
         },
         {
-          "preliminary assessment" : "//button[@orionid='btnPreAssessment']"
+          "preliminary assessment" : "(//div[@class='orion-widget-container orion-button-container orion-inline orion-frame-lg orion-right'])[5]"
         },
         {
-          "information" : "//*[@id=\"modal-background\"]"
+          "information" : "//div[@class='modal in']//p[@id='modal-body-text']"
         },
         {
           "continue button two" : "//button[@orionid='btnDocumentInfoContinue']"
