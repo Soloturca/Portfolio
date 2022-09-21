@@ -24,8 +24,6 @@ Feature: Orion Finance Finco Test Scenarios - Mevcut GKT ön başvuru
     When I click element: loan application at index 1
     Then I click element: pre application at index 1
     And I click element: pre application at index 1
-    And I wait page hader element 30 seconds at index 1
-    And I need to validate the pre-application screen by page hader at index 1
 
     And I wait application information element 30 seconds at index 1
     When I click element: application information at index 1
@@ -47,6 +45,7 @@ Feature: Orion Finance Finco Test Scenarios - Mevcut GKT ön başvuru
     And  I upload the file for customer "evrak.jpg" using the: add document at index 2
     And I wait preliminary assessment element 30 seconds at index 1
     When I click element: preliminary assessment at index 1
+    And I wait information element 30 seconds at index 1
     And I need to see if the preliminary evaluation result is positive by information at index 1
     And I click element: close button at index 1
     And I wait continue button two element 30 seconds at index 1

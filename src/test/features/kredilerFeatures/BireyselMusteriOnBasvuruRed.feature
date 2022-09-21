@@ -23,8 +23,6 @@ Feature: Orion Finance Finco Test Scenarios - Bireysel müşteri ön başvuru re
     When I click element: loan application at index 1
     Then I click element: pre application at index 1
     And I click element: pre application at index 1
-    And I wait page hader element 30 seconds at index 1
-    And I need to validate the pre-application screen by page hader at index 1
 
     And I wait application information element 30 seconds at index 1
     When I click element: application information at index 1
