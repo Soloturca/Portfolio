@@ -72,7 +72,35 @@
         },
         {
           "login username" : "(//input[@id='username'])[1]"
+        },
+        {
+          "preliminary observation" : "//a[@data-href='/finance/creditapplication/js/preApplicationObservation.js']"
+        },
+        {
+          "preliminary observation page" : "//div[@class='orion orion-page orion-context']"
+        },
+        {
+          "search list applications" : "//button[@orionid='searchAndListApplications']"
+        },
+        {
+          "select row" : "//*/div[3]/div/div/div/table/tbody/tr[2]/th"
+        },
+        {
+          "detail button" : "//button[@orionid='btnObservationDetail']"
+        },
+        {
+          "application information page" : "//li[@data-title='Başvuran Bilgisi']"
+        },
+        {
+          "document page" : "//li[@data-title='Evraklar']"
+        },
+        {
+          "document title" : "//legend[@orionid='documnetTitle']"
+        },
+        {
+          "back button" : "//button[@orionid='btnBackToObservationPage']"
         }
+
       ]
     }
   ]
