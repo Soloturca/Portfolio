@@ -12,7 +12,7 @@ Feature: Orion Finance Finco Test Scenarios - Bireysel müşteri ön başvuru re
     When I click element: login button at index 1
     Then I see loanapplication page
 
-  @BireysekMusteriOnBasvuruRed
+  @BireyselMusteriOnBasvuruRed
   Scenario: BIREYSEL MUSTERI ON BASVURU RED:
 
     #on basvuru red - 1Scenario:
