@@ -1,0 +1,103 @@
+{
+  "pages": [
+    {
+      "pageInfo": {
+        "pageName": "paymentplan",
+        "parent": "login",
+        "waitelement": ""
+      },
+      "elements": [
+        {
+          "loan button": "(//li[@class='has-sub'])[3]"
+        },
+        {
+          "payment plan" : "(//li[@class='has-sub'])[5]"
+        },
+        {
+          "payment plan simulation" : "//a[@data-href='/finance/creditpaymentplan/js/paymentPlanSimulation.js']"
+        },
+        {
+          "payment plan simulation page" : "//div[@class='orion orion-page orion-context']"
+        },
+        {
+          "interest calculation" : "//li[@data-title='Faiz Hesapla']"
+        },
+        {
+          "loan amount" : "(//div[@class='orion-widget-container orion-buttonedit-container orion-inline orion-col-c8'])[1]"
+        },
+        {
+          "loan amount area" : "(//input[@type='text'])[1]"
+        },
+        {
+          "number of installments" : "(//div[@class='orion-widget-container orion-inline orion-col-c8'])[1]"
+        },
+        {
+          "number of installments area" : "(//input[@orionid='installmentCount'])[1]"
+        },
+        {
+          "customer type" : "//div[@orionid='row:customerType']//div[@class='orion-widget-container orion-inline orion-col-default']"
+        },
+        {
+          "customer type select" : "//select[@orionid='customerType']"
+        },
+        {
+          "application type" : "//div[@orionid='row:applicationType']//div[@class='orion-widget-container orion-inline orion-col-default']"
+        },
+        {
+          "application type select" : "//select[@orionid='applicationType']"
+        },
+        {
+          "product group" : "//div[@orionid='row:productGroupCode']//div[@class='orion-widget-container orion-inline orion-col-default']"
+        },
+        {
+          "product group code" : "//select[@orionid='productGroupCode']"
+        },
+        {
+          "product code" : "//div[@orionid='row:productCode']//div[@class='orion-widget-container orion-inline orion-col-default']"
+        },
+        {
+          "product code area" : "//select[@orionid='productCode']"
+        },
+        {
+          "pricing" : "//div[@orionid='row:pricingCode']//div[@class='orion-widget-container orion-inline orion-col-default']"
+        },
+        {
+          "pricing code"  : "//select[@orionid='pricingCode']"
+        },
+        {
+          "credit type" : "//div[@orionid='row:creditType']//div[@class='orion-widget-container orion-inline orion-col-default']"
+        },
+        {
+          "credit type area" : "//select[@orionid='creditType']"
+        },
+        {
+          "interest calculate" : "//button[@orionid='btnInterestCalculate']"
+        },
+        {
+          "next step" : "//button[@orionid='btnInterestCalculateNextStep']"
+        },
+        {
+          "create payment plan" : "//li[@class='badge-notify active']"
+        },
+        {
+          "payment plan type" : "(//label[normalize-space()='Esnek Ödeme'])[1]"
+        },
+        {
+          "create template" : "//button[@orionid='btnCreatePaymentTemplate']"
+        },
+        {
+          "flexible payment template" : "//h5[contains(text(),'Esnek Ödeme Şablonu')]"
+        },
+        {
+          "calculate button" : "//button[@orionid='btnCalculate']"
+        },
+        {
+          "final payment plan" : "//h5[contains(text(),'Ödeme Planı')]"
+        }
+      ]
+    }
+  ]
+}
+
+
+

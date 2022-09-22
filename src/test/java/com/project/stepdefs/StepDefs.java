@@ -1693,36 +1693,6 @@ public class StepDefs extends MyTestNGBaseClass {
     }
 
 
-    @Then("I need to validate the pre-application screen by (\\w+(?: \\w+)*) at index (\\d+)$")
-    public boolean preapplicationscreen(String element, int index) {
-        String title = commonLib.getTheElementInformation(element, index);
-        System.out.println("Title: " + " " + title);
-        boolean flag = false;
-
-        try {
-            if (title.contains("Ön Başvuru")) {
-                System.out.println("Matched .The client is created new!");
-                Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
-                reportResult("PASS", "Matched. The client is created new!", true);
-            }
-            else
-            {
-                System.out.println("Not matched.");
-                Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
-                reportResult("FAIL", "Not matched! " + phNo, true);
-                Assert.fail("Not matched." + phNo);
-                flag = false;
-            }
-            return true;
-        } catch (Exception e) {
-            System.out.println("Not matched. An error during the update.");
-            Allure.addAttachment("Not matched. An error during the update.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
-            reportResult("FAIL", "Not matched! " + phNo, true);
-            Assert.fail("Not matched. An error during the update!" + phNo);
-            flag = false;
-        }
-        return flag;
-    }
 
     @Then("^(?:I )?I need to checkbox verify for (\\w+(?: \\w+)*) at index (\\d+)")
     public boolean verifyCheckbox(String element, int index) {
