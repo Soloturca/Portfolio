@@ -65,11 +65,14 @@ Feature: Orion Finance Finco Test Scenarios - SATIN ALMA TALEP
     And  I wait price excluding vat element 30 seconds at index 1
     When I double click element: price excluding vat at index 1
     And I enter "500" text to price area excluding vat at index 1
+    And I click element: free space at index 1
     And I click element: vat rate search at index 2
+    And I wait vat rate search area element 30 seconds at index 1
     And I select element: "%18" under vat rate search area at index 1
     And I click element: vat amount at index 1
 
     When I click element: continue to documents at index 1
+    And I need to right scroll verify by rscroll at index 1
     And I wait upload to word button element 30 seconds at index 1
     And I upload the file for payment "testtd.docx" using the: upload to word button at index 1
     And I upload the file for payment "testtd.docx" using the: upload to word button at index 2

@@ -11,6 +11,7 @@ import io.qameta.allure.Allure;
 import oracle.net.aso.e;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import utils.excelutils.ExcelUtils;
@@ -114,6 +115,25 @@ public class StepDefs extends MyTestNGBaseClass {
             if (object != null) {
                 object.click();
                 System.out.println("Clicked on object-->" + element);
+                Allure.addAttachment("Element is clicked.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "I clicked the element: " + element, true);
+                return true;
+            }
+        } catch (Exception e) {
+            reportResult("FAIL", "I cannot clicked the element: " + element, true);
+            Allure.addAttachment("Element is not clicked.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            Assert.fail("Could not clicked the element:" + element);
+            flag = false;
+        }
+        return flag;
+    }
+
+    private boolean clickElementWithScript(String element, int index) {
+        WebElement object = commonLib.findElement(element, index);
+        boolean flag = false;
+        try {
+            if (object != null) {
+                ((JavascriptExecutor)oDriver).executeScript("arguments[0].click();",object);
                 Allure.addAttachment("Element is clicked.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("PASS", "I clicked the element: " + element, true);
                 return true;
@@ -427,6 +447,11 @@ public class StepDefs extends MyTestNGBaseClass {
     @Then("I go to top of the site")
     public void topOfWebsite() {
         ((JavascriptExecutor) oDriver).executeScript("window.scrollTo(document.body.scrollHeight, 0)");
+    }
+
+    @Then("I go to end of the site")
+    public void endOfWebsite() {
+        ((JavascriptExecutor) oDriver).executeScript("window.scrollTo(document.body.scrollLow, 0)");
     }
 
     @Then("^I have to check is there any document is uploaded on the (.*) at index (\\d+) for telephone")
@@ -784,6 +809,43 @@ public class StepDefs extends MyTestNGBaseClass {
         return flag;
     }
 
+    @Then("^(?:I )?print the date from one year ago: (\\w+(?: \\w+)*) at index (\\d+)")
+    public boolean pase2(String element, int index) throws InterruptedException {
+
+        WebElement object;
+        object = commonLib.waitElement(element, timeout, index);
+
+        String datse;
+
+        Calendar date = Calendar.getInstance();
+        date.setTime(new Date());
+        Format f = new SimpleDateFormat("dd/MM/yyyy");
+        date.add(Calendar.YEAR, -1);
+        System.out.println(f.format(date.getTime()));
+        datse = f.format(date.getTime());
+
+        boolean flag = false;
+        try {
+            if (object != null) {
+                Thread.sleep(2000);
+                object.sendKeys(datse);
+
+                System.out.println("The text has been pasted.");
+                Allure.addAttachment("The text has been pasted.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "The text has been pasted.", true);
+                return true;
+            }
+        } catch (Exception e) {
+            System.out.println("The paste action cannot be done.");
+            Allure.addAttachment("The paste action cannot be done.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "The paste action cannot be done.", true);
+            Assert.fail("The paste action cannot be done!");
+            flag = false;
+
+        }
+        return flag;
+    }
+
     @Then("^(?:I )?get the information by copying the value from: (\\w+(?: \\w+)*) at index (\\d+)")
     public boolean copyElement(String element, int index) throws InterruptedException {
         WebElement object;
@@ -1022,10 +1084,8 @@ public class StepDefs extends MyTestNGBaseClass {
     @Then("^(?:I )?upload the file for payment \"([^\"]*)\" using the: (\\w+(?: \\w+)*) at index (\\d+)")
     public void uploadFile3(String text, String element, int index) throws IOException, InterruptedException, AWTException, IOException {
 
-        WebElement object;
-        object = commonLib.findElement(element, index);
-        object.click();
-        Thread.sleep(5000);
+        waitElement(element,30,index);
+        clickElement(element, index);
 
         if (text.contains("testtd.docx")) {
 
@@ -1577,6 +1637,70 @@ public class StepDefs extends MyTestNGBaseClass {
 
         try {
             if (title.contains("Genel Tanımlar")) {
+                System.out.println("Matched .The client is created new!");
+                Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "Matched. The client is created new!", true);
+            }
+            else
+            {
+                System.out.println("Not matched.");
+                Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("FAIL", "Not matched! " + phNo, true);
+                Assert.fail("Not matched." + phNo);
+                flag = false;
+            }
+            return true;
+        } catch (Exception e) {
+            System.out.println("Not matched. An error during the update.");
+            Allure.addAttachment("Not matched. An error during the update.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "Not matched! " + phNo, true);
+            Assert.fail("Not matched. An error during the update!" + phNo);
+            flag = false;
+        }
+        return flag;
+    }
+
+
+    @Then("I need to see if the preliminary evaluation result is positive by (\\w+(?: \\w+)*) at index (\\d+)$")
+    public boolean evaluationpositive(String element, int index) {
+        String title = commonLib.getTheElementInformation(element, index);
+        System.out.println("Title: " + " " + title);
+        boolean flag = false;
+
+        try {
+            if (title.contains("Ön değerlendirme sonucu olumludur.")) {
+                System.out.println("Matched .The client is created new!");
+                Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "Matched. The client is created new!", true);
+            }
+            else
+            {
+                System.out.println("Not matched.");
+                Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("FAIL", "Not matched! " + phNo, true);
+                Assert.fail("Not matched." + phNo);
+                flag = false;
+            }
+            return true;
+        } catch (Exception e) {
+            System.out.println("Not matched. An error during the update.");
+            Allure.addAttachment("Not matched. An error during the update.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "Not matched! " + phNo, true);
+            Assert.fail("Not matched. An error during the update!" + phNo);
+            flag = false;
+        }
+        return flag;
+    }
+
+
+    @Then("I need to validate the pre-application screen by (\\w+(?: \\w+)*) at index (\\d+)$")
+    public boolean preapplicationscreen(String element, int index) {
+        String title = commonLib.getTheElementInformation(element, index);
+        System.out.println("Title: " + " " + title);
+        boolean flag = false;
+
+        try {
+            if (title.contains("Ön Başvuru")) {
                 System.out.println("Matched .The client is created new!");
                 Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("PASS", "Matched. The client is created new!", true);
