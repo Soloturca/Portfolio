@@ -6,6 +6,7 @@ Feature: Orion Finance Finco Test Scenarios / Test Cases for Treasury
   @Treasury
   Scenario: Delete Treasury Cost Rate
    #Hazine Maliyet Oranı Silinmesi
+
     Given I go to "https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/" with this username: "30060" and this password:"1"
     Then I see treasury page
     And I wait treasury menu for 30060 element 3 seconds at index 1
@@ -21,7 +22,7 @@ Feature: Orion Finance Finco Test Scenarios / Test Cases for Treasury
     And I click element: start day at index 1
     And I enter "1" text to start day at index 1
     And I click element: second day count at index 1
-    And I enter "180" text to second day count at index
+    And I enter "180" text to second day count at index 1
     When I click element: start amount at index 1
     And I enter "10000" text to start amount at index 1
     When I click element: second amount at index 1
