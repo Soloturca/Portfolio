@@ -6,8 +6,6 @@ Feature: Orion Finance Finco Test Scenarios - Customers
 #4.) Kurumsal Müşteri Güncelleme: TC004
 
 
-
-
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
     Then I see login page
@@ -15,14 +13,10 @@ Feature: Orion Finance Finco Test Scenarios - Customers
     Then I enter "1" text to password text area at index 1
     And I wait login button element 30 seconds at index 1
     When I click element: login button at index 1
-    Then I see home page
+    Then I see customer page
     
-
-
   @customer
   Scenario: Bireysel Müşteri Oluşturma: TC001 -
-    Then I see customer page
-    And I wait customer transaction element 30 seconds at index 1
     When I click element: customer transaction at index 1
     And I wait customer management button element 30 seconds at index 1
     When I click element: customer management button at index 1
@@ -58,8 +52,6 @@ Feature: Orion Finance Finco Test Scenarios - Customers
 
   @customer
   Scenario: GKT Müşteri Güncelleme: TC002 -
-    Then I see customer page
-    And I wait customer transaction element 30 seconds at index 1
     When I click element: customer transaction at index 1
     And I wait customer management button element 30 seconds at index 1
     When I click element: customer management button at index 1
@@ -72,8 +64,6 @@ Feature: Orion Finance Finco Test Scenarios - Customers
 
   @customer
   Scenario: Bireysel Müşteri Güncelleme: TC003 -
-    Then I see customer page
-    And I wait customer transaction element 30 seconds at index 1
     When I click element: customer transaction at index 1
     And I wait customer management button element 30 seconds at index 1
     When I click element: customer management button at index 1
@@ -86,8 +76,6 @@ Feature: Orion Finance Finco Test Scenarios - Customers
 
   @customer
   Scenario: Kurumsal Müşteri Güncelleme: TC004 -
-    Then I see customer page
-    And I wait customer transaction element 30 seconds at index 1
     When I click element: customer transaction at index 1
     And I wait customer management button element 30 seconds at index 1
     When I click element: customer management button at index 1
@@ -99,4 +87,6 @@ Feature: Orion Finance Finco Test Scenarios - Customers
     And I click element: financial information section at index 1
     Then I clear text to number of employees area at index 1
     And I enter "4" text to number of employees area at index 1
+
+
 
