@@ -13,14 +13,12 @@ Feature: Orion Finance Finco Test Scenarios - Customer relations
     Then I enter "1" text to password text area at index 1
     And I wait login button element 30 seconds at index 1
     When I click element: login button at index 1
-    Then I see home page
+    Then I see customer page
     
 
 
   @customerrelation
   Scenario: Kurumsal-Müşteri İlişki Gözlem: TC001 -
-    Then I see customer page
-    And I wait customer transaction element 30 seconds at index 1
     When I click element: customer transaction at index 1
     And I wait customer relations observation element 30 seconds at index 1
     When I click element: customer relations observation at index 1
@@ -30,8 +28,6 @@ Feature: Orion Finance Finco Test Scenarios - Customer relations
 
   @customerrelation
   Scenario: GKT-Müşteri İlişki Gözlem: TC002 -
-    Then I see customer page
-    And I wait customer transaction element 30 seconds at index 1
     When I click element: customer transaction at index 1
     And I wait customer relations observation element 30 seconds at index 1
     When I click element: customer relations observation at index 1
