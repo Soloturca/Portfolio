@@ -454,6 +454,12 @@ public class StepDefs extends MyTestNGBaseClass {
         ((JavascriptExecutor) oDriver).executeScript("window.scrollTo(document.body.scrollLow, 0)");
     }
 
+    @Then("I go to down of the site")
+    public void downOfWebsite() {
+        ((JavascriptExecutor) oDriver).executeScript("window.scrollBy(0, 1000)");
+
+    }
+
     @Then("^I have to check is there any document is uploaded on the (.*) at index (\\d+) for telephone")
     public boolean checkUploadFileForTelephone(String element, int index) throws InterruptedException, AWTException, IOException {
         WebElement object;
