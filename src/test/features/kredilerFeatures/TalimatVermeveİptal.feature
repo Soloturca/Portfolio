@@ -30,11 +30,8 @@ Feature: Orion Finance Finco Test Scenarios - Talimat verme ve iptal
     When I click element: credit no area at index 1
     And I enter "2021091700003" text to credit no area at index 1
     And I wait bank name button element 30 seconds at index 1
-    When I click element: bank name button at index 1
-    Then I click element: bank name test at index 1
-    And I wait page hader element 30 seconds at index 1
-    When I click element: page hader at index 1
-    And I click element: save button at index 1
+    Then I select element: "TURKIYE VAKIFLAR BANKASI T.A.O." under bank name button at index 1
+    When I click element: save button at index 1
     And I wait yes button element 30 seconds at index 1
     When I click element: yes button at index 1
     Then I click element: success close button at index 1
