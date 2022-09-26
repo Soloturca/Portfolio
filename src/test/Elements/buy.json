@@ -102,7 +102,7 @@
         { "price area excluding vat" : "//textarea[@class='handsontableInput htRight']"
 
         },
-        {"vat rate search" : "//div[@class='htAutocompleteArrow']"
+        {"vat rate search" : "//tbody/tr[1]/td[7]/div[1]"
 
         },
         {"vat rate search area" : "//select[@class='htSelectEditor']"

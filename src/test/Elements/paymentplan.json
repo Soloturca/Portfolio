@@ -93,6 +93,12 @@
         },
         {
           "final payment plan" : "//h5[contains(text(),'Ödeme Planı')]"
+        },
+        {
+          "equal installment payment" : "(//label[contains(text(),'Eşit Taksitli Ödeme')])[1]"
+        },
+        {
+          "create payment plan two" : "(//button[@orionid='btnCreatePaymentPlan'])[1]"
         }
       ]
     }
