@@ -99,6 +99,12 @@
         },
         {
           "create payment plan two" : "(//button[@orionid='btnCreatePaymentPlan'])[1]"
+        },
+        {
+          "payment plan observation" : "//a[@data-href='/finance/creditpaymentplan/js/paymentPlanInvestigation.js']"
+        },
+        {
+          "payment plan observation page" : "(//h1[contains(text(),'Ödeme Planı Gözlem')])[1]"
         }
       ]
     }
