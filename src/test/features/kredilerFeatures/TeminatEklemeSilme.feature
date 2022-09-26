@@ -51,6 +51,7 @@ Feature: Orion Finance Finco Test Scenarios - 009.TEMİNAT MEKTUBU EKLEME VE Sİ
     Then I click element: add product button at index 3
     And I wait close button element 30 seconds at index 1
     Then I click element: close button at index 1
+    Then I go to down of the site
     And I wait select button element 50 seconds at index 11
     And I click element: select button at index 11
     And I wait create payment plan button element 30 seconds at index 1
@@ -76,6 +77,7 @@ Feature: Orion Finance Finco Test Scenarios - 009.TEMİNAT MEKTUBU EKLEME VE Sİ
 
     And I wait continue to Finco Observation button element 30 seconds at index 1
     Then I click element: continue to Finco Observation button at index 1
+    When I need to just wait
 
   @TeminatEklemeveSilme
   Scenario: Kredi İptali: TC002
