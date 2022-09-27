@@ -13,7 +13,7 @@ Feature: Orion Finance Finco Test Scenarios - 013.GKTİ BAŞVURU, BAŞVURU DEĞE
     When I click element: login button at index 1
     Then I see home page
 
-  @GKTIBaşvuru
+  @GKTIBasvuru
   Scenario: Başvuru Giriş: TC001
 
     #Başvuru Giriş - 1Scenario:
@@ -98,7 +98,7 @@ Feature: Orion Finance Finco Test Scenarios - 013.GKTİ BAŞVURU, BAŞVURU DEĞE
     When I click element: close button at index 1
     Then I see home page
 
-  @GKTIBaşvuruDeğerlendirme
+  @GKTIBasvuruDegerlendirme
   Scenario: Başvuru Değerlendirme: TC002
 
     #Başvuru Değerlendirme - 2Scenario:
