@@ -31,8 +31,8 @@ import java.io.IOException;
 @CucumberOptions(
         features = "src/test/features",
         //features = "src/test/features/kredilerFeatures",
-        //tags = {"@TeminatEklemeveSilme"},
-        tags = {"@BireyselKrediBasvuru, @GKTEsitTaksitOdemePlaniSimulasyonu, @KurumsalEsitTaksitOdemePlaniSimulasyonu, @GKTEsnekOdemePlaniSimulasyonu, @KurumsalEsnekOdemePlaniSimulasyonu, @OnBasvuruGozlem, @BireyselMusteriOnBasvuruRed, @MevcutGKTonbasvuru, @MevcutKurumsalonbasvuru, @Talimatvermeveiptal, @workflow, @workflowpending, @customer, @customerrelation, @teminat, @TeminatEklemeveSilme, @TahsisdenIadeBasvuruVeIptal, @BasvuruIptal, @FiyatlamaEsit, @FiyatlamaEsnek, @FiyatlamaGozlem, @GKTIMevcutBasvuru, @GozlemVeRapor, @KefilEklemeSilme, @MevcutEsitFiyatlama, @MevcutEsnekFiyatlama, @bank, @GiderOdeme, @SatınAlmaTalep, @Treasury, @KomisyonOdeme"},
+        //tags = {"@GKTIBasvuru450.000-1.000.000TLAraTutarli"},
+        tags = {"@BireyselKrediBasvuru, @GKTIBasvuru450.000-1.000.000TLAraTutarli, @GKTIBaşvuru, @GKTIBaşvuruDeğerlendirme, @450.000TLAltiTutarliKredi, @GKTEsitTaksitOdemePlaniSimulasyonu, @KurumsalEsitTaksitOdemePlaniSimulasyonu, @GKTEsnekOdemePlaniSimulasyonu, @KurumsalEsnekOdemePlaniSimulasyonu, @OnBasvuruGozlem, @BireyselMusteriOnBasvuruRed, @MevcutGKTonbasvuru, @MevcutKurumsalonbasvuru, @Talimatvermeveiptal, @workflow, @workflowpending, @customer, @customerrelation, @teminat, @TeminatEklemeveSilme, @TahsisdenIadeBasvuruVeIptal, @BasvuruIptal, @FiyatlamaEsit, @FiyatlamaEsnek, @FiyatlamaGozlem, @GKTIMevcutBasvuru, @GozlemVeRapor, @KefilEklemeSilme, @MevcutEsitFiyatlama, @MevcutEsnekFiyatlama, @bank, @GiderOdeme, @SatınAlmaTalep, @Treasury, @KomisyonOdeme"},
         plugin = {"pretty", "io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm"},
         glue = {"com.project.stepdefs"})
 
