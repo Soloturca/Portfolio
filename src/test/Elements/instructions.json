@@ -11,7 +11,7 @@
           "loan button": "(//li[@class='has-sub'])[4]"
         },
         {
-          "loan disbursement" : "(//li[@class='has-sub'])[5]"
+          "loan disbursement" : "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[4]/ul/li[2]"
         },
         {
           "loan disbursement monitoring" : "(//a[contains(text(),'Kredi Kullandırım Gözlem')])[1]"

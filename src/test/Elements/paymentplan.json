@@ -92,7 +92,7 @@
           "calculate button" : "//button[@orionid='btnCalculate']"
         },
         {
-          "final payment plan" : "//h5[contains(text(),'Ödeme Planı')]"
+          "final payment plan two" : "//h5[@class='orionrpm-accordion-title open']"
         },
         {
           "equal installment payment" : "(//label[contains(text(),'Eşit Taksitli Ödeme')])[1]"
