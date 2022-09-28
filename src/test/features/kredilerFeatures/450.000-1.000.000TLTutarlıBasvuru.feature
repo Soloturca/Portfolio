@@ -131,6 +131,7 @@ Feature: Orion Finance Finco Test Scenarios - GKTİ BAŞVURU-450.000-1.000.000 T
     Then I need to credit application approval verify by credit application approval at index 1
     And I wait customer information tab continue button element 30 seconds at index 1
     When I click element: customer information tab continue button at index 1
+    Then I go to top of the site
     And I wait opinion and decision tab area element 30 seconds at index 1
     When I click element: opinion and decision tab area at index 1
     Then I go to top of the site
