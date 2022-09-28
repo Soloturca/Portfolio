@@ -49,7 +49,7 @@ Feature: Orion Finance Finco Test Scenarios - GKT Müşteri Eşit Taksit Ödeme 
     And I wait next step element 30 seconds at index 1
     When I click element: next step at index 1
     Then I click element: create payment plan two at index 1
-    And I wait final payment plan element 30 seconds at index 1
+    And I wait final payment plan two element 30 seconds at index 1
     
 
 

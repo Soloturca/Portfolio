@@ -9,6 +9,9 @@
       "elements": [
         {
           "always allow button": "//*[contains(text(),'İş Akış')]"
+        },
+        {
+          "final payment plan" : "(//*[contains(text(),'Ödeme Planı')])[7]"
         }
       ]
     }
