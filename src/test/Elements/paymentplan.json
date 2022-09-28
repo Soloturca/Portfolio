@@ -92,13 +92,19 @@
           "calculate button" : "//button[@orionid='btnCalculate']"
         },
         {
-          "final payment plan" : "//h5[contains(text(),'Ödeme Planı')]"
+          "final payment plan two" : "//h5[@class='orionrpm-accordion-title open']"
         },
         {
           "equal installment payment" : "(//label[contains(text(),'Eşit Taksitli Ödeme')])[1]"
         },
         {
           "create payment plan two" : "(//button[@orionid='btnCreatePaymentPlan'])[1]"
+        },
+        {
+          "payment plan observation" : "//a[@data-href='/finance/creditpaymentplan/js/paymentPlanInvestigation.js']"
+        },
+        {
+          "payment plan observation page" : "(//h1[contains(text(),'Ödeme Planı Gözlem')])[1]"
         }
       ]
     }

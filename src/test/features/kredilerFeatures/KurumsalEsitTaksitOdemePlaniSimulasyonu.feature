@@ -1,6 +1,6 @@
-Feature: Orion Finance Finco Test Scenarios - Kurumsal Müşteri Esnek Ödeme Planı Simülasyonu
+Feature: Orion Finance Finco Test Scenarios - KURUMSAL Müşteri Eşit Taksit Ödeme Planı Simülasyonu
 
-  #1.)KURUMSAL MÜŞTERİ ESNEK ÖDEME PLANI SİMÜLASYONU:
+  #1.)KURUMSAL MÜŞTERİ EŞİT TAKSİT ÖDEME PLANI SİMÜLASYONU:
 
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
@@ -12,10 +12,10 @@ Feature: Orion Finance Finco Test Scenarios - Kurumsal Müşteri Esnek Ödeme Pl
     When I click element: login button at index 1
     Then I see paymentplan page
 
-  @KurumsalEsnekOdemePlaniSimulasyonu
-  Scenario: KURUMSAL MÜŞTERİ ESNEK ÖDEME PLANI SİMÜLASYONU:
+  @KurumsalEsitTaksitOdemePlaniSimulasyonu
+  Scenario: KURUMSAL MÜŞTERİ EŞİT TAKSİT ÖDEME PLANI SİMÜLASYONU:
 
-    #KURUMSAL MÜŞTERİ ESNEK ÖDEME PLANI SİMÜLASYONU:
+    #KURUMSAL MÜŞTERİ EŞİT TAKSİT ÖDEME PLANI SİMÜLASYONU:
 
     And I wait loan button element 30 seconds at index 1
     When I click element: loan button at index 1
@@ -27,7 +27,7 @@ Feature: Orion Finance Finco Test Scenarios - Kurumsal Müşteri Esnek Ödeme Pl
     And I wait payment plan simulation page element 30 seconds at index 1
     When I click element: interest calculation at index 1
     And I wait loan amount element 30 seconds at index 1
-    When I enter "1000000" text to loan amount area at index 1
+    When I enter "12000" text to loan amount area at index 1
     And I wait number of installments element 30 seconds at index 1
     Then I enter "12" text to number of installments area at index 1
     And I click element: customer type at index 1
@@ -41,16 +41,15 @@ Feature: Orion Finance Finco Test Scenarios - Kurumsal Müşteri Esnek Ödeme Pl
     When I click element: product code at index 1
     Then I select element: "DONANIM - YILLIK" under product code area at index 1
     And I click element: pricing at index 1
-    And I select element: "201 - BANUZEYNEP ESNEK ÖDEME" under pricing code at index 1
+    And I select element: "196 - GRKN OTOMASYON" under pricing code at index 1
     And I wait credit type element 30 seconds at index 1
     When I select element: "TAKSİTLİ TİCARİ KREDİ" under credit type area at index 1
     And I wait interest calculate element 30 seconds at index 1
     And I click element: interest calculate at index 1
     And I wait next step element 30 seconds at index 1
     When I click element: next step at index 1
-    Then I wait create payment plan element 30 seconds at index 1
-    And I click element: create template at index 1
-    Then I click element: calculate button at index 1
+    And I wait create payment plan element 30 seconds at index 1
+    Then I click element: create payment plan two at index 1
     And I see common page
     And I wait final payment plan element 30 seconds at index 1
     

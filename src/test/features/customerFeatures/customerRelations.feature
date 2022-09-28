@@ -19,7 +19,7 @@ Feature: Orion Finance Finco Test Scenarios - Customer relations
 
   @customerrelation
   Scenario: Kurumsal-Müşteri İlişki Gözlem: TC001 -
-    When I click element: customer transaction at index 1
+    When I click element: customer transaction for 30070 at index 1
     And I wait customer relations observation element 30 seconds at index 1
     When I click element: customer relations observation at index 1
     And I wait customer code area element 10 seconds at index 1
@@ -28,7 +28,7 @@ Feature: Orion Finance Finco Test Scenarios - Customer relations
 
   @customerrelation
   Scenario: GKT-Müşteri İlişki Gözlem: TC002 -
-    When I click element: customer transaction at index 1
+    When I click element: customer transaction for 30070 at index 1
     And I wait customer relations observation element 30 seconds at index 1
     When I click element: customer relations observation at index 1
     And I wait customer code area element 10 seconds at index 1

@@ -50,8 +50,8 @@ Feature: Orion Finance Finco Test Scenarios - GKT Müşteri Esnek Ödeme Planı 
     When I click element: next step at index 1
     Then I wait create payment plan element 30 seconds at index 1
     And I click element: create template at index 1
-    And I wait flexible payment template element 30 seconds at index 1
     Then I click element: calculate button at index 1
+    And I see common page
     And I wait final payment plan element 30 seconds at index 1
     
 
