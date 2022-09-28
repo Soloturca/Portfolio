@@ -1,4 +1,4 @@
-Feature: Orion Finance Finco Test Scenarios - GKTİ BAŞVURU-450.000-1.000.000 Tl Tutarlı Kredinin Onayı
+Feature: Orion Finance Finco Test Scenarios - 014.GKTİ BAŞVURU-450.000-1.000.000 Tl Tutarlı Kredinin Onayı
 
   #1.)Başvuru Giriş: TC001
   #2.)Başvuru Değerlendirme: TC002
