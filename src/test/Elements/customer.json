@@ -8,7 +8,7 @@
       },
       "elements": [
         {
-          "customer transaction": "//*[text()[contains(.,'Müşteri İşlemleri')]]"
+          "customer transaction": "//html/body/div/div[2]/div/div[1]/ul[2]/ul/li[2]"
         },
         {
           "customer management button": "//a[contains(@data-href,'/finance/customer/js/customerManagementPage.js')]"
@@ -99,6 +99,9 @@
         },
         {
           "customer relations observation searh button": "//button[@orionid='orion-id-005']"
+        },
+        {
+          "customer transaction for 30070": "//html/body/div/div[2]/div/div[1]/ul[2]/ul/li[3]"
         }
       ]
     }
