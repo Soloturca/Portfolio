@@ -51,8 +51,7 @@ Feature: Orion Finance Finco Test Scenarios - Kurumsal Müşteri Esnek Ödeme Pl
     Then I wait create payment plan element 30 seconds at index 1
     And I click element: create template at index 1
     Then I click element: calculate button at index 1
-    And I see common page
-    And I wait final payment plan element 30 seconds at index 1
+    And I wait final payment plan two element 30 seconds at index 1
     
 
 

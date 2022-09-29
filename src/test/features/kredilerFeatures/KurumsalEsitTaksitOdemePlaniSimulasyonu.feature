@@ -50,8 +50,7 @@ Feature: Orion Finance Finco Test Scenarios - KURUMSAL Müşteri Eşit Taksit Ö
     When I click element: next step at index 1
     And I wait create payment plan element 30 seconds at index 1
     Then I click element: create payment plan two at index 1
-    And I see common page
-    And I wait final payment plan element 30 seconds at index 1
+    And I wait final payment plan two element 30 seconds at index 1
     
 
 
