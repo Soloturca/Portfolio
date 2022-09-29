@@ -40,7 +40,8 @@ Feature: Orion Finance Finco Test Scenarios - KOMİSYON ÖDEME TALEP
     And I click element: end page at index 1
     And I need to right scroll verify by rscroll2 at index 1
     And I wait upload to word button element 30 seconds at index 1
-    And I upload the file for customer "evrak.jpg" using the: upload to word button at index 1
+    Then I upload the file for customer "evrak.jpg" using the: upload to word button at index 1
+    Then I upload the file for customer "evrak.jpg" using the: upload to word button at index 2
     And I wait page header element 30 seconds at index 1
     When I click element: save button second at index 1
     And I wait note text element 30 seconds at index 1
