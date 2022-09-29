@@ -66,6 +66,8 @@ Feature: Orion Finance Finco Test Scenarios - SATIN ALMA TALEP
     When I double click element: price excluding vat at index 1
     And I enter "500" text to price area excluding vat at index 1
     And I click element: free space at index 1
+    Then I need to right scroll verify by rscroll3 at index 1
+    And I wait vat rate search element 30 seconds at index 1
     And I click element: vat rate search at index 1
     And I wait vat rate search area element 30 seconds at index 1
     And I select element: "%18" under vat rate search area at index 1
