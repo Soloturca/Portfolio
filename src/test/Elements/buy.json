@@ -124,6 +124,9 @@
           "rscroll2" : "//html/body/div[1]/div[4]/div/div/div/div[2]/div/div[5]/div/div[2]/div/div/div/div[1]/div"
         },
         {
+          "rscroll3" : "(//div[@class='wtHolder'])[1]"
+        },
+        {
           "end page" : "(//div[@class='img-rounded orion-dialog orion-widget-container orion-inline'])[1]"
         },
         {
