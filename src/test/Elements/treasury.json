@@ -116,7 +116,7 @@
           "treasury cost rate query button": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div/div[2]/div[3]/div[1]/div[2]/button"
         },
         {
-          "treasury cost rate table line": "//*[@id=\"ht_8fb5cf5d3e992f9c\"]/div[3]/div/div/div/table/tbody/tr[1]"
+          "treasury cost rate table line": "//html/body/div/div[4]/div/div[2]/div/div[2]/div/div/div[2]/div[4]/div[2]/div/div/div/div[3]/div/div/div/table/tbody/tr[1]/th/div"
         },
         {
           "treasury cost rate delete button": "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div/div[2]/div[5]/div[4]/button"

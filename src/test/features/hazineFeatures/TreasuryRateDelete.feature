@@ -3,7 +3,7 @@ Feature: Orion Finance Finco Test Scenarios / Test Cases for Treasury
   #This feature includes these steps:
   #1.) Hazine Maliyet oranı silinmesi
 
-  @Treasury
+  @Treasury1
   Scenario: Delete Treasury Cost Rate
    #Hazine Maliyet Oranı Silinmesi
 
@@ -29,6 +29,9 @@ Feature: Orion Finance Finco Test Scenarios / Test Cases for Treasury
     And I enter "10000000" text to second amount at index 1
     When I click element: interest rate at index 1
     And I enter "2,45" text to interest rate at index 1
+    And I wait treasury cost rate query button element 30 seconds at index 1
+    And I click element: treasury cost rate query button at index 1
+    And I wait treasury cost rate table line element 30 seconds at index 1
     And I click element: treasury cost rate table line at index 1
     And I click element: treasury cost rate delete button at index 1
 
