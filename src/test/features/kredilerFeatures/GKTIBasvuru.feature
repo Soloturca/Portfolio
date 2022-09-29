@@ -132,7 +132,6 @@ Feature: Orion Finance Finco Test Scenarios - 013.GKTİ BAŞVURU, BAŞVURU DEĞE
     And I wait customer information tab continue button element 30 seconds at index 1
     When I click element: customer information tab continue button at index 1
     Then I go to top of the site
-    And I wait opinion and decision tab area element 30 seconds at index 1
     When I click element: opinion and decision tab area at index 1
     Then I go to top of the site
     And I need to right scroll verify by rscroll at index 1
