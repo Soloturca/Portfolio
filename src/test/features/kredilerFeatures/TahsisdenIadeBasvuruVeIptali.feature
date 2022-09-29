@@ -31,8 +31,8 @@ Feature: Orion Finance Finco Test Scenarios - 011.Tahsis Değerlendirme Aşamas�
     Then I click element: magnifying glass button at index 1
     Then I need to just wait
     Then I click element: choose customer at index 1
-    And I wait trade registration no text area element 30 seconds at index 1
-    Then I enter "7611" text to trade registration no text area at index 1
+    And I wait trade registration no individual text area element 30 seconds at index 1
+    Then I enter "1" text to trade registration no individual text area at index 1
     Then I click element: goOn button at index 1
 
     When I need to just wait
@@ -169,7 +169,7 @@ Feature: Orion Finance Finco Test Scenarios - 011.Tahsis Değerlendirme Aşamas�
     When I click element: application cancel button at index 1
     And I wait pricing observation element 30 seconds at index 1
     Then I need to application cancel verify by pricing observation at index 1
-    Then I enter "11876" text to credit application observation and report customer no button at index 1
+    Then I enter "12216" text to credit application observation and report customer no button at index 1
     And I wait credit application observation and report search and list button element 30 seconds at index 1
     When I click element: credit application observation and report search and list button at index 1
     And I click element: credit application observation and report transaction reference number text area at index 1

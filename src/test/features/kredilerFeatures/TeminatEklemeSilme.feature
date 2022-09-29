@@ -33,14 +33,14 @@ Feature: Orion Finance Finco Test Scenarios - 009.TEMİNAT MEKTUBU EKLEME VE Sİ
     And I wait trade registration no text area element 30 seconds at index 1
     Then I enter "7486-5" text to trade registration no text area at index 1
     Then I click element: parties row at index 1
+    And I wait goOn button element 30 seconds at index 1
     Then I click element: goOn button at index 1
 
     When I need to just wait
     Then I need to preliminary assessment verify by transaction result at index 1
-    And I wait close button element 30 seconds at index 1
     Then I click element: close button at index 1
     Then I go to top of the site
-    And I wait product name selection element 10 seconds at index 1
+    And I wait product name selection element 30 seconds at index 1
     And I select element: "MANAGED SERVİCES - YILLIK" under product name selection at index 1
     Then I enter "347" text to pricing selection at index 1
     Then I click element: application calender button at index 1
@@ -51,9 +51,8 @@ Feature: Orion Finance Finco Test Scenarios - 009.TEMİNAT MEKTUBU EKLEME VE Sİ
     Then I click element: add product button at index 3
     And I wait close button element 30 seconds at index 1
     Then I click element: close button at index 1
-    Then I go to down of the site
-    And I wait select button element 50 seconds at index 11
-    And I click element: select button at index 11
+    And I wait select button element 30 seconds at index 1
+    And I click element: select button at index 1
     And I wait create payment plan button element 30 seconds at index 1
     Then I click element: create payment plan button at index 1
     And I click element: go on button at index 1
