@@ -75,9 +75,11 @@ Feature: Orion Finance Finco Test Scenarios - SATIN ALMA TALEP
 
     When I click element: continue to documents at index 1
     And I need to right scroll verify by rscroll at index 1
+    And I need to just wait
     And I wait upload to word button element 30 seconds at index 1
     And I upload the file for payment "testtd.docx" using the: upload to word button at index 1
     And I upload the file for payment "testtd.docx" using the: upload to word button at index 2
+    And I need to just wait
     And I wait save button element 30 seconds at index 1
     When I click element: save button at index 1
     And I wait approval note element 30 seconds at index 1
