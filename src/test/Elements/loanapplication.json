@@ -89,7 +89,7 @@
           "detail button" : "//button[@orionid='btnObservationDetail']"
         },
         {
-          "application information page" : "//li[@data-title='Başvuran Bilgisi']"
+          "application information page" : "//li[@class='badge-notify active']"
         },
         {
           "document page" : "//li[@data-title='Evraklar']"
