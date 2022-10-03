@@ -39,10 +39,12 @@ Feature: Orion Finance Finco Test Scenarios - KOMİSYON ÖDEME TALEP
     When I enter "test" text to description area at index 1
     And I click element: end page at index 1
     And I need to right scroll verify by rscroll2 at index 1
+    And I need to just wait
     And I wait upload to word button element 30 seconds at index 1
-    And I upload the file for customer "evrak.jpg" using the: upload to word button at index 1
+    Then I upload the file for customer "evrak.jpg" using the: upload to word button at index 1
     And I wait page header element 30 seconds at index 1
     When I click element: save button second at index 1
+    And I need to just wait
     And I wait note text element 30 seconds at index 1
     When I click element: note text at index 1
     Then I enter "test komisyon" text to note text at index 1

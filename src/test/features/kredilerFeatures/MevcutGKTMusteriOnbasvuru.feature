@@ -39,12 +39,12 @@ Feature: Orion Finance Finco Test Scenarios - Mevcut GKT ön başvuru
     And I click element: continue button at index 1
     And I wait add document element 30 seconds at index 1
     And I need to just wait
-    And I need to right scroll verify by right scroll at index 1
     When I upload the file for customer "evrak.jpg" using the: add document at index 1
     Then I wait add document element 30 seconds at index 2
     And  I upload the file for customer "evrak.jpg" using the: add document at index 2
     And I wait preliminary assessment element 30 seconds at index 1
     When I click element: preliminary assessment at index 1
+    And I need to just wait
     And I wait information element 30 seconds at index 1
     And I need to see if the preliminary evaluation result is positive by information at index 1
     And I click element: close button at index 1

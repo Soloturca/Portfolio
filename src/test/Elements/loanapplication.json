@@ -89,10 +89,10 @@
           "detail button" : "//button[@orionid='btnObservationDetail']"
         },
         {
-          "application information page" : "//li[@data-title='Başvuran Bilgisi']"
+          "application information page" : "//li[@class='badge-notify active']"
         },
         {
-          "document page" : "//li[@data-title='Evraklar']"
+          "document page" : "//li[@class='badge-notify'][1]"
         },
         {
           "document title" : "//legend[@orionid='documnetTitle']"
