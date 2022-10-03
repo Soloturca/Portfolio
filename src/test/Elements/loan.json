@@ -47,6 +47,9 @@
           "parameter management button": "//a[@data-href='/finance/creditadministration/js/parameterManagement.js']"
         },
         {
+          "kkdf free": "//label[@for='kkdfFree']"
+        },
+        {
           "kkdf area": "//input[@orionid='fundRate']"
         },
         {
