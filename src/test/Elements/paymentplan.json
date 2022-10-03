@@ -104,7 +104,31 @@
           "payment plan observation" : "//a[@data-href='/finance/creditpaymentplan/js/paymentPlanInvestigation.js']"
         },
         {
-          "payment plan observation page" : "(//h1[contains(text(),'Ödeme Planı Gözlem')])[1]"
+          "payment plan observation page" : "(//div[@class='orion orion-page orion-context'])[1]"
+        },
+        {
+          "credit button" : "//div[@class='orion-buttonedit-button right']"
+        },
+        {
+          "credit no area two" : "(//input[@orionid='creditNo'])[1]"
+        },
+        {
+          "date one" : "(//input[@type='text'])[11]"
+        },
+        {
+          "date two" : "(//input[@type='text'])[12]"
+        },
+        {
+          "button search" : "(//button[@orionid='btnSearch'])[1]"
+         },
+        {
+          "row first" : "//html/body/div[2]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
+        },
+        {
+          "button search two" : "//button[@orionid='btnSearchPaymentPlan']"
+        },
+        {
+          "payment plan result" : "//label[contains(text(),'Ödeme Planları')]"
         }
       ]
     }
