@@ -1,7 +1,7 @@
 Feature: Orion Finance Finco Test Scenarios - Talimat verme ve iptal
 
-  #1.)Talimat verme
-  #2.)Talimat iptal
+  #1.)Talimat verme : TC001
+  #2.)Talimat iptal : TC002
 
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
@@ -14,10 +14,9 @@ Feature: Orion Finance Finco Test Scenarios - Talimat verme ve iptal
     Then I see instructions page
 
   @Talimatvermeveiptal
-  Scenario: TALİMAT VERME VE İPTAL LOGİN:
+  Scenario: TALİMAT VERME: TC001
 
-    #Talimat verme - 1Scenario:
-    #talimat iptal - 2Scenario:
+    #Talimat verme - 1Scenario: TC001
 
     And I wait loan button element 30 seconds at index 1
     When I click element: loan button at index 1
@@ -36,6 +35,11 @@ Feature: Orion Finance Finco Test Scenarios - Talimat verme ve iptal
     When I click element: yes button at index 1
     Then I click element: success close button at index 1
     And I wait cancel the instruction element 30 seconds at index 1
+
+  @Talimatvermeveiptal
+  Scenario: TALİMAT İPTAL: TC002
+
+   #talimat iptal - 2Scenario: TC002
 
     When I click element: cancel the instruction at index 1
     Then I click element: cancel credit no search at index 1
