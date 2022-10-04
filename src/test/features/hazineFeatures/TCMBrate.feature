@@ -18,3 +18,4 @@ Feature: Orion Finance Finco Test Scenarios / Test Cases for Treasury
     And I wait tcmb get rates button element 30 seconds at index 1
     When I click element: tcmb get rates button at index 1
 
+
