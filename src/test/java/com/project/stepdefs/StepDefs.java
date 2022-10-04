@@ -1511,6 +1511,38 @@ public class StepDefs extends MyTestNGBaseClass {
         return flag;
     }
 
+    @Then("I need to check area verify by (\\w+(?: \\w+)*) at index (\\d+) contains \"([^\"]*)\"")
+    public boolean verifyCheckArea(String element, int index,String contents) {
+        String title = commonLib.getTheElementInformation(element, index);
+        System.out.println("Title: " + " " + title);
+        System.out.println("Contents: " + " " + contents);
+        boolean flag = false;
+
+        try {
+            if (title.contains(contents)) {
+                System.out.println("Matched .The client is created new!");
+                Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "Matched. The client is created new!", true);
+            }
+            else
+            {
+                System.out.println("Not matched.");
+                Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("FAIL", "Not matched! " + phNo, true);
+                Assert.fail("Not matched." + phNo);
+                flag = false;
+            }
+            return true;
+        } catch (Exception e) {
+            System.out.println("Not matched. An error during the update.");
+            Allure.addAttachment("Not matched. An error during the update.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "Not matched! " + phNo, true);
+            Assert.fail("Not matched. An error during the update!" + phNo);
+            flag = false;
+        }
+        return flag;
+    }
+
     @Then("I need to observation and report verify by (\\w+(?: \\w+)*) at index (\\d+)")
     public boolean verifyObservationAndReport(String element, int index) {
         String title = commonLib.getTheElementInformation(element, index);
