@@ -1,8 +1,8 @@
-Feature: Orion Finance Finco Test Scenarios - 015.GKTİ BAŞVURU-1.000.000 Tl Üstü Tutarlı Kredinin Onayı
+Feature: Orion Finance Finco Test Scenarios - 015.GKTİ BAŞVURU-Bir Milyon Tl Üstü Tutarlı Kredinin Onayı
 
   #1.)Başvuru Giriş: TC001
   #2.)Başvuru Değerlendirme: TC002
-  #3.)1.000.000 Tl Üstü Tutarlı Kredinin Onayı: TC003
+  #3.)Bir Milyon Tl Üstü Tutarlı Kredinin Onayı: TC003
 
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
@@ -13,7 +13,7 @@ Feature: Orion Finance Finco Test Scenarios - 015.GKTİ BAŞVURU-1.000.000 Tl Ü
     When I click element: login button at index 1
     Then I see home page
 
-  @1.000.000TlUstuTutarliKredi
+  @BirMilyonTlUstuTutarliKredi
   Scenario: Başvuru Giriş: TC001
 
     #Başvuru Giriş - 1Scenario:
@@ -96,7 +96,7 @@ Feature: Orion Finance Finco Test Scenarios - 015.GKTİ BAŞVURU-1.000.000 Tl Ü
     When I click element: close button at index 1
     Then I see home page
 
-  @1.000.000TlUstuTutarliKredi
+  @BirMilyonTlUstuTutarliKredi
   Scenario: Başvuru Değerlendirme: TC002
 
     #Başvuru Değerlendirme - 2Scenario:
@@ -163,10 +163,10 @@ Feature: Orion Finance Finco Test Scenarios - 015.GKTİ BAŞVURU-1.000.000 Tl Ü
     When I click element: close button at index 1
     Then I see home page
 
-  @1.000.000TlUstuTutarliKredi
-  Scenario: 1.000.000 Tl Üstü Tutarlı Kredinin Onayı: TC003
+  @BirMilyonTlUstuTutarliKredi
+  Scenario: Bir Milyon Tl Üstü Tutarlı Kredinin Onayı: TC003
 
-    #1.000.000 Tl Üstü Tutarlı Kredinin Onayı - 3Scenario:
+    #Bir Milyon Tl Üstü Tutarlı Kredinin Onayı - 3Scenario:
 
     And I wait close system button element 30 seconds at index 1
     When I click element: close system button at index 1
