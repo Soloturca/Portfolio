@@ -38,6 +38,15 @@
           "credit button": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[3]/a"
         },
         {
+          "credit": "//*[contains(text(),'Kredi')]"
+        },
+        {
+          "application button": "//*[contains(text(),'Başvuru')]"
+        },
+        {
+          "exception handling": "//*[contains(text(),'İstisna Yönetimi')]"
+        },
+        {
           "close system button": "//li[@id='logout_button']"
         },
         {
