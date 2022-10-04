@@ -2,7 +2,7 @@ Feature: Orion Finance Finco Test Scenarios - 013.GKTİ BAŞVURU, BAŞVURU DEĞE
 
   #1.)Başvuru Giriş: TC001
   #2.)Başvuru Değerlendirme: TC002
-  #3.)450.000 Tl Altı Tutarlı Kredinin Onayı: TC003
+  #3.)DörtYüzElliBin Tl Altı Tutarlı Kredinin Onayı: TC003
 
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
@@ -164,10 +164,10 @@ Feature: Orion Finance Finco Test Scenarios - 013.GKTİ BAŞVURU, BAŞVURU DEĞE
     When I click element: close button at index 1
     Then I see home page
 
-  @450.000TLAltiTutarliKredi
-  Scenario: 450.000 Tl Altı Tutarlı Kredinin Onayı: TC003
+  @DortYuzElliBinTLAltiTutarliKredi
+  Scenario: DörtYüzElliBin Tl Altı Tutarlı Kredinin Onayı: TC003
 
-    #450.000 Tl Altı Tutarlı Kredinin Onayı - 3Scenario:
+    #DörtYüzElliBin Tl Altı Tutarlı Kredinin Onayı - 3Scenario:
 
     And I wait close system button element 30 seconds at index 1
     When I click element: close system button at index 1

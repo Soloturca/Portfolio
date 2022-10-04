@@ -1,8 +1,8 @@
-Feature: Orion Finance Finco Test Scenarios - 014.GKTİ BAŞVURU-450.000-1.000.000 Tl Tutarlı Kredinin Onayı
+Feature: Orion Finance Finco Test Scenarios - 014.DörtYüzElliBin-BirMilyon Tl Tutarlı Kredinin Onayı
 
   #1.)Başvuru Giriş: TC001
   #2.)Başvuru Değerlendirme: TC002
-  #3.)450.000-1.000.000 Tl Tutarlı Kredinin Onayı: TC003
+  #3.)DörtYüzElliBin-BirMilyon Tl Tutarlı Kredinin Onayı: TC003
 
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
@@ -13,7 +13,7 @@ Feature: Orion Finance Finco Test Scenarios - 014.GKTİ BAŞVURU-450.000-1.000.0
     When I click element: login button at index 1
     Then I see home page
 
-  @GKTIBasvuru450.000-1.000.000TLAraTutarli
+  @DörtYüzElliBin-BirMilyonTLAraTutarliKredi
   Scenario: Başvuru Giriş: TC001
 
     #Başvuru Giriş - 1Scenario:
@@ -98,7 +98,7 @@ Feature: Orion Finance Finco Test Scenarios - 014.GKTİ BAŞVURU-450.000-1.000.0
     When I click element: close button at index 1
     Then I see home page
 
-  @GKTIBasvuru450.000-1.000.000TLAraTutarli
+  @DörtYüzElliBin-BirMilyonTLAraTutarliKredi
   Scenario: Başvuru Değerlendirme: TC002
 
     #Başvuru Değerlendirme - 2Scenario:
@@ -164,7 +164,7 @@ Feature: Orion Finance Finco Test Scenarios - 014.GKTİ BAŞVURU-450.000-1.000.0
     When I click element: close button at index 1
     Then I see home page
 
-  @GKTIBasvuru450.000-1.000.000TLAraTutarli
+  @DörtYüzElliBin-BirMilyonTLAraTutarliKredi
   Scenario: 450.000-1.000.000 Tl Tutarlı Kredinin Onayı: TC003
 
     #450.000-1.000.000 Tl Tutarlı Kredinin Onayı - 3Scenario:
