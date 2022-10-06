@@ -1065,6 +1065,15 @@
         },
         {
           "first row button": "//html/body/div[2]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
+        },
+        {
+          "row button": "//*/div[3]/div/div/div/table/tbody/tr[1]/th"
+        },
+        {
+          "warning popup": "//*[@id=\"modal-title-text\"] "
+        },
+        {
+          "approve button": "//button[@owf_type='approve']"
         }
       ]
     }
