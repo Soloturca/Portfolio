@@ -12,6 +12,24 @@
         },
         {
           "final payment plan" : "(//*[contains(text(),'Ödeme Planı')])[7]"
+        },
+        {
+          "create exception": "//*[contains(text(),'İstisna Oluştur')]"
+        },
+        {
+          "credit": "//*[contains(text(),'Kredi')]"
+        },
+        {
+          "application button": "//*[contains(text(),'Başvuru')]"
+        },
+        {
+          "financing items": "//*[contains(text(),'Finansman Kalemleri')]"
+        },
+        {
+          "close button": "//*[contains(text(),'Kapat')]"
+        },
+        {
+          "yes button": "//*[contains(text(),'Evet')]"
         }
       ]
     }

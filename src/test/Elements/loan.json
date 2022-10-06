@@ -3,7 +3,7 @@
     {
       "pageInfo": {
         "pageName": "loan",
-        "parent": "home",
+        "parent": "common",
         "waitelement": ""
       },
       "elements": [
@@ -185,7 +185,7 @@
           "search button": "//span[@class='glyphicon glyphicon-search']"
         },
         {
-          "yes button": "//i[@class='fa fa-check']"
+          "yes button": "//*[contains(text(),'Evet')]"
         },
         {
           "comment reason button": "//select[@orionid='commentReason']"
@@ -351,6 +351,9 @@
         },
         {
           "exception management button": "//a[contains(@data-href,'/finance/creditapplication/js/exceptionDefinition.js')]"
+        },
+        {
+          "create exception": "//*[contains(text(),'İstisna Oluştur')]"
         },
         {
           "test button": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[5]/ul/li[6]/a"
@@ -1047,9 +1050,6 @@
         },
         {
           "detail button": "//button[@orionid='btnObservationDetail']"
-        },
-        {
-          "exception management button": "//a[contains(@data-href,'/finance/creditapplication/js/exceptionDefinition.js')]"
         },
         {
           "existing button": "//a[@value=\"existing\"]"
