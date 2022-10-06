@@ -30,6 +30,9 @@
         },
         {
           "yes button": "//*[contains(text(),'Evet')]"
+        },
+        {
+          "reference number text area": "//*[@id=\"modal-title-text\"]/b"
         }
       ]
     }
