@@ -3,7 +3,7 @@
     {
       "pageInfo": {
         "pageName": "home",
-        "parent": "login",
+        "parent": "common",
         "waitelement": "workflow management button"
       },
       "elements": [
