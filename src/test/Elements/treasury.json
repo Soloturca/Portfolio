@@ -393,6 +393,90 @@
         },
         {
           "Fx arbitrage buy amount": "//input[@orionid='arbitrageBuyAmount']"
+        },
+        {
+          "swap order menu for 30060": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[6]/ul/li[3]/ul/li[2]/a"
+        },
+        {
+          "Swap Bank Code": "//*[@id=\"step1\"]/div/div/div[3]/div[2]/div[4]/div/i"
+        },
+        {
+          "Swap next button": "//button[@orionid='btnNext']"
+        },
+        {
+          "Swap transaction direction": "//select[@orionid='direction']"
+        },
+        {
+          "Swap transaction direction buy": "//html/body/div[1]/div[4]/div/div[2]/div/div[2]/div/div[1]/div/div[2]/div/div/div[1]/div/div[4]/select/option[2]"
+        },
+        {
+          "Swap usage purpose": "//select[@orionid='usagePurpose']"
+        },
+        {
+          "Swap usage purpose option": "//html/body/div[1]/div[4]/div/div[2]/div/div[2]/div/div[1]/div/div[2]/div/div/div[3]/div/div[4]/select/option[2]"
+        },
+        {
+          "Swap buy currency interest rate": "//input[@orionid='buyCurrencyInterestRate']"
+        },
+        {
+          "Swap sell currency interest rate": "//input[@orionid='sellCurrencyInterestRate']"
+        },
+        {
+          "Swap due date": "//input[@orionid='dueDate']"
+        },
+        {
+          "Swap spot rate": "//input[@orionid='spotRate']"
+        },
+        {
+          "Swap forward rate": "//input[@orionid='forwardRate']"
+        },
+        {
+          "Swap description": "//textarea[@orionid='description']"
+        },
+        {
+          "Swap button calculate": "//button[@orionid='btnCalculate']"
+        },
+        {
+          "Swap sell currency code": "//select[@orionid='sellCurrencyCode']"
+        },
+        {
+          "Swap sell currency code tl": "//html/body/div[1]/div[4]/div/div[2]/div/div[2]/div/div[1]/div/div[2]/div/div/div[5]/div/div[4]/select/option[2]"
+        },
+        {
+          "Swap first leg buy amount": "//input[@orionid='firstLegBuyAmount']"
+        },
+        {
+          "Swap documents tab": "//html/body/div[1]/div[4]/div/div[2]/div/div[2]/div/div[1]/ol/li[4]"
+        },
+        {
+          "Swap documents upload button": "//i[@class='fa fa-upload htOrionIcon pull-right']"
+        },
+        {
+          "Swap button calculate popup": "//html/body/div[3]/div/div/div[3]/div/div/div[6]/button/span[2]"
+        },
+        {
+          "Swap button ok popup": "//html/body/div[3]/div/div/div[3]/div/div/div[8]/button/span[2]"
+        },
+        {
+          "Swap legs tab": "//html/body/div[1]/div[4]/div/div[2]/div/div[2]/div/div[1]/ol/li[3]"
+        },
+        {
+          "Swap documents description": "//html/body/div[1]/div[4]/div/div[2]/div/div[2]/div/div[1]/div/div[4]/div/div/div/div[1]/div/div/div/div[1]/div/div/div/table/tbody/tr[1]/td[4]"
+        },
+        {
+          "Swap documents description area": "//html/body/div[1]/div[4]/div/div[2]/div/div[2]/div/div[1]/div/div[4]/div/div/div/div[1]/div/div/div/div[5]/textarea"
+        },
+        {
+          "Swap save tab": "//html/body/div[1]/div[4]/div/div[2]/div/div[2]/div/div[1]/ol/li[5]"
+        },
+        {
+          "Swap save button": "//button[@orionid='btnSave']"
+        },
+        {
+          "Approve note area": "//textarea[@orionid='modal-body-notetext']"
+        },
+        {
+          "Comment yes button": "//*[contains(text(),'Evet')]"
         }
       ]
     }

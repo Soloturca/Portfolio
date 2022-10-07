@@ -17,16 +17,12 @@ Feature: Orion Finance Finco Test Scenarios / Test Cases for Treasury
 
     And I wait Fx first bank element 30 seconds at index 1
     And I click element: Fx first bank at index 1
-
     And I wait Fx first bank code element 30 seconds at index 1
     And I click element: Fx first bank code at index 1
-
     And I wait Fx first bank akbank element 30 seconds at index 1
     And I click element: Fx first bank akbank at index 1
-
     And I wait Fx first bank search button element 30 seconds at index 1
     And I click element: Fx first bank search button at index 1
-
     And I wait Fx first bank akbank option element 30 seconds at index 1
     And I click element: Fx first bank akbank option at index 1
 
