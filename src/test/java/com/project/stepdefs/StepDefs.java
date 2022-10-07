@@ -8,10 +8,8 @@ import io.cucumber.java.Before;
 import io.cucumber.core.api.Scenario;
 import io.cucumber.java.en.*;
 import io.qameta.allure.Allure;
-import oracle.net.aso.e;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import utils.excelutils.ExcelUtils;
@@ -21,7 +19,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.text.Format;
 import java.text.SimpleDateFormat;
-import java.util.*;
 import java.util.*;
 
 public class StepDefs extends MyTestNGBaseClass {
@@ -196,7 +193,6 @@ public class StepDefs extends MyTestNGBaseClass {
         return flag;
     }
 
-
     @Then("^I enter \"([^\"]*)\" text to (.*) at index (\\d+)")
     public boolean enterText(String text, String element, int index) throws InterruptedException {
         WebElement object;
@@ -207,12 +203,14 @@ public class StepDefs extends MyTestNGBaseClass {
                 object.sendKeys(text);
                 System.out.println("The text has been entered:" + text);
                 Allure.addAttachment("The text has been entered.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                //allureReport("PASS","I entered the text: "+ text, Boolean.FALSE);
                 reportResult("PASS", "I entered the text: " + text, true);
 
                 return true;
             }
         } catch (Exception e) {
             Allure.addAttachment("The text has not been entered.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            //allureReport("PASS","I entered the text: "+ text, Boolean.TRUE);
             reportResult("FAIL", "I cannot entered the element: " + text, true);
             Assert.fail("Could not entered the text:" + text);
             flag = false;
