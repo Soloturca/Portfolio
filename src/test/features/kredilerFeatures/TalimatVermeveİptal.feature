@@ -41,7 +41,13 @@ Feature: Orion Finance Finco Test Scenarios - Talimat verme ve iptal
 
    #talimat iptal - 2Scenario: TC002
 
-    When I click element: cancel the instruction at index 1
+    When I click element: loan button at index 1
+    And I wait instruction operations element 30 seconds at index 1
+    When I click element: instruction operations at index 1
+    And I wait giving instructions element 30 seconds at index 1
+    When I click element: giving instructions at index 1
+    And I wait cancel the instruction element 30 seconds at index 1
+    Then I click element: cancel the instruction at index 1
     Then I click element: cancel credit no search at index 1
     And I enter "2021091700003" text to cancel credit area at index 1
     And I clear text to start date at index 1
