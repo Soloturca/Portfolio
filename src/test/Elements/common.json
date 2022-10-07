@@ -32,6 +32,12 @@
           "yes button": "//*[contains(text(),'Evet')]"
         },
         {
+          "current exception": "//*[contains(text(),'Mevcut İstisna')]"
+        },
+        {
+          "remove exception": "//*[contains(text(),'İstisna Kaldır')]"
+        },
+        {
           "reference number text area": "//*[@id=\"modal-title-text\"]/b"
         }
       ]
