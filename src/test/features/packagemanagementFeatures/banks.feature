@@ -18,7 +18,7 @@ Feature: Orion Finance Finco Test Scenarios - Bankalar ve banka şubeleri
     Then I see home page
     
 
-  @bank
+  @bankbranch
   Scenario: Banka Subesi Olusturma: TC001 -
     Then I see banks page
     And I wait package management element 30 seconds at index 1
@@ -54,7 +54,7 @@ Feature: Orion Finance Finco Test Scenarios - Bankalar ve banka şubeleri
     And I click element: approve button at index 1
     And I click element: yes button at index 1
 
-  @bank
+  @bankbranch
   Scenario: Banka Subesi Güncelleme: TC002 -
     Then I see banks page
     And I wait package management element 30 seconds at index 1
@@ -96,7 +96,7 @@ Feature: Orion Finance Finco Test Scenarios - Bankalar ve banka şubeleri
     And I click element: approve button at index 1
     And I click element: yes button at index 1
 
-  @bank
+  @bankbranch
   Scenario: Banka Subesi Silme: TC003 -
     Then I see banks page
     And I wait package management element 30 seconds at index 1
