@@ -23,6 +23,12 @@
           "application button": "//*[contains(text(),'Başvuru')]"
         },
         {
+          "loan disbursement": "//*[contains(text(),'Kullandırım')]"
+        },
+        {
+          "loan observation button": "//*[contains(text(),'Kredi Kullandırım Gözlem')]"
+        },
+        {
           "financing items": "//*[contains(text(),'Finansman Kalemleri')]"
         },
         {
@@ -54,6 +60,9 @@
         },
         {
           "reference number text area": "//*[@id=\"modal-title-text\"]/b"
+        },
+        {
+          "magnifying glass v2 button": "//span[contains(@class,'btntext') and text()='Sorgula']"
         }
       ]
     }
