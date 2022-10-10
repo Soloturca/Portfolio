@@ -61,7 +61,6 @@
         {
           "login user" : "//input[@id='username']"
         }
-
       ]
     }
   ]
