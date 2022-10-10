@@ -581,9 +581,6 @@
           "add button": "//button[@orionid='btnAddFinAcc']"
         },
         {
-          "pricing save button": "//button[@orionid='btnSavePricing']"
-        },
-        {
           "parameter management button": "//a[@data-href='/finance/creditadministration/js/parameterManagement.js']"
         },
         {
@@ -818,16 +815,19 @@
           "application calender button": "//*[@id=\"step2\"]/div/div[1]/div[5]/div[1]/div/div[3]/div[1]/div[4]/div"
         },
         {
+          "calender button": "//i[@type='calendar']"
+        },
+        {
           "maturity text area": "//input[@orionid='maturity']"
         },
         {
-          "create payment plan button": "//button[@orionid='btnCreatePaymentPlan']"
+          "create payment plan button": "//*[contains(text(),'Plan Oluştur')]"
         },
         {
           "go on button": "//button[@orionid='btnInterestCalculateNextStep']"
         },
         {
-          "goOn button": "//button[@orionid='btnContinue']"
+          "goOn button": "//*[contains(text(),'Devam Et')]"
         },
         {
           "update product button": "//button[@orionid='btnAddProductItem']"
@@ -1070,7 +1070,16 @@
           "row button": "//*/div[3]/div/div/div/table/tbody/tr[1]/th"
         },
         {
-          "warning popup": "//*[@id=\"modal-title-text\"] "
+          "warning popup": "//*[@id=\"modal-title-text\"]"
+        },
+        {
+          "billing information": "//li[@data-title='Fatura Bilgileri']"
+        },
+        {
+          "invoice no": "//input[@orionid='invoiceNo']"
+        },
+        {
+          "evo sap id": "//input[@orionid='evoSapId']"
         },
         {
           "approve button": "//button[@owf_type='approve']"
