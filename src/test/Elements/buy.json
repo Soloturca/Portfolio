@@ -183,8 +183,8 @@
         {"reference number text area" : "//*[@id=\"modal-title-text\"]/b"
 
         },
-        {"close system button": "//li[@id='logout_button']"
-
+        {
+          "close system button": "//li[@id='logout_button']"
         },
         {
           "workflow management button": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[1]/a"
