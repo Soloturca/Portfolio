@@ -39,7 +39,14 @@
         },
         {
           "reference number text area": "//*[@id=\"modal-title-text\"]/b"
+        },
+        {
+          "close system button": "//li[@id='logout_button']"
+        },
+        {
+          "login user" : "//input[@id='username']"
         }
+
       ]
     }
   ]
