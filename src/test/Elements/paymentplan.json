@@ -122,7 +122,7 @@
           "button search" : "(//button[@orionid='btnSearch'])[1]"
          },
         {
-          "row first" : "//html/body/div[2]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
+          "row first" : "//*/div[3]/div/div/div/table/tbody/tr[1]/th/div"
         },
         {
           "button search two" : "//button[@orionid='btnSearchPaymentPlan']"
