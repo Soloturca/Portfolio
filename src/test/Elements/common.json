@@ -59,7 +59,16 @@
           "close system button": "//li[@id='logout_button']"
         },
         {
+          "loan disbursement": "//*[contains(text(),'Kullandırım')]"
+        },
+        {
+          "loan observation button": "//*[contains(text(),'Kredi Kullandırım Gözlem')]"
+        },
+        {
           "login user" : "//input[@id='username']"
+        },
+        {
+          "magnifying glass v2 button": "//span[contains(@class,'btntext') and text()='Sorgula']"
         }
       ]
     }
