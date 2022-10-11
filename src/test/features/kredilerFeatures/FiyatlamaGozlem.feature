@@ -14,7 +14,7 @@ Feature: Orion Finance Finco Test Scenarios - 006.FİYATLAMA GÖZLEM EKRANI KONT
   @FiyatlamaGozlem
   Scenario: FİYATLAMA GÖZLEM: TC001
 
-    #Fiyatlama Gözlem Ekranı
+    #Fiyatlama Gözlem Ekranı - 1Scenario:
 
     And I wait loan button element 30 seconds at index 1
     When I click element: loan button at index 1

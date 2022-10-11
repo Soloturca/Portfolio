@@ -55,6 +55,7 @@ Feature: Orion Finance Finco Test Scenarios - 016.İSTİSNA OLUŞTURMA VE KALDIR
 
     And I wait credit element 30 seconds at index 1
     When I click element: credit at index 1
+    And I wait application button element 30 seconds at index 1
     And I click element: application button at index 1
     And I click element: exception handling at index 1
     Then I see loan page
@@ -120,6 +121,7 @@ Feature: Orion Finance Finco Test Scenarios - 016.İSTİSNA OLUŞTURMA VE KALDIR
 
     And I wait credit element 30 seconds at index 1
     When I click element: credit at index 1
+    And I wait application button element 30 seconds at index 1
     And I click element: application button at index 1
     And I click element: exception handling at index 1
     Then I see loan page
