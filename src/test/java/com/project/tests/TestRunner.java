@@ -29,9 +29,9 @@ import java.io.IOException;
 
 
 @CucumberOptions(
-        features = "src/test/features",
-        //features = "src/test/features/kredilerFeatures",
-        //tags = {"@FiyatlamaGozlem"},
+        //features = "src/test/features",
+        features = "src/test/features/kredilerFeatures",
+        tags = {"@"},
         //tags = {"@BireyselKrediBasvuru, @IstisnaOlusturmaVeKaldirma, @Litigation, @FTPSunucuTanimlama, @account, @bankbranch, @GKTOdemePlaniGozlem, @KurumsalOdemePlaniGozlem, @BirMilyonTlUstuTutarliKredi, @DörtYüzElliBin-BirMilyonTLAraTutarliKredi, @GKTIBasvuru, @GKTIBasvuruDegerlendirme, @DortYuzElliBinTLAltiTutarliKredi, @GKTEsitTaksitOdemePlaniSimulasyonu, @KurumsalEsitTaksitOdemePlaniSimulasyonu, @GKTEsnekOdemePlaniSimulasyonu, @KurumsalEsnekOdemePlaniSimulasyonu, @OnBasvuruGozlem, @BireyselMusteriOnBasvuruRed, @MevcutGKTonbasvuru, @MevcutKurumsalonbasvuru, @Talimatvermeveiptal, @workflow, @workflowpending, @customer, @customerrelation, @teminat, @TeminatEkleVeSilme, @TahsisdenIadeBasvuruVeIptal, @BasvuruIptal, @FiyatlamaEsit, @FiyatlamaEsnek, @FiyatlamaGozlem, @GKTIMevcutBasvuru, @GozlemVeRapor, @KefilEklemeSilme, @MevcutEsitFiyatlama, @MevcutEsnekFiyatlama, @bank, @GiderOdeme, @SatınAlmaTalep, @Treasury, @KomisyonOdeme"},
         plugin = {"pretty", "io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm"},
         glue = {"com.project.stepdefs"})
