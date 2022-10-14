@@ -65,6 +65,12 @@
           "loan observation button": "//*[contains(text(),'Kredi Kullandırım Gözlem')]"
         },
         {
+          "credit detail button": "//*[contains(text(),'Kredi Detay')]"
+        },
+        {
+          "usage controls button": "//*[contains(text(),'Kullandırım Kontrolleri')]"
+        },
+        {
           "login user" : "//input[@id='username']"
         },
         {

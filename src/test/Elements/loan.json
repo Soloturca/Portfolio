@@ -410,7 +410,7 @@
           "loan installments revolving send button": "//button[@orionid='orion-id-023']"
         },
         {
-          "credit detail button": "//button[@orionid='btnShowCreditDisbursement']"
+          "credit detail button": "//*[contains(text(),'Kredi Detay')]"
         },
         {
           "payment plan button": "//a[@href='#step2']"
@@ -716,7 +716,7 @@
           "choose credit": "//html/body/div[3]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
         },
         {
-          "choose customer": "//html/body/div[3]/div/div/div[5]/div[2]/div/div/div[1]/div/div/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
+          "choose customer": "//html/body/div[2]/div/div/div[5]/div[2]/div/div/div[1]/div/div/div/div[1]/table/tbody/tr[1]/td"
         },
         {
           "situation": "//select[@orionid='state']"
@@ -986,7 +986,7 @@
           "add a guarantor customer": "//input[@orionid='edCustomerCode']"
         },
         {
-          "choose a side": "//html/body/div[1]/div[4]/div/div[2]/div/div[2]/div/div/div/div[1]/div/div[1]/div[4]/div[5]/div/div/div/div[7]/div[1]/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
+          "choose a side": "//html/body/div/div[4]/div/div[2]/div/div[2]/div/div/div/div[1]/div/div[1]/div[4]/div[5]/div/div/div/div[7]/div[1]/div/div[1]/table/tbody/tr[1]/td"
         },
         {
           "delete guarantor": "//button[@orionid='btnSideDeleteGuarantor']"
