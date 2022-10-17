@@ -32,7 +32,7 @@ Feature: Orion Finance Finco Test Scenarios - Bireysel müşteri ön başvuru re
     And I click element: partner search button at index 1
     And I need to just wait
 
-    And I wait error text element 30 seconds at index 1
+    And I need to check area verify by error text at index 1 contains "Tacir yada kurumsal niteliğine sahip olmayan kişiler için Ön Başvuru İşlemi gerçekleştirilememektedir."
     When I click element: error close button at index 1
     Then I click element: close system at index 1
     And I click element: yes button at index 1
