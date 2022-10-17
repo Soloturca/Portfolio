@@ -992,6 +992,12 @@
           "delete guarantor": "//button[@orionid='btnSideDeleteGuarantor']"
         },
         {
+          "rediscount type": "//select[@orionid='drdRediscountType']"
+        },
+        {
+          "product reference number": "//input[@orionid='edProductId']"
+        },
+        {
           "closeview": "//i[@class='fa fa-search fa-fw']"
         },
         {
