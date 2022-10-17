@@ -33,6 +33,8 @@ Feature: Orion Finance Finco Test Scenarios - Talimat verme ve iptal
     When I click element: save button at index 1
     And I wait yes button element 30 seconds at index 1
     When I click element: yes button at index 1
+    And I need to just wait
+    And I need to check area verify by process at index 1 contains "Talimat verme işlemi gerçekleşti."
     Then I click element: success close button at index 1
     And I wait cancel the instruction element 30 seconds at index 1
 
@@ -46,12 +48,13 @@ Feature: Orion Finance Finco Test Scenarios - Talimat verme ve iptal
     When I click element: instruction operations at index 1
     And I wait giving instructions element 30 seconds at index 1
     When I click element: giving instructions at index 1
+    And I need to just wait
     And I wait cancel the instruction element 30 seconds at index 1
     Then I click element: cancel the instruction at index 1
     Then I click element: cancel credit no search at index 1
     And I enter "2021091700003" text to cancel credit area at index 1
-    And I clear text to start date at index 1
-    And I clear text to finish date at index 1
+    And I clear text to start date at index 17
+    And I clear text to finish date at index 18
     And I wait cancel credit no search button element 30 seconds at index 1
     When I click element: cancel credit no search button at index 1
     And I wait cancel credit no first row element 30 seconds at index 1

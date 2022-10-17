@@ -53,16 +53,16 @@
           "cancel credit area" : "(//input[@orionid='creditNo'])[1]"
         },
         {
-          "start date" : "(//input[@type='text'])[13]"
+          "start date" : "//input[@type='text']"
         },
         {
-          "finish date" : "(//input[@type='text'])[14]"
+          "finish date" : "//input[@type='text']"
         },
         {
           "cancel credit no search button" : "//button[@orionid='btnSearch']"
         },
         {
-          "cancel credit no first row" : "//html/body/div[2]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
+          "cancel credit no first row" : "//body[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]"
         },
         {
           "cancel the instruction save button" : "//button[@orionid='btnCancelOrder']"
@@ -81,7 +81,10 @@
         },
         {
           "login user" : "//input[@id='username']"
-         }
+         },
+        {
+          "process" : "//div[@class='modal in']//p[@id='modal-body-text']"
+        }
       ]
     }
   ]
