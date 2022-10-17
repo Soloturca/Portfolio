@@ -19,6 +19,7 @@ Feature: Orion Finance Finco Test Scenarios - 016.KREDİ KULLANDIRIM GÖZLEM EKR
     And I wait credit element 30 seconds at index 1
     When I click element: credit at index 1
     And I click element: loan disbursement at index 1
+    And I wait loan observation button element 30 seconds at index 1
     Then I click element: loan observation button at index 1
     And I wait customer no-new application text area element 30 seconds at index 1
     Then I enter "11876" text to customer no-new application text area at index 1

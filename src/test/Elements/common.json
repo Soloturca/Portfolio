@@ -65,10 +65,19 @@
           "loan observation button": "//*[contains(text(),'Kredi Kullandırım Gözlem')]"
         },
         {
+          "accrual observation": "//*[contains(text(),'Tahakkuk Gözlem')]"
+        },
+        {
+          "rediscount observation": "//*[contains(text(),'Reeskont Gözlem')]"
+        },
+        {
           "credit detail button": "//*[contains(text(),'Kredi Detay')]"
         },
         {
           "usage controls button": "//*[contains(text(),'Kullandırım Kontrolleri')]"
+        },
+        {
+          "number one": "//*[contains(text(),'1')]"
         },
         {
           "login user" : "//input[@id='username']"
