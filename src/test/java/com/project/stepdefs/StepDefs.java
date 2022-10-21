@@ -1,9 +1,9 @@
 package com.project.stepdefs;
 
 import com.saf.framework.CommonLib;
-import com.saf.framework.TestUtils;
 import com.saf.framework.MyTestNGBaseClass;
 import com.saf.framework.TCKN;
+import com.saf.framework.TestUtils;
 import cucumber.api.Scenario;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
@@ -16,9 +16,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 import org.sikuli.script.FindFailed;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 import utils.excelutils.ExcelUtils;
-
 
 import java.awt.*;
 import java.io.ByteArrayInputStream;
@@ -77,6 +75,29 @@ public class StepDefs extends MyTestNGBaseClass {
             reportResult("FAIL", "I cannot clicked the element: " + element, true);
             Allure.addAttachment("Element is not clicked.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
             Assert.fail("Could not clicked the element:" + element);
+            flag = false;
+        }
+        return flag;
+    }
+
+    @When("^(?:I )?wait clickable element: (\\w+(?: \\w+)*) at index (\\d+)")
+    public boolean waitElementClickable(String element, int index) {
+        WebElement object = commonLib.findElement(element, index);
+        boolean flag = false;
+        try {
+            if (object != null) {
+                if (waitElementClickable(element,index))
+                {
+                    System.out.println("Object clickable-->" + element);
+                    Allure.addAttachment("Element is clickable.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                    reportResult("PASS", "I saw clickable element: " + element, true);
+                    return true;
+                }
+            }
+        } catch (Exception e) {
+            reportResult("FAIL", "I cannot see the clickable element: " + element, true);
+            Allure.addAttachment("I cannot see the clickable element.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            Assert.fail("I cannot see the clickable element:" + element);
             flag = false;
         }
         return flag;

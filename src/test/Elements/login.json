@@ -4,18 +4,43 @@
       "pageInfo": {
         "pageName": "login",
         "parent": "common",
-        "waitelement": "username text area"
+        "waitelement": "gsm text area"
       },
       "elements": [
         {
-          "username text area": "username"
+          "gsm text area": "//*[@name='top-up-phone-number']"
         },
         {
-          "password text area": "password"
+          "continue button": "//div/div[1]/div//app-phone-number/button[@type='button']"
         },
         {
-          "login button": "login_button"
+          "pay bill button": "//*button[@type='button']"
+        },
+        {
+          "credit card no": "/html//input[@id='cardNumber-CC']"
+        },
+        {
+          "expDate": "/html//input[@id='creditCardExp']"
+        },
+        {
+          "cvv": "/html//input[@id='cc-csc']"
+        },
+        {
+          "payment button": "/html//button[@id='payment-button']"
+        },
+        {
+          "tl button": "//div[@class='top-up__options']/label[1]/span"
+        },
+        {
+          "send anyway": "//*[@id=\"proceed-button\"]"
+        },
+        {
+          "3D secure okay button": "//*[@id=\"footer\"]/a[1]/img"
+        },
+        {
+          "sms password": "//*[@id=\"login\"]/div[2]"
         }
+
       ]
     }
   ]

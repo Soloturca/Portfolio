@@ -432,6 +432,18 @@ public class CommonLib extends MyTestNGBaseClass {
         return res;
     }
 
+    public static boolean waitElementClickable(WebDriver oDriver, WebElement element) {
+        boolean flag = false;
+        WebDriverWait wait = new WebDriverWait(oDriver, 60);
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(element));
+            flag = true;
+        } catch (Exception e) {
+            flag = false;
+        }
+        return flag;
+    }
+
     public static boolean sendKeys(WebElement element, String text) {
         boolean flag = false;
         try {
