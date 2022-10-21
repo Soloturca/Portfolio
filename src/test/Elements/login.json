@@ -11,10 +11,13 @@
           "gsm text area": "//*[@name='top-up-phone-number']"
         },
         {
-          "continue button": "//div/div[1]/div//app-phone-number/button[@type='button']"
+          "gsm continue button": "(//*[@type='button'])[1]"
         },
         {
-          "pay bill button": "//*button[@type='button']"
+          "payment continue button": "(//*[@type='button'])[2]"
+        },
+        {
+          "pay bill button": "//*[@type='button']"
         },
         {
           "credit card no": "/html//input[@id='cardNumber-CC']"
