@@ -27,6 +27,21 @@
         },
         {
           "body text" : "//div[@class='modal in']//p[@id='modal-body-text']"
+        },
+        {
+          "file transfer transactions" : "//a[@data-href='/finance/filetransfer/js/transferActivityInvestigation.js']"
+        },
+        {
+          "transaction date" : "//div[@class='input-group input-daterange']//input[1]"
+        },
+        {
+          "transaction code" : "//div[@class='orion-buttonedit-button right']"
+        },
+        {
+          "eighth code" : "(//td[contains(text(),'8')])[7]"
+        },
+        {
+          "results" : "//legend[normalize-space()='Sonuçlar']"
         }
       ]
     }
