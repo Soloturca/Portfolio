@@ -84,6 +84,15 @@
         },
         {
           "magnifying glass v2 button": "//span[contains(@class,'btntext') and text()='Sorgula']"
+        },
+        {
+          "page header" : "//h1[@class='page-header']"
+        },
+        {
+          "search button" : "//button[@orionid='btnSearch']"
+        },
+        {
+          "button query" : "//button[@orionid='btnQuery']"
         }
       ]
     }
