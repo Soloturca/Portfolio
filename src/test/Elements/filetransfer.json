@@ -20,7 +20,7 @@
           "server name search" : "//button[@orionid='btnSearch']"
         },
         {
-          "current row" : "//body[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[3]/th[1]/div[1]"
+          "current row" : "//td[normalize-space()='3']"
         },
         {
           "test button" : "//button[@orionid='btnTest']"
