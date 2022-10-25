@@ -11,22 +11,25 @@
           "gsm text area": "//*[@name='top-up-phone-number']"
         },
         {
-          "continue button": "//div/div[1]/div//app-phone-number/button[@type='button']"
+          "gsm continue button": "(//*[@type='button'])[1]"
         },
         {
-          "pay bill button": "//*button[@type='button']"
+          "payment continue button": "(//*[@type='button'])[2]"
         },
         {
-          "credit card no": "/html//input[@id='cardNumber-CC']"
+          "pay bill button": "(//*[@type='button'])[4]"
         },
         {
-          "expDate": "/html//input[@id='creditCardExp']"
+          "credit card no": "//input[@id='cardNumber-CC']"
         },
         {
-          "cvv": "/html//input[@id='cc-csc']"
+          "expDate": "//input[@id='creditCardExp']"
         },
         {
-          "payment button": "/html//button[@id='payment-button']"
+          "cvv": "//input[@id='cc-csc']"
+        },
+        {
+          "payment button": "//button[@id='payment-button']"
         },
         {
           "tl button": "//div[@class='top-up__options']/label[1]/span"
@@ -38,9 +41,41 @@
           "3D secure okay button": "//*[@id=\"footer\"]/a[1]/img"
         },
         {
-          "sms password": "//*[@id=\"login\"]/div[2]"
+          "sms password1": "//*[@id=\"SIFRE1\"]"
+        },
+        {
+          "sms password2": "//*[@id=\"SIFRE2\"]"
+        },
+        {
+          "sms password3": "//*[@id=\"SIFRE3\"]"
+        },
+        {
+          "sms password4": "//*[@id=\"SIFRE4\"]"
+        },
+        {
+          "sms password5": "//*[@id=\"SIFRE5\"]"
+        },
+        {
+          "sms password6": "//*[@id=\"SIFRE6\"]"
+        },
+        {
+          "3D secure last okay button": "//*[@id=\"footer\"]/a[2]/img"
+        },
+        {
+          "web telephone number": "//input[@id='tel-input']"
+        },
+        {
+          "web login password": "//input[@id='pass-input']"
+        },
+        {
+          "web login button": "//*[@id=\"pwdLoginCTA\"]"
+        },
+        {
+          "web two-step verification": "//*[@id=\"c_mkguzcm5vll9msd1lr\"]"
+        },
+        {
+          "web remember me": "//*[@id=\"setRememberMe\"]"
         }
-
       ]
     }
   ]

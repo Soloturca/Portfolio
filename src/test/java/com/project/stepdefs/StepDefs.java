@@ -79,6 +79,28 @@ public class StepDefs extends MyTestNGBaseClass {
         return flag;
     }
 
+    @Given("^(?:I )?cant see element: (\\w+(?: \\w+)*) at index (\\d+)")
+    public boolean scrollDownUntilSeenElement(String element, int index) {
+        JavascriptExecutor js = (JavascriptExecutor) oDriver;
+        boolean flag = false;
+        try {
+            if (commonLib.waitElement(element, 10, 1) == null) {
+                js.executeScript("arguments[0].scrollIntoView();", element);
+                System.out.println("Scrolled the object-->" + element);
+                Allure.addAttachment("Scrolled the object.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "Scrolled the object: " + element, true);
+                return true;
+            }
+        } catch (Exception e) {
+            reportResult("FAIL", "I cannot scroll the element: " + element, true);
+            Allure.addAttachment("I cannot scroll the element.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            Assert.fail("Could not scrolled the element:" + element);
+            flag = false;
+        }
+        return flag;
+    }
+
+
     @When("^(?:I )?wait clickable element: (\\w+(?: \\w+)*) at index (\\d+)")
     public boolean waitElementClickable(String element, int index) {
         WebElement object = commonLib.findElement(element, index);
