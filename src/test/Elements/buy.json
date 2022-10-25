@@ -3,7 +3,7 @@
     {
       "pageInfo": {
         "pageName": "buy",
-        "parent": "login",
+        "parent": "common",
         "waitelement": ""
       },
       "elements": [
@@ -49,7 +49,7 @@
         { "search button" : "//div[@class='orion-widget-container orion-button-container orion-inline orion-frame-lg orion-right']"
 
         },
-        { "row button" : "//*/div[3]/div/div/div/table/tbody/tr[1]/th"
+        { "row button" : "//*/tbody/tr[1]/td[1]"
 
         },
         { "transaction currency selection" : "//select[@orionid='currencyCode']"
@@ -153,7 +153,7 @@
         {"payment type search" : "//div[@class='orion-widget-container orion-button-container orion-inline']"
 
         },
-        {"choose second line" : "//*/div[3]/div/div/div/table/tbody/tr[1]/th"
+        {"choose second line" : "(//td[contains(text(),'1')])[49]"
 
         },
         {"process date area" : "//input[@orionid='processDate']"
@@ -171,7 +171,7 @@
         {"bank name search button" : "//div[@class='orion-widget-container orion-button-container orion-inline orion-frame-lg orion-right']"
 
         },
-        {"choose fifth line" : "//*/div[3]/div/div/div/table/tbody/tr[5]/th"
+        {"choose fifth line" : "//*[@id=\"tblAccounts\"]/tbody/tr[7]/td[1]"
 
         },
         {"save button second" : "//button[@orionid='btnSave']"
@@ -205,7 +205,7 @@
           "transaction amount" : "//*[@id=\"content\"]/div/div/div/div[2]/div/div[4]/div[1]/div[5]/div[4]/input"
         },
         {
-          "select third line" : "//*/div[3]/div/div/div/table/tbody/tr[3]/th"
+          "select third line" : "//html/body/div[2]/div/div/div[2]/div/div/div[2]/div/div/div/div/div[1]/table/tbody/tr[5]/td[1]"
         },
         {
           "invoice no area" : "//input[@orionid='invoiceNo']"
@@ -284,9 +284,6 @@
         },
         {
           "vat rate select" : "//select[@class='htSelectEditor']"
-        },
-        {
-
         }
       ]
     }
