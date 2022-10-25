@@ -1,0 +1,25 @@
+{
+  "pages": [
+    {
+      "pageInfo": {
+        "pageName": "loginyanimda",
+        "parent": "common",
+        "waitelement": "ceptel text area"
+      },
+      "elements": [
+        {
+          "ceptel text area": "//*[@id=\"tel-input\"]"
+        },
+
+        {
+          "sifre text area": "//*[@id=\"pass-input\"]"
+
+        },
+        {
+          "devam et button": "//*[@id=\"pwdLoginCTA\"]"
+        }
+
+      ]
+    }
+  ]
+}
