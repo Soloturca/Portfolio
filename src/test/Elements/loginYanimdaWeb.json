@@ -1,0 +1,67 @@
+{
+  "pages": [
+    {
+      "pageInfo": {
+        "pageName": "loginYanimdaWeb",
+        "parent": "common",
+        "waitelement": "telephone number"
+      },
+      "elements": [
+        {
+          "telephone number": "//input[@id='tel-input']"
+        },
+        {
+          "password": "//input[@id='pass-input']"
+        },
+        {
+          "login button": "//*[@id=\"pwdLoginCTA\"]"
+        },
+        {
+          "two-step verification1": "//*[@class='wrapper']/input[1]"
+        },
+        ,
+        {
+          "two-step verification2": "//*[@class='wrapper']/input[2]"
+        },
+        ,
+        {
+          "two-step verification3": "//*[@class='wrapper']/input[3]"
+        },
+        ,
+        {
+          "two-step verification4": "//*[@class='wrapper']/input[4]"
+        },
+        {
+          "remember me": "//*[@id=\"setRememberMe\"]"
+        },
+        {
+          "pay bill": "//div[@class='quick-link-icon']"
+        },
+        {
+          "pay bill page tel text area": "//input[@id='phone']"
+        },
+        {
+          "master pass select": "//*[@id=\"content\"]/app-invoice-payment/div[1]//div[2]//div[5]/div[2]/label"
+        },
+        {
+          "master pass credit card no": "//input[@id='cardNumber-CC']"
+        },
+        {
+          "master pass expDate": "//input[@id='creditCardExp']"
+        },
+        {
+          "master pass cvv": "//input[@id='cc-csc']"
+        },
+        {
+          "pay bill button": "//*[@id=\"content\"]/app-invoice-payment//button"
+        },
+        {
+          "3D sms pass": "//*[@id=\"smspass\"]"
+        },
+        {
+          "3D confirmation": "//div/button[1]"
+        }
+      ]
+    }
+  ]
+}

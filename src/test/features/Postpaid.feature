@@ -10,7 +10,7 @@ Feature: Postpaid Feature
     Then I enter "461910342" text to gsm text area at index 1
     And I wait gsm continue button element 15 seconds at index 1
     When I click element: gsm continue button at index 1
-    Given I cant see element: payment continue button at index 1
+    Given I scroll and see element: payment continue button at index 1
     And I wait payment continue button element 15 seconds at index 1
     When I click element: payment continue button at index 1
     Then I enter "5406697543211173" text to credit card no at index 1
@@ -31,4 +31,82 @@ Feature: Postpaid Feature
     And I wait 3D secure last okay button element 10 seconds at index 1
     When I click element: 3D secure last okay button at index 1
 
+  @TC002
+  Scenario: Postpaid Yanimda Web Fatura
+    Given Open the http://efes.vodafone.com.tr/tsteShop-selfservice-login-test/#/giris/logoutAuto URL
+    Then I see loginYanimdaWeb page
+    Then I need to just wait
+    And I wait telephone number element 10 seconds at index 1
+    When I click element: telephone number at index 1
+    #enter without 5
+    Then I enter "461910342" text to telephone number at index 1
+    And I wait password element 10 seconds at index 1
+    Then I enter "11111111" text to password at index 1
+    And I wait login button element 10 seconds at index 1
+    When I click element: login button at index 1
+    And I wait two-step verification1 element 10 seconds at index 1
+    Then I enter "1" text to two-step verification1 at index 1
+    Then I enter "1" text to two-step verification2 at index 1
+    Then I enter "1" text to two-step verification3 at index 1
+    Then I enter "1" text to two-step verification4 at index 1
+    And I wait remember me element 10 seconds at index 1
+    When I click element: remember me at index 1
+    Then I refresh page
+    Then I need to just wait
+    Given I scroll and see element: pay bill at index 1
+    And I wait pay bill element 10 seconds at index 1
+    When I click element: pay bill at index 1
+    Then I need to just wait
+    And I wait pay bill page tel text area element 10 seconds at index 1
+    Given I scroll and see element: pay bill button at index 1
+    When I click element: pay bill button at index 1
+    And I wait 3D sms pass element 10 seconds at index 1
+    When I click element: 3D sms pass at index 1
+    Then I enter "123456" text to 3D sms pass at index 1
+    When I click element: 3D confirmation at index 1
+
+
+  @TC003
+  Scenario: Postpaid Yanimda Web Masterpass Fatura Ödeme
+    Given Open the http://efes.vodafone.com.tr/tsteShop-selfservice-login-test/#/giris/logoutAuto URL
+    Then I see loginYanimdaWeb page
+    Then I need to just wait
+    And I wait telephone number element 10 seconds at index 1
+    When I click element: telephone number at index 1
+    #enter without 5
+    Then I enter "461910342" text to telephone number at index 1
+    And I wait password element 10 seconds at index 1
+    Then I enter "11111111" text to password at index 1
+    And I wait login button element 10 seconds at index 1
+    When I click element: login button at index 1
+    And I wait two-step verification1 element 10 seconds at index 1
+    Then I enter "1" text to two-step verification1 at index 1
+    Then I enter "1" text to two-step verification2 at index 1
+    Then I enter "1" text to two-step verification3 at index 1
+    Then I enter "1" text to two-step verification4 at index 1
+    And I wait remember me element 10 seconds at index 1
+    When I click element: remember me at index 1
+    Then I refresh page
+    Then I need to just wait
+    And I wait pay bill element 10 seconds at index 1
+    When I click element: pay bill at index 1
+    And I wait pay bill page tel text area element 10 seconds at index 1
+    Given I scroll and see element: master pass select at index 1
+    When I click element: master pass select at index 1
+    Then I enter "5406697543211173" text to master pass credit card no at index 1
+    Then I enter "0323" text to master pass expDate at index 1
+    Then I enter "465" text to master pass cvv at index 1
+    Given I scroll and see element: pay bill at index 1
+    When I click element: pay bill at index 1
+    And I wait 3D sms pass element 10 seconds at index 1
+    When I click element: 3D sms pass at index 1
+    Then I enter "123456" text to 3D sms pass at index 1
+    When I click element: 3D confirmation at index 1
+
+  @TC004
+  Scenario: Postpaid Yanimda Web Ek Paket Al
+  Scenario: Postpaid Yanimda Web Masterpass Fatura Ödeme
+    Given Open the http://efes.vodafone.com.tr/tsteShop-selfservice-login-test/#/giris/logoutAuto URL
+    Then I see loginYanimdaWeb page
+    Then I need to just wait
 
