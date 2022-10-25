@@ -16,4 +16,4 @@
 #    Then I wait clickable element: payment button at index 1
 #    When I click element: payment button at index 1
 #    And I wait send anyway element 30 seconds at index 1
-#    When I click element: send anyway at index 1
+#  When I click element: send anyway at index 1
