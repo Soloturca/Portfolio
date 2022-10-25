@@ -33,6 +33,7 @@ When I click element: send anyway at index 1
   And I wait 3D secure last okay button element 10 seconds at index 1
   When I click element: 3D secure last okay button at index 1
 
+
   @TC002
   Scenario: Prepaid Yanımda Web TL Yukleme
     Given Open the http://efes.vodafone.com.tr/tsteShop-selfservice-login-test/#/giris/logoutAuto URL
