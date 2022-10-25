@@ -77,9 +77,6 @@
           "usage controls button": "//*[contains(text(),'Kullandırım Kontrolleri')]"
         },
         {
-          "number one": "//*[contains(text(),'1')]"
-        },
-        {
           "login user" : "//input[@id='username']"
         },
         {
@@ -93,6 +90,9 @@
         },
         {
           "button query" : "//button[@orionid='btnQuery']"
+        },
+        {
+          "number one" : "//html/body/div/div[4]/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[1]/table/tbody/tr[1]/td[1]"
         }
       ]
     }

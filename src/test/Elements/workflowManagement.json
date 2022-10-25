@@ -3,7 +3,7 @@
     {
       "pageInfo": {
         "pageName": "workflowManagement",
-        "parent": "home",
+        "parent": "common",
         "waitelement": "jobs pending on my list button"
       },
       "elements": [
