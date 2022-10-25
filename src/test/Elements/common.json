@@ -102,6 +102,12 @@
         },
         {
           "login username" : "//input[@id='username']"
+        },
+        {
+          "current button" : "//a[normalize-space()='Mevcut']"
+        },
+        {
+          "delete button" : "//button[@orionid='btnDelete']"
         }
       ]
     }
