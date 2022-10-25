@@ -296,6 +296,9 @@
         },
         {
           "material group name" : "//div[@orionid='row:materialGroupName']//div[@class='orion-widget-container orion-inline']"
+        },
+        {
+          "row select" : "//td[normalize-space()='1']"
         }
       ]
     }
