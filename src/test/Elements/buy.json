@@ -284,6 +284,18 @@
         },
         {
           "vat rate select" : "//select[@class='htSelectEditor']"
+        },
+        {
+          "managerial" : "(//li[@class='has-sub'])[5]"
+        },
+        {
+          "material group identification" : "//a[contains(text(),'Malzeme Grubu Tanımlama')]"
+        },
+        {
+          "material group name area" : "//input[@orionid='materialGroupName']"
+        },
+        {
+          "material group name" : "//div[@orionid='row:materialGroupName']//div[@class='orion-widget-container orion-inline']"
         }
       ]
     }
