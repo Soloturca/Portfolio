@@ -16,7 +16,8 @@
 
         },
         {
-          "devam et button": "//*[@id=\"pwdLoginCTA\"]"
+          "devam et button": "//*[@id=\"pwdLoginCTA\"]",
+
         }
 
       ]

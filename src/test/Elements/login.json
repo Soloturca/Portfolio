@@ -100,7 +100,8 @@
 
         {
 
-          "tamam button": "//*[@id=\"footer\"]/a[1]/img"
+          "tamam button": "//*[@id=\"footer\"]/a[1]/img",
+
         }
 
       ]
