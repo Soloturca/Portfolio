@@ -108,6 +108,12 @@
         },
         {
           "delete button" : "//button[@orionid='btnDelete']"
+        },
+        {
+          "select first line" : "(//td[contains(text(),'1')])"
+        },
+        {
+          "role button" : "(//button[@role='button'])"
         }
       ]
     }
