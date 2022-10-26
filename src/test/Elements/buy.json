@@ -311,6 +311,69 @@
         },
         {
           "material group search two" : "(//button[@role='button'])[7]"
+        },
+        {
+          "supplier identification" : "//a[contains(text(),'Tedarikçi Tanımlama')]"
+        },
+        {
+          "tck number" : "//div[@orionid='row:tckn']//div[@class='orion-widget-container orion-inline']"
+        },
+        {
+          "tck number area" : "//input[@placeholder='___________']"
+        },
+        {
+          "country" : "//div[@orionid='row:countryCode']//div[@class='orion-widget-container orion-inline']"
+        },
+        {
+          "country select" : "//select[@orionid='countryCode']"
+        },
+        {
+          "phone number" : "//div[@orionid='row:phoneNumber']//div[@class='orion-widget-container orion-inline']"
+        },
+        {
+          "phone number area" : "//div[@class='orion-widget-container orion-inline']//input[@placeholder='+90 (___) - (___ __ __)']"
+        },
+        {
+          "email" : "//div[@orionid='row:email']//div[@class='orion-widget-container orion-inline']"
+        },
+        {
+          "email area" : "//input[@orionid='email']"
+        },
+        {
+          "account info" : "//a[normalize-space()='Hesap Bilgileri']"
+        },
+        {
+          "bank code" : "//div[@orionid='row:bankCode']//div[@class='orion-widget-container orion-inline']"
+        },
+        {
+          "bank code select" : "//select[@orionid='bankCode']"
+        },
+        {
+          "branch code" : "//div[@orionid='row:branchCode']//div[@class='orion-widget-container orion-inline']"
+        },
+        {
+          "branch code area" : "//select[@orionid='branchCode']"
+        },
+        {
+          "iban" : "//div[@orionid='row:iban']//div[@class='orion-widget-container orion-inline']"
+        },
+        {
+          "iban area" : "//input[@placeholder='TR__ ____ ____ ____ ____ ____ __']"
+        },
+        {
+          "currency code" : "//div[@orionid='row:currencyCode']//div[@class='orion-widget-container orion-inline']"
+        },
+        {
+          "currency code select" : "//select[@orionid='currencyCode']"
+        },
+        {
+          "record" : "//a[normalize-space()='Kayıt']"
+        },
+        {
+          "tck number dialog" : "(//div[@class='orion-widget-container orion-inline'])[31]"
+        },
+        {
+          "tck number dialog area" : "//div[@class='orion-frame orion-frame-lg']//input[@placeholder='___________']"
         }
       ]
     }

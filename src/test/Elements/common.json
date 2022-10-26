@@ -114,6 +114,9 @@
         },
         {
           "role button" : "(//button[@role='button'])"
+        },
+        {
+          "save account button" : "//button[@orionid='saveAccount']"
         }
       ]
     }
