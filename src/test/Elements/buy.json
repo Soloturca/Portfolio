@@ -299,6 +299,18 @@
         },
         {
           "row select" : "//td[normalize-space()='1']"
+        },
+        {
+          "material type identification" : "//a[contains(text(),'Malzeme Türü Tanımlama')]"
+        },
+        {
+          "material type name" : "//div[@orionid='row:materialTypeName']//div[@class='orion-widget-container orion-inline']"
+        },
+        {
+          "material type name area" : "//input[@orionid='materialTypeName']"
+        },
+        {
+          "material group search two" : "(//button[@role='button'])[7]"
         }
       ]
     }
