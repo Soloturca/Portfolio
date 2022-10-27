@@ -135,9 +135,6 @@
         {
           "save button" : "//button[@orionid='btnSave']"
         },
-        {"yes button" : "//button[@type='button']"
-
-        },
         {"approval note" : "//textarea[@id='modal-body-notetext']"
 
         },
@@ -174,14 +171,8 @@
         {"choose fifth line" : "//*[@id=\"tblAccounts\"]/tbody/tr[7]/td[1]"
 
         },
-        {"save button second" : "//button[@orionid='btnSave']"
-
-        },
-        {"note text" : "//textarea[@id='modal-body-notetext']"
-
-        },
-        {"reference number text area" : "//*[@id=\"modal-title-text\"]/b"
-
+        {
+          "reference number text area" : "//*[@id=\"modal-title-text\"]/b"
         },
         {
           "close system button": "//li[@id='logout_button']"
@@ -202,10 +193,13 @@
           "commission bank name search" : "//div[@class='orion-buttonedit-button right']"
         },
         {
-          "transaction amount" : "//*[@id=\"content\"]/div/div/div/div[2]/div/div[4]/div[1]/div[5]/div[4]/input"
+          "transaction amount" : "//div[@orionid='row:amount']//div[@class='orion-widget-container orion-buttonedit-container orion-inline']"
         },
         {
-          "select third line" : "//html/body/div[2]/div/div/div[2]/div/div/div[2]/div/div/div/div/div[1]/table/tbody/tr[5]/td[1]"
+          "transaction amount area" : "//input[@orionid='amount']"
+        },
+        {
+          "select third line" : "//html/body/div[2]/div/div/div[2]/div/div/div[2]/div/div/div/div/div[1]/table/tbody/tr[3]/td[1]"
         },
         {
           "invoice no area" : "//input[@orionid='invoiceNo']"
@@ -380,6 +374,9 @@
         },
         {
           "type selection" : "(//select[@class='orion form-control input-sm'])[1]"
+        },
+        {
+          "data name" : "//tr[@class='active-row']//td[@data-name='aciklama']"
         }
       ]
     }
