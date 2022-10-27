@@ -26,8 +26,8 @@ Feature: Orion Finance Finco Test Scenarios - Ön Başvuru Gözlem
     And I wait preliminary observation page element 30 seconds at index 1
 
     When I click element: search list applications at index 1
-    And I wait select row element 30 seconds at index 1
-    Then I click element: select row at index 1
+    And I wait select first line element 30 seconds at index 1
+    Then I click element: select first line at index 1
     And I wait detail button element 30 seconds at index 1
     When I click element: detail button at index 1
     Then I go to top of the site
