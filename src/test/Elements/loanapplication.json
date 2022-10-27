@@ -99,8 +99,13 @@
         },
         {
           "back button" : "//button[@orionid='btnBackToObservationPage']"
+        },
+        {
+          "document description one" : "//body[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[5]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[5]"
+        },
+        {
+          "document description two" : "//td[@class='active-cell']"
         }
-
       ]
     }
   ]

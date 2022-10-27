@@ -129,9 +129,6 @@
         },
         {
           "data save" : "//button[@class='btn-save']",
-        },
-        {
-          "document description" : "(//td[@class='active-cell'])[1]"
         }
       ]
     }
