@@ -107,10 +107,10 @@
           "payment plan observation page" : "(//div[@class='orion orion-page orion-context'])[1]"
         },
         {
-          "credit button" : "//div[@class='orion-buttonedit-button right']"
+          "credit no" : "(//div[@class='orion-widget-container orion-buttonedit-container orion-inline orion-col-c8'])"
         },
         {
-          "credit no area two" : "(//input[@orionid='creditNo'])[1]"
+          "credit no area" : "//input[@class='orion form-control input-sm orion-buttonedit-edit']"
         },
         {
           "date one" : "(//input[@type='text'])[11]"

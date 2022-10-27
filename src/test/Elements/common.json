@@ -120,6 +120,18 @@
         },
         {
           "text area" : "//input[@type='text']"
+        },
+        {
+          "data name" : "(//td[@data-name='dokuman'])"
+        },
+        {
+          "data select" : "(//i[@class='fa fa-upload'])"
+        },
+        {
+          "data save" : "//button[@class='btn-save']",
+        },
+        {
+          "document description" : "(//td[@class='active-cell'])[1]"
         }
       ]
     }
