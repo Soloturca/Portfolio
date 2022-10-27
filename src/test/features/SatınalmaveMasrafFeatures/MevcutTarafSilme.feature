@@ -1,7 +1,7 @@
-Feature: Orion Finance Finco Test Scenarios - MEVCUT TEDARİKÇİ SİLME
+Feature: Orion Finance Finco Test Scenarios - MEVCUT TARAF SİLME
 
-  #1.)MEVCUT TEDARİKÇİ SİLME
-  #2.)yMEVCUT TEDARİKÇİ ONAY
+  #1.)MEVCUT TARAF SİLME
+  #2.)yMEVCUT TARAF SİLME ONAY
 
   Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
@@ -13,22 +13,22 @@ Feature: Orion Finance Finco Test Scenarios - MEVCUT TEDARİKÇİ SİLME
     When I click element: login button at index 1
     Then I see buy page
 
-  @MevcutTedarikciSilme
-  Scenario: MEVCUT TEDARİKÇİ SİLME LOGİN:
+  @MevcutTarafSilme
+  Scenario: MEVCUT TARAF SİLME LOGİN:
 
-    #Mevcut tedarikçi silme - 1Scenario:
+    #Mevcut taraf silme - 1Scenario:
 
     And I wait purchase and expense button element 30 seconds at index 1
     When I click element: purchase and expense button at index 1
     Then I click element: managerial at index 1
-    Then I click element: supplier identification at index 1
+    Then I click element: party identification at index 1
     And I wait page header element 30 seconds at index 1
     When I click element: current button at index 1
     And I wait bank name search element 30 seconds at index 1
     Then I click element: bank name search at index 1
-    And I wait tck number dialog element 30 seconds at index 31
-    When I click element: tck number dialog at index 31
-    Then I enter "46333196904" text to tck number dialog area at index 1
+    And I wait tck number dialog element 30 seconds at index 38
+    When I click element: tck number dialog at index 38
+    Then I enter "46333196904" text to text area at index 74
     Then I click element: bank name search button at index 2
     And I wait select first line element 30 seconds at index 61
     When I click element: select first line at index 61
@@ -46,7 +46,7 @@ Feature: Orion Finance Finco Test Scenarios - MEVCUT TEDARİKÇİ SİLME
     When I click element: close system button at index 1
 
 
-    #mevcut tedarikçi silme onay - 2Scenario:
+    #mevcut taraf silme onay - 2Scenario:
 
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
     Then I see login page
@@ -74,7 +74,7 @@ Feature: Orion Finance Finco Test Scenarios - MEVCUT TEDARİKÇİ SİLME
     Then I enter "TEST" text to approval note at index 1
     And I wait yes button element 30 seconds at index 1
     When I click element: yes button at index 1
-    Then I need to check area verify by warning check at index 1 contains "Tedarikçi silme işlemi onaylandı."
+    Then I need to check area verify by warning check at index 1 contains "Taraf silme işlemi onaylandı."
     And I wait close button element 30 seconds at index 1
     When I click element: close button at index 1
     And I wait page header element 30 seconds at index 1

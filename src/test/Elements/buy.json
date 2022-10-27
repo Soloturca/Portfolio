@@ -370,10 +370,16 @@
           "record" : "//a[normalize-space()='Kayıt']"
         },
         {
-          "tck number dialog" : "(//div[@class='orion-widget-container orion-inline'])[31]"
+          "tck number dialog" : "//div[@class='orion-widget-container orion-inline']"
         },
         {
           "tck number dialog area" : "//div[@class='orion-frame orion-frame-lg']//input[@placeholder='___________']"
+        },
+        {
+          "party identification" : "//a[contains(text(),'Taraf Tanımlama')]"
+        },
+        {
+          "type selection" : "(//select[@class='orion form-control input-sm'])[1]"
         }
       ]
     }
