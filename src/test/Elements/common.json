@@ -117,6 +117,9 @@
         },
         {
           "save account button" : "//button[@orionid='saveAccount']"
+        },
+        {
+          "text area" : "//input[@type='text']"
         }
       ]
     }
