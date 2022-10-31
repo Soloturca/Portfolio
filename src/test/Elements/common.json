@@ -128,7 +128,7 @@
           "data select" : "(//i[@class='fa fa-upload'])"
         },
         {
-          "data save" : "//button[@class='btn-save']",
+          "data save" : "//button[@class='btn-save']"
         }
       ]
     }

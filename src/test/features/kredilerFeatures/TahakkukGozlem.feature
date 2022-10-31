@@ -31,8 +31,8 @@ Feature: Orion Finance Finco Test Scenarios - 017.TAHAKKUK GÖZLEM KONTROLÜ
     Then I enter "27092022" text to loan date at index 38
     And I wait magnifying glass v2 button element 30 seconds at index 2
     And I click element: magnifying glass v2 button at index 2
-    And I wait number one element 30 seconds at index 20
-    And I click element: number one at index 20
+    And I wait select first row element 30 seconds at index 20
+    And I click element: select first row at index 20
     And I click element: magnifying glass v2 button at index 1
     Then I need to just wait
     Then I need to check area verify by application observation and report at index 1 contains "Tahakkuk Gözlem"
