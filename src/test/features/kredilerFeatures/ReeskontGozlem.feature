@@ -29,6 +29,9 @@ Feature: Orion Finance Finco Test Scenarios - 018.REESKONT GÖZLEM KONTROLÜ
     Then I clear text to loan date at index 2
     Then I need to just wait
     Then I enter "27092022" text to loan date at index 2
+    Then I clear text to loan date at index 3
+    Then I need to just wait
+    Then I enter "27092022" text to loan date at index 3
     And I wait magnifying glass v2 button element 30 seconds at index 1
     And I click element: magnifying glass v2 button at index 1
     Then I need to just wait

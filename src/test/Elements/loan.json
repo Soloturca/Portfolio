@@ -314,6 +314,9 @@
           "application no-current application text area": "//input[@orionid='applicationNo']"
         },
         {
+          "select first row": "//*[contains(text(),'1')]"
+        },
+        {
           "observation and report button": "//a[contains(@data-href,'/finance/creditapplication/js/applicationObservationAndReport.js')]"
         },
         {
@@ -753,9 +756,6 @@
         },
         {
           "save button": "//button[@orionid='btnNext']"
-        },
-        {
-          "delete button": "//button[@orionid='btnDeleteFinAcc']"
         },
         {
           "reasons for rejection identify update and cancel button": "//a[contains(@data-href,'/finance/creditapplication/js/rejectionReasons.js')]"
