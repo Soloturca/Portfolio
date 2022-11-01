@@ -482,7 +482,7 @@
           "credit application observation and report search and list button": "//button[@orionid='searchAndListApplications']"
         },
         {
-          "credit application observation and report transaction reference number text area": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[1]"
+          "credit application observation and report transaction reference number text area": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[2]"
         },
         {
           "applications": "//html/body/div[1]/div[4]/div/div/div/div[2]/div/div[1]/div[2]/div[2]/div/div/div/div/div[1]/div/div/div/table/tbody/tr[1]/th"
@@ -1076,7 +1076,7 @@
           "first row button": "//html/body/div[2]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
         },
         {
-          "row button": "//*/div[3]/div/div/div/table/tbody/tr[1]/th"
+          "row button": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[1]"
         },
         {
           "warning popup": "//*[@id=\"modal-title-text\"]"

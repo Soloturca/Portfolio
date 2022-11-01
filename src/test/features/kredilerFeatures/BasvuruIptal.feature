@@ -1,4 +1,4 @@
-Feature: Orion Finance Finco Test Scenarios - 012.BAŞVURU İPTAL KONTROLÜ
+Feature: Orion Finance Finco Test Scenarios - 012.ÖN DEĞERLENDİRMEDEN GEÇEN KREDİ BAŞVURUSUNUN İPTALİ
 
   #1.)Başvuru İlerletme: TC001
   #2.)Başvuru İptal: TC002
@@ -89,13 +89,12 @@ Feature: Orion Finance Finco Test Scenarios - 012.BAŞVURU İPTAL KONTROLÜ
 
     Then I enter my reference: "reference number" text to reference number area at index 1
     When I click element: inquire button at index 1
-    And I wait row button element 30 seconds at index 1
-    When I click element: row button at index 1
-    And I wait warning popup element 30 seconds at index 1
-    When I click element: yes button at index 1
+    And I wait row button element 30 seconds at index 4
+    When I click element: row button at index 4
+    And I wait yes button element 30 seconds at index 2
+    When I click element: yes button at index 2
     And I wait approve button element 30 seconds at index 1
     When I click element: approve button at index 1
-    And I wait warning popup element 30 seconds at index 1
     And I wait yes button element 30 seconds at index 1
     When I click element: yes button at index 1
 
@@ -125,13 +124,12 @@ Feature: Orion Finance Finco Test Scenarios - 012.BAŞVURU İPTAL KONTROLÜ
 
     Then I enter my reference: "reference number" text to reference number area at index 1
     When I click element: inquire button at index 1
-    And I wait row button element 30 seconds at index 1
-    When I click element: row button at index 1
-    And I wait warning popup element 30 seconds at index 1
-    When I click element: yes button at index 1
+    And I wait row button element 30 seconds at index 3
+    When I click element: row button at index 3
+    And I wait yes button element 30 seconds at index 2
+    When I click element: yes button at index 2
     And I wait approve button element 30 seconds at index 1
     When I click element: approve button at index 1
-    And I wait warning popup element 30 seconds at index 1
     And I wait yes button element 30 seconds at index 1
     When I click element: yes button at index 1
     Then I see loan page

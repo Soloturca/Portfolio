@@ -60,9 +60,6 @@
           "close button for financial info": "//button[@class='btn btn-sm btn-success']"
         },
         {
-          "yes button": "//*[@id=\"modal-footer-area\"]/button[1]"
-        },
-        {
           "reference number area": "//input[@orionid='referans_no']"
         },
         {
@@ -78,7 +75,7 @@
           "warning popup": "//*[@id=\"modal-title-text\"] "
         },
         {
-          "yes button": "//*[@id=\"modal-footer-area\"]/button[1]"
+          "yes button": "//*[contains(text(),'Evet')]"
         },
         {
           "no button": "//*[@id=\"modal-footer-area\"]/button[2]"
@@ -87,7 +84,10 @@
           "warning popup text area": "//*[@id=\"modal-body-notetext\"]"
         },
         {
-          "row button": "//*/div[3]/div/div/div/table/tbody/tr[1]/th"
+          "row button": "//*[contains(text(),'1')]"
+        },
+        {
+          "select first row": "//*[contains(text(),'1')]"
         },
         {
           "inquire button": "//button[@orionid='orion-id-008']"
