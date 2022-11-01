@@ -84,7 +84,7 @@
           "warning popup text area": "//*[@id=\"modal-body-notetext\"]"
         },
         {
-          "row button": "//*[contains(text(),'1')]"
+          "row button": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[1]"
         },
         {
           "select first row": "//*[contains(text(),'1')]"

@@ -89,7 +89,7 @@
           "search button" : "//button[@orionid='btnSearch']"
         },
         {
-          "row button": "//*[contains(text(),'1')]"
+          "row button": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[1]"
         },
         {
           "button query" : "//button[@orionid='btnQuery']"
