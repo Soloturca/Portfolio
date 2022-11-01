@@ -241,12 +241,6 @@
           "description area" : "//textarea[@orionid='description']"
         },
         {
-          "bill number" : "//html/body/div[1]/div[4]/div/div[2]/div/div[2]/div/div[2]/div[6]/div[2]/div/div/div/div/div[1]/div/div/div/table/tbody/tr[1]/td[3]"
-        },
-        {
-          "bill number area" : "//html/body/div[1]/div[4]/div/div[2]/div/div[2]/div/div[2]/div[6]/div[2]/div/div/div/div/div[5]/textarea"
-        },
-        {
           "detail expense table" : "//legend[@orionid='detailExpensesLegend']"
         },
         {
@@ -373,10 +367,52 @@
           "party identification" : "//a[contains(text(),'Taraf Tanımlama')]"
         },
         {
+          "expense entry authorization" : "//a[contains(text(),'Masraf Giriş Yetkilendirmesi')]"
+        },
+        {
           "type selection" : "(//select[@class='orion form-control input-sm'])[1]"
         },
         {
           "data name" : "//tr[@class='active-row']//td[@data-name='aciklama']"
+        },
+        {
+          "expense identification" : "//a[contains(text(),'Masraf Tanımlama')]"
+        },
+        {
+          "expense type" : "//div[@orionid='row:expenseType']//div[@class='orion-widget-container orion-inline']"
+        },
+        {
+          "select expense type" : "//select[@orionid='expenseType']"
+        },
+        {
+          "expense sub type" : "//div[@orionid='row:expenseSubtype']//div[@class='orion-widget-container orion-inline']"
+        },
+        {
+          "select expense sub type" : "//select[@orionid='expenseSubtype']"
+        },
+        {
+          "expense sub type control" : "//div[@orionid='row:expenseSubtypeControl']//div[@class='orion-widget-container orion-inline']"
+        },
+        {
+          "select expense sub type control" : "//select[@orionid='expenseSubtypeControl']"
+        },
+        {
+          "units" : "//input[@placeholder='Lütfen seçiniz...']"
+        },
+        {
+          "sales unit" : "//li[@id='select2-nzrn-result-o58o-B1200']"
+        },
+        {
+          "frm buttons" : "//div[@orionid='frmButtons']"
+        },
+        {
+          "detail expense table" : "//legend[normalize-space()='Detay Gider Tablosu']"
+        },
+        {
+          "bill number" : "//td[@data-name='invoiceNo']"
+        },
+        {
+          "bill date" : "//td[@class='active-cell']"
         }
       ]
     }
