@@ -92,6 +92,9 @@
           "row button": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[1]"
         },
         {
+          "pricing no area": "//*[@id=\"modal-body-text\"]/b"
+        },
+        {
           "button query" : "//button[@orionid='btnQuery']"
         },
         {
