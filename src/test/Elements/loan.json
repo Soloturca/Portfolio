@@ -17,8 +17,11 @@
           "pricing button": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[5]/ul/li[4]/a"
         },
         {
+          "pricing no area": "//*[@id=\"modal-body-text\"]/b"
+        },
+        {
           "page header": "//*[@id=\"content\"]/div/h1"
-      },
+        },
         {
           "financial observation button": "//a[contains(@data-href,'/finance/pricing/js/pricingObservation.js')]"
         },
