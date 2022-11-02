@@ -13,7 +13,7 @@ Feature: Orion Finance Finco Test Scenarios - YENİ MASRAF GİRİŞİ YETKİLEND
     When I click element: login button at index 1
     Then I see buy page
 
-  @YeniMasrGirisiYetkilendirme
+  @YeniMasrafGirisiYetkilendirme
   Scenario: YENİ MASRAF GİRİŞİ YETKİLENDİRME LOGİN:
 
     #Yeni masraf girişi yetkilendirme - 1Scenario:
