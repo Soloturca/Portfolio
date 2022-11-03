@@ -30,6 +30,7 @@ Feature: Orion Finance Finco Test Scenarios - 006.FİYATLAMA GÖZLEM EKRANI KONT
     And I wait search and list pricings button element 30 seconds at index 1
     When I click element: search and list pricings button at index 1
     When I click element: row button at index 1
+    Then I go to down of the site
 
     When I need to just wait
     Then I need to general definitions verify by general definitions at index 1
