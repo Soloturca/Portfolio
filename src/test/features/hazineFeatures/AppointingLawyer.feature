@@ -1,7 +1,7 @@
 Feature: Orion Finance Finco Test Scenarios / Test Cases for Litigation
 
   #This feature includes these steps:
-  #1.) Takip Dosyasına Avukat Atama
+  #1.) Takip Dosyasına Avukat Atama Ekranı
 
   @Litigation
   Scenario: Appointing Lawyer

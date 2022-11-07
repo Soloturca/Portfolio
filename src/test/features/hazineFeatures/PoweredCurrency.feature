@@ -1,7 +1,7 @@
 Feature: Orion Finance Finco Test Scenarios / Test Cases for Treasury
 
   #This feature includes these steps:
-  #1.) Güçlü döviz tanımlama
+  #1.) Güçlü döviz tanımlama Ekranı
 
   @Treasury
   Scenario: Add Powered Currency

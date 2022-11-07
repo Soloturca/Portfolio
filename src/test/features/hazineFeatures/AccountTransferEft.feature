@@ -1,7 +1,7 @@
 Feature: Orion Finance Finco Test Scenarios / Test Cases for Treasury
 
   #This feature includes these steps:
-  #1.) Hesaplar Arası Transfer Eft
+  #1.) Hesaplar Arası Transfer Eft Ekranı
 
   @Treasury
   Scenario: Account Transactions Eft Senario

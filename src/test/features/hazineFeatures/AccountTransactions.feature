@@ -1,7 +1,7 @@
 Feature: Orion Finance Finco Test Scenarios / Test Cases for Treasury
 
   #This feature includes these steps:
-  #1.) Hesap Hareketleri Gözlem
+  #1.) Hesap Hareketleri Gözlem Ekranı
 
   @Treasury
   Scenario: Account Transactions Senario

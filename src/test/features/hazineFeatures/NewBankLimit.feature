@@ -103,7 +103,6 @@ Feature: Orion Finance Finco Test Scenarios / Test Cases for Treasury
     When I click element: close button at index 1
     Then I see home page
 
-  @Treasury123456
   Scenario: Approve Swap Transaction
 
     #2.) Döviz Swap İşlem Onay
