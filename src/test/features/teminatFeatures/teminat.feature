@@ -71,6 +71,7 @@ Feature: Orion Finance Finco Test Scenarios - Teminat
     And I click element: approve button at index 1
     And I click element: yes button at index 1
 
+
   @teminat
   Scenario: Var olan teminatın güncellenmesi: TC002 -
     Then I see assurance page
