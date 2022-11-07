@@ -3,7 +3,7 @@
     {
       "pageInfo": {
         "pageName": "home",
-        "parent": "login",
+        "parent": "common",
         "waitelement": "workflow management button"
       },
       "elements": [
@@ -38,6 +38,15 @@
           "credit button": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[3]/a"
         },
         {
+          "credit": "//*[contains(text(),'Kredi')]"
+        },
+        {
+          "application button": "//*[contains(text(),'Başvuru')]"
+        },
+        {
+          "exception handling": "//*[contains(text(),'İstisna Yönetimi')]"
+        },
+        {
           "close system button": "//li[@id='logout_button']"
         },
         {
@@ -49,9 +58,6 @@
 
         {
           "close button for financial info": "//button[@class='btn btn-sm btn-success']"
-        },
-        {
-          "yes button": "//*[@id=\"modal-footer-area\"]/button[1]"
         },
         {
           "reference number area": "//input[@orionid='referans_no']"
@@ -69,7 +75,7 @@
           "warning popup": "//*[@id=\"modal-title-text\"] "
         },
         {
-          "yes button": "//*[@id=\"modal-footer-area\"]/button[1]"
+          "yes button": "//*[contains(text(),'Evet')]"
         },
         {
           "no button": "//*[@id=\"modal-footer-area\"]/button[2]"
@@ -78,7 +84,10 @@
           "warning popup text area": "//*[@id=\"modal-body-notetext\"]"
         },
         {
-          "row button": "//*/div[3]/div/div/div/table/tbody/tr[1]/th"
+          "row button": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[1]"
+        },
+        {
+          "select first row": "//*[contains(text(),'1')]"
         },
         {
           "inquire button": "//button[@orionid='orion-id-008']"

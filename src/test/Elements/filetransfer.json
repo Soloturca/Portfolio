@@ -1,0 +1,52 @@
+{
+  "pages": [
+    {
+      "pageInfo": {
+        "pageName": "filetransfer",
+        "parent": "common",
+        "waitelement": ""
+      },
+      "elements": [
+        {
+          "file transfer": "(//li[@class='has-sub'])[8]"
+        },
+        {
+          "server identification" : "//a[@data-href='/finance/filetransfer/js/serverDefinitions.js']"
+        },
+        {
+          "server name" : "//div[@class='orion-buttonedit-button right']"
+        },
+        {
+          "server name search" : "//button[@orionid='btnSearch']"
+        },
+        {
+          "current row" : "//td[normalize-space()='3']"
+        },
+        {
+          "test button" : "//button[@orionid='btnTest']"
+        },
+        {
+          "body text" : "//div[@class='modal in']//p[@id='modal-body-text']"
+        },
+        {
+          "file transfer transactions" : "//a[@data-href='/finance/filetransfer/js/transferActivityInvestigation.js']"
+        },
+        {
+          "transaction date" : "//div[@class='input-group input-daterange']//input[1]"
+        },
+        {
+          "transaction code" : "//div[@class='orion-buttonedit-button right']"
+        },
+        {
+          "eighth code" : "(//td[contains(text(),'8')])[7]"
+        },
+        {
+          "results" : "//legend[normalize-space()='Sonuçlar']"
+        }
+      ]
+    }
+  ]
+}
+
+
+

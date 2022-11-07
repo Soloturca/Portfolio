@@ -35,12 +35,11 @@ Feature: Orion Finance Finco Test Scenarios - 004.MEVCUT EŞİT FİYATLAMA GÜNC
     And I select element: "Pasif" under situation at index 2
     Then I click element: inquire button for financial observation at index 1
     Then I need to just wait
-    Then I click element: choose pricing at index 1
+    Then I click element: row button at index 1
     Then I clear text to end date area at index 1
     Then I copy the information by copying the system time to: end date area at index 1
 
     When I click element: update button at index 1
-    And I wait warning popup element 30 seconds at index 1
     And I click element: note at index 1
     Then I enter "Fiyatlama Onayi Ltf." text to note at index 1
     When I click element: yes button at index 1
@@ -76,12 +75,11 @@ Feature: Orion Finance Finco Test Scenarios - 004.MEVCUT EŞİT FİYATLAMA GÜNC
     When I click element: inquire button at index 1
     And I wait row button element 30 seconds at index 1
     When I click element: row button at index 1
-    And I wait warning popup element 30 seconds at index 1
-    When I click element: yes button at index 1
+    And I wait yes button element 30 seconds at index 2
+    When I click element: yes button at index 2
 
     And I wait approve button element 30 seconds at index 1
     When I click element: approve button at index 1
-    And I wait warning popup element 30 seconds at index 1
     And I wait yes button element 30 seconds at index 1
     When I click element: yes button at index 1
     And I wait pricing no area element 30 seconds at index 1

@@ -3,8 +3,8 @@
     {
       "pageInfo": {
         "pageName": "workflowManagement",
-        "parent": "home",
-        "waitelement": "jobs pending on my list button"
+        "parent": "common",
+        "waitelement": " "
       },
       "elements": [
         {
@@ -39,9 +39,6 @@
         },
         {
           "approve button": "//button[@owf_type='approve']"
-        },
-        {
-          "yes button": "//i[@class='fa fa-check']"
         },
         {
           "reference number text area": "//html/body/div[1]/div[7]/div/div/div[1]/div/h4/b"
@@ -81,6 +78,12 @@
         },
         {
           "inquire button for pending jobs": "//button[@orionid='orion-id-009']"
+        },
+        {
+          "reference number" : "(//div[@class='orion-widget-container orion-inline orion-col-c9'])[2]"
+        },
+        {
+          "approval note" : "//textarea[@id='modal-body-notetext']"
         }
       ]
     }

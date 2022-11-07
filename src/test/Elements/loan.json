@@ -3,7 +3,7 @@
     {
       "pageInfo": {
         "pageName": "loan",
-        "parent": "home",
+        "parent": "common",
         "waitelement": ""
       },
       "elements": [
@@ -17,8 +17,11 @@
           "pricing button": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[5]/ul/li[4]/a"
         },
         {
+          "pricing no area": "//*[@id=\"modal-body-text\"]/b"
+        },
+        {
           "page header": "//*[@id=\"content\"]/div/h1"
-      },
+        },
         {
           "financial observation button": "//a[contains(@data-href,'/finance/pricing/js/pricingObservation.js')]"
         },
@@ -45,6 +48,9 @@
         },
         {
           "parameter management button": "//a[@data-href='/finance/creditadministration/js/parameterManagement.js']"
+        },
+        {
+          "kkdf free": "//label[@for='kkdfFree']"
         },
         {
           "kkdf area": "//input[@orionid='fundRate']"
@@ -182,7 +188,7 @@
           "search button": "//span[@class='glyphicon glyphicon-search']"
         },
         {
-          "yes button": "//i[@class='fa fa-check']"
+          "yes button": "//*[contains(text(),'Evet')]"
         },
         {
           "comment reason button": "//select[@orionid='commentReason']"
@@ -311,6 +317,9 @@
           "application no-current application text area": "//input[@orionid='applicationNo']"
         },
         {
+          "select first row": "//*[contains(text(),'1')]"
+        },
+        {
           "observation and report button": "//a[contains(@data-href,'/finance/creditapplication/js/applicationObservationAndReport.js')]"
         },
         {
@@ -348,6 +357,9 @@
         },
         {
           "exception management button": "//a[contains(@data-href,'/finance/creditapplication/js/exceptionDefinition.js')]"
+        },
+        {
+          "create exception": "//*[contains(text(),'İstisna Oluştur')]"
         },
         {
           "test button": "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[5]/ul/li[6]/a"
@@ -404,7 +416,7 @@
           "loan installments revolving send button": "//button[@orionid='orion-id-023']"
         },
         {
-          "credit detail button": "//button[@orionid='btnShowCreditDisbursement']"
+          "credit detail button": "//*[contains(text(),'Kredi Detay')]"
         },
         {
           "payment plan button": "//a[@href='#step2']"
@@ -473,7 +485,7 @@
           "credit application observation and report search and list button": "//button[@orionid='searchAndListApplications']"
         },
         {
-          "credit application observation and report transaction reference number text area": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[1]"
+          "credit application observation and report transaction reference number text area": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[2]"
         },
         {
           "applications": "//html/body/div[1]/div[4]/div/div/div/div[2]/div/div[1]/div[2]/div[2]/div/div/div/div/div[1]/div/div/div/table/tbody/tr[1]/th"
@@ -573,9 +585,6 @@
         },
         {
           "add button": "//button[@orionid='btnAddFinAcc']"
-        },
-        {
-          "pricing save button": "//button[@orionid='btnSavePricing']"
         },
         {
           "parameter management button": "//a[@data-href='/finance/creditadministration/js/parameterManagement.js']"
@@ -713,7 +722,7 @@
           "choose credit": "//html/body/div[3]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
         },
         {
-          "choose customer": "//html/body/div[3]/div/div/div[5]/div[2]/div/div/div[1]/div/div/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
+          "choose customer": "//html/body/div[2]/div/div/div[5]/div[2]/div/div/div[1]/div/div/div/div[1]/table/tbody/tr[1]/td"
         },
         {
           "situation": "//select[@orionid='state']"
@@ -750,9 +759,6 @@
         },
         {
           "save button": "//button[@orionid='btnNext']"
-        },
-        {
-          "delete button": "//button[@orionid='btnDeleteFinAcc']"
         },
         {
           "reasons for rejection identify update and cancel button": "//a[contains(@data-href,'/finance/creditapplication/js/rejectionReasons.js')]"
@@ -812,16 +818,22 @@
           "application calender button": "//*[@id=\"step2\"]/div/div[1]/div[5]/div[1]/div/div[3]/div[1]/div[4]/div"
         },
         {
+          "calender button": "//i[@type='calendar']"
+        },
+        {
+          "loan date": "//input[@type='text']"
+        },
+        {
           "maturity text area": "//input[@orionid='maturity']"
         },
         {
-          "create payment plan button": "//button[@orionid='btnCreatePaymentPlan']"
+          "create payment plan button": "//*[contains(text(),'Plan Oluştur')]"
         },
         {
           "go on button": "//button[@orionid='btnInterestCalculateNextStep']"
         },
         {
-          "goOn button": "//button[@orionid='btnContinue']"
+          "goOn button": "//*[contains(text(),'Devam Et')]"
         },
         {
           "update product button": "//button[@orionid='btnAddProductItem']"
@@ -977,10 +989,16 @@
           "add a guarantor customer": "//input[@orionid='edCustomerCode']"
         },
         {
-          "choose a side": "//html/body/div[1]/div[4]/div/div[2]/div/div[2]/div/div/div/div[1]/div/div[1]/div[4]/div[5]/div/div/div/div[7]/div[1]/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
+          "choose a side": "//html/body/div/div[4]/div/div[2]/div/div[2]/div/div/div/div[1]/div/div[1]/div[4]/div[5]/div/div/div/div[7]/div[1]/div/div[1]/table/tbody/tr[1]/td"
         },
         {
           "delete guarantor": "//button[@orionid='btnSideDeleteGuarantor']"
+        },
+        {
+          "rediscount type": "//select[@orionid='drdRediscountType']"
+        },
+        {
+          "product reference number": "//input[@orionid='edProductId']"
         },
         {
           "closeview": "//i[@class='fa fa-search fa-fw']"
@@ -1046,9 +1064,6 @@
           "detail button": "//button[@orionid='btnObservationDetail']"
         },
         {
-          "exception management button": "//a[contains(@data-href,'/finance/creditapplication/js/exceptionDefinition.js')]"
-        },
-        {
           "existing button": "//a[@value=\"existing\"]"
         },
         {
@@ -1062,6 +1077,27 @@
         },
         {
           "first row button": "//html/body/div[2]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
+        },
+        {
+          "row button": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[1]"
+        },
+        {
+          "number one" : "//html/body/div/div[4]/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[1]/table/tbody/tr[1]/td[1]"
+        },
+        {
+          "warning popup": "//*[@id=\"modal-title-text\"]"
+        },
+        {
+          "billing information": "//li[@data-title='Fatura Bilgileri']"
+        },
+        {
+          "invoice no": "//input[@orionid='invoiceNo']"
+        },
+        {
+          "evo sap id": "//input[@orionid='evoSapId']"
+        },
+        {
+          "approve button": "//button[@owf_type='approve']"
         }
       ]
     }

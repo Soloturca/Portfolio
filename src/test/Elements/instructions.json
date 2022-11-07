@@ -11,45 +11,6 @@
           "loan button": "(//li[@class='has-sub'])[4]"
         },
         {
-          "loan disbursement" : "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[4]/ul/li[2]"
-        },
-        {
-          "loan disbursement monitoring" : "(//a[contains(text(),'Kredi Kullandırım Gözlem')])[1]"
-        },
-        {
-          "loan disbursement date" : "(//input[@type='text'])[3]"
-        },
-        {
-          "loan disbursement status" : "(//div[@class='orion-widget-container orion-inline orion-col-c8'])[6]"
-        },
-        {
-          "loan disbursement status area" : "(//select[@orionid='state'])[1]"
-        },
-        {
-          "search button" : "//button[@orionid='btnSearch']"
-        },
-        {
-          "end page" : "//*/div/div[2]/div/div[2]/div/div[2]/div/div[2]/div[2]/div[2]"
-        },
-        {
-          "first row button": "//*/div[3]/div/div/div/table/tbody/tr[2]/th"
-        },
-        {
-          "credit detail button" : "//button[@orionid='btnShowCreditDisbursement']"
-        },
-        {
-          "credit no" : "(//div[@class='orion-widget-container orion-inline orion-col-c8'])[9]"
-        },
-        {
-          "credit no are" : "//small[@id='edPopupCreditNo-helper']"
-        },
-        {
-          "close button" : "//button[@orionid='orion-id-080']"
-        },
-        {
-          "collection" : ".expand .has-sub:nth-of-type(4) > a:nth-of-type(1)"
-        },
-        {
           "instruction operations" : "(//li[@class='has-sub'])[7]"
         },
         {
@@ -92,16 +53,16 @@
           "cancel credit area" : "(//input[@orionid='creditNo'])[1]"
         },
         {
-          "start date" : "(//input[@type='text'])[13]"
+          "start date" : "//input[@type='text']"
         },
         {
-          "finish date" : "(//input[@type='text'])[14]"
+          "finish date" : "//input[@type='text']"
         },
         {
           "cancel credit no search button" : "//button[@orionid='btnSearch']"
         },
         {
-          "cancel credit no first row" : "//html/body/div[2]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
+          "cancel credit no first row" : "//body[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]"
         },
         {
           "cancel the instruction save button" : "//button[@orionid='btnCancelOrder']"
@@ -120,7 +81,10 @@
         },
         {
           "login user" : "//input[@id='username']"
-         }
+         },
+        {
+          "process" : "//div[@class='modal in']//p[@id='modal-body-text']"
+        }
       ]
     }
   ]

@@ -29,26 +29,26 @@ Feature: Orion Finance Finco Test Scenarios - KOMİSYON ÖDEME TALEP
     And I select element: "EFT MASRAFI" under commission type search area at index 1
     And I wait commission bank name search element 30 seconds at index 2
     When I click element: commission bank name search at index 2
-    And I click element: bank name search button at index 5
-    And I click element: select third line at index 2
-    And I click element: transaction amount at index 1
-    Then I enter "15" text to transaction amount at index 1
+    Then I click element: bank name search button at index 5
+    And I wait select third line element 30 seconds at index 1
+    Then I click element: select third line at index 1
+    And I wait transaction amount element 30 seconds at index 1
+    When I click element: transaction amount at index 1
+    Then I enter "15" text to transaction amount area at index 1
     Then I get the information by copying the value from: process date area at index 1
     Then I copy the information by copying the value to: value date area at index 1
     And I wait description area element 30 seconds at index 1
     When I enter "test" text to description area at index 1
-    And I click element: end page at index 1
-    And I need to right scroll verify by rscroll2 at index 1
-    And I need to just wait
-    And I wait upload to word button element 30 seconds at index 1
-    Then I upload the file for customer "evrak.jpg" using the: upload to word button at index 1
-    And I wait page header element 30 seconds at index 1
-    When I click element: save button second at index 1
-    And I need to just wait
-    And I wait note text element 30 seconds at index 1
-    When I click element: note text at index 1
-    Then I enter "test komisyon" text to note text at index 1
-    And I click element: yes button at index 2
+    Then I click element: end page at index 1
+    When I upload the file for customer "evrak.jpg" using the: data select at index 1
+    Then I click element: data save at index 1
+    Then I click element: data name at index 1
+    And I wait save element 30 seconds at index 1
+    When I click element: save at index 1
+    And I wait approval note element 30 seconds at index 1
+    When I click element: approval note at index 1
+    Then I enter "test komisyon" text to approval note at index 1
+    And I click element: yes button at index 1
     And I wait reference number text area element 30 seconds at index 1
     Then I get the information: reference number text area at index 1
     And I wait close button element 30 seconds at index 2
@@ -75,17 +75,18 @@ Feature: Orion Finance Finco Test Scenarios - KOMİSYON ÖDEME TALEP
 
     Then I enter my reference: "reference number" text to reference number area at index 1
     When I click element: inquire button at index 1
-    And I wait row button element 30 seconds at index 1
-    When I click element: row button at index 1
-    And I wait warning popup element 30 seconds at index 1
-    When I click element: yes button at index 1
+    And I wait number one element 30 seconds at index 1
+    When I click element: number one at index 1
+    Then I click element: yes button at index 2
     And I wait approve button element 30 seconds at index 1
     When I click element: approve button at index 1
-    And I wait warning popup element 30 seconds at index 1
+    And I wait approval note element 30 seconds at index 1
+    Then I enter "TEST" text to approval note at index 1
     And I wait yes button element 30 seconds at index 1
     When I click element: yes button at index 1
+    Then I need to check area verify by warning check at index 1 contains "Komisyon Ödeme Tanımlama/Güncelleme işlemi onaylandı."
     And I wait close button element 30 seconds at index 1
     When I click element: close button at index 1
-    And I wait close system button element 30 seconds at index 1
-    When I click element: close system button at index 1
+    And I wait page header element 30 seconds at index 1
+
 

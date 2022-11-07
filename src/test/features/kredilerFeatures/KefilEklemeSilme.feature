@@ -23,12 +23,13 @@ Feature: Orion Finance Finco Test Scenarios - 008.KEFİL EKLEME VE SİLME KONTRO
     When I click element: application button at index 1
     And I wait credit application introduction button element 30 seconds at index 1
     When I click element: credit application introduction button at index 1
-    Then I enter "12231" text to customer no-new application text area at index 1
+    Then I enter "11610" text to customer no-new application text area at index 1
     And I wait magnifying glass button element 30 seconds at index 1
     Then I click element: magnifying glass button at index 1
     Then I need to just wait
     Then I click element: choose customer at index 1
     Then I click element: parties row at index 1
+    Then I go to down of the site
     Then I click element: add product button at index 2
     And I wait magnifying glass button element 30 seconds at index 3
     Then I click element: magnifying glass button at index 3

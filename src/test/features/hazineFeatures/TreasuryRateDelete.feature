@@ -3,7 +3,7 @@ Feature: Orion Finance Finco Test Scenarios / Test Cases for Treasury
   #This feature includes these steps:
   #1.) Hazine Maliyet oranı silinmesi
 
-  @Treasury1
+  @Treasury
   Scenario: Delete Treasury Cost Rate
    #Hazine Maliyet Oranı Silinmesi
 

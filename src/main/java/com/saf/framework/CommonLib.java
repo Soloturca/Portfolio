@@ -1,7 +1,9 @@
 package com.saf.framework;
 
+import base.StepResultType;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Allure;
+import io.qameta.allure.model.Status;
 import org.openqa.selenium.*;
 import org.openqa.selenium.Proxy.ProxyType;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -537,4 +539,24 @@ public class CommonLib extends MyTestNGBaseClass {
             e.printStackTrace();
         }
     }
+    public static void allureReport(StepResultType result, String message, boolean ssFlag) {
+        try {
+            if (ssFlag) {
+                Allure.addAttachment("Screenshot : " + message, new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            }
+            if (result.toString().equalsIgnoreCase("PASS")) {
+                Allure.step(message, Status.PASSED);
+            } else if (result.toString().equalsIgnoreCase("INFO")) {
+                Allure.step(message, Status.SKIPPED);
+            } else if (result.toString().equalsIgnoreCase("FAIL")) {
+                Allure.step(message, Status.FAILED);
+                Assert.fail(message);
+            } else {
+                Allure.step(message);
+            }
+
+        } catch (Exception ignored) {
+        }
+    }
+
 }

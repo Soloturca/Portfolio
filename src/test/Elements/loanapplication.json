@@ -3,7 +3,7 @@
     {
       "pageInfo": {
         "pageName": "loanapplication",
-        "parent": "login",
+        "parent": "common",
         "waitelement": ""
       },
       "elements": [
@@ -99,8 +99,13 @@
         },
         {
           "back button" : "//button[@orionid='btnBackToObservationPage']"
+        },
+        {
+          "document description one" : "//html/body/div/div[4]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[1]/div[2]/div/div[5]/div/div/table/tbody/tr[1]/td[5]"
+        },
+        {
+          "document description two" : "//td[@class='active-cell']"
         }
-
       ]
     }
   ]
