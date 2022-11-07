@@ -242,6 +242,9 @@
           "transaction result": "//p[@id='modal-body-text']"
         },
         {
+          "transaction result message": "//*[contains(text(),'Ön değerlendirme sonucu olumsuz olduğu için devam edemezsiniz')]"
+        },
+        {
           "pricing inquiry frame": "/html/body/div[2]/div/div/div[2]"
         },
         {
@@ -371,6 +374,9 @@
           "credit no text area": "//input[@orionid='everythingCreditNo']"
         },
         {
+          "credit no": "//input[@orionid='lupCreditNo']"
+        },
+        {
           "credit start date text area": "//input[@orionid='processStartDate']"
         },
         {
@@ -383,7 +389,7 @@
           "credit collection test button": "//a[@data-href='/finance/creditcollection/js/serviceTest.js']"
         },
         {
-          "collection button": "//a[@value='collection']"
+          "collection button": "//*[contains(text(),'Tahsilat')]"
         },
         {
           "installment payment verification send button": "//button[@orionid='orion-id-041']"

@@ -68,7 +68,16 @@
           "accrual observation": "//*[contains(text(),'Tahakkuk Gözlem')]"
         },
         {
+          "collection button": "//*[contains(text(),'Tahsilat')]"
+        },
+        {
+          "collection observation": "//*[contains(text(),'Tahsilat Gözlem')]"
+        },
+        {
           "rediscount observation": "//*[contains(text(),'Reeskont Gözlem')]"
+        },
+        {
+          "receipt observation": "//*[contains(text(),'Dekont Gözlem')]"
         },
         {
           "credit detail button": "//*[contains(text(),'Kredi Detay')]"
