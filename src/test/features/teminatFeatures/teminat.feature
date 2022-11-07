@@ -20,7 +20,7 @@ Feature: Orion Finance Finco Test Scenarios - Teminat
     
 
 
-  @teminat
+  @teminat1
   Scenario: Teminat Oluşturma: TC001 -
     Then I see assurance page
     And I wait assurance transaction button element 30 seconds at index 1
@@ -42,8 +42,12 @@ Feature: Orion Finance Finco Test Scenarios - Teminat
     And I enter "10000" text to assurance amount area at index 1
     When I select element: "TL - TÜRK LİRASI" under currency type selection at index 1
     Then I click element: assurance amount continue button at index 1
-    Then I upload the file "aa.txt" using the: upload to excel button at index 1
-    Then I upload the file "aa.txt" using the: upload to excel button at index 2
+    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
+    Then I click element: save to excel button at index 1
+    And I click element: click to explanation at index 1
+    And I wait upload to excel button element 10 seconds at index 1
+    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
+    Then I click element: save to excel button at index 1
     Then I click element: assurance amount continue button at index 1
     Then I enter "teminat test" text to comment area at index 1
     And I click element: add button at index 1
