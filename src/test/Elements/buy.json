@@ -135,38 +135,38 @@
         {
           "save button" : "//button[@orionid='btnSave']"
         },
-        {"approval note" : "//textarea[@id='modal-body-notetext']"
-
+        {
+          "approval note" : "//textarea[@id='modal-body-notetext']"
         },
-        {"close button" : "//button[@type='button']"
-
+        {
+          "close button" : "//button[@type='button']"
         },
-        {"expense payment" : "//a[@data-href='/finance/purchasingandexpense/js/expenditurePaymentPage.js']"
-
+        {
+          "expense payment" : "//a[@data-href='/finance/purchasingandexpense/js/expenditurePaymentPage.js']"
         },
-        {"payment type" : "//select[@orionid='paymentType']"
-
+        {
+          "payment type" : "//select[@orionid='paymentType']"
         },
-        {"payment type search" : "//div[@class='orion-widget-container orion-button-container orion-inline']"
-
+        {
+          "payment type search" : "//div[@class='orion-widget-container orion-button-container orion-inline']"
         },
-        {"choose second line" : "(//td[contains(text(),'1')])[49]"
-
+        {
+          "choose second line" : "(//td[contains(text(),'1')])[49]"
         },
-        {"process date area" : "//input[@orionid='processDate']"
-
+        {
+          "process date area" : "//input[@orionid='processDate']"
         },
-        {"value date area" : "//input[@orionid='valueDate']"
-
+        {
+          "value date area" : "//input[@orionid='valueDate']"
         },
-        {"description area" : "//textarea[@orionid='description']"
-
+        {
+          "description area" : "//textarea[@orionid='description']"
         },
-        {"bank name search" : "//i[@type='search']"
-
+        {
+          "bank name search" : "//i[@type='search']"
         },
-        {"bank name search button" : "//div[@class='orion-widget-container orion-button-container orion-inline orion-frame-lg orion-right']"
-
+        {
+          "bank name search button" : "//div[@class='orion-widget-container orion-button-container orion-inline orion-frame-lg orion-right']"
         },
         {"choose fifth line" : "//*[@id=\"tblAccounts\"]/tbody/tr[7]/td[1]"
 
@@ -373,9 +373,6 @@
           "type selection" : "(//select[@class='orion form-control input-sm'])[1]"
         },
         {
-          "data name" : "//tr[@class='active-row']//td[@data-name='aciklama']"
-        },
-        {
           "expense identification" : "//a[contains(text(),'Masraf Tanımlama')]"
         },
         {
@@ -413,6 +410,81 @@
         },
         {
           "bill date" : "//td[@class='active-cell']"
+        },
+        {
+          "making an advance" : "//a[normalize-space()='Avans Açma']"
+        },
+        {
+          "advance type" : "//div[@orionid='row:advanceType']//div[@class='orion-widget-container orion-inline']"
+        },
+        {
+          "select advance type" : "//select[@orionid='advanceType']"
+        },
+        {
+          "transaction date" : "//input[@orionid='processDate']"
+        },
+        {
+          "customer no search" : "(//I[@type='search'])"
+        },
+        {
+          "customer code" : "//div[@orionid='row:edCustomerCode']//div[@class='orion-widget-container orion-inline orion-col-default']"
+        },
+        {
+          "customer code area" : "//input[@orionid='edCustomerCode']"
+        },
+        {
+          "bank name" : "//div[@orionid='row:receiverBankCode']//div[@class='orion-widget-container orion-inline']"
+        },
+        {
+          "select bank name" : "//select[@orionid='receiverBankCode']"
+        },
+        {
+          "branch name" : "//div[@orionid='row:receiverBranchCode']//div[@class='orion-widget-container orion-inline']"
+        },
+        {
+          "select branch name" : "//select[@orionid='receiverBranchCode']"
+        },
+        {
+          "currency name" : "//div[@orionid='row:receiverCurrencyCode']//div[@class='orion-widget-container orion-inline']"
+        },
+        {
+          "select currency name" : "//select[@orionid='receiverCurrencyCode']"
+        },
+        {
+          "iban name" : "//div[@orionid='row:receiverIban']//div[@class='orion-widget-container orion-inline']"
+        },
+        {
+          "iban name area" : "//input[@orionid='receiverIban']"
+        },
+        {
+          "description name" : "//div[@orionid='row:description']//div[@class='orion-widget-container orion-inline']"
+        },
+        {
+          "description name area" : "//textarea[@class='orion form-control input-sm']"
+        },
+        {
+          "data name explanation" : "//html/body/div/div[4]/div/div/div/div[2]/div/div[8]/div/div[2]/div/div/div/table/tbody/tr[1]/td"
+        },
+        {
+          "paying taxes" : "//a[normalize-space()='Vergi Ödeme']"
+        },
+        {
+          "declaration type" : "//div[@orionid='row:taxType']//div[@class='orion-widget-container orion-inline']"
+        },
+        {
+          "select declaration type" : "//select[@orionid='taxType']"
+        },
+        {
+          "stamp duty" : "//div[@orionid='row:taxDues']//div[@class='orion-widget-container orion-buttonedit-container orion-inline']"
+        },
+        {
+          "stamp duty area" : "//input[@orionid='taxDues']"
+        },
+        {
+          "temporary corporate tax" : "//div[@orionid='row:temporaryInstitutionTax']//div[@class='orion-widget-container orion-buttonedit-container orion-inline']"
+        },
+        {
+          "temporary corporate tax area" : "//input[@orionid='temporaryInstitutionTax']"
         }
       ]
     }
