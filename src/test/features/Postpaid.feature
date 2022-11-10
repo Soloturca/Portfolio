@@ -4,9 +4,14 @@ Feature: Postpaid Feature
   @TC001
   Scenario: Postpaid Public Payment Fatura
     Given Open the https://efes.vodafone.com.tr/tsteShop-public/#/fatura-ode URL
+    #And I wait advanced element 10 seconds at index 1
+    #When I click element: advanced at index 1
+    #And I wait advanced link element 5 seconds at index 1
+    #When I click element: advanced link at index 1
     Then I see login page
+    Then I need to just wait
     And I wait gsm text area element 10 seconds at index 1
-    #enter without 5
+   #enter without 5
     Then I enter "461910342" text to gsm text area at index 1
     And I wait gsm continue button element 15 seconds at index 1
     When I click element: gsm continue button at index 1
@@ -30,15 +35,16 @@ Feature: Postpaid Feature
     Then I enter "6" text to sms password6 at index 1
     And I wait 3D secure last okay button element 10 seconds at index 1
     When I click element: 3D secure last okay button at index 1
+    Then I need to just wait
 
   @TC002
-  Scenario: Postpaid Yanimda Web Fatura
-    Given Open the http://efes.vodafone.com.tr/tsteShop-selfservice-login-test/#/giris/logoutAuto URL
+  Scenario: Postpaid Yanimda Web Fatura Ödeme
+    Given Open the http://efes.vodafone.com.tr/tsteShop-selfservice-login-test/#/giris/logoutAuto/ URL
     Then I see loginYanimdaWeb page
     Then I need to just wait
     And I wait telephone number element 10 seconds at index 1
     When I click element: telephone number at index 1
-    #enter without 5
+   #enter without 5
     Then I enter "461910342" text to telephone number at index 1
     And I wait password element 10 seconds at index 1
     Then I enter "11111111" text to password at index 1
@@ -60,33 +66,18 @@ Feature: Postpaid Feature
     And I wait pay bill page tel text area element 10 seconds at index 1
     Given I scroll and see element: pay bill button at index 1
     When I click element: pay bill button at index 1
+    Then I need to just wait
     And I wait 3D sms pass element 10 seconds at index 1
     When I click element: 3D sms pass at index 1
-    Then I enter "123456" text to 3D sms pass at index 1
-    When I click element: 3D confirmation at index 1
+    Then I enter "12345" text to 3D sms pass at index 1
+    When I click element: 3D okay button1 at index 1
+    Then I need to just wait
 
 
   @TC003
   Scenario: Postpaid Yanimda Web Masterpass Fatura Ödeme
-    Given Open the http://efes.vodafone.com.tr/tsteShop-selfservice-login-test/#/giris/logoutAuto URL
+    Given Open the http://efes.vodafone.com.tr/tsteShop-selfservice-login-test/#/giris/logoutAuto/ URL
     Then I see loginYanimdaWeb page
-    Then I need to just wait
-    And I wait telephone number element 10 seconds at index 1
-    When I click element: telephone number at index 1
-    #enter without 5
-    Then I enter "461910342" text to telephone number at index 1
-    And I wait password element 10 seconds at index 1
-    Then I enter "11111111" text to password at index 1
-    And I wait login button element 10 seconds at index 1
-    When I click element: login button at index 1
-    And I wait two-step verification1 element 10 seconds at index 1
-    Then I enter "1" text to two-step verification1 at index 1
-    Then I enter "1" text to two-step verification2 at index 1
-    Then I enter "1" text to two-step verification3 at index 1
-    Then I enter "1" text to two-step verification4 at index 1
-    And I wait remember me element 10 seconds at index 1
-    When I click element: remember me at index 1
-    Then I refresh page
     Then I need to just wait
     And I wait pay bill element 10 seconds at index 1
     When I click element: pay bill at index 1
@@ -96,17 +87,81 @@ Feature: Postpaid Feature
     Then I enter "5406697543211173" text to master pass credit card no at index 1
     Then I enter "0323" text to master pass expDate at index 1
     Then I enter "465" text to master pass cvv at index 1
-    Given I scroll and see element: pay bill at index 1
-    When I click element: pay bill at index 1
-    And I wait 3D sms pass element 10 seconds at index 1
-    When I click element: 3D sms pass at index 1
-    Then I enter "123456" text to 3D sms pass at index 1
+    And I wait master pass card save button element 10 seconds at index 1
+    When I click element: master pass card save button at index 1
+    And I wait master pass card name element 10 seconds at index 1
+    Then I enter "test" text to master pass card name at index 1
+    Given I scroll and see element: pay bill button at index 1
+    When I click element: pay bill button at index 1
+    And I wait 3D okay button2 element 10 seconds at index 1
+    When I click element: 3D okay button2 at index 1
+    And I wait 3D sms password1 element 10 seconds at index 1
+    Then I enter "1" text to 3D sms password1 at index 1
+    Then I enter "2" text to 3D sms password2 at index 1
+    Then I enter "3" text to 3D sms password3 at index 1
+    Then I enter "4" text to 3D sms password4 at index 1
+    Then I enter "5" text to 3D sms password5 at index 1
+    Then I enter "6" text to 3D sms password6 at index 1
+    And I wait 3D confirmation element 10 seconds at index 1
     When I click element: 3D confirmation at index 1
 
+    #bloklu sayfa yüklenmiyor
   @TC004
   Scenario: Postpaid Yanimda Web Ek Paket Al
-  Scenario: Postpaid Yanimda Web Masterpass Fatura Ödeme
-    Given Open the http://efes.vodafone.com.tr/tsteShop-selfservice-login-test/#/giris/logoutAuto URL
+    Given Open the http://efes.vodafone.com.tr/tsteShop-selfservice-login-test/#/giris/logoutAuto/ URL
     Then I see loginYanimdaWeb page
     Then I need to just wait
+    And I wait ek paket al button element 10 seconds at index 1
+    When I click element: ek paket al button at index 1
+    Then I need to just wait
+    And I wait option dropdown element 10 seconds at index 1
+    When I click element: option dropdown at index 1
+    Then I click element: option dropdown select at index 1
+    And I wait hemen al button element 5 seconds at index 1
+    #When I click element: hemen al button at index 1
+   #hemen al butonuna tıklandıktan sonra sayfa yüklenmiyor.
 
+
+  #Discope case
+ #@TC005
+ #Scenario: Postpaid Yanimda Web Tarife Değişikliği
+ #  Then I need to just wait
+ #  And I wait tarifelerim ve kullanimlarim main button element 10 seconds at index 1
+ #  When I click element: tarifelerim ve kullanimlarim main button at index 1
+ #  Then I need to just wait
+ #  And I wait gecebilecegim tarifeler button element 10 seconds at index 1
+ #  When I click element: gecebilecegim tarifeler button at index 1
+ #  Given I scroll and see element: tarife GB at index 1
+ #  And I wait tarife GB element 5 seconds at index 1
+ #  When I click element: tarife GB at index 1
+ #  And I wait tarife ilgileniyorum button element 5 seconds at index 1
+ #  When I click element: tarife ilgileniyorum button at index 1
+    #hemen al butonuna tıklandıktan sonra sayfa yüklenmiyor. damlaya sormalısın
+
+  @TC006
+  Scenario: Postpaid Yanimda Web Kalan Kullanim Görüntüleme
+    Given Open the http://efes.vodafone.com.tr/tsteShop-selfservice-login-test/#/giris/logoutAuto/ URL
+    Then I see loginYanimdaWeb page
+    Then I need to just wait
+    And I wait tarifelerim ve kullanimlarim main button element 10 seconds at index 1
+    When I click element: tarifelerim ve kullanimlarim main button at index 1
+    Then I need to just wait
+    And I wait tarifem ve kalan kullanimlarim button element 10 seconds at index 1
+    When I click element: tarifem ve kalan kullanimlarim button at index 1
+    And I wait kalan kullanimlarim text element 10 seconds at index 1
+    #gb
+    And I wait kalan GB text element 10 seconds at index 1
+    And I wait kalan GB element 10 seconds at index 1
+    Then I get the value of kalan GB value at index 1
+    #dk
+    Given I scroll and see element: kalan DK text at index 1
+    And I wait kalan DK text element 10 seconds at index 1
+    When I click element: kalan DK text at index 1
+    And I wait kalan DK element 10 seconds at index 1
+    Then I get the value of kalan DK value at index 1
+    #sms
+    And I wait kalan SMS text element 10 seconds at index 1
+    Given I scroll and see element: kalan SMS at index 1
+    And I wait kalan SMS element 10 seconds at index 1
+    When I click element: kalan SMS at index 1
+    Then I get the value of kalan SMS value at index 1

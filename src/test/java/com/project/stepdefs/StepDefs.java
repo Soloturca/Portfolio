@@ -1,9 +1,6 @@
 package com.project.stepdefs;
 
-import com.saf.framework.CommonLib;
-import com.saf.framework.MyTestNGBaseClass;
-import com.saf.framework.TCKN;
-import com.saf.framework.TestUtils;
+import com.saf.framework.*;
 import cucumber.api.Scenario;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
@@ -85,12 +82,13 @@ public class StepDefs extends MyTestNGBaseClass {
         oDriver.navigate().refresh();
     }
 
+
     @Given("^(?:I )?scroll and see element: (\\w+(?: \\w+)*) at index (\\d+)")
     public boolean scrollDownUntilSeenElement(String element, int index) {
         JavascriptExecutor js = (JavascriptExecutor) oDriver;
         boolean flag = false;
         try {
-            if (commonLib.waitElement(element, 10, 1) == null) {
+            if (commonLib.waitElement(element, 10, index) == null) {
                 js.executeScript("arguments[0].scrollIntoView();", element);
                 System.out.println("Scrolled the object-->" + element);
                 Allure.addAttachment("Scrolled the object.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
@@ -644,7 +642,6 @@ public class StepDefs extends MyTestNGBaseClass {
     @And("^I wait (.*) element (\\d+) seconds at index (\\d+)")
     public void waitElement(String element, int timeout, int index) throws InterruptedException {
         commonLib.waitElement(element, timeout, index);
-
     }
 
     @When("^(?:I )?select element: \"([^\"]*)\" under (\\w+(?: \\w+)*) at index (\\d+)")
@@ -667,6 +664,27 @@ public class StepDefs extends MyTestNGBaseClass {
             reportResult("FAIL", "The selection cannot be done.", true);
             Assert.fail("The selection cannot be done!");
             flag = false;
+        }
+        return flag;
+    }
+
+    @Then("^(?:I )?get the value of (\\w+(?: \\w+)*) at index (\\d+)")
+    public boolean getValueFromArea(String element, int index) {
+        String object = commonLib.getTheItemValue(element, index);
+        AutomationConstants.kalanKullanim = object;
+        boolean flag = false;
+        try {
+            if (object != null) {
+                System.out.println(element + " is: " + object);
+                Allure.addAttachment("Information gathered.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                return true;
+            }
+        } catch (Exception e) {
+            System.out.println("Could not got the information.");
+            Allure.addAttachment("Information could not be gathered.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            Assert.fail("Could not got the information.");
+            flag = false;
+
         }
         return flag;
     }

@@ -18,6 +18,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.Random;
@@ -120,6 +121,8 @@ public class CommonLib extends MyTestNGBaseClass {
     }
 
 
+
+
     public String getTheItemValueFromAttribute(String elem, int index) {
         String elementText = (findElement(elem, index).getAttribute("value"));
         System.out.println(elementText);
@@ -139,9 +142,9 @@ public class CommonLib extends MyTestNGBaseClass {
 
     public String getTheItemValue(String elem, int index) {
         String elementText = (findElement(elem, index).getText());
-        System.out.println(elementText);
+        //System.out.println(elementText);
         this.itemValue = elementText;
-        System.out.println(itemValue);
+        //System.out.println(itemValue);
         return elementText;
     }
 

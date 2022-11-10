@@ -18,6 +18,8 @@ public class AutomationConstants
 	public static String CommonFileName = "COMMON.xlsx";
 	
 	public static String reportsDBName = "reports.db";
+
+	public static String kalanKullanim = "";
 	
 	public static int itestCaseID;
 	
