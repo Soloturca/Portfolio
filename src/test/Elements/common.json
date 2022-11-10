@@ -144,6 +144,12 @@
         },
         {
           "data save" : "//button[@class='btn-save']"
+        },
+        {
+          "add button" : "//*[contains(text(),'Ekle')]"
+        },
+        {
+          "note text" : "//textarea[@id='modal-body-notetext']"
         }
       ]
     }
