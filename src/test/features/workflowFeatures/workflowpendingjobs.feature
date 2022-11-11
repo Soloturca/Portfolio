@@ -43,7 +43,7 @@ Feature: Orion Finance Finco Test Scenarios - Is Akis bekleyen isler
     And I wait inquire button for pending jobs element 30 seconds at index 1
     And I click element: inquire button for pending jobs at index 1
     Then I click element: work select row at index 1
-    Then I click element: yes button at index 1
+    Then I click element: yes button at index 2
     And I click element: modify button at index 1
     And I click element: yes button at index 1
     Then I click element: close button at index 1
@@ -62,7 +62,7 @@ Feature: Orion Finance Finco Test Scenarios - Is Akis bekleyen isler
     And I wait inquire button element 30 seconds at index 1
     And I click element: inquire button at index 1
     Then I click element: work select row at index 1
-    Then I click element: yes button at index 1
+    Then I click element: yes button at index 2
     Then I click element: update button at index 1
     And I click element: yes button at index 1
     Then I click element: close button at index 1
@@ -84,7 +84,7 @@ Feature: Orion Finance Finco Test Scenarios - Is Akis bekleyen isler
     And I wait inquire button for pending jobs element 30 seconds at index 1
     And I click element: inquire button for pending jobs at index 1
     Then I click element: work select row at index 1
-    Then I click element: yes button at index 1
+    Then I click element: yes button at index 2
     And I click element: back to pool button at index 1
     And I click element: yes button at index 1
     Then I click element: close button at index 1
@@ -106,7 +106,7 @@ Feature: Orion Finance Finco Test Scenarios - Is Akis bekleyen isler
     And I wait inquire button for pending jobs element 30 seconds at index 1
     And I click element: inquire button for pending jobs at index 1
     Then I click element: work select row at index 1
-    Then I click element: yes button at index 1
+    Then I click element: yes button at index 2
     And I click element: cancel button at index 1
     And I click element: yes button at index 1
     Then I click element: close button at index 1
