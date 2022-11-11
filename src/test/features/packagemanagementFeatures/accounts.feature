@@ -31,6 +31,7 @@ Feature: Orion Finance Finco Test Scenarios - Hesap yönetimi
     And I select element: "TL - TÜRK LİRASI" under currency code at index 1
     And I select element: "SERBEST HESAP" under sub account type at index 1
     And I select element: "MAAS" under account purpose at index 1
+    And I wait information tab element 20 seconds at index 1
     And I click element: information tab at index 1
     And I enter "automation test" text to contact person at index 1
     And I enter "5387201835" text to tel no area at index 1

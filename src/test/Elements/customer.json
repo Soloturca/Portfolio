@@ -80,7 +80,7 @@
           "call center": "//label[@for='callCenter']"
         },
         {
-          "upload excel button": "//i[@class='fa fa-upload htOrionIcon pull-right']"
+          "upload to excel button": "//i[@class='fa fa-upload']"
         },
         {
           "customer code area": "//input[@orionid='customerCode']"
@@ -102,6 +102,15 @@
         },
         {
           "customer transaction for 30070": "//html/body/div/div[2]/div/div[1]/ul[2]/ul/li[3]"
+        },
+        {
+          "save to excel button": "//button[@class='btn-save']"
+        },
+        {
+          "click to explanation":"//td[@data-name=\"aciklama\"]"
+        },
+        {
+          "vkn no":"//input[@orionid=\"taxNo\"]"
         }
       ]
     }
