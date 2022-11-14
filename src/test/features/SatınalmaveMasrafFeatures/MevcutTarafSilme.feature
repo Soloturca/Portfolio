@@ -21,6 +21,7 @@ Feature: Orion Finance Finco Test Scenarios - MEVCUT TARAF SİLME
     And I wait purchase and expense button element 30 seconds at index 1
     When I click element: purchase and expense button at index 1
     Then I click element: managerial at index 1
+    Then I need to just wait
     Then I click element: party identification at index 1
     And I wait page header element 30 seconds at index 1
     When I click element: current button at index 1
