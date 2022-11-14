@@ -27,6 +27,7 @@ Feature: Orion Finance Finco Test Scenarios - Bireysel müşteri ön başvuru re
     And I wait application information element 30 seconds at index 1
     When I click element: application information at index 1
     And I wait tax no element 30 seconds at index 1
+    Then I need to just wait
     When I click element: tax no at index 1
     And I enter "1649952269" text to tax no area at index 1
     And I click element: partner search button at index 1
