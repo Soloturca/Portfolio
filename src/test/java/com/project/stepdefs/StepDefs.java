@@ -107,8 +107,7 @@ public class StepDefs extends MyTestNGBaseClass {
         boolean flag = false;
         try {
             if (object != null) {
-                if (waitElementClickable(element,index))
-                {
+                if (waitElementClickable(element, index)) {
                     System.out.println("Object clickable-->" + element);
                     Allure.addAttachment("Element is clickable.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                     reportResult("PASS", "I saw clickable element: " + element, true);
@@ -122,6 +121,11 @@ public class StepDefs extends MyTestNGBaseClass {
             flag = false;
         }
         return flag;
+    }
+
+    @Then("I refresh page")
+    public void RefreshPage() {
+        oDriver.navigate().refresh();
     }
 
 
@@ -1292,14 +1296,14 @@ public class StepDefs extends MyTestNGBaseClass {
         waitElement("row button", timeout, 27);
         clickElement("row button", 27);
         clickElement("add side customer button", 1);
-       // waitElement("row button", timeout, 1);
+        // waitElement("row button", timeout, 1);
         //clickElement("row button", 1);
 //checkbox tik'lendiğinde kefil seçilmiş oluyor, tekrar run ettiğimizde seçili olursa doğru ilerlemeyecektir.
         //waitElement("checkbox", timeout, 1);
         //clickElement("checkbox", 1);
-       // waitElement("update the guarantor button", timeout, 1);
-     //  clickElement("update the guarantor button", 1);
-      justWait();
+        // waitElement("update the guarantor button", timeout, 1);
+        //  clickElement("update the guarantor button", 1);
+        justWait();
         clickElement("continue to Reference Information button", 1);
         waitElement("close button for financial info", timeout, 1);
         clickElement("close button for financial info", 1);

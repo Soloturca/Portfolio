@@ -16,9 +16,129 @@
 
         },
         {
-          "devam et button": "//*[@id=\"pwdLoginCTA\"]",
+          "yuklemeye devam et button": "//*[@id=\"content\"]/app-public-topup/div[1]/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div[3]/button"
 
+        },
+
+        {
+          "smssifre1": "//*[@class='wrapper']/input[1]"
+        },
+        {
+          "smssifre2": "//*[@class='wrapper']/input[2]"
+        },
+        {
+          "smssifre3": "//*[@class='wrapper']/input[3]"
+        },
+        {
+          "smssifre4": "//*[@class='wrapper']/input[4]"
+        },
+        {
+          "hayirsimdidegilbutton": "//*[@id=\"remember-me-panel\"]/div/div/div/div/div[5]/div[1]/button"
+        },
+        {
+          "tlyuklebutton": "//*[@id=\"navigateToTopup\"]/span"
+        },
+        {
+          "5tlbutton": "//*[@id=\"content\"]/app-topup/div[2]//div[2]//div[1]/div[2]//div/label[2]"
+        },
+        {
+          "yuklemeyapbutton": "//*[@id=\"showConfirm\"]"
+        },
+        {
+          "onaylabutton": "//*[@id=\"confirmTopup\"]/span"
+        },
+        {
+          "yenikartileodebutton": "//*[@id=\"payWithNewCard\"]"
+        },
+        {
+          "kartnumarasi": "//*[@id=\"newCardCC\"]"
+        },
+        {
+          "sonkullanmatarihi": "//*[@id=\"newCardExpDate\"]"
+        },
+        {
+          "guvenlikkodu": "//*[@id=\"newCardCvv\"]"
+        },
+        {
+          "anywaybutton": "//*[@id=\"proceed-button\"]"
+        },
+        {
+          "otptamambutton": "//*[@id=\"footer\"]/a[1]/img"
+        },
+        {
+          "anyway2button": "//*[@id=\"proceed-button\"]"
+        },
+        {
+          "otp1": "//*[@id=\"SIFRE1\"]"
+        },
+        {
+          "otp2": "//*[@id=\"SIFRE2\"]"
+        },
+        {"otp3": "//*[@id=\"SIFRE3\"]"
+        },
+        {
+          "otp4": "//*[@id=\"SIFRE4\"]"
+        },
+        {
+          "otp5": "//*[@id=\"SIFRE5\"]"
+        },
+        {
+          "otp6": "//*[@id=\"SIFRE6\"]"
+        },
+        {
+          "lasttamambutton": "//*[@id=\"footer\"]/a[2]/img"
+        },
+        {
+
+          "odemealindibutton": "//*[@id=\"closeConfirmDialog\"]/span"
+        },
+        {
+
+          "ekpaketalbutton": "//*[@id=\"content\"]/app-dashboard/div/div/div/div/div/div/div/div[3]/a/div"
+        },
+        {
+
+          "hemenalbutton": "//*[@id=\"content\"]/app-addons/div[2]/div[1]/div/div[4]/div/div[1]/temp-bundle-addon/div/div[3]/div/div/div[2]/button"
+        },
+
+        {
+
+          "satinalbutton": "//*[@id=\"dialog\"]/div/div[3]/div[3]/div/div/div[2]/button/span"
+        },
+        {
+
+          "yurtdisikullanimbutton": "//*[@id=\"addon_roaming\"]"
+        },
+        {
+
+          "kalankullanimlar": "//*[@id=\"content\"]/app-dashboard/div/div/dashboard-usage-detail/div/div/div/div/div/div/div[1]/div/div[2]/div/span"
+        },
+        {
+          "80tlbutton": "//*[@id=\"content\"]/app-public-topup/div[1]/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div[2]/div/label[1]/span"
+        },
+        {
+          "devam et button": "//*[@id=\"pwdLoginCTA\"]"
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       ]
     }
