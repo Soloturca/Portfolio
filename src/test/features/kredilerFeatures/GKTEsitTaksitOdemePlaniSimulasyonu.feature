@@ -41,7 +41,7 @@ Feature: Orion Finance Finco Test Scenarios - GKT Müşteri Eşit Taksit Ödeme 
     When I click element: product code at index 1
     Then I select element: "DONANIM - YILLIK" under product code area at index 1
     And I click element: pricing at index 1
-    And I select element: "196 - GRKN OTOMASYON" under pricing code at index 1
+    And I select element: "199 - GRKN OTOMASYON" under pricing code at index 1
     And I wait credit type element 30 seconds at index 1
     When I select element: "TAKSİTLİ TİCARİ KREDİ" under credit type area at index 1
     And I wait interest calculate element 30 seconds at index 1
