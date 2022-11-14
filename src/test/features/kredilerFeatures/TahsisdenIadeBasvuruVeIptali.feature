@@ -26,7 +26,7 @@ Feature: Orion Finance Finco Test Scenarios - 011.Tahsis Değerlendirme Aşamas�
     When I click element: application button at index 1
     And I wait credit application introduction button element 30 seconds at index 1
     When I click element: credit application introduction button at index 1
-    Then I enter "12216" text to customer no-new application text area at index 1
+    Then I enter "12299" text to customer no-new application text area at index 1
     And I wait magnifying glass button element 30 seconds at index 1
     Then I click element: magnifying glass button at index 1
     Then I need to just wait
@@ -169,7 +169,7 @@ Feature: Orion Finance Finco Test Scenarios - 011.Tahsis Değerlendirme Aşamas�
     When I click element: application cancel button at index 1
     And I wait pricing observation element 30 seconds at index 1
     Then I need to application cancel verify by pricing observation at index 1
-    Then I enter "12216" text to credit application observation and report customer no button at index 1
+    Then I enter "12299" text to credit application observation and report customer no button at index 1
     And I wait credit application observation and report search and list button element 30 seconds at index 1
     When I click element: credit application observation and report search and list button at index 1
     And I click element: credit application observation and report transaction reference number text area at index 1
@@ -209,11 +209,10 @@ Feature: Orion Finance Finco Test Scenarios - 011.Tahsis Değerlendirme Aşamas�
     When I click element: inquire button at index 1
     And I wait row button element 30 seconds at index 1
     When I click element: row button at index 1
-    And I wait warning popup element 30 seconds at index 1
-    When I click element: yes button at index 1
+    And I wait yes button element 30 seconds at index 2
+    When I click element: yes button at index 2
     And I wait approve button element 30 seconds at index 1
     When I click element: approve button at index 1
-    And I wait warning popup element 30 seconds at index 1
     And I wait yes button element 30 seconds at index 1
     When I click element: yes button at index 1
 
@@ -245,11 +244,10 @@ Feature: Orion Finance Finco Test Scenarios - 011.Tahsis Değerlendirme Aşamas�
     When I click element: inquire button at index 1
     And I wait row button element 30 seconds at index 1
     When I click element: row button at index 1
-    And I wait warning popup element 30 seconds at index 1
-    When I click element: yes button at index 1
+    And I wait yes button element 30 seconds at index 2
+    When I click element: yes button at index 2
     And I wait approve button element 30 seconds at index 1
     When I click element: approve button at index 1
-    And I wait warning popup element 30 seconds at index 1
     And I wait yes button element 30 seconds at index 1
     When I click element: yes button at index 1
     Then I see loan page

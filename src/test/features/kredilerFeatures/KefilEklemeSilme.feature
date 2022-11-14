@@ -29,7 +29,6 @@ Feature: Orion Finance Finco Test Scenarios - 008.KEFİL EKLEME VE SİLME KONTRO
     Then I need to just wait
     Then I click element: choose customer at index 1
     Then I click element: parties row at index 1
-    Then I go to down of the site
     Then I click element: add product button at index 2
     And I wait magnifying glass button element 30 seconds at index 3
     Then I click element: magnifying glass button at index 3
