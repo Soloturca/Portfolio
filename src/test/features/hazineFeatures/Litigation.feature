@@ -1,7 +1,7 @@
 Feature: Orion Finance Finco Test Scenarios / Test Cases for Litigation
 
   #This feature includes these steps:
-  #1.) Müşteri takibe intikal
+  #1.) Müşteri takibe intikal Ekranı
 
   @Litigation
   Scenario: Starting Litigation

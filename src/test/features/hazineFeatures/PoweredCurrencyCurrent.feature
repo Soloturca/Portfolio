@@ -1,7 +1,7 @@
 Feature: Orion Finance Finco Test Scenarios / Test Cases for Treasury
 
   #This feature includes these steps:
-  #1.) Güçlü döviz sorgulama
+  #1.) Güçlü döviz sorgulama Ekranı
 
   @Treasury
   Scenario: Query Powered Currency

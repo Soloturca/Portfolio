@@ -1,7 +1,7 @@
 Feature: Orion Finance Finco Test Scenarios / Test Cases for Treasury
 
   #This feature includes these steps:
-  #1.) Hesaplar Arası Transfer Virman
+  #1.) Hesaplar Arası Transfer Virman Ekranı
 
   @Treasury
   Scenario: Account Transfer Virman
