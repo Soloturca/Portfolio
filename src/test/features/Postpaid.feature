@@ -4,15 +4,11 @@ Feature: Postpaid Feature
   @TC001
   Scenario: Postpaid Public Payment Fatura
     Given Open the https://efes.vodafone.com.tr/tsteShop-public/#/fatura-ode URL
-    #And I wait advanced element 10 seconds at index 1
-    #When I click element: advanced at index 1
-    #And I wait advanced link element 5 seconds at index 1
-    #When I click element: advanced link at index 1
     Then I see login page
     Then I need to just wait
     And I wait gsm text area element 10 seconds at index 1
    #enter without 5
-    Then I enter "461910342" text to gsm text area at index 1
+    Then I enter "464009831" text to gsm text area at index 1
     And I wait gsm continue button element 15 seconds at index 1
     When I click element: gsm continue button at index 1
     Given I scroll and see element: payment continue button at index 1
@@ -45,7 +41,7 @@ Feature: Postpaid Feature
     And I wait telephone number element 10 seconds at index 1
     When I click element: telephone number at index 1
    #enter without 5
-    Then I enter "461910342" text to telephone number at index 1
+    Then I enter "464009831" text to telephone number at index 1
     And I wait password element 10 seconds at index 1
     Then I enter "11111111" text to password at index 1
     And I wait login button element 10 seconds at index 1
@@ -60,18 +56,23 @@ Feature: Postpaid Feature
     Then I refresh page
     Then I need to just wait
     Given I scroll and see element: pay bill at index 1
-    And I wait pay bill element 10 seconds at index 1
     When I click element: pay bill at index 1
-    Then I need to just wait
-    And I wait pay bill page tel text area element 10 seconds at index 1
-    Given I scroll and see element: pay bill button at index 1
+    And I wait pay bill button element 10 seconds at index 1
     When I click element: pay bill button at index 1
     Then I need to just wait
-    And I wait 3D sms pass element 10 seconds at index 1
-    When I click element: 3D sms pass at index 1
-    Then I enter "12345" text to 3D sms pass at index 1
-    When I click element: 3D okay button1 at index 1
+    And I wait visa yes button element 10 seconds at index 1
+    When I click element: visa yes button at index 1
     Then I need to just wait
+#    (Asagıdaki satirlar olmadan case tamamlaniyor.)
+#    And I wait pay bill page tel text area element 10 seconds at index 1
+#    Given I scroll and see element: pay bill button at index 1
+#    When I click element: pay bill button at index 1
+#    Then I need to just wait
+#    And I wait 3D sms pass element 10 seconds at index 1
+#    When I click element: 3D sms pass at index 1
+#    Then I enter "12345" text to 3D sms pass at index 1
+#    When I click element: 3D okay button1 at index 1
+#    Then I need to just wait
 
 
   @TC003
@@ -81,6 +82,9 @@ Feature: Postpaid Feature
     Then I need to just wait
     And I wait pay bill element 10 seconds at index 1
     When I click element: pay bill at index 1
+    Then I need to just wait
+    And I wait yeni fatura ode button element 10 seconds at index 1
+    When I click element: yeni fatura ode button at index 1
     And I wait pay bill page tel text area element 10 seconds at index 1
     Given I scroll and see element: master pass select at index 1
     When I click element: master pass select at index 1
@@ -105,7 +109,7 @@ Feature: Postpaid Feature
     And I wait 3D confirmation element 10 seconds at index 1
     When I click element: 3D confirmation at index 1
 
-    #bloklu sayfa yüklenmiyor
+
   @TC004
   Scenario: Postpaid Yanimda Web Ek Paket Al
     Given Open the http://efes.vodafone.com.tr/tsteShop-selfservice-login-test/#/giris/logoutAuto/ URL
@@ -118,27 +122,14 @@ Feature: Postpaid Feature
     When I click element: option dropdown at index 1
     Then I click element: option dropdown select at index 1
     And I wait hemen al button element 5 seconds at index 1
-    #When I click element: hemen al button at index 1
-   #hemen al butonuna tıklandıktan sonra sayfa yüklenmiyor.
+    When I click element: hemen al button at index 1
+    And I wait paket satin al button element 5 seconds at index 1
+    When I click element: paket satin al button at index 1
 
 
-  #Discope case
- #@TC005
- #Scenario: Postpaid Yanimda Web Tarife Değişikliği
- #  Then I need to just wait
- #  And I wait tarifelerim ve kullanimlarim main button element 10 seconds at index 1
- #  When I click element: tarifelerim ve kullanimlarim main button at index 1
- #  Then I need to just wait
- #  And I wait gecebilecegim tarifeler button element 10 seconds at index 1
- #  When I click element: gecebilecegim tarifeler button at index 1
- #  Given I scroll and see element: tarife GB at index 1
- #  And I wait tarife GB element 5 seconds at index 1
- #  When I click element: tarife GB at index 1
- #  And I wait tarife ilgileniyorum button element 5 seconds at index 1
- #  When I click element: tarife ilgileniyorum button at index 1
-    #hemen al butonuna tıklandıktan sonra sayfa yüklenmiyor. damlaya sormalısın
 
-  @TC006
+
+  @TC005
   Scenario: Postpaid Yanimda Web Kalan Kullanim Görüntüleme
     Given Open the http://efes.vodafone.com.tr/tsteShop-selfservice-login-test/#/giris/logoutAuto/ URL
     Then I see loginYanimdaWeb page

@@ -15,10 +15,7 @@
           "sifre text area": "//*[@id=\"pass-input\"]"
 
         },
-        {
-          "yuklemeye devam et button": "//*[@id=\"content\"]/app-public-topup/div[1]/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div[3]/button"
 
-        },
 
         {
           "smssifre1": "//*[@class='wrapper']/input[1]"
@@ -39,7 +36,7 @@
           "tlyuklebutton": "//*[@id=\"navigateToTopup\"]/span"
         },
         {
-          "5tlbutton": "//*[@id=\"content\"]/app-topup/div[2]//div[2]//div[1]/div[2]//div/label[2]"
+          "60tlbutton": "//*[@id=\"content\"]/app-topup/div[2]//div[2]//div[1]/div[2]//div/label[2]"
         },
         {
           "yuklemeyapbutton": "//*[@id=\"showConfirm\"]"
@@ -118,7 +115,38 @@
         },
         {
           "devam et button": "//*[@id=\"pwdLoginCTA\"]"
+        },
+        {
+          "kalan GB text": "(//*[@class=\"tariff__uses--title-tariff\"])[1]"
+        },
+        {
+          "kalan GB": "(//*[@class=\"grid__item grid__item--5/9 grid__item--md-1/1 grid__item--sm-1/1 tariff__uses--leftPadding\"])[1]"
+        },
+        {
+          "kalan GB value": "(//div[3]//div[@class='tariff__uses--usage-wrap']//span[@class='tariff__detail--limit'])[1]"
+        },
+        {
+          "kalan DK text": "(//*[@class=\"tariff__uses--title-tariff\"])[2]"
+        },
+        {
+          "kalan DK": "(//*[@class=\"grid__item grid__item--5/9 grid__item--md-1/1 grid__item--sm-1/1 tariff__uses--leftPadding\"])[2]"
+        },
+        {
+          "kalan DK value": "(//div[4]//div[@class='tariff__uses--usage-wrap']//span[@class='tariff__detail--limit'])[1]"
+        },
+        {
+          "kalan SMS text": "(//*[@class=\"tariff__uses--title-tariff\"])[3]"
+        },
+        {
+          "kalan SMS": "(//*[@class=\"grid__item grid__item--5/9 grid__item--md-1/1 grid__item--sm-1/1 tariff__uses--leftPadding\"])[5]"
+        },
+        {
+          "kalan SMS value": "(//div[5]//div[@class='tariff__uses--usage-wrap']//span[@class='tariff__detail--limit'])[1]"
+        },
+        {
+          "gecis butonu": "//*[@id=\"closeConfirmDialog\"]"
         }
+
 
 
 

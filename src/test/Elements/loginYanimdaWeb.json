@@ -38,7 +38,7 @@
           "pay bill page tel text area": "//input[@id='phone']"
         },
         {
-          "master pass select": "(//*[@class='form__radio--button'])[13]"
+          "master pass select": "//*[@id=\"content\"]/app-invoice-payment/div[1]/div/div/div[2]/div/div/div[5]/div[2]/label/div/span[1]"
         },
         {
           "master pass credit card no": "//input[@id='cardNumber-CC']"
@@ -98,7 +98,7 @@
           "option dropdown select": "(//*[@id=\"content\"]/app-addons//div[2]//select/option)[4]"
         },
         {
-          "hemen al button": "//div[@class='grid grid--gutter']/div[1]/temp-bundle-addon//div[@class='addon-footer']//button[.='Hemen Al']"
+          "hemen al button": "//*[@id=\"content\"]/app-addons/div[2]/div[1]/div/div[4]/div/div[11]/temp-bundle-addon/div/div[3]/div/div/div[2]/button"
         },
         {
           "tarifelerim ve kullanimlarim main button": "//a[@id='tariffAndUsage']"
@@ -150,6 +150,15 @@
         },
         {
           "kalan SMS value": "(//div[5]//div[@class='tariff__uses--usage-wrap']//span[@class='tariff__detail--limit'])[1]"
+        },
+        {
+          "visa yes button": "//*[@id=\"yes\"]"
+        },
+        {
+          "paket satin al button": "//*[@id=\"dialog\"]/div/div[3]/div[3]/div/div/div[2]/button/span"
+        },
+        {
+          "yeni fatura ode button": "//*[@id=\"dialog\"]/div/div[2]/div/div/div[2]/div[3]/div[1]/button/span"
         }
       ]
     }

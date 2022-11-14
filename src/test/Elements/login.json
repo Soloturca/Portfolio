@@ -83,10 +83,7 @@
           "web remember me": "//*[@id=\"setRememberMe\"]"
         },
 
-        {
-          "continue button": "//*[@id=\"content\"]/app-public-topup/div[1]/div/div[2]/div/div/div[2]/div/div[1]/div/div/app-phone-number/button"
 
-        },
         {
 
           "kac tl yuklemek istersiniz": "//*[@id=\"content\"]/app-public-topup/div[1]/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div[1]/div/label[1]/span"
@@ -106,7 +103,7 @@
 
         {
 
-          "tamam button": "//*[@id=\"footer\"]/a[1]/img",
+          "tamam button": "//*[@id=\"footer\"]/a[1]/img"
 
         }
 

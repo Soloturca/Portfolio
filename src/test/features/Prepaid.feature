@@ -4,7 +4,7 @@ Feature: Prepaid Feature
 @TC_001_PREPAID_PublicPayment_TL_Yukleme.java
 Scenario: Prepaid Public TL Yukleme
   Given Open the https://efes.vodafone.com.tr/tsteShop-public/#/tl-yukleme URL
-  Then I see login page
+  Then I see prepaidlogin page
   And I wait gsm text area element 10 seconds at index 1
   Then I enter "463011423" text to gsm text area at index 1
   And I wait continue button element 10 seconds at index 1
@@ -38,30 +38,29 @@ Scenario: Prepaid Public TL Yukleme
   Scenario: Prepaid Yanımda Web TL Yukleme
     Given Open the http://efes.vodafone.com.tr/tsteShop-selfservice-login-test/#/giris/logoutAuto URL
     Then I see loginyanimda page
-#    !!! TOPLU KOSUM ICIN YORUMA ALINMISTIR. CASE'I TEK BAŞINA KOŞMAK ISTERSENIZ BU SATIRLARI DA KULLANIN !!!
-#    And I wait ceptel text area element 10 seconds at index 1
-#    When I click element: ceptel text area at index 1
-#    Then I enter "463029083" text to ceptel text area at index 1
-#    And I wait sifre text area element 10 seconds at index 1
-#    Then I enter "11111111" text to sifre text area at index 1
-#    And I wait devam et button element 15 seconds at index 1
-#    When I click element: devam et button at index 1
-#    And I wait smssifre1 element 10 seconds at index 1
-#    Then I enter "1" text to smssifre1 at index 1
-#    And I wait smssifre2 element 10 seconds at index 1
-#    Then I enter "1" text to smssifre2 at index 1
-#    And I wait smssifre3 element 10 seconds at index 1
-#    Then I enter "1" text to smssifre3 at index 1
-#    And I wait smssifre4 element 10 seconds at index 1
-#    Then I enter "1" text to smssifre4 at index 1
-#    And I wait hayirsimdidegilbutton element 10 seconds at index 1
-#    When I click element: hayirsimdidegilbutton at index 1
-#    Then I refresh page
+    And I wait ceptel text area element 10 seconds at index 1
+    When I click element: ceptel text area at index 1
+    Then I enter "463029083" text to ceptel text area at index 1
+    And I wait sifre text area element 10 seconds at index 1
+    Then I enter "11111111" text to sifre text area at index 1
+    And I wait devam et button element 15 seconds at index 1
+    When I click element: devam et button at index 1
+    And I wait smssifre1 element 10 seconds at index 1
+    Then I enter "1" text to smssifre1 at index 1
+    And I wait smssifre2 element 10 seconds at index 1
+    Then I enter "1" text to smssifre2 at index 1
+    And I wait smssifre3 element 10 seconds at index 1
+    Then I enter "1" text to smssifre3 at index 1
+    And I wait smssifre4 element 10 seconds at index 1
+    Then I enter "1" text to smssifre4 at index 1
+    And I wait hayirsimdidegilbutton element 10 seconds at index 1
+    When I click element: hayirsimdidegilbutton at index 1
+    Then I refresh page
     And I wait tlyuklebutton element 10 seconds at index 1
     When I click element: tlyuklebutton at index 1
     Then I need to just wait
-    And I wait 5tlbutton element 10 seconds at index 1
-    When I click element: 5tlbutton at index 1
+    And I wait 60tlbutton element 10 seconds at index 1
+    When I click element: 60tlbutton at index 1
     And I wait yenikartileodebutton element 10 seconds at index 1
     When I click element: yenikartileodebutton at index 1
     And I wait kartnumarasi element 10 seconds at index 1
@@ -114,8 +113,10 @@ Scenario: Prepaid Public TL Yukleme
     And I wait tlyuklebutton element 10 seconds at index 1
     When I click element: tlyuklebutton at index 1
     Then I need to just wait
-    And I wait 5tlbutton element 10 seconds at index 1
-    When I click element: 5tlbutton at index 1
+    And I wait gecis butonu element 10 seconds at index 1
+    When I click element: gecis butonu at index 1
+    And I wait 60tlbutton element 10 seconds at index 1
+    When I click element: 60tlbutton at index 1
     And I wait yuklemeyapbutton element 10 seconds at index 1
     When I click element: yuklemeyapbutton at index 1
     And I wait onaylabutton element 10 seconds at index 1
@@ -129,24 +130,24 @@ Scenario: Prepaid Public TL Yukleme
     Given Open the http://efes.vodafone.com.tr/tsteShop-selfservice-login-test/#/giris/logoutAuto URL
     Then I see loginyanimda page
 #   !!! TOPLU KOSUM ICIN YORUMA ALINMISTIR. CASE'I TEK BAŞINA KOŞMAK ISTERSENIZ BU SATIRLARI DA KULLANIN !!!
-    And I wait ceptel text area element 10 seconds at index 1
-    When I click element: ceptel text area at index 1
-    Then I enter "463029083" text to ceptel text area at index 1
-    And I wait sifre text area element 10 seconds at index 1
-    Then I enter "11111111" text to sifre text area at index 1
-    And I wait devam et button element 15 seconds at index 1
-    When I click element: devam et button at index 1
-    And I wait smssifre1 element 10 seconds at index 1
-    Then I enter "1" text to smssifre1 at index 1
-    And I wait smssifre2 element 10 seconds at index 1
-    Then I enter "1" text to smssifre2 at index 1
-    And I wait smssifre3 element 10 seconds at index 1
-    Then I enter "1" text to smssifre3 at index 1
-    And I wait smssifre4 element 10 seconds at index 1
-    Then I enter "1" text to smssifre4 at index 1
-    And I wait hayirsimdidegilbutton element 10 seconds at index 1
-    When I click element: hayirsimdidegilbutton at index 1
-    Then I refresh page
+#    And I wait ceptel text area element 10 seconds at index 1
+#    When I click element: ceptel text area at index 1
+#    Then I enter "463029083" text to ceptel text area at index 1
+#    And I wait sifre text area element 10 seconds at index 1
+#    Then I enter "11111111" text to sifre text area at index 1
+#    And I wait devam et button element 15 seconds at index 1
+#    When I click element: devam et button at index 1
+#    And I wait smssifre1 element 10 seconds at index 1
+#    Then I enter "1" text to smssifre1 at index 1
+#    And I wait smssifre2 element 10 seconds at index 1
+#    Then I enter "1" text to smssifre2 at index 1
+#    And I wait smssifre3 element 10 seconds at index 1
+#    Then I enter "1" text to smssifre3 at index 1
+#    And I wait smssifre4 element 10 seconds at index 1
+#    Then I enter "1" text to smssifre4 at index 1
+#    And I wait hayirsimdidegilbutton element 10 seconds at index 1
+#    When I click element: hayirsimdidegilbutton at index 1
+#    Then I refresh page
     And I wait ekpaketalbutton element 10 seconds at index 1
     When I click element: ekpaketalbutton at index 1
     And I wait yurtdisikullanimbutton element 10 seconds at index 1
@@ -186,6 +187,22 @@ Scenario: Prepaid Public TL Yukleme
 #      Then I refresh page
       And I wait kalankullanimlar element 10 seconds at index 1
       When I click element: kalankullanimlar at index 1
+      #gb
+      And I wait kalan GB text element 10 seconds at index 1
+      And I wait kalan GB element 10 seconds at index 1
+      Then I get the value of kalan GB value at index 1
+      #dk
+      Given I scroll and see element: kalan DK text at index 1
+      And I wait kalan DK text element 10 seconds at index 1
+      When I click element: kalan DK text at index 1
+      And I wait kalan DK element 10 seconds at index 1
+      Then I get the value of kalan DK value at index 1
+      #sms
+      And I wait kalan SMS text element 10 seconds at index 1
+      Given I scroll and see element: kalan SMS at index 1
+      And I wait kalan SMS element 10 seconds at index 1
+      When I click element: kalan SMS at index 1
+      Then I get the value of kalan SMS value at index 1
       Then I need to just wait
 
 

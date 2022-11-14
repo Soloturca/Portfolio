@@ -126,10 +126,7 @@ public class StepDefs extends MyTestNGBaseClass {
         return flag;
     }
 
-    @Then("I refresh page")
-    public void RefreshPage() {
-        oDriver.navigate().refresh();
-    }
+
 
 
     @When("^(?:I )?have to verify the text for: (\\w+(?: \\w+)*) at index (\\d+)")
