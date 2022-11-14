@@ -49,7 +49,7 @@ Feature: Orion Finance Finco Test Scenarios - Bankalar ve banka şubeleri
     And I wait inquire button element 30 seconds at index 1
     And I click element: inquire button at index 1
     Then I click element: work select row at index 1
-    Then I click element: yes button at index 1
+    Then I click element: yes button at index 2
     And I click element: approve button at index 1
     And I click element: yes button at index 1
 
@@ -85,7 +85,7 @@ Feature: Orion Finance Finco Test Scenarios - Bankalar ve banka şubeleri
     And I wait inquire button element 30 seconds at index 1
     And I click element: inquire button at index 1
     Then I click element: work select row at index 1
-    Then I click element: yes button at index 1
+    Then I click element: yes button at index 2
     And I click element: approve button at index 1
     And I click element: yes button at index 1
 
@@ -119,6 +119,6 @@ Feature: Orion Finance Finco Test Scenarios - Bankalar ve banka şubeleri
     And I wait inquire button element 30 seconds at index 1
     And I click element: inquire button at index 1
     Then I click element: work select row at index 1
-    Then I click element: yes button at index 1
+    Then I click element: yes button at index 2
     And I click element: approve button at index 1
     And I click element: yes button at index 1

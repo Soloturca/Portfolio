@@ -20,7 +20,7 @@ Feature: Orion Finance Finco Test Scenarios - Teminat
     
 
 
-  @teminat1
+  @teminat
   Scenario: Teminat Oluşturma: TC001 -
     Then I see assurance page
     And I wait assurance transaction button element 30 seconds at index 1
@@ -114,7 +114,7 @@ Feature: Orion Finance Finco Test Scenarios - Teminat
     And I click element: approve button at index 1
     And I click element: yes button at index 1
 
-  @teminal
+  @teminat
   Scenario: Teminatın pasife alınması: TC003 -
     Then I see assurance page
     And I wait assurance transaction button element 30 seconds at index 1

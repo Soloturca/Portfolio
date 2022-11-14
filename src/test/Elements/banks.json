@@ -41,7 +41,7 @@
           "query button": "//button[@orionid='btnQuery']"
         },
         {
-          "bank branch select": "//html/body/div/div[4]/div/div[2]/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
+          "bank branch select": "//html/body/div/div[4]/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[1]/table/tbody/tr[1]/td[1]"
         },
         {
           "save button for update": "//button[@orionid='btnUpdate']"

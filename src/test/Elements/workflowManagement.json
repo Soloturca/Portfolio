@@ -85,6 +85,7 @@
         {
           "approval note" : "//textarea[@id='modal-body-notetext']"
         }
+
       ]
     }
   ]

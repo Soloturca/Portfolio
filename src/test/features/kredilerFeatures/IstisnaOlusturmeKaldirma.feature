@@ -35,7 +35,7 @@ Feature: Orion Finance Finco Test Scenarios - 016.İSTİSNA OLUŞTURMA VE KALDIR
     And I wait goOn button element 30 seconds at index 1
     Then I click element: goOn button at index 1
     Then I need to just wait
-    Then I need to check area verify by transaction result at index 1 contains "Ön değerlendirme sonucu olumsuz olduğu için devam edemezsiniz"
+    Then I need to check area verify by transaction result message at index 1 contains "Ön değerlendirme sonucu olumsuz olduğu için devam edemezsiniz"
 
   @IstisnaOlusturmaVeKaldirma
   Scenario: İstisna Oluşturma: TC002
