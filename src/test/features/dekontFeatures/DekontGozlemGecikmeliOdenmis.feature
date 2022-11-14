@@ -19,9 +19,9 @@ Feature: Orion Finance Finco Test Scenarios - DEKONT GÖZLEM GECİKMELİ ÖDENM�
 
     And I wait receipt element 30 seconds at index 1
     When I click element: receipt at index 1
+    Then I need to just wait
     Then I click element: receipt observation at index 1
 
-    When I need to just wait
     Then I need to check area verify by page header at index 1 contains "Dekont Gözlem Ekranı"
     And I wait receipt no element 30 seconds at index 1
     When I click element: receipt no at index 1

@@ -20,6 +20,7 @@ Feature: Orion Finance Finco Test Scenarios - VERGİ ÖDEME TALEP
     And I wait purchase and expense button element 30 seconds at index 1
     When I click element: purchase and expense button at index 1
     Then I click element: operational operations button at index 1
+    Then I need to just wait
     Then I click element: paying taxes at index 1
     And I wait page header element 30 seconds at index 1
 

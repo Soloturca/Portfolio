@@ -28,15 +28,15 @@ Feature: Orion Finance Finco Test Scenarios - Mevcut Kurumsal ön başvuru
     When I click element: application information at index 1
     And I wait tax no element 30 seconds at index 1
     When I click element: tax no at index 1
-    And I enter "4301970204" text to tax no area at index 1
-    And I click element: partner search button at index 1
+    Then I enter "4301970204" text to tax no area at index 1
+    Then I click element: partner search button at index 1
     And I need to just wait
 
     And I wait transaction result element 30 seconds at index 1
     When I need to check area verify by transaction result at index 1 contains "Mersis'ten ortak sorgulama işlemi tamamlandı."
     Then I click element: close button at index 1
     And I wait continue button element 30 seconds at index 1
-    And I click element: continue button at index 1
+    When I click element: continue button at index 1
     And I wait data select element 30 seconds at index 1
 
     When I upload the file for customer "evrak.jpg" using the: data select at index 1

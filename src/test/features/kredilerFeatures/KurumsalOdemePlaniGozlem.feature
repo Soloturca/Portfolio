@@ -32,7 +32,7 @@ Feature: Orion Finance Finco Test Scenarios - Kurumsal Müşteri Ödeme Planı G
     Then I enter "2021121600002" text to credit no area at index 1
     And I wait button search two element 30 seconds at index 1
     When I click element: button search two at index 1
-    And I wait payment plan result element 30 seconds at index 1
+    And I need to just wait
     Then I need to check area verify by payment plan result at index 1 contains "Ödeme Planları"
 
 
