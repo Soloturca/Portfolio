@@ -8,6 +8,12 @@
       },
       "elements": [
         {
+          "advanced": "//*[@id=\"details-button\"]"
+        },
+        {
+          "advanced link": "//*[@id=\"proceed-link\"]"
+        },
+        {
           "gsm text area": "//*[@name='top-up-phone-number']"
         },
         {
