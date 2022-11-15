@@ -128,7 +128,7 @@
           "button search two" : "//button[@orionid='btnSearchPaymentPlan']"
         },
         {
-          "payment plan result" : "//label[contains(text(),'Ödeme Planları')]"
+          "payment plan result" : "//select[@class='orion form-control input-sm']"
         }
       ]
     }
