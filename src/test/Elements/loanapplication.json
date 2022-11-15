@@ -122,7 +122,7 @@
           "receipt date" : "//body[1]/div[1]/div[4]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[4]/div[1]/input"
         },
         {
-          "receipt observation" : "//span[normalize-space()='Dekont Gözlem']"
+          "receipt observation" : "//li[@class='has-sub expand']//ul[@class='sub-menu']"
         }
       ]
     }
