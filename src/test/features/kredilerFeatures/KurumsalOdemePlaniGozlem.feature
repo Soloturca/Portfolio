@@ -33,7 +33,7 @@ Feature: Orion Finance Finco Test Scenarios - Kurumsal Müşteri Ödeme Planı G
     And I wait button search two element 30 seconds at index 1
     When I click element: button search two at index 1
     And I need to just wait
-    Then I need to check area verify by payment plan result at index 1 contains "Ödeme Planları"
+    Then I wait payment plan result element 30 seconds at index 1
 
 
 
