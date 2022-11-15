@@ -58,17 +58,23 @@
         {"Select TL currency type" : "//option[@value='TL']"
 
         },
-        { "material group search" : "//i[@class='fa fa-search htOrionIcon pull-right']"
-
+        {
+          "material group search" : "//td[@class='active-cell']//div[2]"
         },
-        { "material type search" : "//i[@class='fa fa-search htOrionIcon pull-right']"
-
+        {
+          "select first" : "//td[@class='orion-smart-cell orion-smart-sequence'][normalize-space()='1']"
         },
-        { "material group search button" : "//div[@class='orion-widget-container orion-button-container orion-inline orion-frame-lg orion-right']"
-
+        {
+          "material type search" : "//tr[@class='active-row']//td[@data-name='materialType']//div[2]"
         },
-        { "row first button" : "//*/div[3]/div/div/div/table/tbody/tr[1]/th"
-
+        {
+          "log out button" : "//div[@class='orion-popup-content']//i[@class='fa fa-times']"
+        },
+        {
+          "select second" : "//td[@class='orion-smart-cell orion-smart-sequence'][normalize-space()='2']"
+        },
+        {
+          "row first button" : "//*/div[3]/div/div/div/table/tbody/tr[1]/th"
         },
         { "material type search button" : "//div[@class='orion-widget-container orion-button-container orion-inline orion-frame-lg orion-right']"
 
@@ -277,7 +283,7 @@
           "managerial" : "(//li[@class='has-sub'])[5]"
         },
         {
-          "material group identification" : "//a[contains(text(),'Malzeme Grubu Tanımlama')]"
+          "material group identification" : "//li[@class='has-sub expand']//li[1]//ul[1]//li[1]"
         },
         {
           "material group name area" : "//input[@orionid='materialGroupName']"
@@ -289,7 +295,7 @@
           "row select" : "//td[normalize-space()='1']"
         },
         {
-          "material type identification" : "//a[contains(text(),'Malzeme Türü Tanımlama')]"
+          "material type identification" : "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[3]/ul/li[1]/ul/li[2]"
         },
         {
           "material type name" : "//div[@orionid='row:materialTypeName']//div[@class='orion-widget-container orion-inline']"
@@ -301,7 +307,7 @@
           "material group search two" : "(//button[@role='button'])[7]"
         },
         {
-          "supplier identification" : "//a[contains(text(),'Tedarikçi Tanımlama')]"
+          "supplier identification" : "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[3]/ul/li[1]/ul/li[3]"
         },
         {
           "tck number" : "//div[@orionid='row:tckn']//div[@class='orion-widget-container orion-inline']"
@@ -364,10 +370,10 @@
           "tck number dialog area" : "//div[@class='orion-frame orion-frame-lg']//input[@placeholder='___________']"
         },
         {
-          "party identification" : "//a[contains(text(),'Taraf Tanımlama')]"
+          "party identification" : "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[3]/ul/li[1]/ul/li[4]"
         },
         {
-          "expense entry authorization" : "//a[contains(text(),'Masraf Giriş Yetkilendirmesi')]"
+          "expense entry authorization" : "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[3]/ul/li[1]/ul/li[5]"
         },
         {
           "type selection" : "(//select[@class='orion form-control input-sm'])[1]"
