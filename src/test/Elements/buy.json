@@ -361,7 +361,7 @@
           "currency code select" : "//select[@orionid='currencyCode']"
         },
         {
-          "record" : "//a[normalize-space()='Kayıt']"
+          "record" : "//li[@data-title='Kayıt']//a[@class='hidden-phone']"
         },
         {
           "tck number dialog" : "//div[@class='orion-widget-container orion-inline']"
@@ -491,6 +491,9 @@
         },
         {
           "temporary corporate tax area" : "//input[@orionid='temporaryInstitutionTax']"
+        },
+        {
+          "yes button new" : "//*[@id=\"modal-footer-area\"]/button[1]"
         }
       ]
     }
