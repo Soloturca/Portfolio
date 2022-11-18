@@ -68,13 +68,13 @@ Feature: Orion Finance Finco Test Scenarios - MEVCUT TEDARİKÇİ SİLME
     When I click element: inquire button at index 1
     And I wait number one element 30 seconds at index 1
     When I click element: number one at index 1
-    When I click element: yes button new at index 1
+    When I click element: yes button at index 2
     And I wait approve button element 30 seconds at index 1
     When I click element: approve button at index 1
     And I wait approval note element 30 seconds at index 1
     Then I enter "TEST" text to approval note at index 1
     And I wait yes button element 30 seconds at index 1
-    When I click element: yes button new at index 1
+    When I click element: yes button at index 1
     Then I need to check area verify by warning check at index 1 contains "Tedarikçi silme işlemi onaylandı."
     And I wait close button element 30 seconds at index 1
     When I click element: close button at index 1

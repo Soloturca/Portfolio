@@ -62,7 +62,8 @@ Feature: Orion Finance Finco Test Scenarios - MALZEME GRUBU TANIMLAMA
     When I click element: inquire button at index 1
     And I wait number one element 30 seconds at index 1
     When I click element: number one at index 1
-    When I click element: yes button new at index 1
+    And I wait yes button element 30 seconds at index 2
+    When I click element: yes button at index 2
     And I need to just wait
     Then I need to check area verify by warning check at index 1 contains "Malzeme Grubu tanımı sonrası karar ağacı tanımlarının yapılması gerekmektedir."
     Then I click element: close button at index 1

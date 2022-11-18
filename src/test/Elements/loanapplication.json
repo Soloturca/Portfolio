@@ -110,9 +110,6 @@
           "receipt" : "//body/div[@id='page-container']/div[@id='sidebar']/div[@class='slimScrollDiv']/div/ul[@class='nav']/ul[@class='nav']/li[10]/a[1]"
         },
         {
-          "receipt observation" : "//a[normalize-space()='Dekont Gözlem']"
-        },
-        {
           "receipt no" : "//div[@orionid='row:receiptNo']//div[@class='orion-widget-container orion-inline orion-col-c7']"
         },
         {

@@ -34,7 +34,7 @@ Feature: Orion Finance Finco Test Scenarios - MEVCUT MALZEME TÜRÜ SİLME
     Then I click element: delete button at index 1
     And I wait approval note element 30 seconds at index 1
     Then I enter "TEST" text to approval note at index 1
-    Then I click element: yes button at index 2
+    Then I click element: yes button new at index 1
     And I wait reference number text area element 30 seconds at index 1
     Then I get the information: reference number text area at index 1
     And I wait close button element 30 seconds at index 2
