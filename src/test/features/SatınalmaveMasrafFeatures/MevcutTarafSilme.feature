@@ -38,7 +38,7 @@ Feature: Orion Finance Finco Test Scenarios - MEVCUT TARAF SİLME
     Then I click element: delete button at index 1
     And I wait approval note element 30 seconds at index 1
     Then I enter "TEST" text to approval note at index 1
-    Then I click element: yes button at index 2
+    Then I click element: yes button new at index 1
     And I wait reference number text area element 30 seconds at index 1
     Then I get the information: reference number text area at index 1
     And I wait close button element 30 seconds at index 2
@@ -73,8 +73,8 @@ Feature: Orion Finance Finco Test Scenarios - MEVCUT TARAF SİLME
     When I click element: approve button at index 1
     And I wait approval note element 30 seconds at index 1
     Then I enter "TEST" text to approval note at index 1
-    And I wait yes button new element 30 seconds at index 1
-    When I click element: yes button new at index 1
+    And I wait yes button element 30 seconds at index 1
+    When I click element: yes button at index 1
     Then I need to check area verify by warning check at index 1 contains "Taraf silme işlemi onaylandı."
     And I wait close button element 30 seconds at index 1
     When I click element: close button at index 1
