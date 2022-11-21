@@ -66,11 +66,11 @@ Feature: Orion Finance Finco Test Scenarios - 009.TEMİNAT MEKTUBU EKLEME VE Sİ
     And I wait collateral margin ratio text area element 30 seconds at index 1
     Then I enter "10" text to collateral margin ratio text area at index 1
     Then I click element: add collateral button at index 1
-    And I wait success button element 30 seconds at index 1
-    Then I click element: success button at index 1
+    And I wait close button element 30 seconds at index 1
+    Then I click element: close button at index 1
     Then I click element: letter of guarantee selection at index 1
-    And I wait deletion of letter of guarantee element 30 seconds at index 1
-    Then I click element: deletion of letter of guarantee at index 1
+    And I wait deletion of letter of guarantee element 30 seconds at index 2
+    Then I click element: deletion of letter of guarantee at index 2
 
     And I wait continue to Finco Observation button element 30 seconds at index 1
     Then I click element: continue to Finco Observation button at index 1

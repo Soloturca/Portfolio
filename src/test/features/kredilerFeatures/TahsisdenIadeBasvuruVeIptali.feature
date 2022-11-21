@@ -72,12 +72,28 @@ Feature: Orion Finance Finco Test Scenarios - 011.Tahsis Değerlendirme Aşamas�
     Then I click element: continue to Documents button at index 1
     And I wait upload to excel button element 30 seconds at index 1
     Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
-    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 2
-    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 3
-    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 4
-    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 5
-    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 6
-    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 7
+    Then I click element: save at index 5
+    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
+    Then I click element: save at index 5
+    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
+    Then I click element: save at index 5
+    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
+    Then I click element: save at index 5
+    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
+    Then I click element: save at index 5
+    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
+    Then I click element: save at index 5
+    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
+    Then I click element: save at index 5
+    And I select element: "TR - 12300 - Ayşe Çinar" under side selection at index 1
+    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
+    Then I click element: save at index 5
+    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
+    Then I click element: save at index 5
+    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
+    Then I click element: save at index 5
+    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
+    Then I click element: save at index 5
     And I click element: continue to Summary button at index 1
 
     And I wait continue to the Registration button element 30 seconds at index 1
@@ -112,6 +128,7 @@ Feature: Orion Finance Finco Test Scenarios - 011.Tahsis Değerlendirme Aşamas�
     And I wait login button element 30 seconds at index 1
     When I click element: login button at index 1
     Then I see home page
+
     And I wait workflow management button element 30 seconds at index 1
     When I click element: workflow management button at index 1
     Then I see workflowManagement page
@@ -122,14 +139,14 @@ Feature: Orion Finance Finco Test Scenarios - 011.Tahsis Değerlendirme Aşamas�
     When I click element: inquire button at index 1
     And I wait row button element 30 seconds at index 1
     When I click element: row button at index 1
-    And I wait warning popup element 30 seconds at index 1
-    When I click element: yes button at index 1
+    And I wait yes button element 30 seconds at index 2
+    When I click element: yes button at index 2
     Then I see loan page
 
     When I need to just wait
     Then I need to credit application approval verify by credit application approval at index 1
     Then I click element: repeat button at index 1
-    Then I click element: yes button at index 1
+    Then I click element: yes button at index 2
     Then I select element: "DİĞER" under comment reason button at index 1
     Then I enter "Basvuru Iade" text to transaction description text area at index 1
     Then I click element: add comment button at index 1
@@ -148,17 +165,6 @@ Feature: Orion Finance Finco Test Scenarios - 011.Tahsis Değerlendirme Aşamas�
   Scenario: Kredi İptali: TC003
 
     #Kredi İptali - 3Scenario:
-
-    And I wait close system button element 30 seconds at index 1
-    When I click element: close system button at index 1
-    Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
-    Then I see login page
-
-    Then I enter "40000" text to username text area at index 1
-    Then I enter "1" text to password text area at index 1
-    And I wait login button element 30 seconds at index 1
-    When I click element: login button at index 1
-    Then I see home page
 
     And I wait loan button credit element 30 seconds at index 1
     When I click element: loan button credit at index 1
