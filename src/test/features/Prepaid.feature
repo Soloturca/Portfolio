@@ -40,7 +40,11 @@ Scenario: Prepaid Public TL Yukleme
     Then I see loginyanimda page
     And I wait ceptel text area element 10 seconds at index 1
     When I click element: ceptel text area at index 1
-    Then I enter "463029083" text to ceptel text area at index 1
+#    Then I enter "463029083" text to ceptel text area at index 1
+
+    Then I enter msisdn from db text to ceptel text area at index 1
+
+
     And I wait sifre text area element 10 seconds at index 1
     Then I enter "11111111" text to sifre text area at index 1
     And I wait devam et button element 15 seconds at index 1
@@ -204,6 +208,8 @@ Scenario: Prepaid Public TL Yukleme
       When I click element: kalan SMS at index 1
       Then I get the value of kalan SMS value at index 1
       Then I need to just wait
+
+      Then I have to catch msisdn from DB
 
 
 

@@ -9,14 +9,14 @@ import java.sql.SQLException;
 
 public class DBFunction {
 
-    public static void getTcknInfo() {
-        String TCKN = "";
+    public static void getMsisdnInfo() {
+        String Msisdn = "";
         try {
             ExecuteQuery executeQuery = new ExecuteQuery(DataBase.DBType.ORACLE);
-            ResultSet rs = executeQuery.getReadInfoFromDB(AutomationConstants.connectionStringForVFDWH,AutomationConstants.oracleUsernameForVFDWH,AutomationConstants.oraclePasswordForVFDWH, Query.selectTcknQuery);
+            ResultSet rs = executeQuery.getReadInfoFromDB(AutomationConstants.connectionStringForOSS,AutomationConstants.oracleUsernameForVFDWH,AutomationConstants.oraclePasswordForVFDWH, Query.selectMsisdnQueryforTC003);
             while (rs.next()) {
-                TCKN = rs.getString("TC_NO");
-                AutomationConstants.TCKN = TCKN;
+                Msisdn = rs.getString("MSISDN"); //check pls
+                AutomationConstants.Msisdnfortc001 = Msisdn;
             }
         } catch (SQLException e) {
             e.printStackTrace();

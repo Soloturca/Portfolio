@@ -2,6 +2,17 @@ package base;
 
 public class Query {
 
+    public static String selectMsisdnQueryforTC003 = "select * from ccb.ccb_subscriber\n" +
+            "where customer_id in (\n" +
+            "select customer_id from ccb.ccb_customer\n" +
+            "where TYPE = 'S' -- F = kurumsal & S = Bireysel\n" +
+            "--and birthday < '01-JAN-1994' -- 25 yaş altı\n" +
+            "#NAME?\n" +
+            "--and gsm_no= '5463026936' \n" +
+            ")\n" +
+            "and cancel_date is null\n" +
+            "and start_date > sysdate - 30 -- son 1 ayda oluşturulan\n" +
+            "order by start_date desc\n";
     public static String selectTcknQuery = "select kimlik_pasaport_no as TC_No from CBU_CUSTOMER_CREATION where is_foreign = 'H' " +
             "and used = 'N'" +
             "and uyruk = 'Türkiye' and rownum=1";

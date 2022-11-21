@@ -1,6 +1,9 @@
 package base;
 
 public class AutomationConstants {
+    // OSS constants
+    public static String connectionStringForOSS = "jdbc:oracle:thin:@izmcon5dt-scan:1522/CFIICCB";
+
     // vfdwh constants
     public static String connectionStringForVFDWH = "jdbc:postgresql://10.190.230.81:5432/vfdwh";
     public static String oracleUsernameForVFDWH = "vfdwh";
@@ -22,6 +25,7 @@ public class AutomationConstants {
     public static String keySOAPAction = "SOAPAction";
 
     public static String TCKN = "";
+    public static String Msisdnfortc001 = "";
     public static String billingAccountId = "";
 
     public static String imsi = "";

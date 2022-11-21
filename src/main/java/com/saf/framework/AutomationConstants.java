@@ -22,8 +22,9 @@ public class AutomationConstants
 	public static String kalanKullanim = "";
 	
 	public static int itestCaseID;
-	
-	// Email constants
+
+
+    // Email constants
 
 	//referans kısmı://*[@id="modal-title-text"]/b
 	//güncel referans:  20210611-00152
