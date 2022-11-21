@@ -182,7 +182,7 @@
           "click somewhere area": "//legend[@orionid='orion-id-022']"
         },
         {
-          "repeat button": "//span[@class='glyphicon glyphicon-repeat']"
+          "repeat button": "//*[contains(text(),'İade et')]"
         },
         {
           "search button": "//span[@class='glyphicon glyphicon-search']"
@@ -848,7 +848,7 @@
           "row pick input": "//*/div[1]/div/div/div/table/tbody/tr[1]/td[1]/input"
         },
         {
-          "select button": "//input[@class='htCheckboxRendererInput']"
+          "select button": "//*[@id=\"tblFinancingItems\"]/tbody/tr[1]/td[2]/input"
         },
         {
           "payment month selection": "//select[@orionid='drdPaymentDayOfWeek']"
@@ -869,13 +869,10 @@
           "add collateral button": "//button[@orionid='btnAddCollateralItem']"
         },
         {
-          "success button": "//button[@class='btn btn-sm btn-success']"
+          "letter of guarantee selection": "//*[@id=\"declaredCollaterals\"]/tbody/tr[1]/td[1]"
         },
         {
-          "letter of guarantee selection": "//html/body/div[1]/div[4]/div/div[2]/div/div[2]/div/div/div/div[3]/div/div[1]/div[2]/div[8]/div/div/div/div[3]/div/div/div/table/tbody/tr[1]/th"
-        },
-        {
-          "deletion of letter of guarantee": "//button[@orionid='deleteButton']"
+          "deletion of letter of guarantee": "//*[contains(text(),'Sil')]"
         },
         {
           "guarantor selection": "//select[@orionid='guarantor']"
@@ -938,7 +935,7 @@
           "continue to Documents button": "//button[@orionid='btnFinancialInfoContinue']"
         },
         {
-          "upload to excel button": "//i[@class='fa fa-upload htOrionIcon pull-right']"
+          "upload to excel button": "//i[@style='float:right;margin: 0 3px 0 5px;']"
         },
         {
           "side selection": "//select[@orionid='documentOwner']"
