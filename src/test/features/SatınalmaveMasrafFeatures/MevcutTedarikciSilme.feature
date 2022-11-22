@@ -33,6 +33,7 @@ Feature: Orion Finance Finco Test Scenarios - MEVCUT TEDARİKÇİ SİLME
     Then I click element: bank name search button at index 2
     And I wait select first line element 30 seconds at index 61
     When I click element: select first line at index 61
+    Then I need to just wait
     And I wait record element 30 seconds at index 1
     When I click element: record at index 1
     Then I click element: delete button at index 1
