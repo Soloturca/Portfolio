@@ -182,9 +182,6 @@
           "click somewhere area": "//legend[@orionid='orion-id-022']"
         },
         {
-          "repeat button": "//*[contains(text(),'İade et')]"
-        },
-        {
           "search button": "//span[@class='glyphicon glyphicon-search']"
         },
         {
@@ -411,6 +408,9 @@
         },
         {
           "loan disbursement monitoring": "//a[@data-href='/finance/creditdisbursement/js/creditDisbursementInvestigation.js']"
+        },
+        {
+          "loan disbursement": "//*[contains(text(),'Kullandırım')]"
         },
         {
           "credit monitoring credit no text area": "//input[@orionid='creditNo']"
@@ -936,6 +936,9 @@
         },
         {
           "upload to excel button": "//i[@style='float:right;margin: 0 3px 0 5px;']"
+        },
+        {
+          "document description": "//td[@data-name='aciklama']"
         },
         {
           "side selection": "//select[@orionid='documentOwner']"
