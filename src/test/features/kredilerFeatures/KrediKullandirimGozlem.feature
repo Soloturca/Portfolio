@@ -18,6 +18,7 @@ Feature: Orion Finance Finco Test Scenarios - 016.KREDİ KULLANDIRIM GÖZLEM EKR
 
     And I wait credit element 30 seconds at index 1
     When I click element: credit at index 1
+    And I wait loan disbursement element 30 seconds at index 1
     And I click element: loan disbursement at index 1
     And I wait loan observation button element 30 seconds at index 1
     Then I click element: loan observation button at index 1
@@ -26,9 +27,11 @@ Feature: Orion Finance Finco Test Scenarios - 016.KREDİ KULLANDIRIM GÖZLEM EKR
     Then I clear text to loan date at index 3
     Then I clear text to loan date at index 4
     And I click element: magnifying glass v2 button at index 1
-    And I click element: select first row at index 164
+    And I click element: row button at index 1
     Then I go to down of the site
+    Then I need to just wait
     Then I click element: credit detail button at index 1
+    And I wait close button element 30 seconds at index 2
     And I click element: close button at index 2
     And I wait usage controls button element 30 seconds at index 1
     Then I click element: usage controls button at index 1
@@ -37,5 +40,3 @@ Feature: Orion Finance Finco Test Scenarios - 016.KREDİ KULLANDIRIM GÖZLEM EKR
     Then I go to top of the site
     Then I need to just wait
     Then I need to check area verify by application observation and report at index 1 contains "Kredi Gözlem"
-    
-

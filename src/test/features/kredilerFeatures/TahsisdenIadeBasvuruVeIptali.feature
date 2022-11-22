@@ -65,12 +65,12 @@ Feature: Orion Finance Finco Test Scenarios - 011.Tahsis Değerlendirme Aşamas�
     And I wait continue to Finco Observation button element 30 seconds at index 1
     Then I click element: continue to Finco Observation button at index 1
 
-    And I wait continue to Financial Information button element 30 seconds at index 1
+    And I wait continue to Financial Information button element 55 seconds at index 1
     Then I click element: continue to Financial Information button at index 1
 
-    And I wait continue to Documents button element 30 seconds at index 1
+    And I wait continue to Documents button element 55 seconds at index 1
     Then I click element: continue to Documents button at index 1
-    And I wait upload to excel button element 30 seconds at index 1
+    When I need to just wait
     Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
     Then I click element: save at index 5
     Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
@@ -85,6 +85,12 @@ Feature: Orion Finance Finco Test Scenarios - 011.Tahsis Değerlendirme Aşamas�
     Then I click element: save at index 5
     Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
     Then I click element: save at index 5
+    #Then I double click element: document description at index 1
+    #Then I enter "Test" text to document description at index 1
+    #Then I double click element: document description at index 2
+    #Then I enter "Test" text to document description at index 2
+    #Then I double click element: document description at index 3
+    #Then I enter "Test" text to document description at index 3
     And I select element: "TR - 12300 - Ayşe Çinar" under side selection at index 1
     Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
     Then I click element: save at index 5
@@ -144,8 +150,7 @@ Feature: Orion Finance Finco Test Scenarios - 011.Tahsis Değerlendirme Aşamas�
     Then I see loan page
 
     When I need to just wait
-    Then I need to credit application approval verify by credit application approval at index 1
-    Then I click element: repeat button at index 1
+    Then I click element: restitute button at index 1
     Then I click element: yes button at index 2
     Then I select element: "DİĞER" under comment reason button at index 1
     Then I enter "Basvuru Iade" text to transaction description text area at index 1

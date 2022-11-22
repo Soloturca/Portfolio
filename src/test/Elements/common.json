@@ -53,6 +53,9 @@
           "complete product button": "//*[contains(text(),'Ürün Kullandırım Tamamla')]"
         },
         {
+          "restitute button": "//*[contains(text(),'İade et')]"
+        },
+        {
           "reference number text area": "//*[@id=\"modal-title-text\"]/b"
         },
         {
