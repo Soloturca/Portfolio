@@ -3,7 +3,7 @@ Feature: Orion Finance Finco Test Scenarios - DOSYA TRANSFER HAREKETLERİ
   #1.)DOSYA TRANSFER HARERKETLERİ
 
 
-  Background: System Login & Creating Job for unique reference number
+    Background: System Login & Creating Job for unique reference number
     Given Open the https://orion-finance-finco-amtest.apps.dvt-fcloud.vfinans.local/ URL
     Then I see login page
     And I wait username text area element 30 seconds at index 1
@@ -30,7 +30,8 @@ Feature: Orion Finance Finco Test Scenarios - DOSYA TRANSFER HAREKETLERİ
     And I wait eighth code element 30 seconds at index 1
     Then I click element: eighth code at index 1
     Then I click element: button query at index 1
-    And I wait results element 30 seconds at index 1
+    Then I need to just wait
+    Then I need to check area verify by results at index 1 contains "Sonuçlar"
     Then I click element: close system button at index 1
     Then I click element: yes button at index 1
     And I wait login user element 30 seconds at index 1
