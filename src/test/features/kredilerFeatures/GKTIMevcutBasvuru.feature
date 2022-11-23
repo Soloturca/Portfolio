@@ -29,7 +29,6 @@ Feature: Orion Finance Finco Test Scenarios - 010.GKTİ MEVCUT BAŞVURU KONTROL�
     Then I enter "12217" text to customer no-new application text area at index 1
     And I wait magnifying glass button element 30 seconds at index 1
     Then I click element: magnifying glass button at index 1
-    Then I need to just wait
     Then I click element: choose customer at index 1
     And I wait trade registration no text area element 30 seconds at index 1
     Then I enter "385987" text to trade registration no text area at index 1
@@ -58,7 +57,6 @@ Feature: Orion Finance Finco Test Scenarios - 010.GKTİ MEVCUT BAŞVURU KONTROL�
     And I wait credit application observation and report customer no button element 30 seconds at index 1
     Then I enter "12217" text to credit application observation and report customer no button at index 1
     Then I click element: search button at index 8
-    And I wait row button element 30 seconds at index 20
     Then I click element: row button at index 20
     Then I click element: goOn button at index 1
 

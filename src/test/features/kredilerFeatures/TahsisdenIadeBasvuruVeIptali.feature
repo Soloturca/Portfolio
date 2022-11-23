@@ -71,6 +71,7 @@ Feature: Orion Finance Finco Test Scenarios - 011.Tahsis Değerlendirme Aşamas�
     And I wait continue to Documents button element 55 seconds at index 1
     Then I click element: continue to Documents button at index 1
     When I need to just wait
+    And I wait upload to excel button element 55 seconds at index 1
     Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
     Then I click element: save at index 5
     Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
