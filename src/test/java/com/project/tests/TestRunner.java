@@ -29,8 +29,8 @@ import java.io.IOException;
 
 
 @CucumberOptions(
-        features = "src/test/features/Prepaid.feature",
-        tags = "@Prepaid",
+        features = "src/test/features/Postpaid.feature",
+        tags = "@Postpaid",
         plugin = {"pretty", "io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm"},
         glue = {"com.project.stepdefs"})
 

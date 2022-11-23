@@ -1,5 +1,6 @@
 package com.saf.framework;
 
+import DB.DBFunction;
 import base.StepResultType;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Allure;

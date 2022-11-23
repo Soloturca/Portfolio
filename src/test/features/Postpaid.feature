@@ -6,6 +6,7 @@ Feature: Postpaid Feature
     Given Open the https://efes.vodafone.com.tr/tsteShop-public/#/fatura-ode URL
     Then I see login page
     Then I need to just wait
+    Then I execute db queries for pay the bill
     And I wait gsm text area element 10 seconds at index 1
    #enter without 5
     Then I enter "464009831" text to gsm text area at index 1
@@ -38,6 +39,7 @@ Feature: Postpaid Feature
     Given Open the http://efes.vodafone.com.tr/tsteShop-selfservice-login-test/#/giris/logoutAuto/ URL
     Then I see loginYanimdaWeb page
     Then I need to just wait
+    Then I execute db queries for pay the bill
     And I wait telephone number element 10 seconds at index 1
     When I click element: telephone number at index 1
    #enter without 5
@@ -80,6 +82,7 @@ Feature: Postpaid Feature
     Given Open the http://efes.vodafone.com.tr/tsteShop-selfservice-login-test/#/giris/logoutAuto/ URL
     Then I see loginYanimdaWeb page
     Then I need to just wait
+    Then I execute db queries for pay the bill
     And I wait pay bill element 10 seconds at index 1
     When I click element: pay bill at index 1
     Then I need to just wait

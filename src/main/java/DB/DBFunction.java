@@ -2,30 +2,51 @@ package DB;
 
 import base.AutomationConstants;
 import base.DataBase;
-import base.Query;
-import com.saf.framework.CommonLib;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class DBFunction {
 
-    public static void getMsisdnInfo() {
-        String Msisdn = "";
+    public static String getBillNumberInfo() {
+        String billNumber = "";
         try {
             ExecuteQuery executeQuery = new ExecuteQuery(DataBase.DBType.ORACLE);
-            ResultSet rs = executeQuery.getReadInfoFromDB(AutomationConstants.connectionStringForOSS,AutomationConstants.oracleUsernameForVFDWH,AutomationConstants.oraclePasswordForVFDWH, Query.selectMsisdnQueryforTC003);
+            ResultSet rs = executeQuery.selectBillNumberForPAYCAP();
             while (rs.next()) {
-                Msisdn = rs.getString("MSISDN"); //check pls
-                AutomationConstants.Msisdnfortc001 = Msisdn;
+                billNumber = rs.getString("BILL_NUMBER");
+                AutomationConstants.billNumber = billNumber;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return billNumber;
     }
 
-    public static void insertCitizenIntoMernis() {
+    public static void deleteForBill() {
         ExecuteQuery executeQuery = new ExecuteQuery(DataBase.DBType.ORACLE);
-        executeQuery.getWriteInfoFromDB(AutomationConstants.connectionStringForMernis, AutomationConstants.oracleUsernameForMernis, AutomationConstants.oraclePasswordForMernis, Query.insertCitizenIntoMernis(AutomationConstants.TCKN));
-        CommonLib.waitSeconds(3);
+        executeQuery.deleteForBILL1();
+        executeQuery.deleteForBILL2();
+    }
+
+    public static void updateBillStatus() {
+        ExecuteQuery executeQuery = new ExecuteQuery(DataBase.DBType.ORACLE);
+        executeQuery.updateBillStatusForPAYCAP();
+    }
+
+    public static String checkBillStatus() {
+        String billStatus = "";
+        try {
+            ExecuteQuery executeQuery = new ExecuteQuery(DataBase.DBType.ORACLE);
+            ResultSet rs = executeQuery.selectBillNumberForPAYCAP();
+            while (rs.next()) {
+                billStatus = rs.getString("BILL_STATUS");
+                AutomationConstants.billStatus = billStatus;
+                System.out.println("Bill Status is: " + AutomationConstants.billStatus);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return billStatus;
     }
 }

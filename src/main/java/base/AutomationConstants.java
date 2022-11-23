@@ -2,7 +2,14 @@ package base;
 
 public class AutomationConstants {
     // OSS constants
-    public static String connectionStringForOSS = "jdbc:oracle:thin:@izmcon5dt-scan:1522/CFIICCB";
+    public static String connectionStringForPAYCAP = "jdbc:oracle:thin:@//172.31.60.18:1541/PRPOTS1";
+    public static String oracleUsernameForPAYCAP = "PAYCAP";
+    public static String oraclePasswordForPAYCAP = "PAYCAP123*";
+
+    public static String connectionStringForBILL = "jdbc:oracle:thin:@172.31.60.134:1521:PPRODDB1";
+    public static String oracleUsernameForBILL = "TEST";
+    public static String oraclePasswordForBILL = "PATRON";
+
 
     // vfdwh constants
     public static String connectionStringForVFDWH = "jdbc:postgresql://10.190.230.81:5432/vfdwh";
@@ -25,8 +32,11 @@ public class AutomationConstants {
     public static String keySOAPAction = "SOAPAction";
 
     public static String TCKN = "";
-    public static String Msisdnfortc001 = "";
     public static String billingAccountId = "";
+    public static String billNumber = "";
+    public static String msisdn = "5464009831";
+    public static String billStatus;
+    public static String updatedRow = "";
 
     public static String imsi = "";
     public static String createDate = "";
@@ -36,6 +46,6 @@ public class AutomationConstants {
     //Browser Constants
     public static long lngPageLoadTimeout = 90L;
     public static long lngImplicitWaitTimeout = 60L;
-    public static String sGeckoDriverPath   	= "/Exes/geckodriver.exe";
-    public static String sIEDriverPath      	= "/Exes/IEDriverServer.exe";
+    public static String sGeckoDriverPath = "/Exes/geckodriver.exe";
+    public static String sIEDriverPath = "/Exes/IEDriverServer.exe";
 }

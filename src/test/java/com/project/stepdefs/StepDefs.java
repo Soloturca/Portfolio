@@ -1,5 +1,6 @@
 package com.project.stepdefs;
 
+import DB.DBFunction;
 import com.saf.framework.*;
 import cucumber.api.Scenario;
 import cucumber.api.java.Before;
@@ -127,8 +128,6 @@ public class StepDefs extends MyTestNGBaseClass {
     }
 
 
-
-
     @When("^(?:I )?have to verify the text for: (\\w+(?: \\w+)*) at index (\\d+)")
     public boolean verifyText(String element, int index) throws Exception {
         WebElement object = commonLib.findElement(element, index);
@@ -177,26 +176,56 @@ public class StepDefs extends MyTestNGBaseClass {
         }
         return flag;
     }
-    @Then("^I enter \"([^\"]*)\" text to (.*) at index (\\d+)")
-    public boolean enterText(String element, int index, CharSequence text) throws InterruptedException {
-        WebElement object;
+    //@Then("^I enter \"([^\"]*)\" text to (.*) at index (\\d+)")
+    //public boolean enterText(String element, int index, CharSequence text) throws InterruptedException {
+    //    WebElement object;
+    //
+    //    DBFunction.getBillNumberInfo();
+    //
+    //    String deneme = base.AutomationConstants.billNumber;
+    //    object = commonLib.waitElement(element, timeout, index);
+    //    boolean flag = false;
+    //    try {
+    //        if (object != null) {
+    //            object.sendKeys(text);
+    //            System.out.println("The text has been entered:" + text);
+    //            Allure.addAttachment("The text has been entered.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+    //            reportResult("PASS", "I entered the text: " + text, true);
+    //
+    //            return true;
+    //        }
+    //    } catch (Exception e) {
+    //        Allure.addAttachment("The text has not been entered.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+    //        reportResult("FAIL", "I cannot entered the element: " + text, true);
+    //        Assert.fail("Could not entered the text:" + text);
+    //        flag = false;
+    //    }
+    //    return flag;
+    //}
 
-        String msisdnforTC003= base.AutomationConstants.Msisdnfortc001;
-        object = commonLib.waitElement(element, timeout, index);
+    @Then("^I execute db queries for pay the bill")
+    public boolean enterText() throws InterruptedException {
         boolean flag = false;
-        try {
-            if (object != null) {
-                object.sendKeys(text);
-                System.out.println("The text has been entered:" + text);
-                Allure.addAttachment("The text has been entered.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
-                reportResult("PASS", "I entered the text: " + text, true);
+        //Execute queries
+        System.out.println("Database queries started");
+        DBFunction.checkBillStatus();
+        if(base.AutomationConstants.billStatus.equals("1")){
+            DBFunction.getBillNumberInfo();
+            DBFunction.deleteForBill();
+            DBFunction.updateBillStatus();
+            DBFunction.checkBillStatus();
+        }
 
-                return true;
+        String billStatus = base.AutomationConstants.billStatus;
+        try {
+            if (billStatus.equals("0")) {
+                System.out.println("Successfully. Bill Status is:  " + billStatus);
+                MyTestNGBaseClass.allureReport("INFO", "Successfully. Bill Status:" + base.AutomationConstants.billStatus, true);
+                flag = true;
             }
         } catch (Exception e) {
-            Allure.addAttachment("The text has not been entered.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
-            reportResult("FAIL", "I cannot entered the element: " + text, true);
-            Assert.fail("Could not entered the text:" + text);
+            System.out.println("Unsuccessfully. Bill Status is: " + billStatus);
+            MyTestNGBaseClass.allureReport("INFO", "Unsuccessfully. Bill Status:" + base.AutomationConstants.billStatus, true);
             flag = false;
         }
         return flag;
