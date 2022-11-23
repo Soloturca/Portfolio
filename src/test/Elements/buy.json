@@ -76,25 +76,27 @@
         {
           "row first button" : "//*/div[3]/div/div/div/table/tbody/tr[1]/th"
         },
-        { "material type search button" : "//div[@class='orion-widget-container orion-button-container orion-inline orion-frame-lg orion-right']"
-
+        {
+          "material type search button" : "//div[@class='orion-widget-container orion-button-container orion-inline orion-frame-lg orion-right']"
         },
-        { "fifth row button" : "//*/div[3]/div/div/div/table/tbody/tr[5]/th/div"
-
+        {
+          "fifth row button" : "//*/div[3]/div/div/div/table/tbody/tr[5]/th/div"
         },
-        {"material name" : "//*/div[1]/div/div/div/table/tbody/tr[1]/td[3]"
+        {
+          "material name" : "//*/div[1]/div/div/div/table/tbody/tr[1]/td[3]"
         },
-        {"material name area" : "//*/div[6]/textarea"
 
+        {
+          "material name area" : "//*/div[6]/textarea"
         },
-        {"unit search" : "//div[@class='htAutocompleteArrow']"
-
+        {
+          "unit search" : "//div[@class='htAutocompleteArrow']"
         },
-        {"unit search area" : "//select[@class='htSelectEditor']"
-
+        {
+          "unit search area" : "//select[@class='htSelectEditor']"
         },
-        {"free space" : "//*/div/div[2]/div/div[2]/div/div[6]/div[6]/div[1]/div[1]/legend"
-
+        {
+          "free space" : "//*/div/div[2]/div/div[2]/div/div[6]/div[6]/div[1]/div[1]/legend"
         },
         {
           "piece" : "//*/div[1]/div/div/div/table/tbody/tr[1]/td[5]"
@@ -102,26 +104,26 @@
         {
           "piece area" : "//*/div[7]/textarea"
         },
-        {"price excluding vat" :  "//*/div[1]/div/div/div/table/tbody/tr[1]/td[6]"
-
+        {
+          "price excluding vat" :  "//*/div[1]/div/div/div/table/tbody/tr[1]/td[6]"
         },
-        { "price area excluding vat" : "//textarea[@class='handsontableInput htRight']"
-
+        {
+          "price area excluding vat" : "//textarea[@class='handsontableInput htRight']"
         },
-        {"vat rate search" : "//tbody/tr[1]/td[7]/div[1]"
-
+        {
+          "vat rate search" : "//tbody/tr[1]/td[7]/div[1]"
         },
-        {"vat rate search area" : "//select[@class='htSelectEditor']"
-
+        {
+          "vat rate search area" : "//select[@class='htSelectEditor']"
         },
-        {"vat amount" : "//*/div[1]/div/div/div/table/tbody/tr[1]/td[4]"
-
+        {
+          "vat amount" : "//*/div[1]/div/div/div/table/tbody/tr[1]/td[4]"
         },
-        {"continue to documents" : ".orion-grid:nth-of-type(7) .orion-frame"
-
+        {
+          "continue to documents" : ".orion-grid:nth-of-type(7) .orion-frame"
         },
-        {"upload to word button" : "//i[@class='fa fa-upload htOrionIcon pull-right']"
-
+        {
+          "upload to word button" : "//i[@class='fa fa-upload htOrionIcon pull-right']"
         },
         {
           "rscroll": "//html/body/div[1]/div[4]/div/div[2]/div/div[2]/div/div[6]/div[6]/div[2]/div[2]/div/div/div/div[1]/div"
@@ -174,8 +176,8 @@
         {
           "bank name search button" : "//div[@class='orion-widget-container orion-button-container orion-inline orion-frame-lg orion-right']"
         },
-        {"choose fifth line" : "//*[@id=\"tblAccounts\"]/tbody/tr[7]/td[1]"
-
+        {
+          "choose fifth line" : "//*[@id=\"tblAccounts\"]/tbody/tr[7]/td[1]"
         },
         {
           "reference number text area" : "//*[@id=\"modal-title-text\"]/b"
@@ -469,10 +471,13 @@
           "description name area" : "//textarea[@class='orion form-control input-sm']"
         },
         {
-          "data name explanation" : "//html/body/div/div[4]/div/div/div/div[2]/div/div[8]/div/div[2]/div/div/div/table/tbody/tr[1]/td"
+          "data name explanation" : "//td[@data-name='aciklama']"
         },
         {
-          "paying taxes" : "//a[normalize-space()='Vergi Ödeme']"
+          "data name explanation area" : "(//td[@class='active-cell'])[1]"
+        },
+        {
+          "paying taxes" : "//*[@id=\"sidebar\"]/div/div[1]/ul[2]/ul/li[3]/ul/li[2]/ul/li[7]/a"
         },
         {
           "declaration type" : "//div[@orionid='row:taxType']//div[@class='orion-widget-container orion-inline']"
@@ -494,6 +499,18 @@
         },
         {
           "yes button new" : "//*[@id=\"modal-footer-area\"]/button[1]"
+        },
+        {
+          "advance closing" : "//a[normalize-space()='Avans Kapama']"
+        },
+        {
+          "advance no first" : "//*[@id=\"tblAdvance\"]/tbody/tr[1]/td[1]"
+        },
+        {
+          "advance close detail" : "//legend[contains(text(),'Avans Kapama Detayları')]"
+        },
+        {
+          "view depreciation information" : "//a[normalize-space()='Amortisman Bilgileri Görüntüleme']"
         }
       ]
     }
