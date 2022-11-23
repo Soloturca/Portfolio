@@ -52,6 +52,7 @@ Feature: Orion Finance Finco Test Scenarios - YENİ TEDARİKÇİ TANIMLAMA
     Then I select element: "TL - TÜRK LİRASI" under currency code select at index 1
     And I wait save account button element 30 seconds at index 1
     When I click element: save account button at index 1
+    Then I need to just wait
     And I wait record element 30 seconds at index 1
     When I click element: record at index 1
     Then I click element: save at index 2
