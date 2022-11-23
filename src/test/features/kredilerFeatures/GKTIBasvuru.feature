@@ -87,6 +87,15 @@ Feature: Orion Finance Finco Test Scenarios - 013.GKTİ BAŞVURU, BAŞVURU DEĞE
     Then I click element: save at index 5
     Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
     Then I click element: save at index 5
+    And I select element: "TR - 12262 - Ayşe Çinar" under side selection at index 1
+    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
+    Then I click element: save at index 5
+    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
+    Then I click element: save at index 5
+    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
+    Then I click element: save at index 5
+    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
+    Then I click element: save at index 5
     And I click element: continue to Summary button at index 1
 
     And I wait continue to the Registration button element 30 seconds at index 1
