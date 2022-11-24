@@ -40,7 +40,7 @@ Feature: Orion Finance Finco Test Scenarios - GİDER ÖDEME TALEP
     And I click element: bank name search button at index 5
     And I click element: choose fifth line at index 1
     And I wait page header element 30 seconds at index 1
-    When I click element: save button second at index 1
+    When I click element: save button at index 1
     And I wait note text element 30 seconds at index 1
     When I click element: note text at index 1
     Then I enter "test onay" text to note text at index 1

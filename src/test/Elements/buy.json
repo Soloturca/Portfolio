@@ -59,7 +59,7 @@
 
         },
         {
-          "material group search" : "//td[@class='active-cell']//div[2]"
+          "material group search" : "//tbody/tr[1]/td[2]/div[1]/div[2]/i[1]"
         },
         {
           "select first" : "//td[@class='orion-smart-cell orion-smart-sequence'][normalize-space()='1']"
@@ -83,17 +83,16 @@
           "fifth row button" : "//*/div[3]/div/div/div/table/tbody/tr[5]/th/div"
         },
         {
-          "material name" : "//*/div[1]/div/div/div/table/tbody/tr[1]/td[3]"
-        },
-
-        {
-          "material name area" : "//*/div[6]/textarea"
+          "material name" : "//*[@id=\"purchasingOrderDetail\"]/tbody/tr[1]/td[4]"
         },
         {
-          "unit search" : "//div[@class='htAutocompleteArrow']"
+          "unit search" : "(//i[@class='caret'])[1]"
         },
         {
-          "unit search area" : "//select[@class='htSelectEditor']"
+          "select unit search" : "//select[@style='border :0px;background-color:#fff;padding:0px;']"
+        },
+        {
+          "unit" : "//div[@text='SATIŞ YÖNETİMİ']"
         },
         {
           "free space" : "//*/div/div[2]/div/div[2]/div/div[6]/div[6]/div[1]/div[1]/legend"
@@ -363,7 +362,7 @@
           "currency code select" : "//select[@orionid='currencyCode']"
         },
         {
-          "record" : "//li[@data-title='Kayıt']//a[@class='hidden-phone']"
+          "record" : "(//a[@class='hidden-phone'])"
         },
         {
           "tck number dialog" : "//div[@class='orion-widget-container orion-inline']"
