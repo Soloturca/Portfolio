@@ -15,8 +15,6 @@
           "sifre text area": "//*[@id=\"pass-input\"]"
 
         },
-
-
         {
           "smssifre1": "//*[@class='wrapper']/input[1]"
         },

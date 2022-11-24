@@ -56,7 +56,7 @@
           "master pass card name": "//*[@id=\"new-mp-card-name\"]"
         },
         {
-          "pay bill button": "//*[@id=\"content\"]/app-invoice-payment//button"
+          "pay bill button": "(//*[@type='button'])[1]"
         },
         {
           "3D sms pass": "//*[@id=\"smspass\"]"

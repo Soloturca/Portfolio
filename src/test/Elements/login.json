@@ -100,7 +100,6 @@
           "ode button": "//*[@id=\"payment-button\"]"
 
         },
-
         {
 
           "tamam button": "//*[@id=\"footer\"]/a[1]/img"

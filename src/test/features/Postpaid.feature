@@ -59,7 +59,9 @@ Feature: Postpaid Feature
     Then I need to just wait
     Given I scroll and see element: pay bill at index 1
     When I click element: pay bill at index 1
-    And I wait pay bill button element 10 seconds at index 1
+    Then I need to just wait
+    Given I scroll and see element: pay bill button at index 1
+    #And I wait pay bill button element 10 seconds at index 1
     When I click element: pay bill button at index 1
     Then I need to just wait
     And I wait visa yes button element 10 seconds at index 1
@@ -126,10 +128,9 @@ Feature: Postpaid Feature
     Then I click element: option dropdown select at index 1
     And I wait hemen al button element 5 seconds at index 1
     When I click element: hemen al button at index 1
+    Then I need to just wait
     And I wait paket satin al button element 5 seconds at index 1
     When I click element: paket satin al button at index 1
-
-
 
 
   @TC005
