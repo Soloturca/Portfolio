@@ -73,7 +73,10 @@ Feature: Orion Finance Finco Test Scenarios - VERGİ ÖDEME TALEP
     And I wait jobs pending on my list button element 30 seconds at index 1
     When I click element: jobs pending on my list button at index 1
 
-    Then I enter my reference: "reference number" text to reference number area at index 1
+    Then I need to just wait
+    Then I click element: operation type at index 4
+    Then I select element: "Vergi Ödeme" under select operation type at index 1
+    And I wait inquire button element 30 seconds at index 1
     When I click element: inquire button at index 1
     And I wait number one element 30 seconds at index 1
     When I click element: number one at index 1

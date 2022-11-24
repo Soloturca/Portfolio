@@ -34,8 +34,8 @@ Feature: Orion Finance Finco Test Scenarios - MEVCUT TEDARİKÇİ SİLME
     And I wait select first line element 30 seconds at index 61
     When I click element: select first line at index 61
     Then I need to just wait
-    And I wait record element 30 seconds at index 1
-    When I click element: record at index 1
+    And I wait record element 30 seconds at index 6
+    When I click element: record at index 6
     Then I click element: delete button at index 1
     And I wait approval note element 30 seconds at index 1
     Then I enter "TEST" text to approval note at index 1
