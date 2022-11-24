@@ -176,32 +176,6 @@ public class StepDefs extends MyTestNGBaseClass {
         }
         return flag;
     }
-    //@Then("^I enter \"([^\"]*)\" text to (.*) at index (\\d+)")
-    //public boolean enterText(String element, int index, CharSequence text) throws InterruptedException {
-    //    WebElement object;
-    //
-    //    DBFunction.getBillNumberInfo();
-    //
-    //    String deneme = base.AutomationConstants.billNumber;
-    //    object = commonLib.waitElement(element, timeout, index);
-    //    boolean flag = false;
-    //    try {
-    //        if (object != null) {
-    //            object.sendKeys(text);
-    //            System.out.println("The text has been entered:" + text);
-    //            Allure.addAttachment("The text has been entered.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
-    //            reportResult("PASS", "I entered the text: " + text, true);
-    //
-    //            return true;
-    //        }
-    //    } catch (Exception e) {
-    //        Allure.addAttachment("The text has not been entered.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
-    //        reportResult("FAIL", "I cannot entered the element: " + text, true);
-    //        Assert.fail("Could not entered the text:" + text);
-    //        flag = false;
-    //    }
-    //    return flag;
-    //}
 
     @Then("^I execute db queries for pay the bill")
     public boolean enterText() throws InterruptedException {
