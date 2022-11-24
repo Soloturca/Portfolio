@@ -88,7 +88,7 @@ Feature: Postpaid Feature
     And I wait master pass card save button element 10 seconds at index 1
     When I click element: master pass card save button at index 1
     And I wait master pass card name element 10 seconds at index 1
-    Then I enter "test" text to master pass card name at index 1
+    Then I enter "." text to master pass card name at index 1
     Given I scroll and see element: pay bill button at index 1
     When I click element: pay bill button at index 1
     And I wait 3D okay button2 element 10 seconds at index 1
@@ -120,6 +120,7 @@ Feature: Postpaid Feature
     Then I need to just wait
     And I wait paket satin al button element 5 seconds at index 1
     When I click element: paket satin al button at index 1
+    Then I need to just wait
 
 
   @TC005
@@ -149,3 +150,16 @@ Feature: Postpaid Feature
     And I wait kalan SMS element 10 seconds at index 1
     When I click element: kalan SMS at index 1
     Then I get the value of kalan SMS value at index 1
+    #prepaid kısmında url e girebilmesi için önce çıkış yapmamız gerekiyor.
+    Then I need to just wait
+    And I wait logout list element 10 seconds at index 1
+    When I click element: logout list at index 1
+    Then I need to just wait
+    And I wait logout element 10 seconds at index 1
+    When I click element: logout at index 1
+    Then I need to just wait
+    And I wait logout popup element 10 seconds at index 1
+    When I click element: logout popup at index 1
+
+
+

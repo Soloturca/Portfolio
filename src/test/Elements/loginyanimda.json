@@ -10,7 +10,6 @@
         {
           "ceptel text area": "//*[@id=\"tel-input\"]"
         },
-
         {
           "sifre text area": "//*[@id=\"pass-input\"]"
 
@@ -28,7 +27,7 @@
           "smssifre4": "//*[@class='wrapper']/input[4]"
         },
         {
-          "hayirsimdidegilbutton": "//*[@id=\"remember-me-panel\"]/div/div/div/div/div[5]/div[1]/button"
+          "remember me": "//*[@id=\"setRememberMe\"]"
         },
         {
           "tlyuklebutton": "//*[@id=\"navigateToTopup\"]/span"
@@ -136,36 +135,17 @@
           "kalan SMS text": "(//*[@class=\"tariff__uses--title-tariff\"])[3]"
         },
         {
-          "kalan SMS": "//*[@id=\"content\"]/app-products-and-services/div/div[2]/div[1]/div/div/div[1]/div[2]/div/div/div[2]/div/div[1]/div[4]/div"
+          "kalan SMS": "(//*[@class=\"grid__item grid__item--5/9 grid__item--md-1/1 grid__item--sm-1/1 tariff__uses--leftPadding\"])[4]"
         },
         {
           "kalan SMS value": "(//div[5]//div[@class='tariff__uses--usage-wrap']//span[@class='tariff__detail--limit'])[1]"
         },
         {
           "gecis butonu": "//*[@id=\"closeConfirmDialog\"]"
+        },
+        {
+          "popup close": "//*[@id=\"close\"]"
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       ]
     }
   ]

@@ -146,10 +146,10 @@
           "kalan SMS text": "(//*[@class=\"tariff__uses--title-tariff\"])[3]"
         },
         {
-          "kalan SMS": "(//*[@class=\"grid__item grid__item--5/9 grid__item--md-1/1 grid__item--sm-1/1 tariff__uses--leftPadding\"])[5]"
+          "kalan SMS": "(//*[@class=\"grid__item grid__item--5/9 grid__item--md-1/1 grid__item--sm-1/1 tariff__uses--leftPadding\"])[10]"
         },
         {
-          "kalan SMS value": "(//div[5]//div[@class='tariff__uses--usage-wrap']//span[@class='tariff__detail--limit'])[1]"
+          "kalan SMS value": "//*[@id=\"content\"]//div[2]/div[2]//div[2]//div[5]//div[2]//div[1]//div[2]/span[2]"
         },
         {
           "visa yes button": "//*[@id=\"yes\"]"
@@ -159,6 +159,15 @@
         },
         {
           "yeni fatura ode button": "//*[@id=\"dialog\"]/div/div[2]/div/div/div[2]/div[3]/div[1]/button/span"
+        },
+        {
+          "logout list": "//nav[@class='header']//ul[@role='navigation']/li[8]/a[@href='#']"
+        } ,
+        {
+          "logout": "//nav[@class='header']//ul[@role='navigation']/li[8]//ul//a[@title='Çıkış Yap']"
+        } ,
+        {
+          "logout popup": "//div[@id='close-dialog']//div[@class='button-box']/a[2]"
         }
       ]
     }
