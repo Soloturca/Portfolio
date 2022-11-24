@@ -558,16 +558,4 @@ public class CommonLib extends MyTestNGBaseClass {
         } catch (Exception ignored) {
         }
     }
-
-    public void clickKeyboard(String key) {
-            switch (key) {
-                case "TAB":
-                    actions.sendKeys(Keys.NUMPAD1).build().perform();
-                    actions.sendKeys(Keys.TAB).build().perform();
-                    break;
-                default:
-                    break;
-            }
-
-    }
 }
