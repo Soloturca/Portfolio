@@ -558,5 +558,4 @@ public class CommonLib extends MyTestNGBaseClass {
         } catch (Exception ignored) {
         }
     }
-
 }

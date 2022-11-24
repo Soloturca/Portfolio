@@ -10,6 +10,7 @@ import io.cucumber.java.en.*;
 import io.qameta.allure.Allure;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import utils.excelutils.ExcelUtils;
@@ -24,6 +25,7 @@ import java.util.*;
 public class StepDefs extends MyTestNGBaseClass {
     ExcelUtils excelUtils = new ExcelUtils();
     CommonLib commonLib = new CommonLib();
+    Actions action = new Actions(oDriver);
     TCKN tckn = new TCKN();
     int timeout = 30;
     public String uuid = UUID.randomUUID().toString();
@@ -55,12 +57,92 @@ public class StepDefs extends MyTestNGBaseClass {
     @And("^I have to getText from below element. Above element: (\\w+(?: \\w+)*) at index (\\d+)")
     public void getTextFromBelowElement(String element, int index) {
         WebElement object = commonLib.findElement(element, index);
-      //  WebElement element2 = oDriver.findElement(with(By.tagName("input")).below(object));
-       // System.out.println(element2.getText());
+        //  WebElement element2 = oDriver.findElement(with(By.tagName("input")).below(object));
+        // System.out.println(element2.getText());
         //element2.sendKeys("ABC");
         //System.out.println(element2.getText());
+    }
 
+    @When("^I click \"([^\"]*)\" keyboard button$")
+    public void clickKeyboard(String key) {
+        Actions action = new Actions(oDriver);
+        switch (key.toUpperCase()) {
+            case "ENTER":
+                action.sendKeys(Keys.ENTER).build().perform();
+                System.out.println(key + " clicked.");
+                break;
+            case "TAB":
+                action.sendKeys(Keys.TAB).build().perform();
+                System.out.println(key + " clicked.");
+                break;
+            case "PAGE_DOWN":
+                action.sendKeys(Keys.PAGE_DOWN).build().perform();
+                System.out.println(key + " clicked.");
+                break;
+            case "PAGE_UP":
+                action.sendKeys(Keys.PAGE_UP).build().perform();
+                System.out.println(key + " clicked.");
+                break;
+            case "SPACE":
+                action.sendKeys(Keys.SPACE).build().perform();
+                System.out.println(key + " clicked.");
+                break;
+            default:
+                break;
+        }
+    }
 
+    @When("I press keyboard numpad area for the \"([^\"]*)\" key or if I am using \"([^\"]*)\" text value$")
+    public void clickKeyboardForNumpad(String key, String textValue) {
+
+        switch (key.toUpperCase()) {
+            case "0":
+                action.sendKeys(Keys.NUMPAD0).build().perform();
+                System.out.println(key + " pressed.");
+                break;
+            case "1":
+                action.sendKeys(Keys.NUMPAD1).build().perform();
+                System.out.println(key + " pressed.");
+                break;
+            case "2":
+                action.sendKeys(Keys.NUMPAD2).build().perform();
+                System.out.println(key + " pressed.");
+                break;
+            case "3":
+                action.sendKeys(Keys.NUMPAD3).build().perform();
+                System.out.println(key + " pressed.");
+                break;
+            case "4":
+                action.sendKeys(Keys.NUMPAD4).build().perform();
+                System.out.println(key + " pressed.");
+                break;
+            case "5":
+                action.sendKeys(Keys.NUMPAD5).build().perform();
+                System.out.println(key + " pressed.");
+                break;
+            case "6":
+                action.sendKeys(Keys.NUMPAD6).build().perform();
+                System.out.println(key + " pressed.");
+                break;
+            case "7":
+                action.sendKeys(Keys.NUMPAD7).build().perform();
+                System.out.println(key + " pressed.");
+                break;
+            case "8":
+                action.sendKeys(Keys.NUMPAD8).build().perform();
+                System.out.println(key + " pressed.");
+                break;
+            case "9":
+                action.sendKeys(Keys.NUMPAD9).build().perform();
+                System.out.println(key + " pressed.");
+                break;
+            case "text":
+                action.sendKeys(textValue).build().perform();
+                System.out.println(key + " pressed.");
+                break;
+            default:
+                break;
+        }
     }
 
     @Given("^Open the (.*) URL$")
@@ -89,22 +171,21 @@ public class StepDefs extends MyTestNGBaseClass {
                 object.sendKeys(f.format(date.getTime()));
                 Thread.sleep(1000);
             }
-        }  catch (Exception e) {
+        } catch (Exception e) {
 
-                Allure.addAttachment("Verification does not completed.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
-                reportResult("FAIL", "An error during assertion. " + element, true);
-                Assert.fail("Could not clicked the element:" + element);
-                flag = false;
-        }
-         finally {
-                if (stringsis != null) {
-                    stringsis.close();
-                }
+            Allure.addAttachment("Verification does not completed.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+            reportResult("FAIL", "An error during assertion. " + element, true);
+            Assert.fail("Could not clicked the element:" + element);
+            flag = false;
+        } finally {
+            if (stringsis != null) {
+                stringsis.close();
             }
-            return flag;
         }
+        return flag;
+    }
 
-        @When("^(?:I )?click element: (\\w+(?: \\w+)*) at index (\\d+)")
+    @When("^(?:I )?click element: (\\w+(?: \\w+)*) at index (\\d+)")
     public boolean clickElement(String element, int index) {
         WebElement object = commonLib.findElement(element, index);
         boolean flag = false;
@@ -130,7 +211,7 @@ public class StepDefs extends MyTestNGBaseClass {
         boolean flag = false;
         try {
             if (object != null) {
-                ((JavascriptExecutor)oDriver).executeScript("arguments[0].click();",object);
+                ((JavascriptExecutor) oDriver).executeScript("arguments[0].click();", object);
                 Allure.addAttachment("Element is clicked.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("PASS", "I clicked the element: " + element, true);
                 return true;
@@ -917,10 +998,10 @@ public class StepDefs extends MyTestNGBaseClass {
     @Then("^(?:I )?copy the information by copying the system time to: (\\w+(?: \\w+)*) at index (\\d+)")
     public boolean pase(String element, int index) throws InterruptedException {
 
-         WebElement object;
+        WebElement object;
         object = commonLib.waitElement(element, timeout, index);
 
-          String datse;
+        String datse;
 
         Calendar date = Calendar.getInstance();
         date.setTime(new Date());
@@ -1125,7 +1206,7 @@ public class StepDefs extends MyTestNGBaseClass {
     @Then("^(?:I )?upload the file for payment \"([^\"]*)\" using the: (\\w+(?: \\w+)*) at index (\\d+)")
     public void uploadFile3(String text, String element, int index) throws IOException, InterruptedException, AWTException, IOException {
 
-        waitElement(element,30,index);
+        waitElement(element, 30, index);
         clickElement(element, index);
 
         if (text.contains("testtd.docx")) {
@@ -1399,15 +1480,13 @@ public class StepDefs extends MyTestNGBaseClass {
                 System.out.println("Matched .The client is created new!");
                 Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("PASS", "Matched. The client is created new!", true);
-            }
-            else
-            {
+            } else {
                 System.out.println("Not matched.");
                 Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("FAIL", "Not matched! " + phNo, true);
                 Assert.fail("Not matched." + phNo);
                 flag = false;
-             }
+            }
             return true;
         } catch (Exception e) {
             System.out.println("Not matched. An error during the update.");
@@ -1430,9 +1509,7 @@ public class StepDefs extends MyTestNGBaseClass {
                 System.out.println("Matched .The client is created new!");
                 Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("PASS", "Matched. The client is created new!", true);
-            }
-            else
-            {
+            } else {
                 System.out.println("Not matched.");
                 Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("FAIL", "Not matched! " + phNo, true);
@@ -1461,9 +1538,7 @@ public class StepDefs extends MyTestNGBaseClass {
                 System.out.println("Matched .The client is created new!");
                 Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("PASS", "Matched. The client is created new!", true);
-            }
-            else
-            {
+            } else {
                 System.out.println("Not matched.");
                 Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("FAIL", "Not matched! " + phNo, true);
@@ -1483,21 +1558,20 @@ public class StepDefs extends MyTestNGBaseClass {
 
     @Then("I need to right scroll verify by (\\w+(?: \\w+)*) at index (\\d+)")
     public boolean rightScroll(String element, int index) {
-        WebElement object = commonLib.findElement(element,index);
-        System.out.println("Scroll start" );
+        WebElement object = commonLib.findElement(element, index);
+        System.out.println("Scroll start");
         boolean flag = false;
 
         try {
             if (object != null) {
 
-            ((JavascriptExecutor) oDriver).executeScript("arguments[0].scrollLeft = arguments[0].offsetWidth",object);
+                ((JavascriptExecutor) oDriver).executeScript("arguments[0].scrollLeft = arguments[0].offsetWidth", object);
 
-            System.out.println("Scroll!");
-            Allure.addAttachment("Scroll.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
-            reportResult("PASS", "Scroll!", true);
+                System.out.println("Scroll!");
+                Allure.addAttachment("Scroll.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
+                reportResult("PASS", "Scroll!", true);
 
-             }
-            else{
+            } else {
                 System.out.println("Not scroll. Error.");
                 Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("FAIL", "Not matched! " + phNo, true);
@@ -1526,9 +1600,7 @@ public class StepDefs extends MyTestNGBaseClass {
                 System.out.println("Matched .The client is created new!");
                 Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("PASS", "Matched. The client is created new!", true);
-            }
-            else
-            {
+            } else {
                 System.out.println("Not matched.");
                 Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("FAIL", "Not matched! " + phNo, true);
@@ -1547,7 +1619,7 @@ public class StepDefs extends MyTestNGBaseClass {
     }
 
     @Then("I need to check area verify by (\\w+(?: \\w+)*) at index (\\d+) contains \"([^\"]*)\"")
-    public boolean verifyCheckArea(String element, int index,String contents) {
+    public boolean verifyCheckArea(String element, int index, String contents) {
         String title = commonLib.getTheElementInformation(element, index);
         System.out.println("Title: " + " " + title);
         System.out.println("Contents: " + " " + contents);
@@ -1558,9 +1630,7 @@ public class StepDefs extends MyTestNGBaseClass {
                 System.out.println("Matched .The client is created new!");
                 Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("PASS", "Matched. The client is created new!", true);
-            }
-            else
-            {
+            } else {
                 System.out.println("Not matched.");
                 Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("FAIL", "Not matched! " + phNo, true);
@@ -1589,9 +1659,7 @@ public class StepDefs extends MyTestNGBaseClass {
                 System.out.println("Matched .The client is created new!");
                 Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("PASS", "Matched. The client is created new!", true);
-            }
-            else
-            {
+            } else {
                 System.out.println("Not matched.");
                 Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("FAIL", "Not matched! " + phNo, true);
@@ -1620,9 +1688,7 @@ public class StepDefs extends MyTestNGBaseClass {
                 System.out.println("Matched .The client is created new!");
                 Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("PASS", "Matched. The client is created new!", true);
-            }
-            else
-            {
+            } else {
                 System.out.println("Not matched.");
                 Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("FAIL", "Not matched! " + phNo, true);
@@ -1651,9 +1717,7 @@ public class StepDefs extends MyTestNGBaseClass {
                 System.out.println("Matched .The client is created new!");
                 Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("PASS", "Matched. The client is created new!", true);
-            }
-            else
-            {
+            } else {
                 System.out.println("Not matched.");
                 Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("FAIL", "Not matched! " + phNo, true);
@@ -1682,9 +1746,7 @@ public class StepDefs extends MyTestNGBaseClass {
                 System.out.println("Matched .The client is created new!");
                 Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("PASS", "Matched. The client is created new!", true);
-            }
-            else
-            {
+            } else {
                 System.out.println("Not matched.");
                 Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("FAIL", "Not matched! " + phNo, true);
@@ -1713,9 +1775,7 @@ public class StepDefs extends MyTestNGBaseClass {
                 System.out.println("Matched .The client is created new!");
                 Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("PASS", "Matched. The client is created new!", true);
-            }
-            else
-            {
+            } else {
                 System.out.println("Not matched.");
                 Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("FAIL", "Not matched! " + phNo, true);
@@ -1745,9 +1805,7 @@ public class StepDefs extends MyTestNGBaseClass {
                 System.out.println("Matched .The client is created new!");
                 Allure.addAttachment("Matched. The client is created new.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("PASS", "Matched. The client is created new!", true);
-            }
-            else
-            {
+            } else {
                 System.out.println("Not matched.");
                 Allure.addAttachment("Not matched.", new ByteArrayInputStream(((TakesScreenshot) oDriver).getScreenshotAs(OutputType.BYTES)));
                 reportResult("FAIL", "Not matched! " + phNo, true);
@@ -1764,7 +1822,6 @@ public class StepDefs extends MyTestNGBaseClass {
         }
         return flag;
     }
-
 
 
     @Then("^(?:I )?I need to checkbox verify for (\\w+(?: \\w+)*) at index (\\d+)")
