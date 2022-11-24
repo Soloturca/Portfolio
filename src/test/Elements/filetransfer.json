@@ -41,7 +41,7 @@
           "eighth code" : "(//td[contains(text(),'8')])[7]"
         },
         {
-          "results" : "//legend[normalize-space()='Sonuçlar']"
+          "results" : "//*[@id=\"content\"]/div/div[2]/div/div[2]/div/div[2]/div/div[1]/div/legend"
         },
         {
           "file transfer identification" : "//a[contains(text(),'Dosya Transfer Tanımlama')]"

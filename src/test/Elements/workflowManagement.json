@@ -84,6 +84,13 @@
         },
         {
           "approval note" : "//textarea[@id='modal-body-notetext']"
+        },
+        {
+          "operation type" : "(//div[@class='orion-widget-container orion-inline orion-col-c9'])",
+
+        },
+        {
+          "select operation type" : "//select[@orionid='islem_turu']"
         }
 
       ]
