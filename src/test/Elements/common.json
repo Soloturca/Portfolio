@@ -59,9 +59,6 @@
           "close system button": "//li[@id='logout_button']"
         },
         {
-          "loan disbursement": "//*[contains(text(),'Kullandırım')]"
-        },
-        {
           "loan observation button": "//*[contains(text(),'Kredi Kullandırım Gözlem')]"
         },
         {
@@ -69,9 +66,6 @@
         },
         {
           "collection button": "//*[contains(text(),'Tahsilat')]"
-        },
-        {
-          "collection observation": "//*[contains(text(),'Tahsilat Gözlem')]"
         },
         {
           "rediscount observation": "//*[contains(text(),'Reeskont Gözlem')]"
