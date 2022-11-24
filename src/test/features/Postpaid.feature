@@ -61,22 +61,11 @@ Feature: Postpaid Feature
     When I click element: pay bill at index 1
     Then I need to just wait
     Given I scroll and see element: pay bill button at index 1
-    #And I wait pay bill button element 10 seconds at index 1
     When I click element: pay bill button at index 1
     Then I need to just wait
     And I wait visa yes button element 10 seconds at index 1
     When I click element: visa yes button at index 1
     Then I need to just wait
-#    (Asagıdaki satirlar olmadan case tamamlaniyor.)
-#    And I wait pay bill page tel text area element 10 seconds at index 1
-#    Given I scroll and see element: pay bill button at index 1
-#    When I click element: pay bill button at index 1
-#    Then I need to just wait
-#    And I wait 3D sms pass element 10 seconds at index 1
-#    When I click element: 3D sms pass at index 1
-#    Then I enter "12345" text to 3D sms pass at index 1
-#    When I click element: 3D okay button1 at index 1
-#    Then I need to just wait
 
 
   @TC003
