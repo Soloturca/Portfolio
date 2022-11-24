@@ -73,12 +73,19 @@ Feature: Orion Finance Finco Test Scenarios - 014.DörtYüzElliBin-BirMilyon Tl 
     Then I click element: continue to Documents button at index 1
     And I wait upload to excel button element 30 seconds at index 1
     Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
-    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 2
-    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 3
-    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 4
-    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 5
-    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 6
-    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 7
+    Then I click element: save at index 5
+    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
+    Then I click element: save at index 5
+    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
+    Then I click element: save at index 5
+    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
+    Then I click element: save at index 5
+    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
+    Then I click element: save at index 5
+    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
+    Then I click element: save at index 5
+    Then I upload the file for customer "evrak.jpg" using the: upload to excel button at index 1
+    Then I click element: save at index 5
     And I click element: continue to Summary button at index 1
 
     And I wait continue to the Registration button element 30 seconds at index 1
