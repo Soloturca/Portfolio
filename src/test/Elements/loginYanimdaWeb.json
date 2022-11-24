@@ -1,0 +1,175 @@
+{
+  "pages": [
+    {
+      "pageInfo": {
+        "pageName": "loginYanimdaWeb",
+        "parent": "common",
+        "waitelement": "telephone number"
+      },
+      "elements": [
+        {
+          "telephone number": "//input[@id='tel-input']"
+        },
+        {
+          "password": "//input[@id='pass-input']"
+        },
+        {
+          "login button": "//*[@id=\"pwdLoginCTA\"]"
+        },
+        {
+          "two-step verification1": "//*[@class='wrapper']/input[1]"
+        },
+        {
+          "two-step verification2": "//*[@class='wrapper']/input[2]"
+        },
+        {
+          "two-step verification3": "//*[@class='wrapper']/input[3]"
+        },
+        {
+          "two-step verification4": "//*[@class='wrapper']/input[4]"
+        },
+        {
+          "remember me": "//*[@id=\"setRememberMe\"]"
+        },
+        {
+          "pay bill": "//a[@href='#/web/fatura-odeme']/div[@class='quick-link-icon']"
+        },
+        {
+          "pay bill page tel text area": "//input[@id='phone']"
+        },
+        {
+          "master pass select": "//*[@id=\"content\"]/app-invoice-payment/div[1]/div/div/div[2]/div/div/div[5]/div[2]/label/div/span[1]"
+        },
+        {
+          "master pass credit card no": "//input[@id='cardNumber-CC']"
+        },
+        {
+          "master pass expDate": "//input[@id='creditCardExp']"
+        },
+        {
+          "master pass cvv": "//input[@id='cc-csc']"
+        },
+        {
+          "master pass card save button": "//input[@type='checkbox']/following-sibling::span"
+        },
+        {
+          "master pass card name": "//*[@id=\"new-mp-card-name\"]"
+        },
+        {
+          "pay bill button": "(//*[@type='button'])[1]"
+        },
+        {
+          "3D sms pass": "//*[@id=\"smspass\"]"
+        },
+        {
+          "3D okay button1": "//div[@class='col-sm-12 col-xs-12 ng-scope']/button[@type='submit']"
+        },
+        {
+          "3D okay button2": "//div[@id='footer']//img[@src='/images/tamam-buton.gif']"
+        },
+        {
+          "3D sms password1": "//*[@id=\"SIFRE1\"]"
+        },
+        {
+          "3D sms password2": "//*[@id=\"SIFRE2\"]"
+        },
+        {
+          "3D sms password3": "//*[@id=\"SIFRE3\"]"
+        },
+        {
+          "3D sms password4": "//*[@id=\"SIFRE4\"]"
+        },
+        {
+          "3D sms password5": "//*[@id=\"SIFRE5\"]"
+        },
+        {
+          "3D sms password6": "//*[@id=\"SIFRE6\"]"
+        },
+        {
+          "3D confirmation": "//*[@id=\"footer\"]/a[2]/img"
+        },
+        {
+          "ek paket al button": "(//a[@class='js-navigation-link navigation__link navigation__link--main'])[3]"
+        },
+        {
+          "option dropdown": "//*[@id=\"content\"]/app-addons//div[2]//div[2]//div[2]//select"
+        },
+        {
+          "option dropdown select": "(//*[@id=\"content\"]/app-addons//div[2]//select/option)[4]"
+        },
+        {
+          "hemen al button": "//*[@id=\"content\"]/app-addons/div[2]/div[1]/div/div[4]/div/div[11]/temp-bundle-addon/div/div[3]/div/div/div[2]/button"
+        },
+        {
+          "tarifelerim ve kullanimlarim main button": "//a[@id='tariffAndUsage']"
+        },
+        {
+          "gecebilecegim tarifeler button": "//*[@id=\"availableTariffs\"]"
+        },
+        {
+          "tarife GB": "//*[@id=\"tariff-PPHUW24\"]/div[2]/div[1]/div[1]"
+        },
+        {
+          "tarife ilgileniyorum button": "//*[@id=\"tariff-PPHUW24\"]/div[3]/div/div/div[2]/button"
+        },
+        {
+          "tarife onay chechbox": "//*[@id=\"checkmark-checkbox\"]"
+        },
+        {
+          "tarife onayla button": "//*[@id=\"dialog-mccm\"]/div[2]/div/div[2]/div[2]/button"
+        },
+        {
+          "tarifem ve kalan kullanimlarim button": "//a[@id='tariffAndUsageDetail']/parent::li"
+        },
+        {
+          "kalan kullanimlarim text": "(//*[@class=\"heading--4 content__title--tariff\"])[2]"
+        },
+        {
+          "kalan GB text": "(//*[@class=\"tariff__uses--title-tariff\"])[1]"
+        },
+        {
+          "kalan GB": "(//*[@class=\"grid__item grid__item--5/9 grid__item--md-1/1 grid__item--sm-1/1 tariff__uses--leftPadding\"])[1]"
+        },
+        {
+          "kalan GB value": "(//div[3]//div[@class='tariff__uses--usage-wrap']//span[@class='tariff__detail--limit'])[1]"
+        },
+        {
+          "kalan DK text": "(//*[@class=\"tariff__uses--title-tariff\"])[2]"
+        },
+        {
+          "kalan DK": "(//*[@class=\"grid__item grid__item--5/9 grid__item--md-1/1 grid__item--sm-1/1 tariff__uses--leftPadding\"])[2]"
+        },
+        {
+          "kalan DK value": "(//div[4]//div[@class='tariff__uses--usage-wrap']//span[@class='tariff__detail--limit'])[1]"
+        },
+        {
+          "kalan SMS text": "(//*[@class=\"tariff__uses--title-tariff\"])[3]"
+        },
+        {
+          "kalan SMS": "(//*[@class=\"grid__item grid__item--5/9 grid__item--md-1/1 grid__item--sm-1/1 tariff__uses--leftPadding\"])[10]"
+        },
+        {
+          "kalan SMS value": "//*[@id=\"content\"]//div[2]/div[2]//div[2]//div[5]//div[2]//div[1]//div[2]/span[2]"
+        },
+        {
+          "visa yes button": "//*[@id=\"yes\"]"
+        },
+        {
+          "paket satin al button": "//*[@id=\"dialog\"]/div/div[3]/div[3]/div/div/div[2]/button/span"
+        },
+        {
+          "yeni fatura ode button": "//*[@id=\"dialog\"]/div/div[2]/div/div/div[2]/div[3]/div[1]/button/span"
+        },
+        {
+          "logout list": "//nav[@class='header']//ul[@role='navigation']/li[8]/a[@href='#']"
+        } ,
+        {
+          "logout": "//nav[@class='header']//ul[@role='navigation']/li[8]//ul//a[@title='Çıkış Yap']"
+        } ,
+        {
+          "logout popup": "//div[@id='close-dialog']//div[@class='button-box']/a[2]"
+        }
+      ]
+    }
+  ]
+}

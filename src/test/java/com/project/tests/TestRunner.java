@@ -29,13 +29,10 @@ import java.io.IOException;
 
 
 @CucumberOptions(
-        features = "src/test/features",
-        //features = "src/test/features/kredilerFeatures",
-        //tags = {"@TahsilatGözlem"},
-        tags = {"@BireyselKrediBasvuru, @TahsilatGözlem, @KrediKullandirimGozlem, @ReeskontGozlem, @TahakkukGozlem, @IstisnaOlusturmaVeKaldirma, @BirMilyonTlUstuTutarliKredi, @DörtYüzElliBin-BirMilyonTLAraTutarliKredi, @GKTIBasvuru, @GKTIBasvuruDegerlendirme, @DortYuzElliBinTLAltiTutarliKredi, @TeminatEkleVeSilme, @TahsisdenIadeBasvuruVeIptal, @BasvuruIptal, @FiyatlamaEsit, @FiyatlamaEsnek, @FiyatlamaGozlem, @GKTIMevcutBasvuru, @GozlemVeRapor, @KefilEklemeSilme, @MevcutEsitFiyatlama, @MevcutEsnekFiyatlama, @GiderOdeme, @SatınAlmaTalep, @Talimatvermeveiptal, @BireyselMusteriOnBasvuruRed, @MevcutGKTonbasvuru, @MevcutKurumsalonbasvuru, @GKTOdemePlaniGozlem, @KurumsalOdemePlaniGozlem, @GKTEsitTaksitOdemePlaniSimulasyonu, @KurumsalEsitTaksitOdemePlaniSimulasyonu, @GKTEsnekOdemePlaniSimulasyonu, @KurumsalEsnekOdemePlaniSimulasyonu, @OnBasvuruGozlem, @KomisyonOdeme, @FTPSunucuTanimlama, @VergiOdeme, @DekontGozlemErkenKapama, @DekontGozlemErkenOdenmis, @DekontGozlemGecikmeliOdenmis, @DekontGozlemKısmiOdenmis, @DekontGozlemTarihindeOdenmis, @DosyaTransferHareketleri, @MalzemeGrubuTanımlama, @MevuctMalzemeGrubuSilme, @MalzemeTuruTanımlama, @MevcutMalzemeTuruSilme, @YeniTedarikciTanımlama, @MevcutTedarikciSilme, @YeniTarafTanımlama, @MevcutTarafSilme, @YeniMasrafGirisiYetkilendirme, @MevcutMasrafGirisYetkilendirmeSilme, @AvansAcma, @account, @bankbranch, @workflow, @workflowpending, @customer, @customerrelation, @teminat, @bank, @Treasury, @Litigation"},
+        features = "src/test/features/",
+//        tags = "Prepaid",
         plugin = {"pretty", "io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm"},
         glue = {"com.project.stepdefs"})
-
 
 public class TestRunner extends MyTestNGBaseClass {
     private io.cucumber.testng.TestNGCucumberRunner testNGCucumberRunner;

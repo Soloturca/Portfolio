@@ -4,18 +4,108 @@
       "pageInfo": {
         "pageName": "login",
         "parent": "common",
-        "waitelement": "username text area"
+        "waitelement": "gsm text area"
       },
       "elements": [
         {
-          "username text area": "username"
+          "advanced": "//*[@id=\"details-button\"]"
         },
         {
-          "password text area": "password"
+          "advanced link": "//*[@id=\"proceed-link\"]"
         },
         {
-          "login button": "login_button"
+          "gsm text area": "//*[@name='top-up-phone-number']"
+        },
+        {
+          "gsm continue button": "(//*[@type='button'])[1]"
+        },
+        {
+          "payment continue button": "(//*[@type='button'])[2]"
+        },
+        {
+          "pay bill button": "(//*[@type='button'])[4]"
+        },
+        {
+          "credit card no": "//input[@id='cardNumber-CC']"
+        },
+        {
+          "expDate": "//input[@id='creditCardExp']"
+        },
+        {
+          "cvv": "//input[@id='cc-csc']"
+        },
+        {
+          "payment button": "//button[@id='payment-button']"
+        },
+        {
+          "tl button": "//div[@class='top-up__options']/label[1]/span"
+        },
+        {
+          "send anyway": "//*[@id=\"proceed-button\"]"
+        },
+        {
+          "3D secure okay button": "//*[@id=\"footer\"]/a[1]/img"
+        },
+        {
+          "sms password1": "//*[@id=\"SIFRE1\"]"
+        },
+        {
+          "sms password2": "//*[@id=\"SIFRE2\"]"
+        },
+        {
+          "sms password3": "//*[@id=\"SIFRE3\"]"
+        },
+        {
+          "sms password4": "//*[@id=\"SIFRE4\"]"
+        },
+        {
+          "sms password5": "//*[@id=\"SIFRE5\"]"
+        },
+        {
+          "sms password6": "//*[@id=\"SIFRE6\"]"
+        },
+        {
+          "3D secure last okay button": "//*[@id=\"footer\"]/a[2]/img"
+        },
+        {
+          "web telephone number": "//input[@id='tel-input']"
+        },
+        {
+          "web login password": "//input[@id='pass-input']"
+        },
+        {
+          "web login button": "//*[@id=\"pwdLoginCTA\"]"
+        },
+        {
+          "web two-step verification": "//*[@id=\"c_mkguzcm5vll9msd1lr\"]"
+        },
+        {
+          "web remember me": "//*[@id=\"setRememberMe\"]"
+        },
+
+
+        {
+
+          "kac tl yuklemek istersiniz": "//*[@id=\"content\"]/app-public-topup/div[1]/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div[1]/div/label[1]/span"
+        },
+        {
+
+          "altmis tl": "//*[@id=\"content\"]/app-public-topup/div[1]/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div[1]/div/label[1]/span/span"
+        },
+        {
+
+          "devam et button": "//*[@id=\"content\"]/app-public-topup/div[1]/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div[2]/button"
+        },
+        {
+          "ode button": "//*[@id=\"payment-button\"]"
+
+        },
+        {
+
+          "tamam button": "//*[@id=\"footer\"]/a[1]/img"
+
         }
+
       ]
     }
   ]

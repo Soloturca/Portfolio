@@ -1,0 +1,66 @@
+{
+  "pages": [
+    {
+      "pageInfo": {
+        "pageName": "prepaidlogin",
+        "parent": "common",
+        "waitelement": "gsm text area"
+      },
+      "elements": [
+        {
+          "gsm text area": "//*[@name='top-up-phone-number']"
+        },
+        {
+          "continue button": "//*[@id=\"content\"]/app-public-topup/div[1]/div/div[2]/div/div/div[2]/div/div[1]/div/div/app-phone-number/button"
+
+        },
+        {
+          "yuklemeye devam et button": "//*[@id=\"content\"]/app-public-topup/div[1]/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div[3]/button"
+
+        },
+        {
+          "credit card no": "//input[@id='cardNumber-CC']"
+        },
+        {
+          "expDate": "//input[@id='creditCardExp']"
+        },
+        {
+          "cvv": "//input[@id='cc-csc']"
+        },
+        {
+          "ode button": "//*[@id=\"payment-button\"]"
+
+        },
+        {
+          "send anyway": "//*[@id=\"proceed-button\"]"
+        },
+        {
+
+          "tamam button": "//*[@id=\"footer\"]/a[1]/img"
+
+        },
+        {
+          "sms password1": "//*[@id=\"SIFRE1\"]"
+        },
+        {
+          "sms password2": "//*[@id=\"SIFRE2\"]"
+        },
+        {
+          "sms password3": "//*[@id=\"SIFRE3\"]"
+        },
+        {
+          "sms password4": "//*[@id=\"SIFRE4\"]"
+        },
+        {
+          "sms password5": "//*[@id=\"SIFRE5\"]"
+        },
+        {
+          "sms password6": "//*[@id=\"SIFRE6\"]"
+        },
+        {
+          "3D secure last okay button": "//*[@id=\"footer\"]/a[2]/img"
+        }
+      ]
+    }
+  ]
+}
