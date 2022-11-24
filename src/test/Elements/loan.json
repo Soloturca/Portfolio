@@ -389,6 +389,9 @@
           "collection button": "//*[contains(text(),'Tahsilat')]"
         },
         {
+          "collection observation": "//li[5]/ul[@class='sub-menu']/li[3]/ul[@class='sub-menu']//a[@class='orion-menu-item']"
+        },
+        {
           "installment payment verification send button": "//button[@orionid='orion-id-041']"
         },
         {
@@ -410,7 +413,7 @@
           "loan disbursement monitoring": "//a[@data-href='/finance/creditdisbursement/js/creditDisbursementInvestigation.js']"
         },
         {
-          "loan disbursement": "//*[contains(text(),'Kullandırım')]"
+          "loan disbursement": "//ul[@class='nav']/li[4]/ul[@class='sub-menu']/li"
         },
         {
           "credit monitoring credit no text area": "//input[@orionid='creditNo']"
