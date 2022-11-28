@@ -29,7 +29,7 @@
           "credit card no": "//input[@id='cardNumber-CC']"
         },
         {
-          "expDate": "//input[@id='creditCardExp']"
+          "expDate": "//dp-date-picker[@name='creditCardExp']//input[@type='text']"
         },
         {
           "cvv": "//input[@id='cc-csc']"
@@ -82,8 +82,6 @@
         {
           "web remember me": "//*[@id=\"setRememberMe\"]"
         },
-
-
         {
 
           "kac tl yuklemek istersiniz": "//*[@id=\"content\"]/app-public-topup/div[1]/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div[1]/div/label[1]/span"

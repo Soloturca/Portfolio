@@ -22,7 +22,7 @@
           "credit card no": "//input[@id='cardNumber-CC']"
         },
         {
-          "expDate": "//input[@id='creditCardExp']"
+          "expDate": "//dp-date-picker[@name='creditCardExp']/div//input[@type='text']"
         },
         {
           "cvv": "//input[@id='cc-csc']"
