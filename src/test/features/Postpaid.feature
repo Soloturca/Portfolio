@@ -16,7 +16,12 @@ Feature: Postpaid Feature
     And I wait payment continue button element 15 seconds at index 1
     When I click element: payment continue button at index 1
     Then I enter "5406697543211173" text to credit card no at index 1
-    Then I enter "0323" text to expDate at index 1
+    When I click element: expDate at index 1
+    And I wait expDate popup element 15 seconds at index 1
+    When I click element: expDate popup next button at index 1
+    And I wait expDate popup select element 15 seconds at index 1
+    When I click element: expDate popup select at index 1
+    #Then I enter "0323" text to expDate at index 1
     Then I enter "465" text to cvv at index 1
     When I click element: payment button at index 1
     And I wait send anyway element 30 seconds at index 1

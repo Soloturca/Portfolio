@@ -13,7 +13,12 @@ Scenario: Prepaid Public TL Yukleme
   When I click element: yuklemeye devam et button at index 1
   And I wait credit card no element 10 seconds at index 1
   Then I enter "5406697543211173" text to credit card no at index 1
-  Then I enter "0323" text to expDate at index 1
+  When I click element: expDate at index 1
+  And I wait expDate popup element 15 seconds at index 1
+  When I click element: expDate popup next button at index 1
+  And I wait expDate popup select element 15 seconds at index 1
+  When I click element: expDate popup select at index 1
+  #Then I enter "0323" text to expDate at index 1
   Then I enter "465" text to cvv at index 1
   And I wait ode button element 15 seconds at index 1
   When I click element: ode button at index 1
