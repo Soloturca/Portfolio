@@ -152,9 +152,6 @@
           "kalan SMS value": "//*[@id=\"content\"]//div[2]/div[2]//div[2]//div[5]//div[2]//div[1]//div[2]/span[2]"
         },
         {
-          "visa yes button": "//*[@id=\"yes\"]"
-        },
-        {
           "paket satin al button": "//*[@id=\"dialog\"]/div/div[3]/div[3]/div/div/div[2]/button/span"
         },
         {

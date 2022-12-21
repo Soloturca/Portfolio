@@ -68,9 +68,17 @@ Feature: Postpaid Feature
     Given I scroll and see element: pay bill button at index 1
     When I click element: pay bill button at index 1
     Then I need to just wait
-    And I wait visa yes button element 30 seconds at index 1
-    When I click element: visa yes button at index 1
-    Then I need to just wait
+    And I wait 3D okay button2 element 30 seconds at index 1
+    When I click element: 3D okay button2 at index 1
+    And I wait 3D sms password1 element 30 seconds at index 1
+    Then I enter "1" text to 3D sms password1 at index 1
+    Then I enter "2" text to 3D sms password2 at index 1
+    Then I enter "3" text to 3D sms password3 at index 1
+    Then I enter "4" text to 3D sms password4 at index 1
+    Then I enter "5" text to 3D sms password5 at index 1
+    Then I enter "6" text to 3D sms password6 at index 1
+    And I wait 3D confirmation element 30 seconds at index 1
+    When I click element: 3D confirmation at index 1
 
 
   @TC003
