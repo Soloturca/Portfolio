@@ -1,7 +1,7 @@
 @Postpaid
 Feature: Postpaid Feature
 
-  @TC001
+  @PaymentSquad
   Scenario: Postpaid Public Payment Fatura
     Given Open the https://efes.vodafone.com.tr/tsteShop-public/#/fatura-ode URL
     Then I see login page
@@ -39,7 +39,7 @@ Feature: Postpaid Feature
     When I click element: 3D secure last okay button at index 1
     Then I need to just wait
 
-  @TC002
+  @PaymentSquad
   Scenario: Postpaid Yanimda Web Fatura Ödeme
     Given Open the http://efes.vodafone.com.tr/tsteShop-selfservice-login-test/#/giris/logoutAuto/ URL
     Then I see loginYanimdaWeb page
@@ -81,7 +81,7 @@ Feature: Postpaid Feature
     When I click element: 3D confirmation at index 1
 
 
-  @TC003
+  @PaymentSquad
   Scenario: Postpaid Yanimda Web Masterpass Fatura Ödeme
     Given Open the http://efes.vodafone.com.tr/tsteShop-selfservice-login-test/#/giris/logoutAuto/ URL
     Then I see loginYanimdaWeb page
