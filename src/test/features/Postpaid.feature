@@ -140,6 +140,25 @@ Feature: Postpaid Feature
   Scenario: Postpaid Yanimda Web Kalan Kullanim Görüntüleme
     Given Open the http://efes.vodafone.com.tr/tsteShop-selfservice-login-test/#/giris/logoutAuto/ URL
     Then I see loginYanimdaWeb page
+
+    And I wait telephone number element 30 seconds at index 1
+    When I click element: telephone number at index 1
+   #enter without 5
+    Then I enter "464009831" text to telephone number at index 1
+    And I wait password element 30 seconds at index 1
+    Then I enter "11111111" text to password at index 1
+    And I wait login button element 30 seconds at index 1
+    When I click element: login button at index 1
+    And I wait two-step verification1 element 30 seconds at index 1
+    Then I enter "1" text to two-step verification1 at index 1
+    Then I enter "1" text to two-step verification2 at index 1
+    Then I enter "1" text to two-step verification3 at index 1
+    Then I enter "1" text to two-step verification4 at index 1
+    And I wait remember me element 30 seconds at index 1
+    When I click element: remember me at index 1
+    Then I refresh page
+    Then I need to just wait
+
     Then I need to just wait
     And I wait tarifelerim ve kullanimlarim main button element 30 seconds at index 1
     When I click element: tarifelerim ve kullanimlarim main button at index 1

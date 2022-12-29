@@ -117,6 +117,26 @@ Scenario: Prepaid Public TL Yukleme
   Scenario: Prepaid Yanımda Web Ek Paket Al
     Given Open the http://efes.vodafone.com.tr/tsteShop-selfservice-login-test/#/giris/logoutAuto URL
     Then I see loginyanimda page
+
+    And I wait ceptel text area element 30 seconds at index 1
+    When I click element: ceptel text area at index 1
+    Then I enter "463029083" text to ceptel text area at index 1
+    And I wait sifre text area element 30 seconds at index 1
+    Then I enter "11111111" text to sifre text area at index 1
+    And I wait devam et button element 30 seconds at index 1
+    When I click element: devam et button at index 1
+    And I wait smssifre1 element 30 seconds at index 1
+    Then I enter "1" text to smssifre1 at index 1
+    And I wait smssifre2 element 30 seconds at index 1
+    Then I enter "1" text to smssifre2 at index 1
+    And I wait smssifre3 element 30 seconds at index 1
+    Then I enter "1" text to smssifre3 at index 1
+    And I wait smssifre4 element 30 seconds at index 1
+    Then I enter "1" text to smssifre4 at index 1
+    And I wait remember me element 30 seconds at index 1
+    When I click element: remember me at index 1
+    Then I refresh page
+
     And I wait ekpaketalbutton element 30 seconds at index 1
     When I click element: ekpaketalbutton at index 1
     And I wait yurtdisikullanimbutton element 30 seconds at index 1
