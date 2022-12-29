@@ -1,0 +1,2 @@
+# Portfolio
+This project is about my company's bill paying service testing. This project includes 10 test cases. 5 test cases were placed in the postpaid side and 5 more cases were placed in the prepaid side. I was responsible for prepaid side (5 Test Cases). As you can see in this project BDD framework was used. You can see the background codes of the every statement at the feature pages in the stepdefs page.
